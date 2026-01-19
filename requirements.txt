@@ -1,0 +1,24 @@
+# Energy Incentive Manager - Requirements
+# ========================================
+
+# Web Framework
+streamlit>=1.28.0
+
+# Data manipulation
+pandas>=2.0.0
+
+# Visualization
+plotly>=5.18.0
+
+# PDF Generation (optional - for report export)
+# weasyprint>=60.0  # Richiede GTK su Windows, opzionale
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0  # Per coverage report
+
+# Type checking (opzionale)
+# mypy>=1.7.0
+
+# Note: I moduli del progetto (modules/) sono inclusi localmente
+# Note: Per export PDF, l'app usa HTML che puo' essere stampato come PDF dal browser

@@ -1,0 +1,5854 @@
+[
+  {
+    "id_slug": "aermec-swp-301",
+    "search_text": "aermec swp 301 273",
+    "marca": "AERMEC",
+    "modello": "SWP 301",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "SWP 301",
+    "dati_tecnici": {
+      "capacita_litri": 273,
+      "potenza_kw": 1.95,
+      "cop": 2.91
+    }
+  },
+  {
+    "id_slug": "aermec-swp-301-s1",
+    "search_text": "aermec swp 301 s1 268",
+    "marca": "AERMEC",
+    "modello": "SWP 301 S1",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "SWP 301 S1",
+    "dati_tecnici": {
+      "capacita_litri": 268,
+      "potenza_kw": 1.95,
+      "cop": 2.91
+    }
+  },
+  {
+    "id_slug": "aermec-swp-301-s2",
+    "search_text": "aermec swp 301 s2 265",
+    "marca": "AERMEC",
+    "modello": "SWP 301 S2",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "SWP 301 S2",
+    "dati_tecnici": {
+      "capacita_litri": 265,
+      "potenza_kw": 1.95,
+      "cop": 2.91
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-250-ext",
+    "search_text": "ariston nuos 250 ext 250",
+    "marca": "ARISTON",
+    "modello": "NUOS 250 EXT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 2.09,
+      "cop": 2.79
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-250-sys-ext",
+    "search_text": "ariston nuos 250 sys ext 250",
+    "marca": "ARISTON",
+    "modello": "NUOS 250 SYS EXT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 2.09,
+      "cop": 2.79
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-evo-a-110-wh",
+    "search_text": "ariston nuos evo a+ 110 wh 110",
+    "marca": "ARISTON",
+    "modello": "NUOS EVO A+ 110 WH",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 110,
+      "potenza_kw": 0.68,
+      "cop": 2.7
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-evo-a-80-wh",
+    "search_text": "ariston nuos evo a+ 80 wh 80",
+    "marca": "ARISTON",
+    "modello": "NUOS EVO A+ 80 WH",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 80,
+      "potenza_kw": 0.69,
+      "cop": 2.78
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-plus-200",
+    "search_text": "ariston nuos plus 200 200",
+    "marca": "ARISTON",
+    "modello": "NUOS PLUS 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 2.14,
+      "cop": 3.05
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-plus-250",
+    "search_text": "ariston nuos plus 250 250",
+    "marca": "ARISTON",
+    "modello": "NUOS PLUS 250",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 2.35,
+      "cop": 3.35
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-plus-250-sys",
+    "search_text": "ariston nuos plus 250 sys 245",
+    "marca": "ARISTON",
+    "modello": "NUOS PLUS 250 SYS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 245,
+      "potenza_kw": 2.2,
+      "cop": 3.14
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-plus-250-twin-sys",
+    "search_text": "ariston nuos plus 250 twin sys 240",
+    "marca": "ARISTON",
+    "modello": "NUOS PLUS 250 TWIN SYS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 240,
+      "potenza_kw": 2.25,
+      "cop": 3.21
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-plus-s2-wi-fi-110-wh",
+    "search_text": "ariston nuos plus s2 wi-fi 110 wh 110",
+    "marca": "ARISTON",
+    "modello": "NUOS PLUS S2 WI-FI 110 WH",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3629146",
+    "dati_tecnici": {
+      "capacita_litri": 110,
+      "potenza_kw": 0.77,
+      "cop": 2.74
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-plus-s2-wi-fi-150-wh",
+    "search_text": "ariston nuos plus s2 wi-fi 150 wh 147",
+    "marca": "ARISTON",
+    "modello": "NUOS PLUS S2 WI-FI 150 WH",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3629147",
+    "dati_tecnici": {
+      "capacita_litri": 147,
+      "potenza_kw": 0.83,
+      "cop": 2.95
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-plus-s2-wi-fi-80-wh",
+    "search_text": "ariston nuos plus s2 wi-fi 80 wh 80",
+    "marca": "ARISTON",
+    "modello": "NUOS PLUS S2 WI-FI 80 WH",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3629145",
+    "dati_tecnici": {
+      "capacita_litri": 80,
+      "potenza_kw": 0.78,
+      "cop": 2.77
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-plus-wi-fi-200",
+    "search_text": "ariston nuos plus wi-fi 200 200",
+    "marca": "ARISTON",
+    "modello": "NUOS PLUS WI-FI 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3069775",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 3.72,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-plus-wi-fi-250",
+    "search_text": "ariston nuos plus wi-fi 250 250",
+    "marca": "ARISTON",
+    "modello": "NUOS PLUS WI-FI 250",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3069776",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 5.66,
+      "cop": 3.35
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-plus-wi-fi-250-sys",
+    "search_text": "ariston nuos plus wi-fi 250 sys 245",
+    "marca": "ARISTON",
+    "modello": "NUOS PLUS WI-FI 250 SYS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3069777",
+    "dati_tecnici": {
+      "capacita_litri": 245,
+      "potenza_kw": 6.04,
+      "cop": 3.14
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-plus-wi-fi-250-twin-sys",
+    "search_text": "ariston nuos plus wi-fi 250 twin sys 240",
+    "marca": "ARISTON",
+    "modello": "NUOS PLUS WI-FI 250 TWIN SYS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3069778",
+    "dati_tecnici": {
+      "capacita_litri": 240,
+      "potenza_kw": 5.86,
+      "cop": 3.21
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-primo-200",
+    "search_text": "ariston nuos primo 200 200",
+    "marca": "ARISTON",
+    "modello": "NUOS PRIMO 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.38,
+      "cop": 2.76
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-primo-200-hc",
+    "search_text": "ariston nuos primo 200 hc 202",
+    "marca": "ARISTON",
+    "modello": "NUOS PRIMO 200 HC",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 202,
+      "potenza_kw": 1.36,
+      "cop": 2.71
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-primo-240",
+    "search_text": "ariston nuos primo 240 242",
+    "marca": "ARISTON",
+    "modello": "NUOS PRIMO 240",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 242,
+      "potenza_kw": 1.32,
+      "cop": 2.64
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-primo-240-hc",
+    "search_text": "ariston nuos primo 240 hc 244",
+    "marca": "ARISTON",
+    "modello": "NUOS PRIMO 240 HC",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 244,
+      "potenza_kw": 1.43,
+      "cop": 2.86
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-primo-240-sys",
+    "search_text": "ariston nuos primo 240 sys 242",
+    "marca": "ARISTON",
+    "modello": "NUOS PRIMO 240 SYS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 242,
+      "potenza_kw": 1.32,
+      "cop": 2.64
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-primo-240-sys-hc",
+    "search_text": "ariston nuos primo 240 sys hc 239",
+    "marca": "ARISTON",
+    "modello": "NUOS PRIMO 240 SYS HC",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 239,
+      "potenza_kw": 1.39,
+      "cop": 2.77
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-primo-hc-a-200",
+    "search_text": "ariston nuos primo hc a+ 200 202",
+    "marca": "ARISTON",
+    "modello": "NUOS PRIMO HC A+ 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3069796",
+    "dati_tecnici": {
+      "capacita_litri": 202,
+      "potenza_kw": 1400.0,
+      "cop": 2.8
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-primo-hc-a-240",
+    "search_text": "ariston nuos primo hc a+ 240 244",
+    "marca": "ARISTON",
+    "modello": "NUOS PRIMO HC A+ 240",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3069797",
+    "dati_tecnici": {
+      "capacita_litri": 244,
+      "potenza_kw": 1515.0,
+      "cop": 3.03
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-primo-hc-a-240-sys",
+    "search_text": "ariston nuos primo hc a+ 240 sys 239",
+    "marca": "ARISTON",
+    "modello": "NUOS PRIMO HC A+ 240 SYS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3069798",
+    "dati_tecnici": {
+      "capacita_litri": 239,
+      "potenza_kw": 1485.0,
+      "cop": 2.97
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-split-110-wh",
+    "search_text": "ariston nuos split 110 wh 110",
+    "marca": "ARISTON",
+    "modello": "NUOS SPLIT 110 WH",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 110,
+      "potenza_kw": 1.34,
+      "cop": 2.69
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-split-150-wh",
+    "search_text": "ariston nuos split 150 wh 150",
+    "marca": "ARISTON",
+    "modello": "NUOS SPLIT 150 WH",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 150,
+      "potenza_kw": 1.84,
+      "cop": 2.71
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-split-200-wh",
+    "search_text": "ariston nuos split 200 wh 200",
+    "marca": "ARISTON",
+    "modello": "NUOS SPLIT 200 WH",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.77,
+      "cop": 2.6
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-split-300-fs",
+    "search_text": "ariston nuos split 300 fs 300",
+    "marca": "ARISTON",
+    "modello": "NUOS SPLIT 300 FS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.84,
+      "cop": 2.7
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-split-80-wh",
+    "search_text": "ariston nuos split 80 wh 80",
+    "marca": "ARISTON",
+    "modello": "NUOS SPLIT 80 WH",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 80,
+      "potenza_kw": 1.33,
+      "cop": 2.67
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-split-flex-150-wh",
+    "search_text": "ariston nuos split flex 150 wh 150",
+    "marca": "ARISTON",
+    "modello": "NUOS SPLIT FLEX 150 WH",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 150,
+      "potenza_kw": 1.89,
+      "cop": 2.78
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-split-flex-200-wh",
+    "search_text": "ariston nuos split flex 200 wh 200",
+    "marca": "ARISTON",
+    "modello": "NUOS SPLIT FLEX 200 WH",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.86,
+      "cop": 2.74
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-split-flex-270-fs",
+    "search_text": "ariston nuos split flex 270 fs 270",
+    "marca": "ARISTON",
+    "modello": "NUOS SPLIT FLEX 270 FS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 1.95,
+      "cop": 2.87
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-split-inverter-wi-fi-er-150",
+    "search_text": "ariston nuos split inverter wi-fi er 150 150",
+    "marca": "ARISTON",
+    "modello": "NUOS SPLIT INVERTER WI-FI ER 150",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "3629072",
+    "identificativo_unita_interna": "3069749",
+    "dati_tecnici": {
+      "capacita_litri": 150,
+      "potenza_kw": 2270.0,
+      "cop": 3.25
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-split-inverter-wi-fi-er-200",
+    "search_text": "ariston nuos split inverter wi-fi er 200 200",
+    "marca": "ARISTON",
+    "modello": "NUOS SPLIT INVERTER WI-FI ER 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "3629072",
+    "identificativo_unita_interna": "3069750",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 2270.0,
+      "cop": 3.25
+    }
+  },
+  {
+    "id_slug": "ariston-nuos-split-inverter-wi-fi-er-270",
+    "search_text": "ariston nuos split inverter wi-fi er 270 270",
+    "marca": "ARISTON",
+    "modello": "NUOS SPLIT INVERTER WI-FI ER 270",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "3629072",
+    "identificativo_unita_interna": "3069751",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 2470.0,
+      "cop": 3.53
+    }
+  },
+  {
+    "id_slug": "atag-energion-nuos-plus-2002",
+    "search_text": "atag energion nuos plus 200.2 200",
+    "marca": "ATAG",
+    "modello": "ENERGION NUOS PLUS 200.2",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "3069809",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 2.14,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "atag-energion-nuos-plus-2502",
+    "search_text": "atag energion nuos plus 250.2 250",
+    "marca": "ATAG",
+    "modello": "ENERGION NUOS PLUS 250.2",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "3069810",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 2.35,
+      "cop": 3.35
+    }
+  },
+  {
+    "id_slug": "atag-energion-nuos-plus-2502-sys",
+    "search_text": "atag energion nuos plus 250.2 sys 245",
+    "marca": "ATAG",
+    "modello": "ENERGION NUOS PLUS 250.2 SYS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "3069811",
+    "dati_tecnici": {
+      "capacita_litri": 245,
+      "potenza_kw": 2.2,
+      "cop": 3.14
+    }
+  },
+  {
+    "id_slug": "atag-energion-nuos-plus-2502-twin-sys",
+    "search_text": "atag energion nuos plus 250.2 twin sys 240",
+    "marca": "ATAG",
+    "modello": "ENERGION NUOS PLUS 250.2 TWIN SYS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "3069812",
+    "dati_tecnici": {
+      "capacita_litri": 240,
+      "potenza_kw": 2.2,
+      "cop": 3.21
+    }
+  },
+  {
+    "id_slug": "atag-italia-airp-cpw110",
+    "search_text": "atag italia airp-cpw110 110",
+    "marca": "ATAG ITALIA",
+    "modello": "AIRP-CPW110",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "AIRP-CPW110",
+    "dati_tecnici": {
+      "capacita_litri": 110,
+      "potenza_kw": 0.85,
+      "cop": 2.62
+    }
+  },
+  {
+    "id_slug": "atag-italia-airp-cw200",
+    "search_text": "atag italia airp-cw200 228",
+    "marca": "ATAG ITALIA",
+    "modello": "AIRP-CW200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "AIRP-CW200",
+    "dati_tecnici": {
+      "capacita_litri": 228,
+      "potenza_kw": 1.87,
+      "cop": 3.72
+    }
+  },
+  {
+    "id_slug": "atag-italia-airp-cw200s",
+    "search_text": "atag italia airp-cw200s 220",
+    "marca": "ATAG ITALIA",
+    "modello": "AIRP-CW200S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "AIRP-CW200S",
+    "dati_tecnici": {
+      "capacita_litri": 220,
+      "potenza_kw": 1.87,
+      "cop": 3.72
+    }
+  },
+  {
+    "id_slug": "atag-italia-airp-cw200sg",
+    "search_text": "atag italia airp-cw200sg 217",
+    "marca": "ATAG ITALIA",
+    "modello": "AIRP-CW200SG",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "AIRP-CW200SG",
+    "dati_tecnici": {
+      "capacita_litri": 217,
+      "potenza_kw": 1.87,
+      "cop": 3.72
+    }
+  },
+  {
+    "id_slug": "atag-italia-airp-cw300",
+    "search_text": "atag italia airp-cw300 286",
+    "marca": "ATAG ITALIA",
+    "modello": "AIRP-CW300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "AIRP-CW300",
+    "dati_tecnici": {
+      "capacita_litri": 286,
+      "potenza_kw": 1.87,
+      "cop": 3.72
+    }
+  },
+  {
+    "id_slug": "atag-italia-airp-cw300s",
+    "search_text": "atag italia airp-cw300s 278",
+    "marca": "ATAG ITALIA",
+    "modello": "AIRP-CW300S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "AIRP-CW300S",
+    "dati_tecnici": {
+      "capacita_litri": 278,
+      "potenza_kw": 1.87,
+      "cop": 3.72
+    }
+  },
+  {
+    "id_slug": "atag-italia-airp-cw300sg",
+    "search_text": "atag italia airp-cw300sg 273",
+    "marca": "ATAG ITALIA",
+    "modello": "AIRP-CW300SG",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "AIRP-CW300SG",
+    "dati_tecnici": {
+      "capacita_litri": 273,
+      "potenza_kw": 1.87,
+      "cop": 3.72
+    }
+  },
+  {
+    "id_slug": "atlantic-calypso-split-200-m",
+    "search_text": "atlantic calypso split 200 m 199",
+    "marca": "ATLANTIC",
+    "modello": "CALYPSO SPLIT 200 M",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "232401",
+    "identificativo_unita_interna": "232515",
+    "dati_tecnici": {
+      "capacita_litri": 199,
+      "potenza_kw": 3.04,
+      "cop": 3.09
+    }
+  },
+  {
+    "id_slug": "atlantic-calypso-split-270-s",
+    "search_text": "atlantic calypso split 270 s 270",
+    "marca": "ATLANTIC",
+    "modello": "CALYPSO SPLIT 270 S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "232401",
+    "identificativo_unita_interna": "232514",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 3.56,
+      "cop": 3.24
+    }
+  },
+  {
+    "id_slug": "atlantic-calypso-vm-100",
+    "search_text": "atlantic calypso vm 100 100",
+    "marca": "ATLANTIC",
+    "modello": "CALYPSO VM 100",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "866015",
+    "dati_tecnici": {
+      "capacita_litri": 100,
+      "potenza_kw": 0.93,
+      "cop": 2.66
+    }
+  },
+  {
+    "id_slug": "atlantic-calypso-vm-150",
+    "search_text": "atlantic calypso vm 150 150",
+    "marca": "ATLANTIC",
+    "modello": "CALYPSO VM 150",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "876188",
+    "dati_tecnici": {
+      "capacita_litri": 150,
+      "potenza_kw": 1.07,
+      "cop": 3.05
+    }
+  },
+  {
+    "id_slug": "atlantic-explorer-200-l-cozy",
+    "search_text": "atlantic explorer 200 l cozy 200",
+    "marca": "ATLANTIC",
+    "modello": "EXPLORER 200 L COZY",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "986086",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.95,
+      "cop": 2.79
+    }
+  },
+  {
+    "id_slug": "atlantic-explorer-200-l-s-cozy",
+    "search_text": "atlantic explorer 200 l s cozy 200",
+    "marca": "ATLANTIC",
+    "modello": "EXPLORER 200 L S COZY",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "986088",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.95,
+      "cop": 2.79
+    }
+  },
+  {
+    "id_slug": "atlantic-explorer-270-l-cozy",
+    "search_text": "atlantic explorer 270 l cozy 270",
+    "marca": "ATLANTIC",
+    "modello": "EXPLORER 270 L COZY",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "986087",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 2.21,
+      "cop": 3.16
+    }
+  },
+  {
+    "id_slug": "atlantic-explorer-270-l-s-cozy",
+    "search_text": "atlantic explorer 270 l s cozy 270",
+    "marca": "ATLANTIC",
+    "modello": "EXPLORER 270 L S COZY",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "986089",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 2.12,
+      "cop": 3.03
+    }
+  },
+  {
+    "id_slug": "auer-edel-200-air",
+    "search_text": "auer edel 200 air 200",
+    "marca": "AUER",
+    "modello": "EDEL 200 air",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "EDEL200 air",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 2.2,
+      "cop": 3.37
+    }
+  },
+  {
+    "id_slug": "auer-edel-270-air",
+    "search_text": "auer edel 270 air 270",
+    "marca": "AUER",
+    "modello": "EDEL 270 air",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "EDEL 270 air",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 2.2,
+      "cop": 3.47
+    }
+  },
+  {
+    "id_slug": "auerintuis-edel-155-air",
+    "search_text": "auer/intuis edel 155 air 150",
+    "marca": "AUER/INTUIS",
+    "modello": "EDEL 155 air",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "EDEL 150 air",
+    "dati_tecnici": {
+      "capacita_litri": 150,
+      "potenza_kw": 0.95,
+      "cop": 2.89
+    }
+  },
+  {
+    "id_slug": "baltur-spa-quadra2-w-110-m",
+    "search_text": "baltur spa quadra.2 w 110 m 110",
+    "marca": "Baltur SPA",
+    "modello": "QUADRA.2 W 110 M",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "0",
+    "identificativo_unita_interna": "84550920",
+    "dati_tecnici": {
+      "capacita_litri": 110,
+      "potenza_kw": 850.0,
+      "cop": 3.01
+    }
+  },
+  {
+    "id_slug": "baltur-spa-quadra2-w-he-200",
+    "search_text": "baltur spa quadra.2 w he 200 228",
+    "marca": "Baltur SPA",
+    "modello": "QUADRA.2 W HE 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "0",
+    "identificativo_unita_interna": "84550921",
+    "dati_tecnici": {
+      "capacita_litri": 228,
+      "potenza_kw": 2060.0,
+      "cop": 2.81
+    }
+  },
+  {
+    "id_slug": "baltur-spa-quadra2-w-he-200s",
+    "search_text": "baltur spa quadra.2 w he 200s 220",
+    "marca": "Baltur SPA",
+    "modello": "QUADRA.2 W HE 200S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "0",
+    "identificativo_unita_interna": "84550923",
+    "dati_tecnici": {
+      "capacita_litri": 220,
+      "potenza_kw": 2060.0,
+      "cop": 2.81
+    }
+  },
+  {
+    "id_slug": "baltur-spa-quadra2-w-he-260",
+    "search_text": "baltur spa quadra.2 w he 260 286",
+    "marca": "Baltur SPA",
+    "modello": "QUADRA.2 W HE 260",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "0",
+    "identificativo_unita_interna": "84550922",
+    "dati_tecnici": {
+      "capacita_litri": 286,
+      "potenza_kw": 2060.0,
+      "cop": 3.03
+    }
+  },
+  {
+    "id_slug": "baltur-spa-quadra2-w-he-260s",
+    "search_text": "baltur spa quadra.2 w he 260s 278",
+    "marca": "Baltur SPA",
+    "modello": "QUADRA.2 W HE 260S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "0",
+    "identificativo_unita_interna": "84550924",
+    "dati_tecnici": {
+      "capacita_litri": 278,
+      "potenza_kw": 2060.0,
+      "cop": 3.03
+    }
+  },
+  {
+    "id_slug": "baxi-spc-180-eco",
+    "search_text": "baxi spc 180 eco 180",
+    "marca": "BAXI",
+    "modello": "SPC 180 ECO",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7629069",
+    "dati_tecnici": {
+      "capacita_litri": 180,
+      "potenza_kw": 1.5,
+      "cop": 2.88
+    }
+  },
+  {
+    "id_slug": "baxi-spc-200",
+    "search_text": "baxi spc 200 210",
+    "marca": "BAXI",
+    "modello": "SPC 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7213893",
+    "dati_tecnici": {
+      "capacita_litri": 210,
+      "potenza_kw": 1.7,
+      "cop": 3.5
+    }
+  },
+  {
+    "id_slug": "baxi-spc-200-plus",
+    "search_text": "baxi spc 200 plus 196",
+    "marca": "BAXI",
+    "modello": "SPC 200 Plus",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "A7785397",
+    "identificativo_unita_interna": "A7785397",
+    "dati_tecnici": {
+      "capacita_litri": 196,
+      "potenza_kw": 1.35,
+      "cop": 3.09
+    }
+  },
+  {
+    "id_slug": "baxi-spc-200-s-plus",
+    "search_text": "baxi spc 200 s plus 188",
+    "marca": "BAXI",
+    "modello": "SPC 200 S Plus",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "A7785398",
+    "identificativo_unita_interna": "A7785398",
+    "dati_tecnici": {
+      "capacita_litri": 188,
+      "potenza_kw": 1.34,
+      "cop": 3.15
+    }
+  },
+  {
+    "id_slug": "baxi-spc-250-plus",
+    "search_text": "baxi spc 250 plus 251",
+    "marca": "BAXI",
+    "modello": "SPC 250 Plus",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "A7785399",
+    "identificativo_unita_interna": "A7785399",
+    "dati_tecnici": {
+      "capacita_litri": 251,
+      "potenza_kw": 1.32,
+      "cop": 3.48
+    }
+  },
+  {
+    "id_slug": "baxi-spc-250-s-plus",
+    "search_text": "baxi spc 250 s plus 243",
+    "marca": "BAXI",
+    "modello": "SPC 250 S Plus",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "A7785400",
+    "identificativo_unita_interna": "A7785400",
+    "dati_tecnici": {
+      "capacita_litri": 243,
+      "potenza_kw": 1.3,
+      "cop": 3.28
+    }
+  },
+  {
+    "id_slug": "baxi-spc-300",
+    "search_text": "baxi spc 300 265",
+    "marca": "BAXI",
+    "modello": "SPC 300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7112974",
+    "dati_tecnici": {
+      "capacita_litri": 265,
+      "potenza_kw": 1.7,
+      "cop": 3.7
+    }
+  },
+  {
+    "id_slug": "baxi-spc-300-s",
+    "search_text": "baxi spc 300 s 270",
+    "marca": "BAXI",
+    "modello": "SPC 300 S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7112975",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 1.7,
+      "cop": 3.6
+    }
+  },
+  {
+    "id_slug": "baxi-spc-90",
+    "search_text": "baxi spc 90 87",
+    "marca": "BAXI",
+    "modello": "SPC 90",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7677361",
+    "dati_tecnici": {
+      "capacita_litri": 87,
+      "potenza_kw": 1.01,
+      "cop": 2.7
+    }
+  },
+  {
+    "id_slug": "baxi-spc-split-150-wh",
+    "search_text": "baxi spc split 150 wh 150",
+    "marca": "BAXI",
+    "modello": "SPC SPLIT 150 WH",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "7626223",
+    "identificativo_unita_interna": "IDU SPC SPLIT 150 WH",
+    "dati_tecnici": {
+      "capacita_litri": 150,
+      "potenza_kw": 1.75,
+      "cop": 3.36
+    }
+  },
+  {
+    "id_slug": "baxi-spc-split-200-fs",
+    "search_text": "baxi spc split 200 fs 215",
+    "marca": "BAXI",
+    "modello": "SPC SPLIT 200 FS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "7626223",
+    "identificativo_unita_interna": "IDU SPC SPLIT 200 FS",
+    "dati_tecnici": {
+      "capacita_litri": 215,
+      "potenza_kw": 1.75,
+      "cop": 3.3
+    }
+  },
+  {
+    "id_slug": "baxi-spc-split-300-fs",
+    "search_text": "baxi spc split 300 fs 270",
+    "marca": "BAXI",
+    "modello": "SPC SPLIT 300 FS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "7626223",
+    "identificativo_unita_interna": "IDU SPC SPLIT 300 FS",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 1.75,
+      "cop": 3.42
+    }
+  },
+  {
+    "id_slug": "beretta-acquazenit-120",
+    "search_text": "beretta acquazenit 120 80",
+    "marca": "BERETTA",
+    "modello": "ACQUAZENIT 120",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20075568",
+    "dati_tecnici": {
+      "capacita_litri": 80,
+      "potenza_kw": 0.87,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "beretta-acquazenit-80",
+    "search_text": "beretta acquazenit 80 80",
+    "marca": "BERETTA",
+    "modello": "ACQUAZENIT 80",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20075566",
+    "dati_tecnici": {
+      "capacita_litri": 80,
+      "potenza_kw": 0.87,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "beretta-acquazenit-e-120",
+    "search_text": "beretta acquazenit e 120 120",
+    "marca": "BERETTA",
+    "modello": "ACQUAZENIT E 120",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20075571",
+    "dati_tecnici": {
+      "capacita_litri": 120,
+      "potenza_kw": 0.9,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "beretta-acquazenit-e-80",
+    "search_text": "beretta acquazenit e 80 120",
+    "marca": "BERETTA",
+    "modello": "ACQUAZENIT E 80",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20075569",
+    "dati_tecnici": {
+      "capacita_litri": 120,
+      "potenza_kw": 0.9,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "beretta-hp-e-260-acs",
+    "search_text": "beretta hp-e 260 acs 273",
+    "marca": "BERETTA",
+    "modello": "HP-E 260 ACS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20125646",
+    "dati_tecnici": {
+      "capacita_litri": 273,
+      "potenza_kw": 1.95,
+      "cop": 2.92
+    }
+  },
+  {
+    "id_slug": "beretta-hp-e-260-acs-s",
+    "search_text": "beretta hp-e 260 acs s 267",
+    "marca": "BERETTA",
+    "modello": "HP-E 260 ACS S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20125647",
+    "dati_tecnici": {
+      "capacita_litri": 267,
+      "potenza_kw": 1.95,
+      "cop": 2.92
+    }
+  },
+  {
+    "id_slug": "beretta-hp-e-260-acs-sc",
+    "search_text": "beretta hp-e 260 acs sc 264",
+    "marca": "BERETTA",
+    "modello": "HP-E 260 ACS SC",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20125648",
+    "dati_tecnici": {
+      "capacita_litri": 264,
+      "potenza_kw": 1.95,
+      "cop": 2.92
+    }
+  },
+  {
+    "id_slug": "beretta-hp-n-180-acs",
+    "search_text": "beretta hp-n 180 acs 178",
+    "marca": "BERETTA",
+    "modello": "HP-N 180 ACS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 178,
+      "potenza_kw": 1.23,
+      "cop": 2.86
+    }
+  },
+  {
+    "id_slug": "beretta-hp-n-250-acs",
+    "search_text": "beretta hp-n 250 acs 254",
+    "marca": "BERETTA",
+    "modello": "HP-N 250 ACS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 254,
+      "potenza_kw": 1.17,
+      "cop": 3.23
+    }
+  },
+  {
+    "id_slug": "beretta-hp-n-250-acs-s",
+    "search_text": "beretta hp-n 250 acs s 251",
+    "marca": "BERETTA",
+    "modello": "HP-N 250 ACS S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 251,
+      "potenza_kw": 1.17,
+      "cop": 3.22
+    }
+  },
+  {
+    "id_slug": "bongioanni-eco-aw-2200-e",
+    "search_text": "bongioanni eco aw 2.200 e 202",
+    "marca": "BONGIOANNI",
+    "modello": "ECO AW 2.200 E",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "\\",
+    "identificativo_unita_interna": "ECO AW 2.200 E",
+    "dati_tecnici": {
+      "capacita_litri": 202,
+      "potenza_kw": 1.16,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "bongioanni-eco-aw-2200-se",
+    "search_text": "bongioanni eco aw 2.200 se 194",
+    "marca": "BONGIOANNI",
+    "modello": "ECO AW 2.200 SE",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "\\",
+    "identificativo_unita_interna": "ECO AW 2.200 SE",
+    "dati_tecnici": {
+      "capacita_litri": 194,
+      "potenza_kw": 1.16,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "bongioanni-eco-aw-2300-e",
+    "search_text": "bongioanni eco aw 2.300 e 260",
+    "marca": "BONGIOANNI",
+    "modello": "ECO AW 2.300 E",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "\\",
+    "identificativo_unita_interna": "ECO AW 2.300 E",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.33,
+      "cop": 3.4
+    }
+  },
+  {
+    "id_slug": "bongioanni-eco-aw-2300-se",
+    "search_text": "bongioanni eco aw 2.300 se 251",
+    "marca": "BONGIOANNI",
+    "modello": "ECO AW 2.300 SE",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "\\",
+    "identificativo_unita_interna": "ECO AW 2.300 SE",
+    "dati_tecnici": {
+      "capacita_litri": 251,
+      "potenza_kw": 1.33,
+      "cop": 3.4
+    }
+  },
+  {
+    "id_slug": "bongioanni-eco-aw-200-e",
+    "search_text": "bongioanni eco aw 200-e 228",
+    "marca": "BONGIOANNI",
+    "modello": "ECO AW 200-E",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "ECO AW 200-E",
+    "dati_tecnici": {
+      "capacita_litri": 228,
+      "potenza_kw": 1.87,
+      "cop": 2.6
+    }
+  },
+  {
+    "id_slug": "bongioanni-eco-aw-200-sce",
+    "search_text": "bongioanni eco aw 200-sce 217",
+    "marca": "BONGIOANNI",
+    "modello": "ECO AW 200-SCE",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "ECO AW 200-SCE",
+    "dati_tecnici": {
+      "capacita_litri": 217,
+      "potenza_kw": 1.87,
+      "cop": 2.6
+    }
+  },
+  {
+    "id_slug": "bongioanni-eco-aw-200-se",
+    "search_text": "bongioanni eco aw 200-se 220",
+    "marca": "BONGIOANNI",
+    "modello": "ECO AW 200-SE",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "ECO AW 200-SE",
+    "dati_tecnici": {
+      "capacita_litri": 220,
+      "potenza_kw": 1.87,
+      "cop": 2.6
+    }
+  },
+  {
+    "id_slug": "bongioanni-eco-aw-300-e",
+    "search_text": "bongioanni eco aw 300-e 286",
+    "marca": "BONGIOANNI",
+    "modello": "ECO AW 300-E",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "ECO AW 300-E",
+    "dati_tecnici": {
+      "capacita_litri": 286,
+      "potenza_kw": 1.87,
+      "cop": 2.6
+    }
+  },
+  {
+    "id_slug": "bongioanni-eco-aw-300-sce",
+    "search_text": "bongioanni eco aw 300-sce 273",
+    "marca": "BONGIOANNI",
+    "modello": "ECO AW 300-SCE",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "ECO AW 300-SCE",
+    "dati_tecnici": {
+      "capacita_litri": 273,
+      "potenza_kw": 1.87,
+      "cop": 2.6
+    }
+  },
+  {
+    "id_slug": "bongioanni-eco-aw-300-se",
+    "search_text": "bongioanni eco aw 300-se 278",
+    "marca": "BONGIOANNI",
+    "modello": "ECO AW 300-SE",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "ECO AW 300-SE",
+    "dati_tecnici": {
+      "capacita_litri": 278,
+      "potenza_kw": 1.87,
+      "cop": 2.6
+    }
+  },
+  {
+    "id_slug": "bosch-cs3000dw-120-1-s",
+    "search_text": "bosch cs3000dw 120-1 s 131",
+    "marca": "BOSCH",
+    "modello": "CS3000DW 120-1 S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7736503484",
+    "dati_tecnici": {
+      "capacita_litri": 131,
+      "potenza_kw": 2.8,
+      "cop": 2.76
+    }
+  },
+  {
+    "id_slug": "bosch-cs3000dw-200-1-s",
+    "search_text": "bosch cs3000dw 200-1 s 187",
+    "marca": "BOSCH",
+    "modello": "CS3000DW 200-1 S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7736503483",
+    "dati_tecnici": {
+      "capacita_litri": 187,
+      "potenza_kw": 2.8,
+      "cop": 2.9
+    }
+  },
+  {
+    "id_slug": "bosch-cs4000dw-200-1-fi",
+    "search_text": "bosch cs4000dw 200-1 fi 200",
+    "marca": "BOSCH",
+    "modello": "CS4000DW 200-1 FI",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7735500588",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.4,
+      "cop": 2.75
+    }
+  },
+  {
+    "id_slug": "bosch-cs4000dw-250-1-cfi",
+    "search_text": "bosch cs4000dw 250-1 cfi 240",
+    "marca": "BOSCH",
+    "modello": "CS4000DW 250-1 CFI",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7735500582",
+    "dati_tecnici": {
+      "capacita_litri": 240,
+      "potenza_kw": 1.5,
+      "cop": 2.83
+    }
+  },
+  {
+    "id_slug": "bosch-cs4000dw-250-1-fi",
+    "search_text": "bosch cs4000dw 250-1 fi 247",
+    "marca": "BOSCH",
+    "modello": "CS4000DW 250-1 FI",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7735500581",
+    "dati_tecnici": {
+      "capacita_litri": 247,
+      "potenza_kw": 1.4,
+      "cop": 2.81
+    }
+  },
+  {
+    "id_slug": "bosch-cs5000dw-100-w",
+    "search_text": "bosch cs5000dw 100 w 98",
+    "marca": "Bosch",
+    "modello": "CS5000DW 100 W",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "CS5000DW 100 W",
+    "identificativo_unita_interna": "-",
+    "dati_tecnici": {
+      "capacita_litri": 98,
+      "potenza_kw": 670.0,
+      "cop": 2.8
+    }
+  },
+  {
+    "id_slug": "bosch-cs5000dw-150-w",
+    "search_text": "bosch cs5000dw 150 w 143",
+    "marca": "Bosch",
+    "modello": "CS5000DW 150 W",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "CS5000DW 150 W",
+    "identificativo_unita_interna": "-",
+    "dati_tecnici": {
+      "capacita_litri": 143,
+      "potenza_kw": 680.0,
+      "cop": 2.8
+    }
+  },
+  {
+    "id_slug": "bosch-cs5000dw-270-3-cfo",
+    "search_text": "bosch cs5000dw 270-3 cfo 260",
+    "marca": "BOSCH",
+    "modello": "CS5000DW 270-3 CFO",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7736503524",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.7,
+      "cop": 2.98
+    }
+  },
+  {
+    "id_slug": "bosch-cs5000dw-270-3-fo",
+    "search_text": "bosch cs5000dw 270-3 fo 270",
+    "marca": "BOSCH",
+    "modello": "CS5000DW 270-3 FO",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7736503525",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 1.7,
+      "cop": 2.95
+    }
+  },
+  {
+    "id_slug": "bosch-cs5001dw-200",
+    "search_text": "bosch cs5001dw 200 202",
+    "marca": "BOSCH",
+    "modello": "CS5001DW 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "CS5001DW 200",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 202,
+      "potenza_kw": 1.27,
+      "cop": 3.0
+    }
+  },
+  {
+    "id_slug": "bosch-cs5001dw-200-c",
+    "search_text": "bosch cs5001dw 200 c 194",
+    "marca": "BOSCH",
+    "modello": "CS5001DW 200 C",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "CS5001DW 200 C",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 194,
+      "potenza_kw": 1.27,
+      "cop": 3.0
+    }
+  },
+  {
+    "id_slug": "bosch-cs5001dw-260",
+    "search_text": "bosch cs5001dw 260 260",
+    "marca": "BOSCH",
+    "modello": "CS5001DW 260",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "CS5001DW 260",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.23,
+      "cop": 3.2
+    }
+  },
+  {
+    "id_slug": "bosch-cs5001dw-260-c",
+    "search_text": "bosch cs5001dw 260 c 251",
+    "marca": "BOSCH",
+    "modello": "CS5001DW 260 C",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "CS5001DW 260 C",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 251,
+      "potenza_kw": 1.23,
+      "cop": 3.2
+    }
+  },
+  {
+    "id_slug": "buderus-wpt-2001-i",
+    "search_text": "buderus wpt 200.1 i 200",
+    "marca": "BUDERUS",
+    "modello": "WPT 200.1 I",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7735500589",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.4,
+      "cop": 2.75
+    }
+  },
+  {
+    "id_slug": "buderus-wpt-2501-i",
+    "search_text": "buderus wpt 250.1 i 250",
+    "marca": "BUDERUS",
+    "modello": "WPT 250.1 I",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7735500583",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 1.5,
+      "cop": 2.81
+    }
+  },
+  {
+    "id_slug": "buderus-wpt-2501-is",
+    "search_text": "buderus wpt 250.1 is 250",
+    "marca": "BUDERUS",
+    "modello": "WPT 250.1 IS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7735500584",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 1.5,
+      "cop": 2.83
+    }
+  },
+  {
+    "id_slug": "buderus-wpt-2703-a",
+    "search_text": "buderus wpt 270.3 a 270",
+    "marca": "BUDERUS",
+    "modello": "WPT 270.3 A",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7736503529",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 1.7,
+      "cop": 2.98
+    }
+  },
+  {
+    "id_slug": "buderus-wpt-2703-as",
+    "search_text": "buderus wpt 270.3 as 270",
+    "marca": "BUDERUS",
+    "modello": "WPT 270.3 AS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "7736503528",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 1.7,
+      "cop": 2.95
+    }
+  },
+  {
+    "id_slug": "buderus-wpt100-w",
+    "search_text": "buderus wpt100 w 98",
+    "marca": "Buderus",
+    "modello": "WPT100 W",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "WPT100 W",
+    "identificativo_unita_interna": "-",
+    "dati_tecnici": {
+      "capacita_litri": 98,
+      "potenza_kw": 670.0,
+      "cop": 2.8
+    }
+  },
+  {
+    "id_slug": "buderus-wpt150-w",
+    "search_text": "buderus wpt150 w 143",
+    "marca": "Buderus",
+    "modello": "WPT150 W",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "WPT150 W",
+    "identificativo_unita_interna": "-",
+    "dati_tecnici": {
+      "capacita_litri": 143,
+      "potenza_kw": 680.0,
+      "cop": 2.8
+    }
+  },
+  {
+    "id_slug": "buderus-wpt2004-a",
+    "search_text": "buderus wpt200.4 a 202",
+    "marca": "BUDERUS",
+    "modello": "WPT200.4 A",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "WPT200.4 A",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 202,
+      "potenza_kw": 1.27,
+      "cop": 3.0
+    }
+  },
+  {
+    "id_slug": "buderus-wpt2004-as",
+    "search_text": "buderus wpt200.4 as 194",
+    "marca": "BUDERUS",
+    "modello": "WPT200.4 AS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "WPT200.4 AS",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 194,
+      "potenza_kw": 1.27,
+      "cop": 3.0
+    }
+  },
+  {
+    "id_slug": "buderus-wpt2604-a",
+    "search_text": "buderus wpt260.4 a 260",
+    "marca": "BUDERUS",
+    "modello": "WPT260.4 A",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "WPT260.4 A",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.23,
+      "cop": 3.2
+    }
+  },
+  {
+    "id_slug": "buderus-wpt2604-as",
+    "search_text": "buderus wpt260.4 as 251",
+    "marca": "BUDERUS",
+    "modello": "WPT260.4 AS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "WPT260.4 AS",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 251,
+      "potenza_kw": 1.23,
+      "cop": 3.2
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-acquanext-performance-200",
+    "search_text": "chaffoteaux acquanext performance 200 202",
+    "marca": "CHAFFOTEAUX",
+    "modello": "ACQUANEXT PERFORMANCE 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 202,
+      "potenza_kw": 1.36,
+      "cop": 2.71
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-acquanext-performance-240",
+    "search_text": "chaffoteaux acquanext performance 240 244",
+    "marca": "CHAFFOTEAUX",
+    "modello": "ACQUANEXT PERFORMANCE 240",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 244,
+      "potenza_kw": 1.43,
+      "cop": 2.86
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-acquanext-performance-240-sys",
+    "search_text": "chaffoteaux acquanext performance 240 sys 239",
+    "marca": "CHAFFOTEAUX",
+    "modello": "ACQUANEXT PERFORMANCE 240 SYS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 239,
+      "potenza_kw": 1.39,
+      "cop": 2.77
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-aquanext-250",
+    "search_text": "chaffoteaux aquanext 250 250",
+    "marca": "CHAFFOTEAUX",
+    "modello": "AQUANEXT 250",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 2.09,
+      "cop": 2.79
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-aquanext-250-sys",
+    "search_text": "chaffoteaux aquanext 250 sys 250",
+    "marca": "CHAFFOTEAUX",
+    "modello": "AQUANEXT 250 SYS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 2.09,
+      "cop": 2.79
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-aquanext-facile-240",
+    "search_text": "chaffoteaux aquanext facile 240 242",
+    "marca": "CHAFFOTEAUX",
+    "modello": "AQUANEXT FACILE 240",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 242,
+      "potenza_kw": 1.32,
+      "cop": 2.64
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-aquanext-facile-240-sys",
+    "search_text": "chaffoteaux aquanext facile 240 sys 242",
+    "marca": "CHAFFOTEAUX",
+    "modello": "AQUANEXT FACILE 240 SYS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 242,
+      "potenza_kw": 1.32,
+      "cop": 2.64
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-aquanext-performance-a-200",
+    "search_text": "chaffoteaux aquanext performance a+ 200 202",
+    "marca": "CHAFFOTEAUX",
+    "modello": "AQUANEXT PERFORMANCE A+ 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3069800",
+    "dati_tecnici": {
+      "capacita_litri": 202,
+      "potenza_kw": 1400.0,
+      "cop": 2.8
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-aquanext-performance-a-240",
+    "search_text": "chaffoteaux aquanext performance a+ 240 244",
+    "marca": "CHAFFOTEAUX",
+    "modello": "AQUANEXT PERFORMANCE A+ 240",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3069801",
+    "dati_tecnici": {
+      "capacita_litri": 244,
+      "potenza_kw": 1515.0,
+      "cop": 3.03
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-aquanext-performance-a-240-sys",
+    "search_text": "chaffoteaux aquanext performance a+ 240 sys 239",
+    "marca": "CHAFFOTEAUX",
+    "modello": "AQUANEXT PERFORMANCE A+ 240 SYS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3069802",
+    "dati_tecnici": {
+      "capacita_litri": 239,
+      "potenza_kw": 1485.0,
+      "cop": 2.97
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-aquanext-plus-200",
+    "search_text": "chaffoteaux aquanext plus 200 200",
+    "marca": "CHAFFOTEAUX",
+    "modello": "AQUANEXT PLUS 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 2.14,
+      "cop": 3.05
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-aquanext-plus-250",
+    "search_text": "chaffoteaux aquanext plus 250 250",
+    "marca": "CHAFFOTEAUX",
+    "modello": "AQUANEXT PLUS 250",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 2.35,
+      "cop": 3.35
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-aquanext-plus-250-sys",
+    "search_text": "chaffoteaux aquanext plus 250 sys 245",
+    "marca": "CHAFFOTEAUX",
+    "modello": "AQUANEXT PLUS 250 SYS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 245,
+      "potenza_kw": 2.2,
+      "cop": 3.14
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-aquanext-plus-link-200",
+    "search_text": "chaffoteaux aquanext plus link 200 200",
+    "marca": "CHAFFOTEAUX",
+    "modello": "AQUANEXT PLUS LINK 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3069781",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 3.72,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-aquanext-plus-link-250",
+    "search_text": "chaffoteaux aquanext plus link 250 250",
+    "marca": "CHAFFOTEAUX",
+    "modello": "AQUANEXT PLUS LINK 250",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3069782",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 5.66,
+      "cop": 3.35
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-aquanext-plus-link-250-sys",
+    "search_text": "chaffoteaux aquanext plus link 250 sys 245",
+    "marca": "CHAFFOTEAUX",
+    "modello": "AQUANEXT PLUS LINK 250 SYS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3069783",
+    "dati_tecnici": {
+      "capacita_litri": 245,
+      "potenza_kw": 6.04,
+      "cop": 3.14
+    }
+  },
+  {
+    "id_slug": "clivet-aqua",
+    "search_text": "clivet aqua 176",
+    "marca": "CLIVET",
+    "modello": "AQUA",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "SWAN 190",
+    "dati_tecnici": {
+      "capacita_litri": 176,
+      "potenza_kw": 1.62,
+      "cop": 2.76
+    }
+  },
+  {
+    "id_slug": "clivet-aqua-plus-190",
+    "search_text": "clivet aqua plus 190 176",
+    "marca": "CLIVET",
+    "modello": "AQUA PLUS 190",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "SWAN-2 190",
+    "dati_tecnici": {
+      "capacita_litri": 176,
+      "potenza_kw": 1.62,
+      "cop": 2.76
+    }
+  },
+  {
+    "id_slug": "clivet-aqua-plus-190s",
+    "search_text": "clivet aqua plus 190s 284",
+    "marca": "CLIVET",
+    "modello": "AQUA PLUS 190S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "SWAN-2 190S",
+    "dati_tecnici": {
+      "capacita_litri": 284,
+      "potenza_kw": 2.3,
+      "cop": 3.01
+    }
+  },
+  {
+    "id_slug": "clivet-aqua-plus-300",
+    "search_text": "clivet aqua plus 300 168",
+    "marca": "CLIVET",
+    "modello": "AQUA PLUS 300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "SWAN-2 300",
+    "dati_tecnici": {
+      "capacita_litri": 168,
+      "potenza_kw": 1.62,
+      "cop": 2.76
+    }
+  },
+  {
+    "id_slug": "clivet-aqua-plus-300s",
+    "search_text": "clivet aqua plus 300s 272",
+    "marca": "CLIVET",
+    "modello": "AQUA PLUS 300S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "SWAN-2 300S",
+    "dati_tecnici": {
+      "capacita_litri": 272,
+      "potenza_kw": 2.3,
+      "cop": 3.01
+    }
+  },
+  {
+    "id_slug": "cosmogas-aguamax-300",
+    "search_text": "cosmogas aguamax 300 300",
+    "marca": "COSMOGAS",
+    "modello": "AGUAMAX 300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "AGUAMAX 300",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.68,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "cosmogas-aguamax-3001",
+    "search_text": "cosmogas aguamax 300/1 300",
+    "marca": "COSMOGAS",
+    "modello": "AGUAMAX 300/1",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "AGUAMAX 300/1",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.68,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "daikin-ech2o-split-300-l",
+    "search_text": "daikin ech2o split 300 l 300",
+    "marca": "DAIKIN",
+    "modello": "ECH2O Split 300 l",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "ERWQ02A*V3",
+    "identificativo_unita_interna": "EKHHP300A*2V3",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 2.2,
+      "cop": 2.83
+    }
+  },
+  {
+    "id_slug": "daikin-ech2o-split-500-l",
+    "search_text": "daikin ech2o split 500 l 500",
+    "marca": "DAIKIN",
+    "modello": "ECH2O Split 500 l",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "ERWQ02A*V3",
+    "identificativo_unita_interna": "EKHHP500A*2V3",
+    "dati_tecnici": {
+      "capacita_litri": 500,
+      "potenza_kw": 2.2,
+      "cop": 3.06
+    }
+  },
+  {
+    "id_slug": "daikin-monobloc-dhw-hp-200",
+    "search_text": "daikin monobloc dhw hp 200 200",
+    "marca": "DAIKIN",
+    "modello": "Monobloc DHW HP 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "EKHH2E200AV3",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.82,
+      "cop": 2.9
+    }
+  },
+  {
+    "id_slug": "daikin-monobloc-dhw-hp-260-solar",
+    "search_text": "daikin monobloc dhw hp 260 solar 260",
+    "marca": "DAIKIN",
+    "modello": "Monobloc DHW HP 260 solar",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "EKHH2E260PAV3",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.82,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "daikin-monobloc-dhw-hp-2600",
+    "search_text": "daikin monobloc dhw hp 2600 260",
+    "marca": "DAIKIN",
+    "modello": "Monobloc DHW HP 2600",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "EKHH2E260AV3",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.82,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "daikin-monobloc-dhw-hp-200-l-2-gen",
+    "search_text": "daikin monobloc-dhw hp 200 l 2 gen 200",
+    "marca": "DAIKIN",
+    "modello": "Monobloc-DHW HP 200 l 2 GEN",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "EKHHE200CV3",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.82,
+      "cop": 3.23
+    }
+  },
+  {
+    "id_slug": "daikin-monobloc-dhw-hp-260-l-2-gen",
+    "search_text": "daikin monobloc-dhw hp 260 l 2 gen 260",
+    "marca": "DAIKIN",
+    "modello": "Monobloc-DHW HP 260 l 2 GEN",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "EKHHE260CV3",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.82,
+      "cop": 3.38
+    }
+  },
+  {
+    "id_slug": "daikin-monobloc-dhw-hp-260-l-solar-2-gen",
+    "search_text": "daikin monobloc-dhw hp 260 l solar 2 gen 260",
+    "marca": "DAIKIN",
+    "modello": "Monobloc-DHW HP 260 l Solar 2 Gen",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "EKHHE260PCV3",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.82,
+      "cop": 3.38
+    }
+  },
+  {
+    "id_slug": "elco-italia-aerotop-dhw-200",
+    "search_text": "elco italia aerotop dhw 200 200",
+    "marca": "ELCO ITALIA",
+    "modello": "AEROTOP DHW 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3079060",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 2.14,
+      "cop": 3.05
+    }
+  },
+  {
+    "id_slug": "elco-italia-aerotop-dhw-250",
+    "search_text": "elco italia aerotop dhw 250 250",
+    "marca": "ELCO ITALIA",
+    "modello": "AEROTOP DHW 250",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3079061",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 2.35,
+      "cop": 3.35
+    }
+  },
+  {
+    "id_slug": "elco-italia-aerotop-dhw-250-sys",
+    "search_text": "elco italia aerotop dhw 250 sys 245",
+    "marca": "ELCO ITALIA",
+    "modello": "AEROTOP DHW 250 SYS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3079062",
+    "dati_tecnici": {
+      "capacita_litri": 245,
+      "potenza_kw": 2.2,
+      "cop": 3.14
+    }
+  },
+  {
+    "id_slug": "elco-italia-spa-aerotop-dhw-2002",
+    "search_text": "elco italia s.p.a. aerotop dhw 200.2 200",
+    "marca": "Elco Italia S.p.A.",
+    "modello": "AEROTOP DHW 200.2",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "3079060",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 2.14,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "elco-italia-spa-aerotop-dhw-2502",
+    "search_text": "elco italia s.p.a. aerotop dhw 250.2 250",
+    "marca": "Elco Italia S.p.A.",
+    "modello": "AEROTOP DHW 250.2",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "3079061",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 2.35,
+      "cop": 3.35
+    }
+  },
+  {
+    "id_slug": "elco-italia-spa-aerotop-dhw-2502-sys",
+    "search_text": "elco italia s.p.a. aerotop dhw 250.2 sys 245",
+    "marca": "Elco Italia S.p.A.",
+    "modello": "AEROTOP DHW 250.2 SYS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "3079062",
+    "dati_tecnici": {
+      "capacita_litri": 245,
+      "potenza_kw": 2.2,
+      "cop": 3.14
+    }
+  },
+  {
+    "id_slug": "emmeti-eq-1015-w",
+    "search_text": "emmeti eq 1015 w 100",
+    "marca": "EMMETI",
+    "modello": "EQ 1015 W",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "07239715",
+    "dati_tecnici": {
+      "capacita_litri": 100,
+      "potenza_kw": 0.76,
+      "cop": 3.65
+    }
+  },
+  {
+    "id_slug": "emmeti-eq-1123",
+    "search_text": "emmeti eq 1123 110",
+    "marca": "EMMETI",
+    "modello": "EQ 1123",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "---",
+    "identificativo_unita_interna": "07239721",
+    "dati_tecnici": {
+      "capacita_litri": 110,
+      "potenza_kw": 750.0,
+      "cop": 2.61
+    }
+  },
+  {
+    "id_slug": "emmeti-eq-2014",
+    "search_text": "emmeti eq 2014 200",
+    "marca": "EMMETI",
+    "modello": "EQ 2014",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "07239605",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.37,
+      "cop": 3.04
+    }
+  },
+  {
+    "id_slug": "emmeti-eq-2014-es",
+    "search_text": "emmeti eq 2014 es 300",
+    "marca": "EMMETI",
+    "modello": "EQ 2014 ES",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "07239635",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.24,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "emmeti-eq-2018",
+    "search_text": "emmeti eq 2018 200",
+    "marca": "EMMETI",
+    "modello": "EQ 2018",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "07239607",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.77,
+      "cop": 3.55
+    }
+  },
+  {
+    "id_slug": "emmeti-eq-2021",
+    "search_text": "emmeti eq 2021 190",
+    "marca": "EMMETI",
+    "modello": "EQ 2021",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "---",
+    "identificativo_unita_interna": "07239608",
+    "dati_tecnici": {
+      "capacita_litri": 190,
+      "potenza_kw": 1.4,
+      "cop": 3.8
+    }
+  },
+  {
+    "id_slug": "emmeti-eq-3014-es",
+    "search_text": "emmeti eq 3014 es 343",
+    "marca": "EMMETI",
+    "modello": "EQ 3014 ES",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "07239635",
+    "dati_tecnici": {
+      "capacita_litri": 343,
+      "potenza_kw": 1.93,
+      "cop": 3.29
+    }
+  },
+  {
+    "id_slug": "emmeti-eq-3018-es",
+    "search_text": "emmeti eq 3018 es 300",
+    "marca": "EMMETI",
+    "modello": "EQ 3018 ES",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "07239637",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.7,
+      "cop": 3.7
+    }
+  },
+  {
+    "id_slug": "emmeti-eq-3021-es",
+    "search_text": "emmeti eq 3021 es 270",
+    "marca": "EMMETI",
+    "modello": "EQ 3021 ES",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "---",
+    "identificativo_unita_interna": "07239638",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 1.5,
+      "cop": 4.21
+    }
+  },
+  {
+    "id_slug": "ferroli-egea-120-lt",
+    "search_text": "ferroli egea 120 lt 120",
+    "marca": "Ferroli",
+    "modello": "EGEA 120 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2COBA01F",
+    "dati_tecnici": {
+      "capacita_litri": 120,
+      "potenza_kw": 0.83,
+      "cop": 2.7
+    }
+  },
+  {
+    "id_slug": "ferroli-egea-200-ht",
+    "search_text": "ferroli egea 200 ht 200",
+    "marca": "Ferroli",
+    "modello": "EGEA 200 HT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2COBA02F",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.6,
+      "cop": 2.8
+    }
+  },
+  {
+    "id_slug": "ferroli-egea-200-lt",
+    "search_text": "ferroli egea 200 lt 200",
+    "marca": "Ferroli",
+    "modello": "EGEA 200 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2COBA04F",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.82,
+      "cop": 3.23
+    }
+  },
+  {
+    "id_slug": "ferroli-egea-200-lt-s",
+    "search_text": "ferroli egea 200 lt-s 200",
+    "marca": "Ferroli",
+    "modello": "EGEA 200 LT-S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2COBA06F",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.82,
+      "cop": 3.23
+    }
+  },
+  {
+    "id_slug": "ferroli-egea-260-ht",
+    "search_text": "ferroli egea 260 ht 260",
+    "marca": "Ferroli",
+    "modello": "EGEA 260 HT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2COBA03F",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.6,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "ferroli-egea-260-lt",
+    "search_text": "ferroli egea 260 lt 260",
+    "marca": "Ferroli",
+    "modello": "EGEA 260 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2COBA05F",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.82,
+      "cop": 3.37
+    }
+  },
+  {
+    "id_slug": "ferroli-egea-260-lt-s",
+    "search_text": "ferroli egea 260 lt-s 260",
+    "marca": "Ferroli",
+    "modello": "EGEA 260 LT-S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2COBA07F",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.82,
+      "cop": 3.37
+    }
+  },
+  {
+    "id_slug": "ferroli-egea-90-lt",
+    "search_text": "ferroli egea 90 lt 90",
+    "marca": "Ferroli",
+    "modello": "EGEA 90 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2COBA00F",
+    "dati_tecnici": {
+      "capacita_litri": 90,
+      "potenza_kw": 0.83,
+      "cop": 2.61
+    }
+  },
+  {
+    "id_slug": "ferroli-egea-tech-120-lt",
+    "search_text": "ferroli egea tech 120 lt 120",
+    "marca": "Ferroli",
+    "modello": "EGEA TECH 120 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2CP0021F",
+    "dati_tecnici": {
+      "capacita_litri": 120,
+      "potenza_kw": 0.61,
+      "cop": 2.62
+    }
+  },
+  {
+    "id_slug": "ferroli-egea-tech-200-ht",
+    "search_text": "ferroli egea tech 200 ht 200",
+    "marca": "Ferroli",
+    "modello": "EGEA TECH 200 HT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2CP0022F",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.25,
+      "cop": 2.8
+    }
+  },
+  {
+    "id_slug": "ferroli-egea-tech-200-lt",
+    "search_text": "ferroli egea tech 200 lt 200",
+    "marca": "Ferroli",
+    "modello": "EGEA TECH 200 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2CP0024F",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.34,
+      "cop": 3.23
+    }
+  },
+  {
+    "id_slug": "ferroli-egea-tech-200-lt-s",
+    "search_text": "ferroli egea tech 200 lt-s 200",
+    "marca": "Ferroli",
+    "modello": "EGEA TECH 200 LT-S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2CP0026F",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.34,
+      "cop": 3.23
+    }
+  },
+  {
+    "id_slug": "ferroli-egea-tech-260-ht",
+    "search_text": "ferroli egea tech 260 ht 260",
+    "marca": "Ferroli",
+    "modello": "EGEA TECH 260 HT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2CP0023F",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.28,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "ferroli-egea-tech-260-lt",
+    "search_text": "ferroli egea tech 260 lt 260",
+    "marca": "Ferroli",
+    "modello": "EGEA TECH 260 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2CP0025F",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.25,
+      "cop": 3.37
+    }
+  },
+  {
+    "id_slug": "ferroli-egea-tech-260-lt-s",
+    "search_text": "ferroli egea tech 260 lt-s 260",
+    "marca": "Ferroli",
+    "modello": "EGEA TECH 260 LT-S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2CP0027F",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.25,
+      "cop": 3.37
+    }
+  },
+  {
+    "id_slug": "ferroli-egea-tech-90-lt",
+    "search_text": "ferroli egea tech 90 lt 90",
+    "marca": "Ferroli",
+    "modello": "EGEA TECH 90 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2CP0020F",
+    "dati_tecnici": {
+      "capacita_litri": 90,
+      "potenza_kw": 0.61,
+      "cop": 2.88
+    }
+  },
+  {
+    "id_slug": "fondital-meloria-100",
+    "search_text": "fondital meloria 100 98",
+    "marca": "FONDITAL",
+    "modello": "MELORIA 100",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "DME0MMX100",
+    "dati_tecnici": {
+      "capacita_litri": 98,
+      "potenza_kw": 850.0,
+      "cop": 2.61
+    }
+  },
+  {
+    "id_slug": "fondital-meloria-150",
+    "search_text": "fondital meloria 150 145",
+    "marca": "FONDITAL",
+    "modello": "MELORIA 150",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "DME0MMX200",
+    "dati_tecnici": {
+      "capacita_litri": 145,
+      "potenza_kw": 1100.0,
+      "cop": 2.67
+    }
+  },
+  {
+    "id_slug": "fondital-meloria-190-s",
+    "search_text": "fondital meloria 190 s 181",
+    "marca": "FONDITAL",
+    "modello": "MELORIA 190 S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "DME0MBS190",
+    "dati_tecnici": {
+      "capacita_litri": 181,
+      "potenza_kw": 1190.0,
+      "cop": 3.13
+    }
+  },
+  {
+    "id_slug": "fondital-meloria-300-s",
+    "search_text": "fondital meloria 300 s 270",
+    "marca": "FONDITAL",
+    "modello": "MELORIA 300 S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "DME0MBS300",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 1510.0,
+      "cop": 3.13
+    }
+  },
+  {
+    "id_slug": "fondital-whps-pdc-300-ds",
+    "search_text": "fondital whps pdc 300 ds + 273",
+    "marca": "FONDITAL",
+    "modello": "WHPS PDC 300 DS +",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "DHPBVPDC01",
+    "dati_tecnici": {
+      "capacita_litri": 273,
+      "potenza_kw": 2.06,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "fondital-whps-pdc-300-ss",
+    "search_text": "fondital whps pdc 300 ss + 278",
+    "marca": "FONDITAL",
+    "modello": "WHPS PDC 300 SS +",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "DHPBVPDC02",
+    "dati_tecnici": {
+      "capacita_litri": 278,
+      "potenza_kw": 2.06,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "haier-scaldacqua-hp110m5-monoblocco",
+    "search_text": "haier scaldacqua hp110m5 monoblocco 102",
+    "marca": "Haier",
+    "modello": "Scaldacqua HP110M5 Monoblocco",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HP110M5",
+    "dati_tecnici": {
+      "capacita_litri": 102,
+      "potenza_kw": 0.64,
+      "cop": 2.74
+    }
+  },
+  {
+    "id_slug": "haier-scaldacqua-hp150m5-monoblocco",
+    "search_text": "haier scaldacqua hp150m5 monoblocco 149",
+    "marca": "Haier",
+    "modello": "Scaldacqua HP150M5 Monoblocco",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HP150M5",
+    "dati_tecnici": {
+      "capacita_litri": 149,
+      "potenza_kw": 0.72,
+      "cop": 3.14
+    }
+  },
+  {
+    "id_slug": "haier-scaldacqua-hp200m3-monoblocco",
+    "search_text": "haier scaldacqua hp200m3 monoblocco 195",
+    "marca": "Haier",
+    "modello": "Scaldacqua HP200M3 Monoblocco",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HP200M3",
+    "dati_tecnici": {
+      "capacita_litri": 195,
+      "potenza_kw": 1.51,
+      "cop": 3.04
+    }
+  },
+  {
+    "id_slug": "haier-scaldacqua-hp200s1",
+    "search_text": "haier scaldacqua hp200s1 195",
+    "marca": "Haier",
+    "modello": "Scaldacqua HP200S1",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "UE1.0-S1",
+    "identificativo_unita_interna": "TS200HE-S1",
+    "dati_tecnici": {
+      "capacita_litri": 195,
+      "potenza_kw": 2.06,
+      "cop": 3.09
+    }
+  },
+  {
+    "id_slug": "haier-scaldacqua-hp250m3-monoblocco",
+    "search_text": "haier scaldacqua hp250m3 monoblocco 246",
+    "marca": "Haier",
+    "modello": "Scaldacqua HP250M3 Monoblocco",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HP250M3",
+    "dati_tecnici": {
+      "capacita_litri": 246,
+      "potenza_kw": 1.5,
+      "cop": 3.02
+    }
+  },
+  {
+    "id_slug": "haier-scaldacqua-hp250m3c-monoblocco",
+    "search_text": "haier scaldacqua hp250m3c monoblocco 240",
+    "marca": "Haier",
+    "modello": "Scaldacqua HP250M3C Monoblocco",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HP250M3C",
+    "dati_tecnici": {
+      "capacita_litri": 240,
+      "potenza_kw": 1.54,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "haier-scaldacqua-hp300s1",
+    "search_text": "haier scaldacqua hp300s1 293",
+    "marca": "Haier",
+    "modello": "Scaldacqua HP300S1",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "UE1.5-S1",
+    "identificativo_unita_interna": "TS300HE-S1",
+    "dati_tecnici": {
+      "capacita_litri": 293,
+      "potenza_kw": 2.72,
+      "cop": 3.2
+    }
+  },
+  {
+    "id_slug": "haier-scaldacqua-hp80m5-monoblocco",
+    "search_text": "haier scaldacqua hp80m5 monoblocco 82",
+    "marca": "Haier",
+    "modello": "Scaldacqua HP80M5 Monoblocco",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HP80M5",
+    "dati_tecnici": {
+      "capacita_litri": 82,
+      "potenza_kw": 0.65,
+      "cop": 2.86
+    }
+  },
+  {
+    "id_slug": "haier-scaldacqua-m7-monoblocco-r290",
+    "search_text": "haier scaldacqua m7 monoblocco r290 192",
+    "marca": "Haier",
+    "modello": "Scaldacqua M7 monoblocco R290",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "1046",
+    "identificativo_unita_interna": "HP200M7-F9",
+    "dati_tecnici": {
+      "capacita_litri": 192,
+      "potenza_kw": 1047.0,
+      "cop": 3.27
+    }
+  },
+  {
+    "id_slug": "haier-scaldacqua-m8-monoblocco-r290",
+    "search_text": "haier scaldacqua m8 monoblocco r290 82",
+    "marca": "Haier",
+    "modello": "Scaldacqua M8 monoblocco R290",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "728",
+    "identificativo_unita_interna": "HP80M8-9",
+    "dati_tecnici": {
+      "capacita_litri": 82,
+      "potenza_kw": 728.0,
+      "cop": 2.91
+    }
+  },
+  {
+    "id_slug": "hermann-saunier-duval-magnaaqua-2003",
+    "search_text": "hermann saunier duval magnaaqua 200/3 200",
+    "marca": "HERMANN SAUNIER DUVAL",
+    "modello": "MAGNAAQUA 200/3",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "--",
+    "identificativo_unita_interna": "0010028217",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 0.7,
+      "cop": 3.19
+    }
+  },
+  {
+    "id_slug": "hermann-saunier-duval-magnaaqua-2003-c",
+    "search_text": "hermann saunier duval magnaaqua 200/3 c 200",
+    "marca": "HERMANN SAUNIER DUVAL",
+    "modello": "MAGNAAQUA 200/3 C",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "--",
+    "identificativo_unita_interna": "0010026826",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 0.7,
+      "cop": 2.99
+    }
+  },
+  {
+    "id_slug": "hermann-saunier-duval-magnaaqua-2703",
+    "search_text": "hermann saunier duval magnaaqua 270/3 270",
+    "marca": "HERMANN SAUNIER DUVAL",
+    "modello": "MAGNAAQUA 270/3",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "--",
+    "identificativo_unita_interna": "0010026828",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 0.7,
+      "cop": 3.14
+    }
+  },
+  {
+    "id_slug": "hermann-saunier-duval-magnaaqua-2703-c",
+    "search_text": "hermann saunier duval magnaaqua 270/3 c 270",
+    "marca": "HERMANN SAUNIER DUVAL",
+    "modello": "MAGNAAQUA 270/3 C",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "--",
+    "identificativo_unita_interna": "0010026829",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 0.7,
+      "cop": 3.0
+    }
+  },
+  {
+    "id_slug": "hisense-dhw-hp",
+    "search_text": "hisense dhw hp 200",
+    "marca": "Hisense",
+    "modello": "DHW HP",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "AH-200NH4GHB",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 2.4,
+      "cop": 3.75
+    }
+  },
+  {
+    "id_slug": "hitachi-ariaacqua",
+    "search_text": "hitachi aria/acqua 262",
+    "marca": "HITACHI",
+    "modello": "ARIA/ACQUA",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "RAW-25NH2A",
+    "identificativo_unita_interna": "TAW-270NH2A",
+    "dati_tecnici": {
+      "capacita_litri": 262,
+      "potenza_kw": 2.5,
+      "cop": 3.09
+    }
+  },
+  {
+    "id_slug": "hitec-pdc-acqua-plus-200-r1-evo",
+    "search_text": "hitec pdc acqua plus 200 r1 evo 200",
+    "marca": "HITEC",
+    "modello": "PDC ACQUA PLUS 200 R1 EVO",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3299201",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.82,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "hitec-pdc-acqua-plus-300-r1-evo",
+    "search_text": "hitec pdc acqua plus 300 r1 evo 260",
+    "marca": "HITEC",
+    "modello": "PDC ACQUA PLUS 300 R1 EVO",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3299301",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.82,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "hitec-pdc-acqua-plus-300-r2-evo",
+    "search_text": "hitec pdc acqua plus 300 r2 evo 260",
+    "marca": "HITEC",
+    "modello": "PDC ACQUA PLUS 300 R2 EVO",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3299302",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.82,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "hoval-aktiengesellschaft-wpe-300",
+    "search_text": "hoval aktiengesellschaft wpe (300) 270",
+    "marca": "Hoval Aktiengesellschaft",
+    "modello": "WPE (300)",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "WPE (300)",
+    "identificativo_unita_interna": "WPE (300)",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 1.78,
+      "cop": 3.61
+    }
+  },
+  {
+    "id_slug": "hoval-aktiengesellschaft-wpef-300",
+    "search_text": "hoval aktiengesellschaft wpef (300) 270",
+    "marca": "Hoval Aktiengesellschaft",
+    "modello": "WPEF (300)",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "WPEF (300)",
+    "identificativo_unita_interna": "WPEF (300)",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 1.78,
+      "cop": 3.61
+    }
+  },
+  {
+    "id_slug": "hoval-aktiengesellschaft-wper-300",
+    "search_text": "hoval aktiengesellschaft wper (300) 258",
+    "marca": "Hoval Aktiengesellschaft",
+    "modello": "WPER (300)",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "WPER (300)",
+    "identificativo_unita_interna": "WPER (300)",
+    "dati_tecnici": {
+      "capacita_litri": 258,
+      "potenza_kw": 1.78,
+      "cop": 3.61
+    }
+  },
+  {
+    "id_slug": "idema-acs-r290",
+    "search_text": "idema acs-r290 98",
+    "marca": "IDEMA",
+    "modello": "ACS-R290",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "ACS-100-R290",
+    "dati_tecnici": {
+      "capacita_litri": 98,
+      "potenza_kw": 0.98,
+      "cop": 2.74
+    }
+  },
+  {
+    "id_slug": "idema-acs-sol",
+    "search_text": "idema acs-sol 200",
+    "marca": "IDEMA",
+    "modello": "ACS-SOL",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "ACS-200-SOL",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 2.02,
+      "cop": 2.76
+    }
+  },
+  {
+    "id_slug": "immergas-rapax-100-v2",
+    "search_text": "immergas rapax 100 v2 100",
+    "marca": "IMMERGAS",
+    "modello": "RAPAX 100 V2",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3.028366",
+    "dati_tecnici": {
+      "capacita_litri": 100,
+      "potenza_kw": 0.87,
+      "cop": 2.75
+    }
+  },
+  {
+    "id_slug": "immergas-rapax-200-sol-v3",
+    "search_text": "immergas rapax 200 sol v3 197",
+    "marca": "IMMERGAS",
+    "modello": "RAPAX 200 SOL V3",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3.030633",
+    "dati_tecnici": {
+      "capacita_litri": 197,
+      "potenza_kw": 2.15,
+      "cop": 3.07
+    }
+  },
+  {
+    "id_slug": "immergas-rapax-200-v3",
+    "search_text": "immergas rapax 200 v3 200",
+    "marca": "IMMERGAS",
+    "modello": "RAPAX 200 V3",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3.030632",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 2.14,
+      "cop": 3.05
+    }
+  },
+  {
+    "id_slug": "immergas-rapax-300-sol-v2",
+    "search_text": "immergas rapax 300 sol v2 270",
+    "marca": "IMMERGAS",
+    "modello": "RAPAX 300 SOL V2",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3.027347",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 1.65,
+      "cop": 3.41
+    }
+  },
+  {
+    "id_slug": "immergas-rapax-300-sol-v3",
+    "search_text": "immergas rapax 300 sol v3 263",
+    "marca": "IMMERGAS",
+    "modello": "RAPAX 300 SOL V3",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3.030073",
+    "dati_tecnici": {
+      "capacita_litri": 263,
+      "potenza_kw": 2.41,
+      "cop": 3.44
+    }
+  },
+  {
+    "id_slug": "immergas-rapax-300-v2",
+    "search_text": "immergas rapax 300 v2 270",
+    "marca": "IMMERGAS",
+    "modello": "RAPAX 300 V2",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3.027346",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 1.65,
+      "cop": 3.41
+    }
+  },
+  {
+    "id_slug": "immergas-rapax-300-v3",
+    "search_text": "immergas rapax 300 v3 270",
+    "marca": "IMMERGAS",
+    "modello": "RAPAX 300 V3",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "3.030072",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 2.53,
+      "cop": 3.61
+    }
+  },
+  {
+    "id_slug": "innovita-akuastore-200-2k",
+    "search_text": "innovita akuastore 200 2k 193",
+    "marca": "INNOVITA",
+    "modello": "AKUASTORE 200 2K",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "AKUASTORE 200 2K",
+    "dati_tecnici": {
+      "capacita_litri": 193,
+      "potenza_kw": 1.8,
+      "cop": 3.83
+    }
+  },
+  {
+    "id_slug": "innovita-akuastore-300-2k-wifi",
+    "search_text": "innovita akuastore 300 2k wifi 284",
+    "marca": "INNOVITA",
+    "modello": "AKUASTORE 300 2K WIFI",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "AKUASTORE 300 2K WIFI",
+    "dati_tecnici": {
+      "capacita_litri": 284,
+      "potenza_kw": 2.42,
+      "cop": 3.88
+    }
+  },
+  {
+    "id_slug": "innovita-akuastore-s-300-2k-wifi",
+    "search_text": "innovita akuastore s 300 2k wifi 284",
+    "marca": "INNOVITA",
+    "modello": "AKUASTORE S 300 2K WIFI",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "AKUASTORE S 300 2K WIFI",
+    "dati_tecnici": {
+      "capacita_litri": 284,
+      "potenza_kw": 2.42,
+      "cop": 3.88
+    }
+  },
+  {
+    "id_slug": "intuis-edel-155-eau",
+    "search_text": "intuis edel 155 eau 150",
+    "marca": "INTUIS",
+    "modello": "EDEL 155 eau",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "EDEL 150 eau",
+    "dati_tecnici": {
+      "capacita_litri": 150,
+      "potenza_kw": 1.48,
+      "cop": 3.7
+    }
+  },
+  {
+    "id_slug": "intuis-edel-200-air",
+    "search_text": "intuis edel 200 air 200",
+    "marca": "INTUIS",
+    "modello": "EDEL 200 air",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "EDEL 200 air",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 2.2,
+      "cop": 3.37
+    }
+  },
+  {
+    "id_slug": "intuis-edel-200-eau",
+    "search_text": "intuis edel 200 eau 200",
+    "marca": "INTUIS",
+    "modello": "EDEL 200 eau",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "EDEL 200 eau",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 2.2,
+      "cop": 4.38
+    }
+  },
+  {
+    "id_slug": "intuis-edel-270-air",
+    "search_text": "intuis edel 270 air 270",
+    "marca": "INTUIS",
+    "modello": "EDEL 270 air",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "EDEL 270 air",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 2.2,
+      "cop": 3.47
+    }
+  },
+  {
+    "id_slug": "intuis-edel-270-eau",
+    "search_text": "intuis edel 270 eau 270",
+    "marca": "INTUIS",
+    "modello": "EDEL 270 eau",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "EDEL 270 eau",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 2.2,
+      "cop": 4.47
+    }
+  },
+  {
+    "id_slug": "italtherm-aquasmart-100",
+    "search_text": "italtherm aquasmart 100 87",
+    "marca": "ITALTHERM",
+    "modello": "Aquasmart 100",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "401160013",
+    "dati_tecnici": {
+      "capacita_litri": 87,
+      "potenza_kw": 1.0,
+      "cop": 2.7
+    }
+  },
+  {
+    "id_slug": "italtherm-aquasmart-100m",
+    "search_text": "italtherm aquasmart 100m 89",
+    "marca": "ITALTHERM",
+    "modello": "Aquasmart 100M",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "401160030",
+    "dati_tecnici": {
+      "capacita_litri": 89,
+      "potenza_kw": 0.83,
+      "cop": 2.6
+    }
+  },
+  {
+    "id_slug": "italtherm-aquasmart-200",
+    "search_text": "italtherm aquasmart 200 200",
+    "marca": "ITALTHERM",
+    "modello": "Aquasmart 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "401160014",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.6,
+      "cop": 2.8
+    }
+  },
+  {
+    "id_slug": "italtherm-aquasmart-200-frost",
+    "search_text": "italtherm aquasmart 200 frost 199",
+    "marca": "ITALTHERM",
+    "modello": "Aquasmart 200 Frost",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "401160016",
+    "dati_tecnici": {
+      "capacita_litri": 199,
+      "potenza_kw": 1.82,
+      "cop": 3.0
+    }
+  },
+  {
+    "id_slug": "italtherm-aquasmart-200-solar",
+    "search_text": "italtherm aquasmart 200 solar 200",
+    "marca": "ITALTHERM",
+    "modello": "Aquasmart 200 Solar",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "401160018",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.6,
+      "cop": 2.8
+    }
+  },
+  {
+    "id_slug": "italtherm-aquasmart-200b",
+    "search_text": "italtherm aquasmart 200b 192",
+    "marca": "ITALTHERM",
+    "modello": "Aquasmart 200B",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "401160031",
+    "dati_tecnici": {
+      "capacita_litri": 192,
+      "potenza_kw": 1.6,
+      "cop": 2.8
+    }
+  },
+  {
+    "id_slug": "italtherm-aquasmart-200b-frost",
+    "search_text": "italtherm aquasmart 200b frost 192",
+    "marca": "ITALTHERM",
+    "modello": "Aquasmart 200B FROST",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "401160032",
+    "dati_tecnici": {
+      "capacita_litri": 192,
+      "potenza_kw": 1.82,
+      "cop": 3.23
+    }
+  },
+  {
+    "id_slug": "italtherm-aquasmart-200b-solar",
+    "search_text": "italtherm aquasmart 200b solar 187",
+    "marca": "ITALTHERM",
+    "modello": "Aquasmart 200B SOLAR",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "401160033",
+    "dati_tecnici": {
+      "capacita_litri": 187,
+      "potenza_kw": 1.82,
+      "cop": 3.23
+    }
+  },
+  {
+    "id_slug": "italtherm-aquasmart-300",
+    "search_text": "italtherm aquasmart 300 260",
+    "marca": "ITALTHERM",
+    "modello": "Aquasmart 300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "401160015",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.6,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "italtherm-aquasmart-300-frost",
+    "search_text": "italtherm aquasmart 300 frost 255",
+    "marca": "ITALTHERM",
+    "modello": "Aquasmart 300 Frost",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "401160017",
+    "dati_tecnici": {
+      "capacita_litri": 255,
+      "potenza_kw": 1.82,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "italtherm-aquasmart-300-solar",
+    "search_text": "italtherm aquasmart 300 solar 260",
+    "marca": "ITALTHERM",
+    "modello": "Aquasmart 300 Solar",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "401160019",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.6,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "italtherm-aquasmart-300b",
+    "search_text": "italtherm aquasmart 300b 250",
+    "marca": "ITALTHERM",
+    "modello": "Aquasmart 300B",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "401160034",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 1.6,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "italtherm-aquasmart-300b-frost",
+    "search_text": "italtherm aquasmart 300b frost 250",
+    "marca": "ITALTHERM",
+    "modello": "Aquasmart 300B FROST",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "401160035",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 1.82,
+      "cop": 3.38
+    }
+  },
+  {
+    "id_slug": "italtherm-aquasmart-300b-solar",
+    "search_text": "italtherm aquasmart 300b solar 247",
+    "marca": "ITALTHERM",
+    "modello": "Aquasmart 300B SOLAR",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "401160036",
+    "dati_tecnici": {
+      "capacita_litri": 247,
+      "potenza_kw": 1.82,
+      "cop": 3.38
+    }
+  },
+  {
+    "id_slug": "jodo-airp-cw200",
+    "search_text": "jodo airp-cw200 228",
+    "marca": "JODO",
+    "modello": "AIRP-CW200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "IRPS0200",
+    "dati_tecnici": {
+      "capacita_litri": 228,
+      "potenza_kw": 2060.0,
+      "cop": 2.64
+    }
+  },
+  {
+    "id_slug": "jodo-airp-cw200s",
+    "search_text": "jodo airp-cw200s 200",
+    "marca": "JODO",
+    "modello": "AIRP-CW200S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "IRPS1200",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 2060.0,
+      "cop": 2.64
+    }
+  },
+  {
+    "id_slug": "jodo-airp-cw200sg",
+    "search_text": "jodo airp-cw200sg 217",
+    "marca": "JODO",
+    "modello": "AIRP-CW200SG",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "IRPS2200",
+    "dati_tecnici": {
+      "capacita_litri": 217,
+      "potenza_kw": 2060.0,
+      "cop": 2.64
+    }
+  },
+  {
+    "id_slug": "jodo-airp-cw300",
+    "search_text": "jodo airp-cw300 286",
+    "marca": "JODO",
+    "modello": "AIRP-CW300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "IRPS0300",
+    "dati_tecnici": {
+      "capacita_litri": 286,
+      "potenza_kw": 2060.0,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "jodo-airp-cw300s",
+    "search_text": "jodo airp-cw300s 278",
+    "marca": "JODO",
+    "modello": "AIRP-CW300S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "IRPS1300",
+    "dati_tecnici": {
+      "capacita_litri": 278,
+      "potenza_kw": 2060.0,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "jodo-airp-cw300sg",
+    "search_text": "jodo airp-cw300sg 273",
+    "marca": "JODO",
+    "modello": "AIRP-CW300SG",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "IRPS2300",
+    "dati_tecnici": {
+      "capacita_litri": 273,
+      "potenza_kw": 2060.0,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "jodo-airp-pcw110",
+    "search_text": "jodo airp-pcw110 110",
+    "marca": "JODO",
+    "modello": "AIRP-PCW110",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "IRPCW110",
+    "dati_tecnici": {
+      "capacita_litri": 110,
+      "potenza_kw": 850.0,
+      "cop": 3.01
+    }
+  },
+  {
+    "id_slug": "johnson-controls-hitachi-lagon-190",
+    "search_text": "johnson controls hitachi lagon 190 180",
+    "marca": "JOHNSON CONTROLS HITACHI",
+    "modello": "Lagon 190",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "JZGG19LVEE-MO-X",
+    "dati_tecnici": {
+      "capacita_litri": 180,
+      "potenza_kw": 1.45,
+      "cop": 2.61
+    }
+  },
+  {
+    "id_slug": "johnson-controls-hitachi-lagon-280",
+    "search_text": "johnson controls hitachi lagon 280 280",
+    "marca": "JOHNSON CONTROLS HITACHI",
+    "modello": "Lagon 280",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "JZGG30LVEE-MO-X",
+    "dati_tecnici": {
+      "capacita_litri": 280,
+      "potenza_kw": 3.0,
+      "cop": 2.9
+    }
+  },
+  {
+    "id_slug": "kronoterm-wp2-lf-202e",
+    "search_text": "kronoterm wp2 lf-202e 200",
+    "marca": "KRONOTERM",
+    "modello": "WP2 LF-202E",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.85,
+      "cop": 4.0
+    }
+  },
+  {
+    "id_slug": "kronoterm-wp2-lf-23a",
+    "search_text": "kronoterm wp2 lf-23a 230",
+    "marca": "KRONOTERM",
+    "modello": "WP2 LF-23A",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 230,
+      "potenza_kw": 1.85,
+      "cop": 3.3
+    }
+  },
+  {
+    "id_slug": "kronoterm-wp2-lf-302e",
+    "search_text": "kronoterm wp2 lf-302e 270",
+    "marca": "KRONOTERM",
+    "modello": "WP2 LF-302E",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 1.85,
+      "cop": 4.0
+    }
+  },
+  {
+    "id_slug": "kronoterm-wp2-lf-30a",
+    "search_text": "kronoterm wp2 lf-30a 300",
+    "marca": "KRONOTERM",
+    "modello": "WP2 LF-30A",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.85,
+      "cop": 3.3
+    }
+  },
+  {
+    "id_slug": "kronoterm-wp4-lf-502",
+    "search_text": "kronoterm wp4 lf-502 450",
+    "marca": "KRONOTERM",
+    "modello": "WP4 LF-502",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 450,
+      "potenza_kw": 3.83,
+      "cop": 3.9
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-dora-120-lt",
+    "search_text": "lamborghini caloreclima dora 120 lt 120",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "DORA 120 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2COBA01L",
+    "dati_tecnici": {
+      "capacita_litri": 120,
+      "potenza_kw": 0.83,
+      "cop": 2.7
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-dora-200-ht",
+    "search_text": "lamborghini caloreclima dora 200 ht 200",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "DORA 200 HT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2COBA02L",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.6,
+      "cop": 2.8
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-dora-200-lt",
+    "search_text": "lamborghini caloreclima dora 200 lt 200",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "DORA 200 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2COBA04L",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.82,
+      "cop": 3.23
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-dora-200-lt-s",
+    "search_text": "lamborghini caloreclima dora 200 lt-s 200",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "DORA 200 LT-S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2COBA06L",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.82,
+      "cop": 3.23
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-dora-260-ht",
+    "search_text": "lamborghini caloreclima dora 260 ht 260",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "DORA 260 HT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2COBA03L",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.6,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-dora-260-lt",
+    "search_text": "lamborghini caloreclima dora 260 lt 260",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "DORA 260 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2COBA05L",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.82,
+      "cop": 3.37
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-dora-260-lt-s",
+    "search_text": "lamborghini caloreclima dora 260 lt-s 260",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "DORA 260 LT-S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2COBA07L",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.82,
+      "cop": 3.37
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-dora-90-lt",
+    "search_text": "lamborghini caloreclima dora 90 lt 90",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "DORA 90 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2COBA00L",
+    "dati_tecnici": {
+      "capacita_litri": 90,
+      "potenza_kw": 0.83,
+      "cop": 2.61
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-dora-tech-120-lt",
+    "search_text": "lamborghini caloreclima dora tech 120 lt 120",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "DORA TECH 120 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2CP0021L",
+    "dati_tecnici": {
+      "capacita_litri": 120,
+      "potenza_kw": 0.61,
+      "cop": 2.62
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-dora-tech-200-ht",
+    "search_text": "lamborghini caloreclima dora tech 200 ht 200",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "DORA TECH 200 HT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2CP0022L",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.25,
+      "cop": 2.8
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-dora-tech-200-lt",
+    "search_text": "lamborghini caloreclima dora tech 200 lt 200",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "DORA TECH 200 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2CP0024L",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.34,
+      "cop": 3.23
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-dora-tech-200-lt-s",
+    "search_text": "lamborghini caloreclima dora tech 200 lt-s 200",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "DORA TECH 200 LT-S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2CP0026L",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.34,
+      "cop": 3.23
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-dora-tech-260-ht",
+    "search_text": "lamborghini caloreclima dora tech 260 ht 260",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "DORA TECH 260 HT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2CP0023L",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.28,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-dora-tech-260-lt",
+    "search_text": "lamborghini caloreclima dora tech 260 lt 260",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "DORA TECH 260 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2CP0025L",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.25,
+      "cop": 3.37
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-dora-tech-260-lt-s",
+    "search_text": "lamborghini caloreclima dora tech 260 lt-s 260",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "DORA TECH 260 LT-S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2CP0027L",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.25,
+      "cop": 3.37
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-dora-tech-90-lt",
+    "search_text": "lamborghini caloreclima dora tech 90 lt 90",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "DORA TECH 90 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "2CP0020L",
+    "dati_tecnici": {
+      "capacita_litri": 90,
+      "potenza_kw": 0.61,
+      "cop": 2.88
+    }
+  },
+  {
+    "id_slug": "midea-rsj-15190rdn3-f",
+    "search_text": "midea rsj-15/190rdn3-f 180",
+    "marca": "MIDEA",
+    "modello": "RSJ-15/190RDN3-F",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "RSJ-15/190RDN3-F",
+    "dati_tecnici": {
+      "capacita_litri": 180,
+      "potenza_kw": 2.5,
+      "cop": 2.93
+    }
+  },
+  {
+    "id_slug": "midea-rsj-35300rdn3-f1",
+    "search_text": "midea rsj-35/300rdn3-f1 280",
+    "marca": "MIDEA",
+    "modello": "RSJ-35/300RDN3-F1",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "RSJ-35/300RDN3-F1",
+    "dati_tecnici": {
+      "capacita_litri": 280,
+      "potenza_kw": 2.6,
+      "cop": 2.87
+    }
+  },
+  {
+    "id_slug": "olimpia-splendid-sherpa-shw-200",
+    "search_text": "olimpia splendid sherpa shw 200 200",
+    "marca": "OLIMPIA SPLENDID",
+    "modello": "SHERPA SHW 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "1809",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.87,
+      "cop": 2.6
+    }
+  },
+  {
+    "id_slug": "olimpia-splendid-sherpa-shw-300s",
+    "search_text": "olimpia splendid sherpa shw 300s 300",
+    "marca": "OLIMPIA SPLENDID",
+    "modello": "SHERPA SHW 300S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "1810",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.87,
+      "cop": 2.6
+    }
+  },
+  {
+    "id_slug": "orca-orca-zeus-230",
+    "search_text": "orca orca zeus 230 230",
+    "marca": "ORCA",
+    "modello": "ORCA ZEUS 230",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "ORCA ZEUS 230",
+    "dati_tecnici": {
+      "capacita_litri": 230,
+      "potenza_kw": 1.8,
+      "cop": 3.0
+    }
+  },
+  {
+    "id_slug": "orca-orca-zeus-300",
+    "search_text": "orca orca zeus 300 300",
+    "marca": "ORCA",
+    "modello": "ORCA ZEUS 300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "ORCA ZEUS 300",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.8,
+      "cop": 3.3
+    }
+  },
+  {
+    "id_slug": "orca-orca-zeus-plus-230",
+    "search_text": "orca orca zeus plus 230 230",
+    "marca": "ORCA",
+    "modello": "ORCA ZEUS PLUS 230",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "ORCA ZEUS PLUS 230",
+    "dati_tecnici": {
+      "capacita_litri": 230,
+      "potenza_kw": 1.8,
+      "cop": 3.0
+    }
+  },
+  {
+    "id_slug": "orca-orca-zeus-plus-300",
+    "search_text": "orca orca zeus plus 300 300",
+    "marca": "ORCA",
+    "modello": "ORCA ZEUS PLUS 300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "ORCA ZEUS PLUS 300",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.8,
+      "cop": 3.3
+    }
+  },
+  {
+    "id_slug": "panasonic-dhw-stand-alone",
+    "search_text": "panasonic dhw stand alone 100",
+    "marca": "PANASONIC",
+    "modello": "DHW Stand Alone",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "PAW-DHW100W-1",
+    "dati_tecnici": {
+      "capacita_litri": 100,
+      "potenza_kw": 0.73,
+      "cop": 2.66
+    }
+  },
+  {
+    "id_slug": "paradigma-italia-libra-easy-260-hs",
+    "search_text": "paradigma italia libra easy - 260 hs 260",
+    "marca": "PARADIGMA ITALIA",
+    "modello": "Libra Easy - 260 HS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "03-0355",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 4.35,
+      "cop": 3.0
+    }
+  },
+  {
+    "id_slug": "paradigma-italia-libra-easy-260-ls",
+    "search_text": "paradigma italia libra easy - 260 ls 260",
+    "marca": "PARADIGMA ITALIA",
+    "modello": "Libra Easy - 260 LS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "03-0350",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 3.4,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "paradigma-italia-libra-easy-250-h",
+    "search_text": "paradigma italia libra easy 250 h 243",
+    "marca": "Paradigma Italia",
+    "modello": "Libra Easy 250 H",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "03-0354",
+    "dati_tecnici": {
+      "capacita_litri": 243,
+      "potenza_kw": 1410.0,
+      "cop": 3.54
+    }
+  },
+  {
+    "id_slug": "paradigma-italia-spa-libra-easy-200",
+    "search_text": "paradigma italia spa libra easy 200 196",
+    "marca": "Paradigma Italia SpA",
+    "modello": "Libra Easy 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "03-0351",
+    "dati_tecnici": {
+      "capacita_litri": 196,
+      "potenza_kw": 1.46,
+      "cop": 3.63
+    }
+  },
+  {
+    "id_slug": "paradigma-italia-spa-libra-easy-200-h",
+    "search_text": "paradigma italia spa libra easy 200 h 188",
+    "marca": "Paradigma Italia SpA",
+    "modello": "Libra Easy 200 H",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "03-0352",
+    "dati_tecnici": {
+      "capacita_litri": 188,
+      "potenza_kw": 1.48,
+      "cop": 3.33
+    }
+  },
+  {
+    "id_slug": "radiant-bruciatori-nettuno-110",
+    "search_text": "radiant bruciatori nettuno 110 110",
+    "marca": "Radiant Bruciatori",
+    "modello": "NETTUNO 110",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "NETTUNO 110",
+    "dati_tecnici": {
+      "capacita_litri": 110,
+      "potenza_kw": 0.85,
+      "cop": 2.62
+    }
+  },
+  {
+    "id_slug": "radiant-bruciatori-nettuno-200",
+    "search_text": "radiant bruciatori nettuno 200 228",
+    "marca": "Radiant Bruciatori",
+    "modello": "NETTUNO 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "NETTUNO 200",
+    "dati_tecnici": {
+      "capacita_litri": 228,
+      "potenza_kw": 2.06,
+      "cop": 2.64
+    }
+  },
+  {
+    "id_slug": "radiant-bruciatori-nettuno-200d",
+    "search_text": "radiant bruciatori nettuno 200d 217",
+    "marca": "Radiant Bruciatori",
+    "modello": "NETTUNO 200D",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "NETTUNO 200D",
+    "dati_tecnici": {
+      "capacita_litri": 217,
+      "potenza_kw": 2.06,
+      "cop": 2.64
+    }
+  },
+  {
+    "id_slug": "radiant-bruciatori-nettuno-200s",
+    "search_text": "radiant bruciatori nettuno 200s 220",
+    "marca": "Radiant Bruciatori",
+    "modello": "NETTUNO 200S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "NETTUNO 200S",
+    "dati_tecnici": {
+      "capacita_litri": 220,
+      "potenza_kw": 2.06,
+      "cop": 2.64
+    }
+  },
+  {
+    "id_slug": "radiant-bruciatori-nettuno-300",
+    "search_text": "radiant bruciatori nettuno 300 286",
+    "marca": "Radiant Bruciatori",
+    "modello": "NETTUNO 300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "NETTUNO 300",
+    "dati_tecnici": {
+      "capacita_litri": 286,
+      "potenza_kw": 2.06,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "radiant-bruciatori-nettuno-300d",
+    "search_text": "radiant bruciatori nettuno 300d 273",
+    "marca": "Radiant Bruciatori",
+    "modello": "NETTUNO 300D",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "NETTUNO 300D",
+    "dati_tecnici": {
+      "capacita_litri": 273,
+      "potenza_kw": 2.06,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "radiant-bruciatori-nettuno-300s",
+    "search_text": "radiant bruciatori nettuno 300s 278",
+    "marca": "Radiant Bruciatori",
+    "modello": "NETTUNO 300S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "NETTUNO 300S",
+    "dati_tecnici": {
+      "capacita_litri": 278,
+      "potenza_kw": 2.06,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "rhoss-electa_san_twcz_b_200",
+    "search_text": "rhoss electa_san_twcz_b_200 228",
+    "marca": "RHOSS",
+    "modello": "Electa_SAN_TWCZ_B_200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 228,
+      "potenza_kw": 1.87,
+      "cop": 2.64
+    }
+  },
+  {
+    "id_slug": "rhoss-electa_san_twcz_b_300",
+    "search_text": "rhoss electa_san_twcz_b_300 286",
+    "marca": "RHOSS",
+    "modello": "Electa_SAN_TWCZ_B_300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 286,
+      "potenza_kw": 1.87,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "rhoss-electa_san_twcz_s_200",
+    "search_text": "rhoss electa_san_twcz_s_200 220",
+    "marca": "RHOSS",
+    "modello": "Electa_SAN_TWCZ_S_200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 220,
+      "potenza_kw": 1.87,
+      "cop": 2.64
+    }
+  },
+  {
+    "id_slug": "rhoss-electa_san_twcz_s_300",
+    "search_text": "rhoss electa_san_twcz_s_300 278",
+    "marca": "RHOSS",
+    "modello": "Electa_SAN_TWCZ_S_300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 278,
+      "potenza_kw": 1.87,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "rhoss-electa-san-plus_twctz_b_200",
+    "search_text": "rhoss electa-san-plus_twctz_b_200 180",
+    "marca": "RHOSS",
+    "modello": "Electa-SAN-Plus_TWCTZ_B_200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 180,
+      "potenza_kw": 1.8,
+      "cop": 3.14
+    }
+  },
+  {
+    "id_slug": "rhoss-electa-san-plus_twctz_b_300",
+    "search_text": "rhoss electa-san-plus_twctz_b_300 270",
+    "marca": "RHOSS",
+    "modello": "Electa-SAN-Plus_TWCTZ_B_300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 1.8,
+      "cop": 3.16
+    }
+  },
+  {
+    "id_slug": "rhoss-electa-san-plus_twctz_s_200",
+    "search_text": "rhoss electa-san-plus_twctz_s_200 174",
+    "marca": "RHOSS",
+    "modello": "Electa-SAN-Plus_TWCTZ_S_200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 174,
+      "potenza_kw": 1.8,
+      "cop": 3.14
+    }
+  },
+  {
+    "id_slug": "rhoss-electa-san-plus_twctz_s_300",
+    "search_text": "rhoss electa-san-plus_twctz_s_300 261",
+    "marca": "RHOSS",
+    "modello": "Electa-SAN-Plus_TWCTZ_S_300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 261,
+      "potenza_kw": 1.8,
+      "cop": 3.16
+    }
+  },
+  {
+    "id_slug": "riello-nexaqua-120",
+    "search_text": "riello nexaqua 120 120",
+    "marca": "RIELLO",
+    "modello": "NexAqua 120",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20075562",
+    "dati_tecnici": {
+      "capacita_litri": 120,
+      "potenza_kw": 0.9,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "riello-nexaqua-120-plus",
+    "search_text": "riello nexaqua 120 plus 120",
+    "marca": "RIELLO",
+    "modello": "NexAqua 120 Plus",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20075565",
+    "dati_tecnici": {
+      "capacita_litri": 120,
+      "potenza_kw": 0.9,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "riello-nexaqua-80",
+    "search_text": "riello nexaqua 80 80",
+    "marca": "RIELLO",
+    "modello": "NexAqua 80",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20075560",
+    "dati_tecnici": {
+      "capacita_litri": 80,
+      "potenza_kw": 0.87,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "riello-nexaqua-80-plus",
+    "search_text": "riello nexaqua 80 plus 80",
+    "marca": "RIELLO",
+    "modello": "NexAqua 80 Plus",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20075563",
+    "dati_tecnici": {
+      "capacita_litri": 80,
+      "potenza_kw": 0.87,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "riello-nexpro-180-acs",
+    "search_text": "riello nexpro 180 acs 178",
+    "marca": "RIELLO",
+    "modello": "NexPro 180 ACS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 178,
+      "potenza_kw": 1.23,
+      "cop": 2.86
+    }
+  },
+  {
+    "id_slug": "riello-nexpro-250-acs",
+    "search_text": "riello nexpro 250 acs 254",
+    "marca": "RIELLO",
+    "modello": "NexPro 250 ACS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 254,
+      "potenza_kw": 1.17,
+      "cop": 3.23
+    }
+  },
+  {
+    "id_slug": "riello-nexpro-250-s-acs",
+    "search_text": "riello nexpro 250 s acs 251",
+    "marca": "RIELLO",
+    "modello": "NexPro 250 S ACS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 251,
+      "potenza_kw": 1.17,
+      "cop": 3.22
+    }
+  },
+  {
+    "id_slug": "riello-nexpro-300-cs-plus",
+    "search_text": "riello nexpro 300 cs plus 290",
+    "marca": "RIELLO",
+    "modello": "NexPro 300 CS Plus",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20125642",
+    "dati_tecnici": {
+      "capacita_litri": 290,
+      "potenza_kw": 1.95,
+      "cop": 2.92
+    }
+  },
+  {
+    "id_slug": "riello-nexpro-300-plus",
+    "search_text": "riello nexpro 300 plus 300",
+    "marca": "RIELLO",
+    "modello": "NexPro 300 Plus",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20125639",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.95,
+      "cop": 2.92
+    }
+  },
+  {
+    "id_slug": "riello-nexpro-300-s-plus",
+    "search_text": "riello nexpro 300 s plus 295",
+    "marca": "RIELLO",
+    "modello": "NexPro 300 S Plus",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20125640",
+    "dati_tecnici": {
+      "capacita_litri": 295,
+      "potenza_kw": 1.95,
+      "cop": 2.92
+    }
+  },
+  {
+    "id_slug": "rinnai-shimanto-sanitary-110",
+    "search_text": "rinnai shimanto sanitary 110 110",
+    "marca": "RINNAI",
+    "modello": "Shimanto Sanitary 110",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "EHP-WH110",
+    "dati_tecnici": {
+      "capacita_litri": 110,
+      "potenza_kw": 0.85,
+      "cop": 2.62
+    }
+  },
+  {
+    "id_slug": "rinnai-shimanto-sanitary-200",
+    "search_text": "rinnai shimanto sanitary 200 228",
+    "marca": "RINNAI",
+    "modello": "Shimanto Sanitary 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "EHP-WH200",
+    "dati_tecnici": {
+      "capacita_litri": 228,
+      "potenza_kw": 2.06,
+      "cop": 2.64
+    }
+  },
+  {
+    "id_slug": "rinnai-shimanto-sanitary-200-con-doppio-serpentino",
+    "search_text": "rinnai shimanto sanitary 200 con doppio serpentino 217",
+    "marca": "RINNAI",
+    "modello": "Shimanto Sanitary 200 con doppio serpentino",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "EHP-WH200-2A",
+    "dati_tecnici": {
+      "capacita_litri": 217,
+      "potenza_kw": 2.06,
+      "cop": 2.64
+    }
+  },
+  {
+    "id_slug": "rinnai-shimanto-sanitary-200-con-serpentino",
+    "search_text": "rinnai shimanto sanitary 200 con serpentino 220",
+    "marca": "RINNAI",
+    "modello": "Shimanto Sanitary 200 con serpentino",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "EHP-WH200-1A",
+    "dati_tecnici": {
+      "capacita_litri": 220,
+      "potenza_kw": 2.06,
+      "cop": 2.64
+    }
+  },
+  {
+    "id_slug": "rinnai-shimanto-sanitary-300",
+    "search_text": "rinnai shimanto sanitary 300 286",
+    "marca": "RINNAI",
+    "modello": "Shimanto Sanitary 300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "EHP-WH300",
+    "dati_tecnici": {
+      "capacita_litri": 286,
+      "potenza_kw": 2.06,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "rinnai-shimanto-sanitary-300-con-doppio-serpentino",
+    "search_text": "rinnai shimanto sanitary 300 con doppio serpentino 273",
+    "marca": "RINNAI",
+    "modello": "Shimanto Sanitary 300 con doppio serpentino",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "EHP-WH300-2A",
+    "dati_tecnici": {
+      "capacita_litri": 273,
+      "potenza_kw": 2.06,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "rinnai-shimanto-sanitary-300-con-serpentino",
+    "search_text": "rinnai shimanto sanitary 300 con serpentino 278",
+    "marca": "RINNAI",
+    "modello": "Shimanto Sanitary 300 con serpentino",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "EHP-WH300-1A",
+    "dati_tecnici": {
+      "capacita_litri": 278,
+      "potenza_kw": 2.06,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "rossato-group-air-combo-pro-100",
+    "search_text": "rossato group air combo pro 100 100",
+    "marca": "ROSSATO GROUP",
+    "modello": "Air Combo PRO 100",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "02AC53100",
+    "dati_tecnici": {
+      "capacita_litri": 100,
+      "potenza_kw": 2.05,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "rossato-group-air-combo-pro-200",
+    "search_text": "rossato group air combo pro 200 208",
+    "marca": "ROSSATO GROUP",
+    "modello": "Air Combo PRO 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "02AC53200",
+    "dati_tecnici": {
+      "capacita_litri": 208,
+      "potenza_kw": 3.95,
+      "cop": 3.07
+    }
+  },
+  {
+    "id_slug": "rossato-group-air-combo-pro-200-s",
+    "search_text": "rossato group air combo pro 200 s 194",
+    "marca": "ROSSATO GROUP",
+    "modello": "Air Combo PRO 200 S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "02AC53201",
+    "dati_tecnici": {
+      "capacita_litri": 194,
+      "potenza_kw": 3.86,
+      "cop": 3.12
+    }
+  },
+  {
+    "id_slug": "rossato-group-air-combo-pro-300",
+    "search_text": "rossato group air combo pro 300 295",
+    "marca": "ROSSATO GROUP",
+    "modello": "Air Combo PRO 300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "02AC53300",
+    "dati_tecnici": {
+      "capacita_litri": 295,
+      "potenza_kw": 5.56,
+      "cop": 3.39
+    }
+  },
+  {
+    "id_slug": "rossato-group-air-combo-pro-300-s",
+    "search_text": "rossato group air combo pro 300 s 276",
+    "marca": "ROSSATO GROUP",
+    "modello": "Air Combo PRO 300 S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "02AC53301",
+    "dati_tecnici": {
+      "capacita_litri": 276,
+      "potenza_kw": 5.75,
+      "cop": 3.38
+    }
+  },
+  {
+    "id_slug": "rossato-spa-air-combo-evo-200",
+    "search_text": "rossato s.p.a. air combo evo 200 176",
+    "marca": "Rossato S.p.A.",
+    "modello": "Air Combo EVO 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "02AC51200",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 176,
+      "potenza_kw": 2310.0,
+      "cop": 2.76
+    }
+  },
+  {
+    "id_slug": "rossato-spa-air-combo-evo-200-s",
+    "search_text": "rossato s.p.a. air combo evo 200 s 168",
+    "marca": "Rossato S.p.A.",
+    "modello": "Air Combo EVO 200 S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "02AC51201",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 168,
+      "potenza_kw": 2310.0,
+      "cop": 2.76
+    }
+  },
+  {
+    "id_slug": "rossato-spa-air-combo-evo-300",
+    "search_text": "rossato s.p.a. air combo evo 300 284",
+    "marca": "Rossato S.p.A.",
+    "modello": "Air Combo EVO 300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "02AC51300",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 284,
+      "potenza_kw": 3250.0,
+      "cop": 3.01
+    }
+  },
+  {
+    "id_slug": "rossato-spa-air-combo-evo-300-s",
+    "search_text": "rossato s.p.a. air combo evo 300 s 272",
+    "marca": "Rossato S.p.A.",
+    "modello": "Air Combo EVO 300 S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "02AC51301",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 272,
+      "potenza_kw": 3250.0,
+      "cop": 3.01
+    }
+  },
+  {
+    "id_slug": "sic-compact-cre-pel-275",
+    "search_text": "sic compact cre-pel 275 275",
+    "marca": "SIC",
+    "modello": "COMPACT CRE-PEL 275",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "COMPACT CRE-PEL 275",
+    "dati_tecnici": {
+      "capacita_litri": 275,
+      "potenza_kw": 1.95,
+      "cop": 2.91
+    }
+  },
+  {
+    "id_slug": "sic-compact-cre-pep-275",
+    "search_text": "sic compact cre-pep 275 265",
+    "marca": "SIC",
+    "modello": "COMPACT CRE-PEP 275",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "COMPACT CRE-PEP 275",
+    "dati_tecnici": {
+      "capacita_litri": 265,
+      "potenza_kw": 1.95,
+      "cop": 2.91
+    }
+  },
+  {
+    "id_slug": "sic-compact-cre-pww-275",
+    "search_text": "sic compact cre-pww 275 268",
+    "marca": "SIC",
+    "modello": "COMPACT CRE-PWW 275",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "COMPACT CRE-PWW 275",
+    "dati_tecnici": {
+      "capacita_litri": 268,
+      "potenza_kw": 1.95,
+      "cop": 2.91
+    }
+  },
+  {
+    "id_slug": "sime-ecomaxi-va-110",
+    "search_text": "sime ecomaxi va 110 110",
+    "marca": "SIME",
+    "modello": "Ecomaxi VA 110",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "Ecomaxi VA 110",
+    "dati_tecnici": {
+      "capacita_litri": 110,
+      "potenza_kw": 0.85,
+      "cop": 2.62
+    }
+  },
+  {
+    "id_slug": "sime-ecomaxi-va-200",
+    "search_text": "sime ecomaxi va 200 228",
+    "marca": "SIME",
+    "modello": "Ecomaxi VA 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "Ecomaxi VA 200",
+    "dati_tecnici": {
+      "capacita_litri": 228,
+      "potenza_kw": 2.06,
+      "cop": 2.64
+    }
+  },
+  {
+    "id_slug": "sime-ecomaxi-va-300",
+    "search_text": "sime ecomaxi va 300 286",
+    "marca": "SIME",
+    "modello": "Ecomaxi VA 300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "Ecomaxi VA 300",
+    "dati_tecnici": {
+      "capacita_litri": 286,
+      "potenza_kw": 2.06,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "sime-ecomaxi-va-300-s",
+    "search_text": "sime ecomaxi va 300 s 278",
+    "marca": "SIME",
+    "modello": "Ecomaxi VA 300 S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "Ecomaxi VA 300 S",
+    "dati_tecnici": {
+      "capacita_litri": 278,
+      "potenza_kw": 2.06,
+      "cop": 2.85
+    }
+  },
+  {
+    "id_slug": "sime-ecomaxi-vb-200",
+    "search_text": "sime ecomaxi vb 200 200",
+    "marca": "Sime",
+    "modello": "ECOMAXI VB 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "ECOMAXI VB 200",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 2.4,
+      "cop": 2.79
+    }
+  },
+  {
+    "id_slug": "sime-ecomaxi-vb-200-s",
+    "search_text": "sime ecomaxi vb 200 s 200",
+    "marca": "SIME",
+    "modello": "ECOMAXI VB 200 S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "ECOMAXI VB 200 S",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 2.4,
+      "cop": 2.79
+    }
+  },
+  {
+    "id_slug": "sime-ecomaxi-vb-300",
+    "search_text": "sime ecomaxi vb 300 301",
+    "marca": "Sime",
+    "modello": "ECOMAXI VB 300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "ECOMAXI VB 300",
+    "dati_tecnici": {
+      "capacita_litri": 301,
+      "potenza_kw": 2.4,
+      "cop": 2.97
+    }
+  },
+  {
+    "id_slug": "sime-ecomaxi-vb-300-s",
+    "search_text": "sime ecomaxi vb 300 s 303",
+    "marca": "Sime",
+    "modello": "ECOMAXI VB 300 S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "ECOMAXI VB 300 S",
+    "dati_tecnici": {
+      "capacita_litri": 303,
+      "potenza_kw": 2.4,
+      "cop": 2.97
+    }
+  },
+  {
+    "id_slug": "sinclair-split-water-heaters-185l-r410a",
+    "search_text": "sinclair split water heaters 185l r410a 185",
+    "marca": "SINCLAIR",
+    "modello": "SPLIT WATER HEATERS 185L R410A",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "SWH-35ERA2",
+    "identificativo_unita_interna": "SWH-200IRA2",
+    "dati_tecnici": {
+      "capacita_litri": 185,
+      "potenza_kw": 3.5,
+      "cop": 4.1
+    }
+  },
+  {
+    "id_slug": "sinclair-water-heaters-170l-r134a",
+    "search_text": "sinclair water heaters 170l r134a 176",
+    "marca": "SINCLAIR",
+    "modello": "WATER HEATERS 170L R134A",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "SWH-190IRE",
+    "dati_tecnici": {
+      "capacita_litri": 176,
+      "potenza_kw": 1.62,
+      "cop": 3.86
+    }
+  },
+  {
+    "id_slug": "sinclair-water-heaters-170l-r134a-versione-s",
+    "search_text": "sinclair water heaters 170l r134a versione s 168",
+    "marca": "SINCLAIR",
+    "modello": "WATER HEATERS 170L R134A VERSIONE S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "SWH-190IRES",
+    "dati_tecnici": {
+      "capacita_litri": 168,
+      "potenza_kw": 1.62,
+      "cop": 3.86
+    }
+  },
+  {
+    "id_slug": "sinclair-water-heaters-280l-r134a",
+    "search_text": "sinclair water heaters 280l r134a 284",
+    "marca": "SINCLAIR",
+    "modello": "WATER HEATERS 280L R134A",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "SWH-300IRE",
+    "dati_tecnici": {
+      "capacita_litri": 284,
+      "potenza_kw": 2.3,
+      "cop": 4.34
+    }
+  },
+  {
+    "id_slug": "sinclair-water-heaters-280l-r134a-versione-s",
+    "search_text": "sinclair water heaters 280l r134a versione s 272",
+    "marca": "SINCLAIR",
+    "modello": "WATER HEATERS 280L R134A VERSIONE S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "SWH-300IRES",
+    "dati_tecnici": {
+      "capacita_litri": 272,
+      "potenza_kw": 2.3,
+      "cop": 4.34
+    }
+  },
+  {
+    "id_slug": "solex-maxi-160l",
+    "search_text": "solex maxi 160/l 160",
+    "marca": "SOLEX",
+    "modello": "MAXI 160/L",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "MAXI 160/L",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 160,
+      "potenza_kw": 1.82,
+      "cop": 2.9
+    }
+  },
+  {
+    "id_slug": "solex-maxi-200l",
+    "search_text": "solex maxi 200/l 200",
+    "marca": "SOLEX",
+    "modello": "MAXI 200/L",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "MAXI 200/L",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.82,
+      "cop": 3.0
+    }
+  },
+  {
+    "id_slug": "solex-maxi-200ls",
+    "search_text": "solex maxi 200/ls 200",
+    "marca": "SOLEX",
+    "modello": "MAXI 200/LS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "MAXI 200/LS",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.82,
+      "cop": 3.0
+    }
+  },
+  {
+    "id_slug": "solex-maxi-260l",
+    "search_text": "solex maxi 260/l 260",
+    "marca": "SOLEX",
+    "modello": "MAXI 260/L",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "MAXI 260/L",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.82,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "solex-maxi-260ls",
+    "search_text": "solex maxi 260/ls 260",
+    "marca": "SOLEX",
+    "modello": "MAXI 260/LS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "MAXI 260/LS",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.82,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "solex-maxi-260lsb",
+    "search_text": "solex maxi 260/lsb 260",
+    "marca": "SOLEX",
+    "modello": "MAXI 260/LSB",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "MAXI 260/LSB",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 260,
+      "potenza_kw": 1.82,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "stelbi-pdc-per-acs-tecnoevo-bn-200",
+    "search_text": "stelbi pdc per acs tecnoevo bn 200 228",
+    "marca": "STELBI",
+    "modello": "PdC PER ACS TECNOEVO BN 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "TECNOEVO BN 200",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 228,
+      "potenza_kw": 1.87,
+      "cop": 3.27
+    }
+  },
+  {
+    "id_slug": "stelbi-pdc-per-acs-tecnoevo-bn-200-s1",
+    "search_text": "stelbi pdc per acs tecnoevo bn 200 s1 220",
+    "marca": "STELBI",
+    "modello": "PdC PER ACS TECNOEVO BN 200 S1",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "TECNOEVO BN 200 S1",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 220,
+      "potenza_kw": 1.87,
+      "cop": 3.27
+    }
+  },
+  {
+    "id_slug": "stelbi-pdc-per-acs-tecnoevo-bn-200-s2",
+    "search_text": "stelbi pdc per acs tecnoevo bn 200 s2 217",
+    "marca": "STELBI",
+    "modello": "PdC PER ACS TECNOEVO BN 200 S2",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "TECNOEVO BN 200 S2",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 217,
+      "potenza_kw": 1.87,
+      "cop": 3.27
+    }
+  },
+  {
+    "id_slug": "stelbi-pdc-per-acs-tecnoevo-bn-300",
+    "search_text": "stelbi pdc per acs tecnoevo bn 300 286",
+    "marca": "STELBI",
+    "modello": "PdC PER ACS TECNOEVO BN 300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "TECNOEVO BN 300",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 286,
+      "potenza_kw": 1.87,
+      "cop": 3.27
+    }
+  },
+  {
+    "id_slug": "stelbi-pdc-per-acs-tecnoevo-bn-300-s1",
+    "search_text": "stelbi pdc per acs tecnoevo bn 300 s1 278",
+    "marca": "STELBI",
+    "modello": "PdC PER ACS TECNOEVO BN 300 S1",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "TECNOEVO BN 300 S1",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 278,
+      "potenza_kw": 1.87,
+      "cop": 3.27
+    }
+  },
+  {
+    "id_slug": "stelbi-pdc-per-acs-tecnoevo-bn-300-s2",
+    "search_text": "stelbi pdc per acs tecnoevo bn 300 s2 273",
+    "marca": "STELBI",
+    "modello": "PdC PER ACS TECNOEVO BN 300 S2",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "TECNOEVO BN 300 S2",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 273,
+      "potenza_kw": 1.87,
+      "cop": 3.27
+    }
+  },
+  {
+    "id_slug": "stelbi-pdc-per-acs-tecnoevo-en-100",
+    "search_text": "stelbi pdc per acs tecnoevo en 100 100",
+    "marca": "STELBI",
+    "modello": "PdC PER ACS TECNOEVO EN 100",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "TECNOEVO EN 100",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 100,
+      "potenza_kw": 1.87,
+      "cop": 2.83
+    }
+  },
+  {
+    "id_slug": "stiebel-eltron-shp-a-220-plus",
+    "search_text": "stiebel-eltron shp-a 220 plus 220",
+    "marca": "Stiebel-Eltron",
+    "modello": "SHP-A 220 Plus",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "SHP-A 220 Plus",
+    "dati_tecnici": {
+      "capacita_litri": 220,
+      "potenza_kw": 1.01,
+      "cop": 2.68
+    }
+  },
+  {
+    "id_slug": "stiebel-eltron-shp-a-300-plus",
+    "search_text": "stiebel-eltron shp-a 300 plus 302",
+    "marca": "Stiebel-Eltron",
+    "modello": "SHP-A 300 Plus",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "SHP-A 300 Plus",
+    "dati_tecnici": {
+      "capacita_litri": 302,
+      "potenza_kw": 1.14,
+      "cop": 2.79
+    }
+  },
+  {
+    "id_slug": "stiebel-eltron-shp-a-300-x-plus",
+    "search_text": "stiebel-eltron shp-a 300 x plus 291",
+    "marca": "Stiebel-Eltron",
+    "modello": "SHP-A 300 X Plus",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "SHP-A 300 X Plus",
+    "dati_tecnici": {
+      "capacita_litri": 291,
+      "potenza_kw": 1.07,
+      "cop": 2.75
+    }
+  },
+  {
+    "id_slug": "stiebel-eltron-shp-f-220-premium",
+    "search_text": "stiebel-eltron shp-f 220 premium 220",
+    "marca": "Stiebel-Eltron",
+    "modello": "SHP-F 220 Premium",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "SHP-F 220 Premium",
+    "dati_tecnici": {
+      "capacita_litri": 220,
+      "potenza_kw": 1.08,
+      "cop": 3.07
+    }
+  },
+  {
+    "id_slug": "stiebel-eltron-shp-f-300-premium",
+    "search_text": "stiebel-eltron shp-f 300 premium 302",
+    "marca": "Stiebel-Eltron",
+    "modello": "SHP-F 300 Premium",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "SHP-F 300 Premium",
+    "dati_tecnici": {
+      "capacita_litri": 302,
+      "potenza_kw": 1.3,
+      "cop": 3.22
+    }
+  },
+  {
+    "id_slug": "stiebel-eltron-shp-f-300-x-premium",
+    "search_text": "stiebel-eltron shp-f 300 x premium 291",
+    "marca": "Stiebel-Eltron",
+    "modello": "SHP-F 300 X Premium",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "SHP-F 300 X Premium",
+    "dati_tecnici": {
+      "capacita_litri": 291,
+      "potenza_kw": 1.12,
+      "cop": 2.99
+    }
+  },
+  {
+    "id_slug": "sylber-orionacqua-120",
+    "search_text": "sylber orionacqua 120 80",
+    "marca": "SYLBER",
+    "modello": "ORIONACQUA 120",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20075574",
+    "dati_tecnici": {
+      "capacita_litri": 80,
+      "potenza_kw": 0.87,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "sylber-orionacqua-80",
+    "search_text": "sylber orionacqua 80 80",
+    "marca": "SYLBER",
+    "modello": "ORIONACQUA 80",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20075572",
+    "dati_tecnici": {
+      "capacita_litri": 80,
+      "potenza_kw": 0.87,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "sylber-orionacqua-e-120",
+    "search_text": "sylber orionacqua e 120 120",
+    "marca": "SYLBER",
+    "modello": "ORIONACQUA E 120",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20075577",
+    "dati_tecnici": {
+      "capacita_litri": 120,
+      "potenza_kw": 0.9,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "sylber-orionacqua-e-80",
+    "search_text": "sylber orionacqua e 80 120",
+    "marca": "SYLBER",
+    "modello": "ORIONACQUA E 80",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20075575",
+    "dati_tecnici": {
+      "capacita_litri": 120,
+      "potenza_kw": 0.9,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "tekno-point-zeus-230-1",
+    "search_text": "tekno point zeus 230-1 230",
+    "marca": "Tekno Point",
+    "modello": "ZEUS 230-1",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 230,
+      "potenza_kw": 1.8,
+      "cop": 3.0
+    }
+  },
+  {
+    "id_slug": "tekno-point-zeus-300-1",
+    "search_text": "tekno point zeus 300-1 300",
+    "marca": "Tekno Point",
+    "modello": "ZEUS 300-1",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.8,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "tekno-point-zeus-300-2",
+    "search_text": "tekno point zeus 300-2 300",
+    "marca": "Tekno Point",
+    "modello": "ZEUS 300-2",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.8,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "tekno-point-zeus-b2-200-wifi",
+    "search_text": "tekno point zeus b2 200 wifi 200",
+    "marca": "Tekno Point",
+    "modello": "ZEUS B2 200 WIFI",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.8,
+      "cop": 3.82
+    }
+  },
+  {
+    "id_slug": "tekno-point-zeus-b2-300-wifi",
+    "search_text": "tekno point zeus b2 300 wifi 300",
+    "marca": "Tekno Point",
+    "modello": "ZEUS B2 300 WIFI",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 2.42,
+      "cop": 3.88
+    }
+  },
+  {
+    "id_slug": "tekno-point-zeus-plus-230-1",
+    "search_text": "tekno point zeus plus 230-1 230",
+    "marca": "Tekno Point",
+    "modello": "ZEUS PLUS 230-1",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 230,
+      "potenza_kw": 1.8,
+      "cop": 3.0
+    }
+  },
+  {
+    "id_slug": "tekno-point-zeus-plus-300-1",
+    "search_text": "tekno point zeus plus 300-1 300",
+    "marca": "Tekno Point",
+    "modello": "ZEUS PLUS 300-1",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.8,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "tekno-point-zeus-plus-300-2",
+    "search_text": "tekno point zeus plus 300-2 300",
+    "marca": "Tekno Point",
+    "modello": "ZEUS PLUS 300-2",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.8,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "tesy-aquathermica-200",
+    "search_text": "tesy aquathermica 200 200",
+    "marca": "TESY",
+    "modello": "Aquathermica 200",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HPWH 2.1 200 U 02",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.1,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "tesy-aquathermica-200-con-serpentina",
+    "search_text": "tesy aquathermica 200 con serpentina 200",
+    "marca": "TESY",
+    "modello": "Aquathermica 200 con serpentina",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HPWH 2.1 200 U 02 S",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.1,
+      "cop": 3.1
+    }
+  },
+  {
+    "id_slug": "tesy-aquathermica-300",
+    "search_text": "tesy aquathermica 300 300",
+    "marca": "TESY",
+    "modello": "Aquathermica 300",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HPWH 2.1 260 U 02",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.2,
+      "cop": 3.4
+    }
+  },
+  {
+    "id_slug": "tesy-aquathermica-300-con-serpentina",
+    "search_text": "tesy aquathermica 300 con serpentina 300",
+    "marca": "TESY",
+    "modello": "Aquathermica 300 con serpentina",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HPWH 2.1 260 U 02 S",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.2,
+      "cop": 3.4
+    }
+  },
+  {
+    "id_slug": "tesy-aquathermica-compact-100",
+    "search_text": "tesy aquathermica compact 100 100",
+    "marca": "TESY",
+    "modello": "AquaThermica Compact 100",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HPWH 3.2 100 U 01",
+    "dati_tecnici": {
+      "capacita_litri": 100,
+      "potenza_kw": 0.93,
+      "cop": 3.7
+    }
+  },
+  {
+    "id_slug": "tesy-aquathermica-compact-150",
+    "search_text": "tesy aquathermica compact 150 150",
+    "marca": "TESY",
+    "modello": "AquaThermica Compact 150",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HPWH 3.2 150 U 01",
+    "dati_tecnici": {
+      "capacita_litri": 150,
+      "potenza_kw": 0.92,
+      "cop": 3.9
+    }
+  },
+  {
+    "id_slug": "tesy-aquathermica-eco-200-lt",
+    "search_text": "tesy aquathermica eco 200 lt 200",
+    "marca": "TESY",
+    "modello": "AquaThermica Eco 200 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HPWH 3.1 200 U 01",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.75,
+      "cop": 3.9
+    }
+  },
+  {
+    "id_slug": "tesy-aquathermica-eco-200-lt-con-serpentina-aggiuntiva",
+    "search_text": "tesy aquathermica eco 200 lt con serpentina aggiuntiva 200",
+    "marca": "TESY",
+    "modello": "AquaThermica Eco 200 LT con serpentina aggiuntiva",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HPWH 3.1 200 U 01 S",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 1.75,
+      "cop": 3.9
+    }
+  },
+  {
+    "id_slug": "tesy-aquathermica-eco-300-lt",
+    "search_text": "tesy aquathermica eco 300 lt 300",
+    "marca": "TESY",
+    "modello": "AquaThermica Eco 300 LT",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HPWH 3.1 260 U 01",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.63,
+      "cop": 3.9
+    }
+  },
+  {
+    "id_slug": "tesy-aquathermica-eco-300-lt-con-serpentina-aggiuntiva",
+    "search_text": "tesy aquathermica eco 300 lt con serpentina aggiuntiva 300",
+    "marca": "TESY",
+    "modello": "AquaThermica Eco 300 LT con serpentina aggiuntiva",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HPWH 3.1 260 U 01 S",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 1.63,
+      "cop": 3.9
+    }
+  },
+  {
+    "id_slug": "thermital-thehp-120-acs",
+    "search_text": "thermital the/hp 120 acs 120",
+    "marca": "THERMITAL",
+    "modello": "THE/HP 120 ACS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "THE/HP 120 ACS",
+    "dati_tecnici": {
+      "capacita_litri": 120,
+      "potenza_kw": 0.91,
+      "cop": 2.61
+    }
+  },
+  {
+    "id_slug": "thermital-thehp-120-acs-ex",
+    "search_text": "thermital the/hp 120 acs ex 120",
+    "marca": "THERMITAL",
+    "modello": "THE/HP 120 ACS EX",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "THE/HP 120 ACS EX",
+    "dati_tecnici": {
+      "capacita_litri": 120,
+      "potenza_kw": 0.91,
+      "cop": 2.61
+    }
+  },
+  {
+    "id_slug": "thermital-thehp-260-acs",
+    "search_text": "thermital the/hp 260 acs 273",
+    "marca": "THERMITAL",
+    "modello": "THE/HP 260 ACS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20125643",
+    "dati_tecnici": {
+      "capacita_litri": 273,
+      "potenza_kw": 1.95,
+      "cop": 2.92
+    }
+  },
+  {
+    "id_slug": "thermital-thehp-260-acs-s",
+    "search_text": "thermital the/hp 260 acs s 268",
+    "marca": "THERMITAL",
+    "modello": "THE/HP 260 ACS S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20125644",
+    "dati_tecnici": {
+      "capacita_litri": 268,
+      "potenza_kw": 1.95,
+      "cop": 2.92
+    }
+  },
+  {
+    "id_slug": "thermital-thehp-260-acs-sc",
+    "search_text": "thermital the/hp 260 acs sc 265",
+    "marca": "THERMITAL",
+    "modello": "THE/HP 260 ACS SC",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "20125645",
+    "dati_tecnici": {
+      "capacita_litri": 265,
+      "potenza_kw": 1.95,
+      "cop": 2.92
+    }
+  },
+  {
+    "id_slug": "thermital-thehp-80-acs",
+    "search_text": "thermital the/hp 80 acs 80",
+    "marca": "THERMITAL",
+    "modello": "THE/HP 80 ACS",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "THE/HP 80 ACS",
+    "dati_tecnici": {
+      "capacita_litri": 80,
+      "potenza_kw": 0.93,
+      "cop": 2.65
+    }
+  },
+  {
+    "id_slug": "thermital-thehp-80-acs-ex",
+    "search_text": "thermital the/hp 80 acs ex 80",
+    "marca": "THERMITAL",
+    "modello": "THE/HP 80 ACS EX",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "THE/HP 80 ACS EX",
+    "dati_tecnici": {
+      "capacita_litri": 80,
+      "potenza_kw": 0.93,
+      "cop": 2.65
+    }
+  },
+  {
+    "id_slug": "toshiba-estia-scaldacqua-a-pompa-di-calore",
+    "search_text": "toshiba estia scaldacqua a pompa di calore 190",
+    "marca": "TOSHIBA",
+    "modello": "ESTIA Scaldacqua a pompa di calore",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "HWS-G1901CNMR-E",
+    "dati_tecnici": {
+      "capacita_litri": 190,
+      "potenza_kw": 1.7,
+      "cop": 3.9
+    }
+  },
+  {
+    "id_slug": "vaillant-arostor-vwl-b-1005",
+    "search_text": "vaillant arostor vwl b 100/5 100",
+    "marca": "VAILLANT",
+    "modello": "aroSTOR VWL B 100/5",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "--",
+    "identificativo_unita_interna": "0010026813",
+    "dati_tecnici": {
+      "capacita_litri": 100,
+      "potenza_kw": 0.35,
+      "cop": 2.6
+    }
+  },
+  {
+    "id_slug": "vaillant-arostor-vwl-b-2005",
+    "search_text": "vaillant arostor vwl b 200/5 200",
+    "marca": "VAILLANT",
+    "modello": "AROSTOR VWL B 200/5",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "0010026816",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 0.7,
+      "cop": 3.19
+    }
+  },
+  {
+    "id_slug": "vaillant-arostor-vwl-b-2705",
+    "search_text": "vaillant arostor vwl b 270/5 270",
+    "marca": "VAILLANT",
+    "modello": "AROSTOR VWL B 270/5",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "0010026817",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 0.7,
+      "cop": 3.14
+    }
+  },
+  {
+    "id_slug": "vaillant-arostor-vwl-b-2904",
+    "search_text": "vaillant arostor vwl b 290/4 300",
+    "marca": "VAILLANT",
+    "modello": "aroSTOR VWL B 290/4",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "0010018570",
+    "dati_tecnici": {
+      "capacita_litri": 300,
+      "potenza_kw": 0.7,
+      "cop": 3.3
+    }
+  },
+  {
+    "id_slug": "vaillant-arostor-vwl-b-805",
+    "search_text": "vaillant arostor vwl b 80/5 80",
+    "marca": "VAILLANT",
+    "modello": "aroSTOR VWL B 80/5",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "--",
+    "identificativo_unita_interna": "0010026815",
+    "dati_tecnici": {
+      "capacita_litri": 80,
+      "potenza_kw": 0.35,
+      "cop": 2.6
+    }
+  },
+  {
+    "id_slug": "vaillant-arostor-vwl-bm-2005",
+    "search_text": "vaillant arostor vwl bm 200/5 200",
+    "marca": "VAILLANT",
+    "modello": "AROSTOR VWL BM 200/5",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "0010026818",
+    "dati_tecnici": {
+      "capacita_litri": 200,
+      "potenza_kw": 0.7,
+      "cop": 2.99
+    }
+  },
+  {
+    "id_slug": "vaillant-arostor-vwl-bm-2705",
+    "search_text": "vaillant arostor vwl bm 270/5 270",
+    "marca": "VAILLANT",
+    "modello": "AROSTOR VWL BM 270/5",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "0010026819",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 0.7,
+      "cop": 3.0
+    }
+  },
+  {
+    "id_slug": "vaillant-arostor-vwl-bm-2904",
+    "search_text": "vaillant arostor vwl bm 290/4 290",
+    "marca": "VAILLANT",
+    "modello": "aroSTOR VWL BM 290/4",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "0010018377",
+    "dati_tecnici": {
+      "capacita_litri": 290,
+      "potenza_kw": 0.7,
+      "cop": 3.3
+    }
+  },
+  {
+    "id_slug": "viessmann-energycal-dhw-160",
+    "search_text": "viessmann energycal dhw 160 160",
+    "marca": "VIESSMANN",
+    "modello": "ENERGYCAL DHW 160",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 160,
+      "potenza_kw": 1.82,
+      "cop": 3.5
+    }
+  },
+  {
+    "id_slug": "viessmann-energycal-dhw-180-l",
+    "search_text": "viessmann energycal dhw 180 l 180",
+    "marca": "VIESSMANN",
+    "modello": "Energycal DHW 180 l",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "Energycal DHW 180 l",
+    "dati_tecnici": {
+      "capacita_litri": 180,
+      "potenza_kw": 1.95,
+      "cop": 2.9
+    }
+  },
+  {
+    "id_slug": "viessmann-energycal-dhw-275-l",
+    "search_text": "viessmann energycal dhw 275 l 268",
+    "marca": "VIESSMANN",
+    "modello": "Energycal DHW 275 l",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "-",
+    "identificativo_unita_interna": "Energycal DHW 275 l",
+    "dati_tecnici": {
+      "capacita_litri": 268,
+      "potenza_kw": 1.95,
+      "cop": 2.9
+    }
+  },
+  {
+    "id_slug": "viessmann-energycal-dhw-90",
+    "search_text": "viessmann energycal dhw 90 90",
+    "marca": "VIESSMANN",
+    "modello": "ENERGYCAL DHW 90",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 90,
+      "potenza_kw": 1.05,
+      "cop": 3.0
+    }
+  },
+  {
+    "id_slug": "viessmann-vitocal-060-a-profilo-l",
+    "search_text": "viessmann vitocal 060-a (profilo l) 250",
+    "marca": "VIESSMANN",
+    "modello": "VITOCAL 060-A (profilo L)",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 1.4,
+      "cop": 3.26
+    }
+  },
+  {
+    "id_slug": "viessmann-vitocal-060-a-profilo-m",
+    "search_text": "viessmann vitocal 060-a (profilo m) 178",
+    "marca": "VIESSMANN",
+    "modello": "VITOCAL 060-A (profilo M)",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 178,
+      "potenza_kw": 1.4,
+      "cop": 2.86
+    }
+  },
+  {
+    "id_slug": "viessmann-vitocal-060-a-profilo-xl",
+    "search_text": "viessmann vitocal 060-a (profilo xl) 250",
+    "marca": "VIESSMANN",
+    "modello": "VITOCAL 060-A (profilo XL)",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 250,
+      "potenza_kw": 1.4,
+      "cop": 3.4
+    }
+  },
+  {
+    "id_slug": "viessmann-vitocal-060-a-t0e-ze-178-l",
+    "search_text": "viessmann vitocal 060-a t0e-ze 178 l 178",
+    "marca": "VIESSMANN",
+    "modello": "VITOCAL 060-A T0E-ze 178 l",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 178,
+      "potenza_kw": 1.23,
+      "cop": 2.86
+    }
+  },
+  {
+    "id_slug": "viessmann-vitocal-060-a-t0e-ze-254-l",
+    "search_text": "viessmann vitocal 060-a t0e-ze 254 l 254",
+    "marca": "VIESSMANN",
+    "modello": "VITOCAL 060-A T0E-ze 254 l",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 254,
+      "potenza_kw": 1.17,
+      "cop": 3.23
+    }
+  },
+  {
+    "id_slug": "viessmann-vitocal-060-a-t0s-ze-251-l",
+    "search_text": "viessmann vitocal 060-a t0s-ze 251 l 251",
+    "marca": "VIESSMANN",
+    "modello": "VITOCAL 060-A T0S-ze 251 l",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 251,
+      "potenza_kw": 1.17,
+      "cop": 3.22
+    }
+  },
+  {
+    "id_slug": "viessmann-vitocal-161-a",
+    "search_text": "viessmann vitocal 161-a 308",
+    "marca": "VIESSMANN",
+    "modello": "VITOCAL 161-A",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 308,
+      "potenza_kw": 1.67,
+      "cop": 3.11
+    }
+  },
+  {
+    "id_slug": "viessmann-vitocal-262-a",
+    "search_text": "viessmann vitocal 262-a 291",
+    "marca": "VIESSMANN",
+    "modello": "VITOCAL 262-A",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 291,
+      "potenza_kw": 1.4,
+      "cop": 3.75
+    }
+  },
+  {
+    "id_slug": "viessmann-vitocal-262-a-t2e-ze",
+    "search_text": "viessmann vitocal 262-a t2e-ze 298",
+    "marca": "VIESSMANN",
+    "modello": "VITOCAL 262-A T2E-ze",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 298,
+      "potenza_kw": 1.17,
+      "cop": 3.43
+    }
+  },
+  {
+    "id_slug": "viessmann-vitocal-262-a-t2h-ze",
+    "search_text": "viessmann vitocal 262-a t2h-ze 291",
+    "marca": "VIESSMANN",
+    "modello": "VITOCAL 262-A T2H-ze",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 291,
+      "potenza_kw": 1.17,
+      "cop": 3.43
+    }
+  },
+  {
+    "id_slug": "weishaupt-italia-wwp-t-300-wa",
+    "search_text": "weishaupt italia wwp t 300 wa 290",
+    "marca": "WEISHAUPT ITALIA",
+    "modello": "WWP T 300 WA",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "",
+    "dati_tecnici": {
+      "capacita_litri": 290,
+      "potenza_kw": 1.5,
+      "cop": 3.6
+    }
+  },
+  {
+    "id_slug": "wolf-fhs-180-s",
+    "search_text": "wolf fhs-180-s 166",
+    "marca": "Wolf",
+    "modello": "FHS-180-S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "FHS-180-S230V-E2-M2",
+    "dati_tecnici": {
+      "capacita_litri": 166,
+      "potenza_kw": 3009.0,
+      "cop": 3.2
+    }
+  },
+  {
+    "id_slug": "wolf-fhs-280-he",
+    "search_text": "wolf fhs-280-he 258",
+    "marca": "Wolf",
+    "modello": "FHS-280-HE",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "FHS-280-HE230V-E2-M2",
+    "dati_tecnici": {
+      "capacita_litri": 258,
+      "potenza_kw": 3421.0,
+      "cop": 3.67
+    }
+  },
+  {
+    "id_slug": "wolf-fhs-280-s",
+    "search_text": "wolf fhs-280-s 270",
+    "marca": "Wolf",
+    "modello": "FHS-280-S",
+    "tipologia_intervento": "2.D",
+    "identificativo_unita_esterna": "",
+    "identificativo_unita_interna": "FHS-280-S230V-E2-M2",
+    "dati_tecnici": {
+      "capacita_litri": 270,
+      "potenza_kw": 3421.0,
+      "cop": 3.67
+    }
+  }
+]

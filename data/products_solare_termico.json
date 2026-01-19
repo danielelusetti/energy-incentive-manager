@@ -1,0 +1,3906 @@
+[
+  {
+    "id_slug": "acquapower-asc-300h",
+    "search_text": "acquapower asc 3.00h piano",
+    "marca": "AcquaPower",
+    "modello": "ASC 3.00H",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 3.0,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1552.0,
+      "energia_qcol_75": 893.0,
+      "producibilita_qualificazione_kwh_mq": 517.33
+    }
+  },
+  {
+    "id_slug": "acquapower-asc-300v",
+    "search_text": "acquapower asc 3.00v piano",
+    "marca": "AcquaPower",
+    "modello": "ASC 3.00V",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 3.0,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1552.0,
+      "energia_qcol_75": 893.0,
+      "producibilita_qualificazione_kwh_mq": 517.33
+    }
+  },
+  {
+    "id_slug": "ariston-kairos-thermo-hf-2-150-1-tr",
+    "search_text": "ariston kairos thermo hf-2 150-1 tr factory_made",
+    "marca": "ARISTON",
+    "modello": "KAIROS THERMO HF-2 150-1 TR",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 544.5
+    }
+  },
+  {
+    "id_slug": "ariston-kairos-thermo-hf-2-150-1-tt",
+    "search_text": "ariston kairos thermo hf-2 150-1 tt factory_made",
+    "marca": "ARISTON",
+    "modello": "KAIROS THERMO HF-2 150-1 TT",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 544.5
+    }
+  },
+  {
+    "id_slug": "ariston-kairos-thermo-hf-2-200-1-tr",
+    "search_text": "ariston kairos thermo hf-2 200-1 tr factory_made",
+    "marca": "ARISTON",
+    "modello": "KAIROS THERMO HF-2 200-1 TR",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 626.45
+    }
+  },
+  {
+    "id_slug": "ariston-kairos-thermo-hf-2-200-1-tt",
+    "search_text": "ariston kairos thermo hf-2 200-1 tt factory_made",
+    "marca": "ARISTON",
+    "modello": "KAIROS THERMO HF-2 200-1 TT",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 626.45
+    }
+  },
+  {
+    "id_slug": "ariston-kairos-thermo-hf-2-200-2-tr",
+    "search_text": "ariston kairos thermo hf-2 200-2 tr factory_made",
+    "marca": "ARISTON",
+    "modello": "KAIROS THERMO HF-2 200-2 TR",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 407.75
+    }
+  },
+  {
+    "id_slug": "ariston-kairos-thermo-hf-2-200-2-tt",
+    "search_text": "ariston kairos thermo hf-2 200-2 tt factory_made",
+    "marca": "ARISTON",
+    "modello": "KAIROS THERMO HF-2 200-2 TT",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 407.75
+    }
+  },
+  {
+    "id_slug": "ariston-kairos-thermo-hf-2-300-2-tr",
+    "search_text": "ariston kairos thermo hf-2 300-2 tr factory_made",
+    "marca": "ARISTON",
+    "modello": "KAIROS THERMO HF-2 300-2 TR",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 555.69
+    }
+  },
+  {
+    "id_slug": "ariston-kairos-thermo-hf-2-300-2-tt",
+    "search_text": "ariston kairos thermo hf-2 300-2 tt factory_made",
+    "marca": "ARISTON",
+    "modello": "KAIROS THERMO HF-2 300-2 TT",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 555.69
+    }
+  },
+  {
+    "id_slug": "ati-di-mariani-discosol-ds01",
+    "search_text": "ati di mariani discosol ds01 factory_made",
+    "marca": "ATI DI MARIANI",
+    "modello": "DISCOSOL DS01",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.2,
+      "area_apertura_mq": 0.92,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 729.0
+    }
+  },
+  {
+    "id_slug": "ati-di-mariani-discosol-ds02",
+    "search_text": "ati di mariani discosol ds02 factory_made",
+    "marca": "ATI DI MARIANI",
+    "modello": "DISCOSOL DS02",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.2,
+      "area_apertura_mq": 0.92,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 700.0
+    }
+  },
+  {
+    "id_slug": "ati-di-mariani-hydrosol-200",
+    "search_text": "ati di mariani hydrosol 200 factory_made",
+    "marca": "ATI DI MARIANI",
+    "modello": "HYDROSOL 200",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.52,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 707.24
+    }
+  },
+  {
+    "id_slug": "baxi-sb-20v",
+    "search_text": "baxi sb 20+v piano",
+    "marca": "BAXI",
+    "modello": "SB 20+V",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.01,
+      "area_apertura_mq": 1.89,
+      "energia_qcol_50": 931.0,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 463.18
+    }
+  },
+  {
+    "id_slug": "baxi-sb-25v",
+    "search_text": "baxi sb 25+v piano",
+    "marca": "BAXI",
+    "modello": "SB 25+V",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": 2.37,
+      "energia_qcol_50": 1192.0,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 474.9
+    }
+  },
+  {
+    "id_slug": "baxi-sol-200-v",
+    "search_text": "baxi sol 200-v piano",
+    "marca": "BAXI",
+    "modello": "SOL 200-V",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.02,
+      "area_apertura_mq": 1.92,
+      "energia_qcol_50": 918.0,
+      "energia_qcol_75": 522.0,
+      "producibilita_qualificazione_kwh_mq": 454.46
+    }
+  },
+  {
+    "id_slug": "baxi-sol-250-o",
+    "search_text": "baxi sol 250-o piano",
+    "marca": "BAXI",
+    "modello": "SOL 250-O",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.52,
+      "area_apertura_mq": 2.4,
+      "energia_qcol_50": 1163.0,
+      "energia_qcol_75": 602.0,
+      "producibilita_qualificazione_kwh_mq": 461.51
+    }
+  },
+  {
+    "id_slug": "baxi-sol-250-v",
+    "search_text": "baxi sol 250-v piano",
+    "marca": "BAXI",
+    "modello": "SOL 250-V",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.52,
+      "area_apertura_mq": 2.4,
+      "energia_qcol_50": 1223.0,
+      "energia_qcol_75": 705.0,
+      "producibilita_qualificazione_kwh_mq": 485.32
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-1501-ti",
+    "search_text": "beretta nb-sol 150/1 ti factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL 150/1 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 565.0
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-1501-tp",
+    "search_text": "beretta nb-sol 150/1 tp factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL 150/1 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 565.0
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-2001-ti",
+    "search_text": "beretta nb-sol 200/1 ti factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL 200/1 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 585.0
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-2001-tp",
+    "search_text": "beretta nb-sol 200/1 tp factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL 200/1 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 585.0
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-2202-ti",
+    "search_text": "beretta nb-sol 220/2 ti factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL 220/2 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 440.0
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-2202-tp",
+    "search_text": "beretta nb-sol 220/2 tp factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL 220/2 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 440.0
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-3002-ti",
+    "search_text": "beretta nb-sol 300/2 ti factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL 300/2 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 507.0
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-3002-tp",
+    "search_text": "beretta nb-sol 300/2 tp factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL 300/2 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 507.0
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-3003-ti",
+    "search_text": "beretta nb-sol 300/3 ti factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL 300/3 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 442.0
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-3003-tp",
+    "search_text": "beretta nb-sol 300/3 tp factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL 300/3 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 442.0
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-a-20025-ti",
+    "search_text": "beretta nb-sol-a 200/2,5 ti factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL-A 200/2,5 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 597.4
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-a-20025-tp",
+    "search_text": "beretta nb-sol-a 200/2,5 tp factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL-A 200/2,5 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 597.4
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-a-2004-ti",
+    "search_text": "beretta nb-sol-a 200/4 ti factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL-A 200/4 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 449.46
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-a-2004-tp",
+    "search_text": "beretta nb-sol-a 200/4 tp factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL-A 200/4 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 449.46
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-a-3004-ti",
+    "search_text": "beretta nb-sol-a 300/4 ti factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL-A 300/4 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 589.37
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-a-3004-tp",
+    "search_text": "beretta nb-sol-a 300/4 tp factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL-A 300/4 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 589.37
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-a-3005-ti",
+    "search_text": "beretta nb-sol-a 300/5 ti factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL-A 300/5 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 514.99
+    }
+  },
+  {
+    "id_slug": "beretta-nb-sol-a-3005-tp",
+    "search_text": "beretta nb-sol-a 300/5 tp factory_made",
+    "marca": "BERETTA",
+    "modello": "NB-SOL-A 300/5 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 514.99
+    }
+  },
+  {
+    "id_slug": "beretta-scf-204b-a",
+    "search_text": "beretta scf 20/4b a piano",
+    "marca": "BERETTA",
+    "modello": "SCF 20/4B A",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": 947.0,
+      "energia_qcol_75": 522.0,
+      "producibilita_qualificazione_kwh_mq": 473.0
+    }
+  },
+  {
+    "id_slug": "beretta-scf-254b-a",
+    "search_text": "beretta scf 25/4b a piano",
+    "marca": "BERETTA",
+    "modello": "SCF 25/4B A",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": 1184.0,
+      "energia_qcol_75": 652.0,
+      "producibilita_qualificazione_kwh_mq": 473.0
+    }
+  },
+  {
+    "id_slug": "beretta-scf-20b-cp20tss",
+    "search_text": "beretta scf-20b (*) - cp20tss (**) piano",
+    "marca": "BERETTA",
+    "modello": "SCF-20B (*) - CP20TSS (**)",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": 731.0,
+      "energia_qcol_75": 423.0,
+      "producibilita_qualificazione_kwh_mq": 386.0
+    }
+  },
+  {
+    "id_slug": "beretta-scf-254b",
+    "search_text": "beretta scf-25/4b piano",
+    "marca": "BERETTA",
+    "modello": "SCF-25/4B",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.3,
+      "area_apertura_mq": 2.15,
+      "energia_qcol_50": 1055.0,
+      "energia_qcol_75": 638.0,
+      "producibilita_qualificazione_kwh_mq": 458.7
+    }
+  },
+  {
+    "id_slug": "beretta-scf-25b-cp25tvs",
+    "search_text": "beretta scf-25b (*) - cp25tvs (**) piano",
+    "marca": "BERETTA",
+    "modello": "SCF-25B (*) - CP25TVS (**)",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.29,
+      "area_apertura_mq": 2.15,
+      "energia_qcol_50": 1031.0,
+      "energia_qcol_75": 619.0,
+      "producibilita_qualificazione_kwh_mq": 450.0
+    }
+  },
+  {
+    "id_slug": "bongioanni-ecosolar-ap4-np14",
+    "search_text": "bongioanni ecosolar ap4-np/1.4 piano",
+    "marca": "Bongioanni",
+    "modello": "EcoSolar AP4-NP/1.4",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.36,
+      "area_apertura_mq": 1.22,
+      "energia_qcol_50": 613.0,
+      "energia_qcol_75": 401.0,
+      "producibilita_qualificazione_kwh_mq": 450.74
+    }
+  },
+  {
+    "id_slug": "bongioanni-ecosolar-ap4-np18",
+    "search_text": "bongioanni ecosolar ap4-np/1.8 piano",
+    "marca": "Bongioanni",
+    "modello": "EcoSolar AP4-NP/1.8",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.83,
+      "area_apertura_mq": 1.67,
+      "energia_qcol_50": 825.0,
+      "energia_qcol_75": 540.0,
+      "producibilita_qualificazione_kwh_mq": 450.82
+    }
+  },
+  {
+    "id_slug": "bongioanni-ecosolar-ap4-np20",
+    "search_text": "bongioanni ecosolar ap4-np/2.0 piano",
+    "marca": "Bongioanni",
+    "modello": "EcoSolar AP4-NP/2.0",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": 1.82,
+      "energia_qcol_50": 902.0,
+      "energia_qcol_75": 590.0,
+      "producibilita_qualificazione_kwh_mq": 451.0
+    }
+  },
+  {
+    "id_slug": "bongioanni-ecosolar-ap4-np23",
+    "search_text": "bongioanni ecosolar ap4-np/2.3 piano",
+    "marca": "Bongioanni",
+    "modello": "EcoSolar AP4-NP/2.3",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.31,
+      "area_apertura_mq": 2.11,
+      "energia_qcol_50": 1042.0,
+      "energia_qcol_75": 681.0,
+      "producibilita_qualificazione_kwh_mq": 451.08
+    }
+  },
+  {
+    "id_slug": "bongioanni-ecosolar-system-crn-200-1x23",
+    "search_text": "bongioanni ecosolar system crn 200 1x2,3 factory_made",
+    "marca": "Bongioanni",
+    "modello": "EcoSolar System CRN 200 1x2,3",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.31,
+      "area_apertura_mq": 2.11,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 589.52
+    }
+  },
+  {
+    "id_slug": "bongioanni-ecosolar-system-crn-300-2x23",
+    "search_text": "bongioanni ecosolar system crn 300 2x2,3 factory_made",
+    "marca": "Bongioanni",
+    "modello": "EcoSolar System CRN 300 2x2,3",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.31,
+      "area_apertura_mq": 2.11,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 531.4
+    }
+  },
+  {
+    "id_slug": "bosch-fkc-2s",
+    "search_text": "bosch fkc-2s piano",
+    "marca": "Bosch",
+    "modello": "FKC-2S",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.37,
+      "area_apertura_mq": 2.25,
+      "energia_qcol_50": 1047.0,
+      "energia_qcol_75": 603.0,
+      "producibilita_qualificazione_kwh_mq": 441.77
+    }
+  },
+  {
+    "id_slug": "bosch-fkc-2w",
+    "search_text": "bosch fkc-2w piano",
+    "marca": "Bosch",
+    "modello": "FKC-2W",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.37,
+      "area_apertura_mq": 2.25,
+      "energia_qcol_50": 1040.0,
+      "energia_qcol_75": 584.0,
+      "producibilita_qualificazione_kwh_mq": 438.82
+    }
+  },
+  {
+    "id_slug": "bosch-vk-120-2-cpc-2-moduli",
+    "search_text": "bosch vk 120-2 cpc (2 moduli) sottovuoto",
+    "marca": "Bosch",
+    "modello": "VK 120-2 CPC (2 moduli)",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.44,
+      "area_apertura_mq": 2.06,
+      "energia_qcol_50": 1405.0,
+      "energia_qcol_75": 1172.0,
+      "producibilita_qualificazione_kwh_mq": 575.82
+    }
+  },
+  {
+    "id_slug": "buderus-logasol-skn40-s",
+    "search_text": "buderus logasol skn4.0-s piano",
+    "marca": "Buderus",
+    "modello": "Logasol SKN4.0-S",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.37,
+      "area_apertura_mq": 2.25,
+      "energia_qcol_50": 1047.0,
+      "energia_qcol_75": 603.0,
+      "producibilita_qualificazione_kwh_mq": 441.77
+    }
+  },
+  {
+    "id_slug": "buderus-logasol-skn40-w",
+    "search_text": "buderus logasol skn4.0-w piano",
+    "marca": "Buderus",
+    "modello": "Logasol SKN4.0-W",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.37,
+      "area_apertura_mq": 2.25,
+      "energia_qcol_50": 1040.0,
+      "energia_qcol_75": 584.0,
+      "producibilita_qualificazione_kwh_mq": 438.82
+    }
+  },
+  {
+    "id_slug": "buderus-logasol-skr10-cpc-2-moduli",
+    "search_text": "buderus logasol skr10 cpc (2 moduli) sottovuoto",
+    "marca": "Buderus",
+    "modello": "Logasol SKR10 CPC (2 moduli)",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.44,
+      "area_apertura_mq": 2.06,
+      "energia_qcol_50": 1405.0,
+      "energia_qcol_75": 1172.0,
+      "producibilita_qualificazione_kwh_mq": 575.82
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-zelios-thermo-hf-2-150-1-tr",
+    "search_text": "chaffoteaux zelios thermo hf-2 150-1 tr factory_made",
+    "marca": "CHAFFOTEAUX",
+    "modello": "ZELIOS THERMO HF-2 150-1 TR",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 544.5
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-zelios-thermo-hf-2-150-1-tt",
+    "search_text": "chaffoteaux zelios thermo hf-2 150-1 tt factory_made",
+    "marca": "CHAFFOTEAUX",
+    "modello": "ZELIOS THERMO HF-2 150-1 TT",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 544.5
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-zelios-thermo-hf-2-200-1-tr",
+    "search_text": "chaffoteaux zelios thermo hf-2 200-1 tr factory_made",
+    "marca": "CHAFFOTEAUX",
+    "modello": "ZELIOS THERMO HF-2 200-1 TR",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 626.45
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-zelios-thermo-hf-2-200-1-tt",
+    "search_text": "chaffoteaux zelios thermo hf-2 200-1 tt factory_made",
+    "marca": "CHAFFOTEAUX",
+    "modello": "ZELIOS THERMO HF-2 200-1 TT",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 626.45
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-zelios-thermo-hf-2-200-2-tr",
+    "search_text": "chaffoteaux zelios thermo hf-2 200-2 tr factory_made",
+    "marca": "CHAFFOTEAUX",
+    "modello": "ZELIOS THERMO HF-2 200-2 TR",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 407.75
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-zelios-thermo-hf-2-200-2-tt",
+    "search_text": "chaffoteaux zelios thermo hf-2 200-2 tt factory_made",
+    "marca": "CHAFFOTEAUX",
+    "modello": "ZELIOS THERMO HF-2 200-2 TT",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 407.75
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-zelios-thermo-hf-2-300-2-tr",
+    "search_text": "chaffoteaux zelios thermo hf-2 300-2 tr factory_made",
+    "marca": "CHAFFOTEAUX",
+    "modello": "ZELIOS THERMO HF-2 300-2 TR",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 555.69
+    }
+  },
+  {
+    "id_slug": "chaffoteaux-zelios-thermo-hf-2-300-2-tt",
+    "search_text": "chaffoteaux zelios thermo hf-2 300-2 tt factory_made",
+    "marca": "CHAFFOTEAUX",
+    "modello": "ZELIOS THERMO HF-2 300-2 TT",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 555.69
+    }
+  },
+  {
+    "id_slug": "clivet-fh-xl",
+    "search_text": "clivet fh-xl piano",
+    "marca": "Clivet",
+    "modello": "FH-XL",
+    "tipologia": "piano",
+    "tipologia_collettore": "piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.37,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1154.0,
+      "energia_qcol_75": 682.0,
+      "producibilita_qualificazione_kwh_mq": 487.0
+    }
+  },
+  {
+    "id_slug": "clivet-f-l",
+    "search_text": "clivet f-l piano",
+    "marca": "Clivet",
+    "modello": "F-L",
+    "tipologia": "piano",
+    "tipologia_collettore": "piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 974.0,
+      "energia_qcol_75": 575.0,
+      "producibilita_qualificazione_kwh_mq": 487.0
+    }
+  },
+  {
+    "id_slug": "clivet-f-xl",
+    "search_text": "clivet f-xl piano",
+    "marca": "Clivet",
+    "modello": "F-XL",
+    "tipologia": "piano",
+    "tipologia_collettore": "piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.37,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1154.0,
+      "energia_qcol_75": 682.0,
+      "producibilita_qualificazione_kwh_mq": 487.0
+    }
+  },
+  {
+    "id_slug": "elco-solatron-cf-gr-150-1-tr-tt-tt-dt",
+    "search_text": "elco solatron cf-gr 150-1 tr / tt / tt dt factory_made",
+    "marca": "ELCO",
+    "modello": "Solatron CF-GR 150-1 TR / TT / TT DT",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.01,
+      "area_apertura_mq": 1.83,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 536.13
+    }
+  },
+  {
+    "id_slug": "elco-solatron-cf-gr-200-1-tr-tt-tt-dt",
+    "search_text": "elco solatron cf-gr 200-1 tr / tt / tt dt factory_made",
+    "marca": "ELCO",
+    "modello": "Solatron CF-GR 200-1 TR / TT / TT DT",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.01,
+      "area_apertura_mq": 1.83,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 631.91
+    }
+  },
+  {
+    "id_slug": "elco-solatron-cf-gr-200-2-tr-tt-tt-dt",
+    "search_text": "elco solatron cf-gr 200-2 tr / tt / tt dt factory_made",
+    "marca": "ELCO",
+    "modello": "Solatron CF-GR 200-2 TR / TT / TT DT",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.01,
+      "area_apertura_mq": 1.83,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 447.56
+    }
+  },
+  {
+    "id_slug": "elco-solatron-cf-gr-300-2-tr-tt-tt-dt",
+    "search_text": "elco solatron cf-gr 300-2 tr / tt / tt dt factory_made",
+    "marca": "ELCO",
+    "modello": "Solatron CF-GR 300-2 TR / TT / TT DT",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.01,
+      "area_apertura_mq": 1.83,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 572.02
+    }
+  },
+  {
+    "id_slug": "elco-solatron-n-plus-20-150-1",
+    "search_text": "elco solatron n plus 2.0 150-1 factory_made",
+    "marca": "ELCO",
+    "modello": "Solatron N Plus 2.0 150-1",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 544.0
+    }
+  },
+  {
+    "id_slug": "elco-solatron-n-plus-20-200-1",
+    "search_text": "elco solatron n plus 2.0 200-1 factory_made",
+    "marca": "ELCO",
+    "modello": "Solatron N Plus 2.0 200-1",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 626.0
+    }
+  },
+  {
+    "id_slug": "elco-solatron-n-plus-20-300-2",
+    "search_text": "elco solatron n plus 2.0 300-2 factory_made",
+    "marca": "ELCO",
+    "modello": "Solatron N Plus 2.0 300-2",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.2,
+      "area_apertura_mq": 2.01,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 555.0
+    }
+  },
+  {
+    "id_slug": "elco-solatron-s25-1-h",
+    "search_text": "elco solatron s2.5-1 h piano",
+    "marca": "ELCO",
+    "modello": "Solatron S2.5-1 H",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.53,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1173.0,
+      "energia_qcol_75": 737.0,
+      "producibilita_qualificazione_kwh_mq": 463.64
+    }
+  },
+  {
+    "id_slug": "elco-solatron-s25-1-v",
+    "search_text": "elco solatron s2.5-1 v piano",
+    "marca": "ELCO",
+    "modello": "Solatron S2.5-1 V",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.53,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1173.0,
+      "energia_qcol_75": 737.0,
+      "producibilita_qualificazione_kwh_mq": 463.64
+    }
+  },
+  {
+    "id_slug": "elco-italia-spa-solatron-cf-20-1",
+    "search_text": "elco italia s.p.a. solatron cf 2.0-1 piano",
+    "marca": "ELCO Italia S.p.A.",
+    "modello": "Solatron CF 2.0-1",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.01,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 753.0,
+      "energia_qcol_75": 423.0,
+      "producibilita_qualificazione_kwh_mq": 374.63
+    }
+  },
+  {
+    "id_slug": "elco-italia-spa-solatron-cf-gr-150-1",
+    "search_text": "elco italia s.p.a. solatron cf-gr 150-1 factory_made",
+    "marca": "ELCO Italia S.p.A.",
+    "modello": "Solatron CF-GR 150-1",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.01,
+      "area_apertura_mq": 1.83,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 563.0
+    }
+  },
+  {
+    "id_slug": "elco-italia-spa-solatron-cf-gr-200-1",
+    "search_text": "elco italia s.p.a. solatron cf-gr 200-1 factory_made",
+    "marca": "ELCO Italia S.p.A.",
+    "modello": "Solatron CF-GR 200-1",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.01,
+      "area_apertura_mq": 1.83,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 631.0
+    }
+  },
+  {
+    "id_slug": "elco-italia-spa-solatron-cf-gr-200-2",
+    "search_text": "elco italia s.p.a. solatron cf-gr 200-2 factory_made",
+    "marca": "ELCO Italia S.p.A.",
+    "modello": "Solatron CF-GR 200-2",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.01,
+      "area_apertura_mq": 1.83,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 447.0
+    }
+  },
+  {
+    "id_slug": "elco-italia-spa-solatron-cf-gr-300-2",
+    "search_text": "elco italia s.p.a. solatron cf-gr 300-2 factory_made",
+    "marca": "ELCO Italia S.p.A.",
+    "modello": "Solatron CF-GR 300-2",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.01,
+      "area_apertura_mq": 1.83,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 572.0
+    }
+  },
+  {
+    "id_slug": "emmeti-arcobaleno-ns",
+    "search_text": "emmeti arcobaleno ns piano",
+    "marca": "Emmeti",
+    "modello": "Arcobaleno NS",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.43,
+      "area_apertura_mq": 2.22,
+      "energia_qcol_50": 998.0,
+      "energia_qcol_75": 607.0,
+      "producibilita_qualificazione_kwh_mq": 411.0
+    }
+  },
+  {
+    "id_slug": "emmeti-arcobaleno-srto",
+    "search_text": "emmeti arcobaleno srto piano",
+    "marca": "Emmeti",
+    "modello": "Arcobaleno SRTO",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.59,
+      "area_apertura_mq": 2.31,
+      "energia_qcol_50": 1127.0,
+      "energia_qcol_75": 668.0,
+      "producibilita_qualificazione_kwh_mq": 435.0
+    }
+  },
+  {
+    "id_slug": "ferroli-solarevo-21-v",
+    "search_text": "ferroli solarevo 2.1 v piano",
+    "marca": "Ferroli",
+    "modello": "SOLAREVO 2.1 V",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.09,
+      "area_apertura_mq": 1.96,
+      "energia_qcol_50": 1026.0,
+      "energia_qcol_75": 591.0,
+      "producibilita_qualificazione_kwh_mq": 490.91
+    }
+  },
+  {
+    "id_slug": "ferroli-solarevo-26-v",
+    "search_text": "ferroli solarevo 2.6 v piano",
+    "marca": "Ferroli",
+    "modello": "SOLAREVO 2.6 V",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.6,
+      "area_apertura_mq": 2.44,
+      "energia_qcol_50": 1277.0,
+      "energia_qcol_75": 736.0,
+      "producibilita_qualificazione_kwh_mq": 491.15
+    }
+  },
+  {
+    "id_slug": "ferroli-solarevo-nat-160l-21-ti",
+    "search_text": "ferroli solarevo nat 160l/ 2,1-ti factory_made",
+    "marca": "Ferroli",
+    "modello": "SOLAREVO NAT 160L/ 2,1-TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.09,
+      "area_apertura_mq": 1.96,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 558.67
+    }
+  },
+  {
+    "id_slug": "ferroli-solarevo-nat-160l-21-tp",
+    "search_text": "ferroli solarevo nat 160l/ 2,1-tp factory_made",
+    "marca": "Ferroli",
+    "modello": "SOLAREVO NAT 160L/ 2,1-TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.09,
+      "area_apertura_mq": 1.96,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 558.67
+    }
+  },
+  {
+    "id_slug": "ferroli-solarevo-nat-200l21-ti",
+    "search_text": "ferroli solarevo nat 200l/2,1-ti factory_made",
+    "marca": "Ferroli",
+    "modello": "SOLAREVO NAT 200L/2,1-TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.09,
+      "area_apertura_mq": 1.96,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 674.89
+    }
+  },
+  {
+    "id_slug": "ferroli-solarevo-nat-200l21-tp",
+    "search_text": "ferroli solarevo nat 200l/2,1-tp factory_made",
+    "marca": "Ferroli",
+    "modello": "SOLAREVO NAT 200L/2,1-TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.09,
+      "area_apertura_mq": 1.96,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 674.89
+    }
+  },
+  {
+    "id_slug": "ferroli-solarevo-nat-300l52-ti",
+    "search_text": "ferroli solarevo nat 300l/5,2-ti factory_made",
+    "marca": "Ferroli",
+    "modello": "SOLAREVO NAT 300L/5,2-TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.6,
+      "area_apertura_mq": 2.44,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 516.96
+    }
+  },
+  {
+    "id_slug": "ferroli-solarevo-nat-300l52-tp",
+    "search_text": "ferroli solarevo nat 300l/5,2-tp factory_made",
+    "marca": "Ferroli",
+    "modello": "SOLAREVO NAT 300L/5,2-TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.6,
+      "area_apertura_mq": 2.44,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 516.96
+    }
+  },
+  {
+    "id_slug": "ferroli-solarevo-nat-300l52-tp-30",
+    "search_text": "ferroli solarevo nat 300l/5.2-tp 30° factory_made",
+    "marca": "Ferroli",
+    "modello": "SOLAREVO NAT 300L/5.2-TP 30°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.6,
+      "area_apertura_mq": 2.44,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 516.96
+    }
+  },
+  {
+    "id_slug": "fondital-hwf-20",
+    "search_text": "fondital hwf 20 piano",
+    "marca": "Fondital",
+    "modello": "HWF 20",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.06,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1037.0,
+      "energia_qcol_75": 650.0,
+      "producibilita_qualificazione_kwh_mq": 503.4
+    }
+  },
+  {
+    "id_slug": "fondital-hwf-26",
+    "search_text": "fondital hwf 26 piano",
+    "marca": "Fondital",
+    "modello": "HWF 26",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.62,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1319.0,
+      "energia_qcol_75": 827.0,
+      "producibilita_qualificazione_kwh_mq": 503.44
+    }
+  },
+  {
+    "id_slug": "fondital-sulpack-natural-plus-150",
+    "search_text": "fondital sulpack natural plus 150 factory_made",
+    "marca": "Fondital",
+    "modello": "SULPACK NATURAL PLUS 150",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.11,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 566.03
+    }
+  },
+  {
+    "id_slug": "fondital-sulpack-natural-plus-200",
+    "search_text": "fondital sulpack natural plus 200 factory_made",
+    "marca": "Fondital",
+    "modello": "SULPACK NATURAL PLUS 200",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.11,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 597.94
+    }
+  },
+  {
+    "id_slug": "fondital-sulpack-natural-plus-300",
+    "search_text": "fondital sulpack natural plus 300 factory_made",
+    "marca": "FONDITAL",
+    "modello": "SULPACK NATURAL PLUS 300",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.11,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 556.5
+    }
+  },
+  {
+    "id_slug": "fondital-vlc-25",
+    "search_text": "fondital vlc 25 piano",
+    "marca": "Fondital",
+    "modello": "VLC 25",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.57,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1095.0,
+      "energia_qcol_75": 640.0,
+      "producibilita_qualificazione_kwh_mq": 426.07
+    }
+  },
+  {
+    "id_slug": "hsd-scv-232",
+    "search_text": "hsd scv 2.3/2 piano",
+    "marca": "HSD",
+    "modello": "SCV 2.3/2",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1010.0,
+      "energia_qcol_75": 542.0,
+      "producibilita_qualificazione_kwh_mq": 402.0
+    }
+  },
+  {
+    "id_slug": "hsd-srd-23-h2",
+    "search_text": "hsd srd 2.3 h/2 piano",
+    "marca": "HSD",
+    "modello": "SRD 2.3 H/2",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1146.0,
+      "energia_qcol_75": 677.0,
+      "producibilita_qualificazione_kwh_mq": 456.0
+    }
+  },
+  {
+    "id_slug": "hsd-srd-23-v2",
+    "search_text": "hsd srd 2.3 v/2 piano",
+    "marca": "HSD",
+    "modello": "SRD 2.3 V/2",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1146.0,
+      "energia_qcol_75": 677.0,
+      "producibilita_qualificazione_kwh_mq": 456.0
+    }
+  },
+  {
+    "id_slug": "hsd-srv-232",
+    "search_text": "hsd srv 2.3/2 piano",
+    "marca": "HSD",
+    "modello": "SRV 2.3/2",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1166.0,
+      "energia_qcol_75": 672.0,
+      "producibilita_qualificazione_kwh_mq": 464.0
+    }
+  },
+  {
+    "id_slug": "immergas-cp-4m",
+    "search_text": "immergas cp 4m piano",
+    "marca": "IMMERGAS",
+    "modello": "CP 4M",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.02,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 896.0,
+      "energia_qcol_75": 508.0,
+      "producibilita_qualificazione_kwh_mq": 443.56
+    }
+  },
+  {
+    "id_slug": "immergas-cp-4xl",
+    "search_text": "immergas cp 4xl piano",
+    "marca": "IMMERGAS",
+    "modello": "CP 4XL",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.52,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1180.0,
+      "energia_qcol_75": 682.0,
+      "producibilita_qualificazione_kwh_mq": 468.25
+    }
+  },
+  {
+    "id_slug": "immergas-natural-sol-150-v2",
+    "search_text": "immergas natural sol 150 v2 factory_made",
+    "marca": "IMMERGAS",
+    "modello": "NATURAL SOL 150 V2",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.11,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 566.0
+    }
+  },
+  {
+    "id_slug": "immergas-natural-sol-200-v2",
+    "search_text": "immergas natural sol 200 v2 factory_made",
+    "marca": "IMMERGAS",
+    "modello": "NATURAL SOL 200 V2",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.11,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 597.0
+    }
+  },
+  {
+    "id_slug": "immergas-natural-sol-280-v2",
+    "search_text": "immergas natural sol 280 v2 factory_made",
+    "marca": "IMMERGAS",
+    "modello": "NATURAL SOL 280 V2",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 4.22,
+      "area_apertura_mq": 3.81,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 559.0
+    }
+  },
+  {
+    "id_slug": "italtherm-slim-solar-20",
+    "search_text": "italtherm slim solar 2.0 piano",
+    "marca": "ITALTHERM",
+    "modello": "Slim Solar 2.0",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.01,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 813.0,
+      "energia_qcol_75": 443.0,
+      "producibilita_qualificazione_kwh_mq": 404.48
+    }
+  },
+  {
+    "id_slug": "italtherm-slim-solar-25",
+    "search_text": "italtherm slim solar 2.5 piano",
+    "marca": "ITALTHERM",
+    "modello": "Slim Solar 2.5",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1016.0,
+      "energia_qcol_75": 554.0,
+      "producibilita_qualificazione_kwh_mq": 404.78
+    }
+  },
+  {
+    "id_slug": "jodo-italia-sole200",
+    "search_text": "jodo italia sole200 piano",
+    "marca": "JODO Italia",
+    "modello": "SOLE200",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.02,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 896.0,
+      "energia_qcol_75": 508.0,
+      "producibilita_qualificazione_kwh_mq": 443.56
+    }
+  },
+  {
+    "id_slug": "jodo-italia-sole250",
+    "search_text": "jodo italia sole250 piano",
+    "marca": "JODO Italia",
+    "modello": "SOLE250",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.52,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1180.0,
+      "energia_qcol_75": 682.0,
+      "producibilita_qualificazione_kwh_mq": 468.25
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-solextech-21-v",
+    "search_text": "lamborghini caloreclima solextech 2.1 v piano",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "SOLEXTECH 2.1 V",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.09,
+      "area_apertura_mq": 1.96,
+      "energia_qcol_50": 1026.0,
+      "energia_qcol_75": 591.0,
+      "producibilita_qualificazione_kwh_mq": 490.0
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-solextech-26-v",
+    "search_text": "lamborghini caloreclima solextech 2.6 v piano",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "SOLEXTECH 2.6 V",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.6,
+      "area_apertura_mq": 2.44,
+      "energia_qcol_50": 1277.0,
+      "energia_qcol_75": 736.0,
+      "producibilita_qualificazione_kwh_mq": 491.0
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-solextech-nat-160l-21-ti",
+    "search_text": "lamborghini caloreclima solextech nat 160l/ 2,1-ti factory_made",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "SOLEXTECH NAT 160L/ 2,1-TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.09,
+      "area_apertura_mq": 1.96,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 558.67
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-solextech-nat-160l-21-tp",
+    "search_text": "lamborghini caloreclima solextech nat 160l/ 2,1-tp factory_made",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "SOLEXTECH NAT 160L/ 2,1-TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.09,
+      "area_apertura_mq": 1.96,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 558.67
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-solextech-nat-200l21-ti",
+    "search_text": "lamborghini caloreclima solextech nat 200l/2,1-ti factory_made",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "SOLEXTECH NAT 200L/2,1-TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.09,
+      "area_apertura_mq": 1.96,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 674.89
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-solextech-nat-200l21-tp",
+    "search_text": "lamborghini caloreclima solextech nat 200l/2,1-tp factory_made",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "SOLEXTECH NAT 200L/2,1-TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.09,
+      "area_apertura_mq": 1.96,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 674.89
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-solextech-nat-300l52-ti",
+    "search_text": "lamborghini caloreclima solextech nat 300l/5,2-ti factory_made",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "SOLEXTECH NAT 300L/5,2-TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.6,
+      "area_apertura_mq": 2.44,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 516.96
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-solextech-nat-300l52-tp",
+    "search_text": "lamborghini caloreclima solextech nat 300l/5,2-tp factory_made",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "SOLEXTECH NAT 300L/5,2-TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.6,
+      "area_apertura_mq": 2.44,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 516.96
+    }
+  },
+  {
+    "id_slug": "lamborghini-caloreclima-solextech-nat-300l52-tp-30",
+    "search_text": "lamborghini caloreclima solextech nat 300l/5.2-tp 30° factory_made",
+    "marca": "Lamborghini Caloreclima",
+    "modello": "SOLEXTECH NAT 300L/5.2-TP 30°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.6,
+      "area_apertura_mq": 2.44,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 516.96
+    }
+  },
+  {
+    "id_slug": "naked-energy-virtu-hot",
+    "search_text": "naked energy virtu hot sottovuoto",
+    "marca": "Naked Energy",
+    "modello": "Virtu HOT",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "a tubi evacuati",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 0.65,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 277.0,
+      "energia_qcol_75": 207.0,
+      "producibilita_qualificazione_kwh_mq": 426.15
+    }
+  },
+  {
+    "id_slug": "naked-energy-virtu-hot-hd",
+    "search_text": "naked energy virtu hot hd sottovuoto",
+    "marca": "Naked Energy",
+    "modello": "Virtu HOT HD",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "a tubi evacuati",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 0.47,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 243.0,
+      "energia_qcol_75": 171.0,
+      "producibilita_qualificazione_kwh_mq": 517.02
+    }
+  },
+  {
+    "id_slug": "paradigma-italia-easysun-plus",
+    "search_text": "paradigma italia easysun plus piano",
+    "marca": "Paradigma Italia",
+    "modello": "EasySun Plus",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.53,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1146.0,
+      "energia_qcol_75": 668.0,
+      "producibilita_qualificazione_kwh_mq": 453.0
+    }
+  },
+  {
+    "id_slug": "pleion-spa-ego-110",
+    "search_text": "pleion spa ego 110 factory_made",
+    "marca": "PLEION SPA",
+    "modello": "EGO 110",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.52,
+      "area_apertura_mq": 1.09,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 602.7
+    }
+  },
+  {
+    "id_slug": "pleion-spa-ego-150",
+    "search_text": "pleion spa ego 150 factory_made",
+    "marca": "PLEION SPA",
+    "modello": "EGO 150",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.93,
+      "area_apertura_mq": 1.48,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 594.59
+    }
+  },
+  {
+    "id_slug": "pleion-spa-ego-180",
+    "search_text": "pleion spa ego 180 factory_made",
+    "marca": "PLEION SPA",
+    "modello": "EGO 180",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.35,
+      "area_apertura_mq": 1.86,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 586.32
+    }
+  },
+  {
+    "id_slug": "pleion-spa-ego-220",
+    "search_text": "pleion spa ego 220 factory_made",
+    "marca": "PLEION SPA",
+    "modello": "EGO 220",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.77,
+      "area_apertura_mq": 2.25,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 583.58
+    }
+  },
+  {
+    "id_slug": "pleion-spa-ego-260",
+    "search_text": "pleion spa ego 260 factory_made",
+    "marca": "PLEION SPA",
+    "modello": "EGO 260",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 3.18,
+      "area_apertura_mq": 2.64,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 599.01
+    }
+  },
+  {
+    "id_slug": "pleion-spa-ego-prime-110",
+    "search_text": "pleion spa ego prime 110 factory_made",
+    "marca": "PLEION SPA",
+    "modello": "EGO PRIME 110",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.28,
+      "area_apertura_mq": 1.09,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 602.7
+    }
+  },
+  {
+    "id_slug": "pleion-spa-ego-prime-150",
+    "search_text": "pleion spa ego prime 150 factory_made",
+    "marca": "PLEION SPA",
+    "modello": "EGO PRIME 150",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.68,
+      "area_apertura_mq": 1.48,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 594.59
+    }
+  },
+  {
+    "id_slug": "pleion-spa-ego-prime-180",
+    "search_text": "pleion spa ego prime 180 factory_made",
+    "marca": "PLEION SPA",
+    "modello": "EGO PRIME 180",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.08,
+      "area_apertura_mq": 1.86,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 586.32
+    }
+  },
+  {
+    "id_slug": "pleion-spa-ego-prime-220",
+    "search_text": "pleion spa ego prime 220 factory_made",
+    "marca": "PLEION SPA",
+    "modello": "EGO PRIME 220",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.48,
+      "area_apertura_mq": 2.25,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 583.58
+    }
+  },
+  {
+    "id_slug": "pleion-spa-ego-prime-260",
+    "search_text": "pleion spa ego prime 260 factory_made",
+    "marca": "PLEION SPA",
+    "modello": "EGO PRIME 260",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.88,
+      "area_apertura_mq": 2.64,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 599.01
+    }
+  },
+  {
+    "id_slug": "pleion-spa-ksf-25d",
+    "search_text": "pleion spa ksf 25d piano",
+    "marca": "PLEION SPA",
+    "modello": "KSF 25D",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.52,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1261.0,
+      "energia_qcol_75": 806.0,
+      "producibilita_qualificazione_kwh_mq": 500.4
+    }
+  },
+  {
+    "id_slug": "pleion-spa-ksf-p26",
+    "search_text": "pleion spa ksf p26 piano",
+    "marca": "PLEION SPA",
+    "modello": "KSF P26",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.62,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1392.0,
+      "energia_qcol_75": 855.0,
+      "producibilita_qualificazione_kwh_mq": 531.3
+    }
+  },
+  {
+    "id_slug": "pleion-spa-uniko-p21",
+    "search_text": "pleion spa uniko p21 piano",
+    "marca": "PLEION SPA",
+    "modello": "UNIKO P21",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.06,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1094.0,
+      "energia_qcol_75": 673.0,
+      "producibilita_qualificazione_kwh_mq": 531.07
+    }
+  },
+  {
+    "id_slug": "pleion-spa-x-ray-10-r",
+    "search_text": "pleion spa x-ray 10 r sottovuoto",
+    "marca": "PLEION SPA",
+    "modello": "X-RAY 10 R",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.12,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1234.0,
+      "energia_qcol_75": 946.0,
+      "producibilita_qualificazione_kwh_mq": 582.08
+    }
+  },
+  {
+    "id_slug": "pleion-spa-x-ray-15-r",
+    "search_text": "pleion spa x-ray 15 r sottovuoto",
+    "marca": "PLEION SPA",
+    "modello": "X-RAY 15 R",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 3.18,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1975.0,
+      "energia_qcol_75": 1607.0,
+      "producibilita_qualificazione_kwh_mq": 621.07
+    }
+  },
+  {
+    "id_slug": "pleion-spa-x-ray-18-r",
+    "search_text": "pleion spa x-ray 18 r sottovuoto",
+    "marca": "PLEION SPA",
+    "modello": "X-RAY 18 R",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 3.82,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 2372.0,
+      "energia_qcol_75": 1930.0,
+      "producibilita_qualificazione_kwh_mq": 620.94
+    }
+  },
+  {
+    "id_slug": "riello-csal-20-rs-cp20tss",
+    "search_text": "riello csal 20 rs (*) - cp20tss (**) piano",
+    "marca": "RIELLO",
+    "modello": "CSAL 20 RS (*) - CP20TSS (**)",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": 731.0,
+      "energia_qcol_75": 423.0,
+      "producibilita_qualificazione_kwh_mq": 386.16
+    }
+  },
+  {
+    "id_slug": "riello-csal-25-rs-cp25tvs",
+    "search_text": "riello csal 25 rs (*) - cp25tvs (**) piano",
+    "marca": "RIELLO",
+    "modello": "CSAL 25 RS (*) - CP25TVS (**)",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.29,
+      "area_apertura_mq": 2.15,
+      "energia_qcol_50": 1031.0,
+      "energia_qcol_75": 619.0,
+      "producibilita_qualificazione_kwh_mq": 450.22
+    }
+  },
+  {
+    "id_slug": "riello-csna-20-rs-1501-0",
+    "search_text": "riello csna 20 rs 150/1 0° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA 20 RS 150/1 0°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 564.8
+    }
+  },
+  {
+    "id_slug": "riello-csna-20-rs-1501-30",
+    "search_text": "riello csna 20 rs 150/1 30° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA 20 RS 150/1 30°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 564.8
+    }
+  },
+  {
+    "id_slug": "riello-csna-20-rs-2001-0",
+    "search_text": "riello csna 20 rs 200/1 0° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA 20 RS 200/1 0°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 584.87
+    }
+  },
+  {
+    "id_slug": "riello-csna-20-rs-2001-30",
+    "search_text": "riello csna 20 rs 200/1 30° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA 20 RS 200/1 30°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 584.87
+    }
+  },
+  {
+    "id_slug": "riello-csna-20-rs-2202-0",
+    "search_text": "riello csna 20 rs 220/2 0° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA 20 RS 220/2 0°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 439.95
+    }
+  },
+  {
+    "id_slug": "riello-csna-20-rs-2202-30",
+    "search_text": "riello csna 20 rs 220/2 30° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA 20 RS 220/2 30°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 439.95
+    }
+  },
+  {
+    "id_slug": "riello-csna-20-rs-3002-0",
+    "search_text": "riello csna 20 rs 300/2 0° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA 20 RS 300/2 0°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 507.27
+    }
+  },
+  {
+    "id_slug": "riello-csna-20-rs-3002-30",
+    "search_text": "riello csna 20 rs 300/2 30° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA 20 RS 300/2 30°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 507.27
+    }
+  },
+  {
+    "id_slug": "riello-csna-20-rs-3003-0",
+    "search_text": "riello csna 20 rs 300/3 0° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA 20 RS 300/3 0°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 442.0
+    }
+  },
+  {
+    "id_slug": "riello-csna-20-rs-3003-30",
+    "search_text": "riello csna 20 rs 300/3 30° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA 20 RS 300/3 30°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 442.0
+    }
+  },
+  {
+    "id_slug": "riello-csna-a-16025-0",
+    "search_text": "riello csna-a 160/2,5 0° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA-A 160/2,5 0°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 483.0
+    }
+  },
+  {
+    "id_slug": "riello-csna-a-16025-45",
+    "search_text": "riello csna-a 160/2,5 45° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA-A 160/2,5 45°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 483.0
+    }
+  },
+  {
+    "id_slug": "riello-csna-a-20025-0",
+    "search_text": "riello csna-a 200/2,5 0° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA-A 200/2,5 0°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 597.4
+    }
+  },
+  {
+    "id_slug": "riello-csna-a-20025-45",
+    "search_text": "riello csna-a 200/2,5 45° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA-A 200/2,5 45°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 597.4
+    }
+  },
+  {
+    "id_slug": "riello-csna-a-2004-0",
+    "search_text": "riello csna-a 200/4 0° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA-A 200/4 0°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 449.46
+    }
+  },
+  {
+    "id_slug": "riello-csna-a-2004-45",
+    "search_text": "riello csna-a 200/4 45° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA-A 200/4 45°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 449.46
+    }
+  },
+  {
+    "id_slug": "riello-csna-a-3004-0",
+    "search_text": "riello csna-a 300/4 0° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA-A 300/4 0°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 589.37
+    }
+  },
+  {
+    "id_slug": "riello-csna-a-3004-45",
+    "search_text": "riello csna-a 300/4 45° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA-A 300/4 45°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 589.37
+    }
+  },
+  {
+    "id_slug": "riello-csna-a-3005-0",
+    "search_text": "riello csna-a 300/5 0° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA-A 300/5 0°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 514.99
+    }
+  },
+  {
+    "id_slug": "riello-csna-a-3005-45",
+    "search_text": "riello csna-a 300/5 45° factory_made",
+    "marca": "RIELLO",
+    "modello": "CSNA-A 300/5 45°",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 514.99
+    }
+  },
+  {
+    "id_slug": "riello-csv-25-r",
+    "search_text": "riello csv 25 r sottovuoto",
+    "marca": "RIELLO",
+    "modello": "CSV 25 R",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "Sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.69,
+      "area_apertura_mq": 2.37,
+      "energia_qcol_50": 1618.0,
+      "energia_qcol_75": 1383.0,
+      "producibilita_qualificazione_kwh_mq": 601.49
+    }
+  },
+  {
+    "id_slug": "riello-csv-35-r",
+    "search_text": "riello csv 35 r sottovuoto",
+    "marca": "RIELLO",
+    "modello": "CSV 35 R",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "Sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 3.83,
+      "area_apertura_mq": 3.39,
+      "energia_qcol_50": 2303.0,
+      "energia_qcol_75": 1969.0,
+      "producibilita_qualificazione_kwh_mq": 601.31
+    }
+  },
+  {
+    "id_slug": "riello-rps-204-a",
+    "search_text": "riello rps 20/4 a piano",
+    "marca": "RIELLO",
+    "modello": "RPS 20/4 A",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": 947.0,
+      "energia_qcol_75": 522.0,
+      "producibilita_qualificazione_kwh_mq": 473.5
+    }
+  },
+  {
+    "id_slug": "riello-rps-252-evo",
+    "search_text": "riello rps 25/2 evo piano",
+    "marca": "RIELLO",
+    "modello": "RPS 25/2 EVO",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.3,
+      "area_apertura_mq": 2.15,
+      "energia_qcol_50": 1076.0,
+      "energia_qcol_75": 652.0,
+      "producibilita_qualificazione_kwh_mq": 467.72
+    }
+  },
+  {
+    "id_slug": "riello-rps-254",
+    "search_text": "riello rps 25/4 piano",
+    "marca": "RIELLO",
+    "modello": "RPS 25/4",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.3,
+      "area_apertura_mq": 2.15,
+      "energia_qcol_50": 1055.0,
+      "energia_qcol_75": 638.0,
+      "producibilita_qualificazione_kwh_mq": 458.5
+    }
+  },
+  {
+    "id_slug": "riello-rps-254-a",
+    "search_text": "riello rps 25/4 a piano",
+    "marca": "RIELLO",
+    "modello": "RPS 25/4 A",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": 1184.0,
+      "energia_qcol_75": 652.0,
+      "producibilita_qualificazione_kwh_mq": 473.6
+    }
+  },
+  {
+    "id_slug": "ritter-energie-aqua-plasma-1527",
+    "search_text": "ritter energie aqua plasma 15/27 sottovuoto",
+    "marca": "RITTER ENERGIE",
+    "modello": "AQUA PLASMA 15/27",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.67,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1797.0,
+      "energia_qcol_75": 1627.0,
+      "producibilita_qualificazione_kwh_mq": 673.03
+    }
+  },
+  {
+    "id_slug": "ritter-energie-aqua-plasma-1540",
+    "search_text": "ritter energie aqua plasma 15/40 sottovuoto",
+    "marca": "RITTER ENERGIE",
+    "modello": "AQUA PLASMA 15/40",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 3.99,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 2685.0,
+      "energia_qcol_75": 2431.0,
+      "producibilita_qualificazione_kwh_mq": 672.93
+    }
+  },
+  {
+    "id_slug": "ritter-energie-aqua-plasma-1934",
+    "search_text": "ritter energie aqua plasma 19/34 sottovuoto",
+    "marca": "RITTER ENERGIE",
+    "modello": "AQUA PLASMA 19/34",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 3.35,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 2254.0,
+      "energia_qcol_75": 2041.0,
+      "producibilita_qualificazione_kwh_mq": 672.84
+    }
+  },
+  {
+    "id_slug": "ritter-energie-aqua-plasma-1950",
+    "search_text": "ritter energie aqua plasma 19/50 sottovuoto",
+    "marca": "RITTER ENERGIE",
+    "modello": "AQUA PLASMA 19/50",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 5.01,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 3372.0,
+      "energia_qcol_75": 3052.0,
+      "producibilita_qualificazione_kwh_mq": 673.05
+    }
+  },
+  {
+    "id_slug": "ritter-energie-cso-21",
+    "search_text": "ritter energie cso 21 sottovuoto",
+    "marca": "RITTER ENERGIE",
+    "modello": "CSO 21",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "Sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.38,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1201.0,
+      "energia_qcol_75": 1004.0,
+      "producibilita_qualificazione_kwh_mq": 504.0
+    }
+  },
+  {
+    "id_slug": "ritter-energie-star-1526",
+    "search_text": "ritter energie star 15/26 sottovuoto",
+    "marca": "RITTER ENERGIE",
+    "modello": "STAR 15/26",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "Sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.63,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1544.0,
+      "energia_qcol_75": 1333.0,
+      "producibilita_qualificazione_kwh_mq": 587.0
+    }
+  },
+  {
+    "id_slug": "ritter-energie-star-1539",
+    "search_text": "ritter energie star 15/39 sottovuoto",
+    "marca": "RITTER ENERGIE",
+    "modello": "STAR 15/39",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "Sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 3.93,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 2313.0,
+      "energia_qcol_75": 1997.0,
+      "producibilita_qualificazione_kwh_mq": 588.0
+    }
+  },
+  {
+    "id_slug": "ritter-energie-star-1933",
+    "search_text": "ritter energie star 19/33 sottovuoto",
+    "marca": "RITTER ENERGIE",
+    "modello": "STAR 19/33",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "Sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 3.31,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1988.0,
+      "energia_qcol_75": 1717.0,
+      "producibilita_qualificazione_kwh_mq": 600.0
+    }
+  },
+  {
+    "id_slug": "ritter-energie-star-1949",
+    "search_text": "ritter energie star 19/49 sottovuoto",
+    "marca": "RITTER ENERGIE",
+    "modello": "STAR 19/49",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "Sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 4.94,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 2982.0,
+      "energia_qcol_75": 2575.0,
+      "producibilita_qualificazione_kwh_mq": 603.0
+    }
+  },
+  {
+    "id_slug": "sime-sime-natural-160-s",
+    "search_text": "sime sime natural 160 s factory_made",
+    "marca": "SIME",
+    "modello": "SIME NATURAL 160 S",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.09,
+      "area_apertura_mq": 1.88,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 582.45
+    }
+  },
+  {
+    "id_slug": "sime-sime-natural-160-s-lp",
+    "search_text": "sime sime natural 160 s lp factory_made",
+    "marca": "SIME",
+    "modello": "SIME NATURAL 160 S LP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.09,
+      "area_apertura_mq": 1.88,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 582.45
+    }
+  },
+  {
+    "id_slug": "sime-sime-natural-200-s",
+    "search_text": "sime sime natural 200 s factory_made",
+    "marca": "SIME",
+    "modello": "SIME NATURAL 200 S",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.6,
+      "area_apertura_mq": 2.37,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 573.0
+    }
+  },
+  {
+    "id_slug": "sime-sime-natural-200-s-lp",
+    "search_text": "sime sime natural 200 s lp factory_made",
+    "marca": "SIME",
+    "modello": "SIME NATURAL 200 S LP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.6,
+      "area_apertura_mq": 2.37,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 573.0
+    }
+  },
+  {
+    "id_slug": "sime-sime-natural-30052-s",
+    "search_text": "sime sime natural 300/5.2 s factory_made",
+    "marca": "SIME",
+    "modello": "SIME NATURAL 300/5.2 S",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.6,
+      "area_apertura_mq": 2.37,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 482.28
+    }
+  },
+  {
+    "id_slug": "sime-sime-natural-30052-s-lp",
+    "search_text": "sime sime natural 300/5.2 s lp factory_made",
+    "marca": "SIME",
+    "modello": "SIME NATURAL 300/5.2 S LP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.6,
+      "area_apertura_mq": 2.37,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 482.28
+    }
+  },
+  {
+    "id_slug": "sime-simesol-182",
+    "search_text": "sime simesol 182 piano",
+    "marca": "SIME",
+    "modello": "SIMESOL 182",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.03,
+      "area_apertura_mq": 1.82,
+      "energia_qcol_50": 801.0,
+      "energia_qcol_75": 446.0,
+      "producibilita_qualificazione_kwh_mq": 394.58
+    }
+  },
+  {
+    "id_slug": "sime-simesol-230",
+    "search_text": "sime simesol 230 piano",
+    "marca": "SIME",
+    "modello": "SIMESOL 230",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.53,
+      "area_apertura_mq": 2.33,
+      "energia_qcol_50": 998.0,
+      "energia_qcol_75": 556.0,
+      "producibilita_qualificazione_kwh_mq": 394.47
+    }
+  },
+  {
+    "id_slug": "sime-simesol-hrz-182",
+    "search_text": "sime simesol hrz 182 piano",
+    "marca": "SIME",
+    "modello": "SIMESOL HRZ 182",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.03,
+      "area_apertura_mq": 1.84,
+      "energia_qcol_50": 819.0,
+      "energia_qcol_75": 422.0,
+      "producibilita_qualificazione_kwh_mq": 403.45
+    }
+  },
+  {
+    "id_slug": "sondag-energy-diamond-sky-50",
+    "search_text": "sondag energy diamond sky 50 concentrazione",
+    "marca": "SONDAG ENERGY",
+    "modello": "Diamond SKY 50",
+    "tipologia": "concentrazione",
+    "tipologia_collettore": "A concentrazione",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 49.94,
+      "area_apertura_mq": 47.8,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 1181.0
+    }
+  },
+  {
+    "id_slug": "stelbi-spa-collettore-solare-sunstar-av-df10",
+    "search_text": "stelbi s.p.a. collettore solare sunstar av df10 sottovuoto",
+    "marca": "STELBI S.P.A.",
+    "modello": "COLLETTORE SOLARE SUNSTAR AV DF10",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.38,
+      "area_apertura_mq": 2.09,
+      "energia_qcol_50": 1585.0,
+      "energia_qcol_75": 1357.0,
+      "producibilita_qualificazione_kwh_mq": 665.97
+    }
+  },
+  {
+    "id_slug": "sunerg-solar-bluh",
+    "search_text": "sunerg solar bluh+ piano",
+    "marca": "Sunerg Solar",
+    "modello": "BLUH+",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.96,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 963.0,
+      "energia_qcol_75": 594.0,
+      "producibilita_qualificazione_kwh_mq": 491.33
+    }
+  },
+  {
+    "id_slug": "sunerg-solar-bluhx",
+    "search_text": "sunerg solar bluhx+ piano",
+    "marca": "Sunerg Solar",
+    "modello": "BLUHX+",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.52,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1419.0,
+      "energia_qcol_75": 949.0,
+      "producibilita_qualificazione_kwh_mq": 563.1
+    }
+  },
+  {
+    "id_slug": "sunerg-solar-hv12",
+    "search_text": "sunerg solar hv12 sottovuoto",
+    "marca": "Sunerg Solar",
+    "modello": "HV12",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.17,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1149.0,
+      "energia_qcol_75": 965.0,
+      "producibilita_qualificazione_kwh_mq": 529.49
+    }
+  },
+  {
+    "id_slug": "sunerg-solar-slim",
+    "search_text": "sunerg solar slim+ piano",
+    "marca": "Sunerg Solar",
+    "modello": "SLIM+",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.02,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1010.0,
+      "energia_qcol_75": 646.0,
+      "producibilita_qualificazione_kwh_mq": 500.0
+    }
+  },
+  {
+    "id_slug": "sunerg-solar-slimx",
+    "search_text": "sunerg solar slimx+ piano",
+    "marca": "Sunerg Solar",
+    "modello": "SLIMX+",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.52,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1261.0,
+      "energia_qcol_75": 806.0,
+      "producibilita_qualificazione_kwh_mq": 500.4
+    }
+  },
+  {
+    "id_slug": "sunerg-solar-slimxl",
+    "search_text": "sunerg solar slimxl+ piano",
+    "marca": "Sunerg Solar",
+    "modello": "SLIMXL+",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.92,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1461.0,
+      "energia_qcol_75": 933.0,
+      "producibilita_qualificazione_kwh_mq": 500.34
+    }
+  },
+  {
+    "id_slug": "sylber-cfs-204-a",
+    "search_text": "sylber cfs 20/4 a piano",
+    "marca": "SYLBER",
+    "modello": "CFS 20/4 A",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": 947.0,
+      "energia_qcol_75": 522.0,
+      "producibilita_qualificazione_kwh_mq": 473.0
+    }
+  },
+  {
+    "id_slug": "sylber-cfs-254-a",
+    "search_text": "sylber cfs 25/4 a piano",
+    "marca": "SYLBER",
+    "modello": "CFS 25/4 A",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": 1184.0,
+      "energia_qcol_75": 652.0,
+      "producibilita_qualificazione_kwh_mq": 473.0
+    }
+  },
+  {
+    "id_slug": "sylber-cfs20-cp20tss",
+    "search_text": "sylber cfs20 (*) - cp20tss (**) piano",
+    "marca": "SYLBER",
+    "modello": "CFS20 (*) - CP20TSS (**)",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": 731.0,
+      "energia_qcol_75": 423.0,
+      "producibilita_qualificazione_kwh_mq": 386.0
+    }
+  },
+  {
+    "id_slug": "sylber-cfs25-cp25tvs",
+    "search_text": "sylber cfs25 (*) - cp25tvs (**) piano",
+    "marca": "SYLBER",
+    "modello": "CFS25 (*) - CP25TVS (**)",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.29,
+      "area_apertura_mq": 2.15,
+      "energia_qcol_50": 1031.0,
+      "energia_qcol_75": 619.0,
+      "producibilita_qualificazione_kwh_mq": 450.0
+    }
+  },
+  {
+    "id_slug": "sylber-cfs-254",
+    "search_text": "sylber cfs-25/4 piano",
+    "marca": "SYLBER",
+    "modello": "CFS-25/4",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.3,
+      "area_apertura_mq": 2.15,
+      "energia_qcol_50": 1055.0,
+      "energia_qcol_75": 638.0,
+      "producibilita_qualificazione_kwh_mq": 458.7
+    }
+  },
+  {
+    "id_slug": "sylber-sn-1501-ti",
+    "search_text": "sylber sn 150/1 ti factory_made",
+    "marca": "SYLBER",
+    "modello": "SN 150/1 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 565.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-1501-tp",
+    "search_text": "sylber sn 150/1 tp factory_made",
+    "marca": "SYLBER",
+    "modello": "SN 150/1 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 565.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-2001-ti",
+    "search_text": "sylber sn 200/1 ti factory_made",
+    "marca": "SYLBER",
+    "modello": "SN 200/1 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 585.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-2001-tp",
+    "search_text": "sylber sn 200/1 tp factory_made",
+    "marca": "SYLBER",
+    "modello": "SN 200/1 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 585.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-2202-ti",
+    "search_text": "sylber sn 220/2 ti factory_made",
+    "marca": "SYLBER",
+    "modello": "SN 220/2 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 440.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-2202-tp",
+    "search_text": "sylber sn 220/2 tp factory_made",
+    "marca": "SYLBER",
+    "modello": "SN 220/2 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 440.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-3002-ti",
+    "search_text": "sylber sn 300/2 ti factory_made",
+    "marca": "SYLBER",
+    "modello": "SN 300/2 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 507.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-3002-tp",
+    "search_text": "sylber sn 300/2 tp factory_made",
+    "marca": "SYLBER",
+    "modello": "SN 300/2 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 507.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-3003-ti",
+    "search_text": "sylber sn 300/3 ti factory_made",
+    "marca": "SYLBER",
+    "modello": "SN 300/3 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 442.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-3003-tp",
+    "search_text": "sylber sn 300/3 tp factory_made",
+    "marca": "SYLBER",
+    "modello": "SN 300/3 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.89,
+      "area_apertura_mq": 1.77,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 442.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-a-16025-ti",
+    "search_text": "sylber sn-a 160/2,5 ti factory_made",
+    "marca": "SYLBER",
+    "modello": "SN-A 160/2,5 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 483.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-a-16025-tp",
+    "search_text": "sylber sn-a 160/2,5 tp factory_made",
+    "marca": "SYLBER",
+    "modello": "SN-A 160/2,5 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 483.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-a-20025-ti",
+    "search_text": "sylber sn-a 200/2,5 ti factory_made",
+    "marca": "SYLBER",
+    "modello": "SN-A 200/2,5 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 597.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-a-20025-tp",
+    "search_text": "sylber sn-a 200/2,5 tp factory_made",
+    "marca": "SYLBER",
+    "modello": "SN-A 200/2,5 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 597.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-a-2004-ti",
+    "search_text": "sylber sn-a 200/4 ti factory_made",
+    "marca": "SYLBER",
+    "modello": "SN-A 200/4 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 449.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-a-2004-tp",
+    "search_text": "sylber sn-a 200/4 tp factory_made",
+    "marca": "SYLBER",
+    "modello": "SN-A 200/4 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 449.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-a-3004-ti",
+    "search_text": "sylber sn-a 300/4 ti factory_made",
+    "marca": "SYLBER",
+    "modello": "SN-A 300/4 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 589.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-a-3004-tp",
+    "search_text": "sylber sn-a 300/4 tp factory_made",
+    "marca": "SYLBER",
+    "modello": "SN-A 300/4 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.0,
+      "area_apertura_mq": 1.91,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 589.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-a-3005-ti",
+    "search_text": "sylber sn-a 300/5 ti factory_made",
+    "marca": "SYLBER",
+    "modello": "SN-A 300/5 TI",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 514.0
+    }
+  },
+  {
+    "id_slug": "sylber-sn-a-3005-tp",
+    "search_text": "sylber sn-a 300/5 tp factory_made",
+    "marca": "SYLBER",
+    "modello": "SN-A 300/5 TP",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "Impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": 2.39,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 514.0
+    }
+  },
+  {
+    "id_slug": "vaillant-aurotherm-classic-vfk-1353-d",
+    "search_text": "vaillant aurotherm classic vfk 135/3 d piano",
+    "marca": "Vaillant",
+    "modello": "auroTHERM classic VFK 135/3 D",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1146.0,
+      "energia_qcol_75": 677.0,
+      "producibilita_qualificazione_kwh_mq": 456.57
+    }
+  },
+  {
+    "id_slug": "vaillant-aurotherm-classic-vfk-1353-vd",
+    "search_text": "vaillant aurotherm classic vfk 135/3 vd piano",
+    "marca": "Vaillant",
+    "modello": "auroTHERM classic VFK 135/3 VD",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1146.0,
+      "energia_qcol_75": 677.0,
+      "producibilita_qualificazione_kwh_mq": 456.57
+    }
+  },
+  {
+    "id_slug": "vaillant-aurotherm-classic-vfk-1403-vd",
+    "search_text": "vaillant aurotherm classic vfk 140/3 vd piano",
+    "marca": "Vaillant",
+    "modello": "auroTHERM classic VFK 140/3 VD",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1281.0,
+      "energia_qcol_75": 773.0,
+      "producibilita_qualificazione_kwh_mq": 510.36
+    }
+  },
+  {
+    "id_slug": "vaillant-aurotherm-plus-vfk-1552-h",
+    "search_text": "vaillant aurotherm plus vfk 155/2 h piano",
+    "marca": "Vaillant",
+    "modello": "auroTHERM plus VFK 155/2 H",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1242.0,
+      "energia_qcol_75": 742.0,
+      "producibilita_qualificazione_kwh_mq": 494.82
+    }
+  },
+  {
+    "id_slug": "vaillant-aurotherm-plus-vfk-1552-v",
+    "search_text": "vaillant aurotherm plus vfk 155/2 v piano",
+    "marca": "Vaillant",
+    "modello": "auroTHERM plus VFK 155/2 V",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1242.0,
+      "energia_qcol_75": 742.0,
+      "producibilita_qualificazione_kwh_mq": 494.82
+    }
+  },
+  {
+    "id_slug": "vaillant-aurotherm-pro-vfk-1254",
+    "search_text": "vaillant aurotherm pro vfk 125/4 piano",
+    "marca": "Vaillant",
+    "modello": "auroTHERM pro VFK 125/4",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1010.0,
+      "energia_qcol_75": 542.0,
+      "producibilita_qualificazione_kwh_mq": 402.39
+    }
+  },
+  {
+    "id_slug": "vaillant-aurotherm-vfk-1453-h",
+    "search_text": "vaillant aurotherm vfk 145/3 h piano",
+    "marca": "Vaillant",
+    "modello": "auroTHERM VFK 145/3 H",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1166.0,
+      "energia_qcol_75": 672.0,
+      "producibilita_qualificazione_kwh_mq": 464.54
+    }
+  },
+  {
+    "id_slug": "vaillant-aurotherm-vfk-1453-v",
+    "search_text": "vaillant aurotherm vfk 145/3 v piano",
+    "marca": "Vaillant",
+    "modello": "auroTHERM VFK 145/3 V",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1166.0,
+      "energia_qcol_75": 672.0,
+      "producibilita_qualificazione_kwh_mq": 464.54
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-100-fm-sh1f",
+    "search_text": "viessmann vitosol 100-fm sh1f piano",
+    "marca": "Viessmann",
+    "modello": "Vitosol 100-FM SH1F",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 975.0,
+      "energia_qcol_75": 438.0,
+      "producibilita_qualificazione_kwh_mq": 388.0
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-100-fm-sv1f",
+    "search_text": "viessmann vitosol 100-fm sv1f piano",
+    "marca": "Viessmann",
+    "modello": "Vitosol 100-FM SV1F",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 954.0,
+      "energia_qcol_75": 441.0,
+      "producibilita_qualificazione_kwh_mq": 380.0
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-111-f-ts1-150-lt",
+    "search_text": "viessmann vitosol 111-f ts1 (150 lt.) factory_made",
+    "marca": "Viessmann",
+    "modello": "Vitosol 111-F TS1 (150 LT.)",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.18,
+      "area_apertura_mq": 2.02,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 516.0
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-111-f-ts1-200-lt",
+    "search_text": "viessmann vitosol 111-f ts1 (200 lt.) factory_made",
+    "marca": "Viessmann",
+    "modello": "Vitosol 111-F TS1 (200 LT.)",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.18,
+      "area_apertura_mq": 2.02,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 620.0
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-111-f-ts1-300-lt",
+    "search_text": "viessmann vitosol 111-f ts1 (300 lt.) factory_made",
+    "marca": "Viessmann",
+    "modello": "Vitosol 111-F TS1 (300 LT.)",
+    "tipologia": "factory_made",
+    "tipologia_collettore": "impianti solari termici factory made",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.18,
+      "area_apertura_mq": 2.02,
+      "energia_qcol_50": null,
+      "energia_qcol_75": null,
+      "producibilita_qualificazione_kwh_mq": 557.0
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-200-f-sve",
+    "search_text": "viessmann vitosol 200-f sve piano",
+    "marca": "Viessmann",
+    "modello": "Vitosol 200-F SVE",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.5,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1208.0,
+      "energia_qcol_75": 693.0,
+      "producibilita_qualificazione_kwh_mq": 483.2
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-200-fm-sh2f",
+    "search_text": "viessmann vitosol 200-fm sh2f piano",
+    "marca": "Viessmann",
+    "modello": "Vitosol 200-FM SH2F",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 952.0,
+      "energia_qcol_75": 407.0,
+      "producibilita_qualificazione_kwh_mq": 379.0
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-200-fm-sh2g",
+    "search_text": "viessmann vitosol 200-fm sh2g piano",
+    "marca": "Viessmann",
+    "modello": "Vitosol 200-FM SH2G",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.56,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 986.0,
+      "energia_qcol_75": 420.0,
+      "producibilita_qualificazione_kwh_mq": 385.0
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-200-fm-sv2f",
+    "search_text": "viessmann vitosol 200-fm sv2f piano",
+    "marca": "Viessmann",
+    "modello": "Vitosol 200-FM SV2F",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1010.0,
+      "energia_qcol_75": 431.0,
+      "producibilita_qualificazione_kwh_mq": 402.0
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-200-fm-sv2g",
+    "search_text": "viessmann vitosol 200-fm sv2g piano",
+    "marca": "Viessmann",
+    "modello": "Vitosol 200-FM SV2G",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.56,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1008.0,
+      "energia_qcol_75": 430.0,
+      "producibilita_qualificazione_kwh_mq": 393.0
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-200-t-spx-f",
+    "search_text": "viessmann vitosol 200-t spx-f sottovuoto",
+    "marca": "Viessmann",
+    "modello": "Vitosol 200-T SPX-F",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 5.05,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 2960.0,
+      "energia_qcol_75": 2450.0,
+      "producibilita_qualificazione_kwh_mq": 586.0
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-200-t-spx-s",
+    "search_text": "viessmann vitosol 200-t spx-s sottovuoto",
+    "marca": "Viessmann",
+    "modello": "Vitosol 200-T SPX-S",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 5.05,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 3072.0,
+      "energia_qcol_75": 2559.0,
+      "producibilita_qualificazione_kwh_mq": 608.0
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-200-tm-spea-163-m2",
+    "search_text": "viessmann vitosol 200-tm spea 1,63 m2 sottovuoto",
+    "marca": "Viessmann",
+    "modello": "Vitosol 200-TM SPEA 1,63 m2",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.67,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1132.0,
+      "energia_qcol_75": 890.0,
+      "producibilita_qualificazione_kwh_mq": 423.97
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-200-tm-spea-326-m2",
+    "search_text": "viessmann vitosol 200-tm spea 3,26 m2 sottovuoto",
+    "marca": "Viessmann",
+    "modello": "Vitosol 200-TM SPEA 3,26 m2",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 5.3,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 2358.0,
+      "energia_qcol_75": 1879.0,
+      "producibilita_qualificazione_kwh_mq": 444.9
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-300-tm-sp3c-125-m2-hw",
+    "search_text": "viessmann vitosol 300-tm sp3c 1,25 m2 hw sottovuoto",
+    "marca": "Viessmann",
+    "modello": "Vitosol 300-TM SP3C 1,25 m2 HW",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 1.98,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 829.0,
+      "energia_qcol_75": 552.0,
+      "producibilita_qualificazione_kwh_mq": 418.68
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-300-tm-sp3c-151-m2",
+    "search_text": "viessmann vitosol 300-tm sp3c 1,51 m2 sottovuoto",
+    "marca": "Viessmann",
+    "modello": "Vitosol 300-TM SP3C 1,51 m2",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.36,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1028.0,
+      "energia_qcol_75": 792.0,
+      "producibilita_qualificazione_kwh_mq": 435.6
+    }
+  },
+  {
+    "id_slug": "viessmann-vitosol-300-tm-sp3c-303-m2",
+    "search_text": "viessmann vitosol 300-tm sp3c 3,03 m2 sottovuoto",
+    "marca": "Viessmann",
+    "modello": "Vitosol 300-TM SP3C 3,03 m2",
+    "tipologia": "sottovuoto",
+    "tipologia_collettore": "sottovuoto",
+    "utilizzo": "solo_acs",
+    "dati_tecnici": {
+      "area_lorda_mq": 4.61,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 2162.0,
+      "energia_qcol_75": 1689.0,
+      "producibilita_qualificazione_kwh_mq": 468.9
+    }
+  },
+  {
+    "id_slug": "weishaupt-italia-wts-f2-k5",
+    "search_text": "weishaupt italia wts-f2 k5 piano",
+    "marca": "WEISHAUPT ITALIA",
+    "modello": "WTS-F2 K5",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1162.0,
+      "energia_qcol_75": 588.0,
+      "producibilita_qualificazione_kwh_mq": 462.94
+    }
+  },
+  {
+    "id_slug": "weishaupt-italia-wts-f2-k6",
+    "search_text": "weishaupt italia wts-f2 k6 piano",
+    "marca": "WEISHAUPT ITALIA",
+    "modello": "WTS-F2 K6",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.51,
+      "area_apertura_mq": null,
+      "energia_qcol_50": 1162.0,
+      "energia_qcol_75": 588.0,
+      "producibilita_qualificazione_kwh_mq": 462.94
+    }
+  },
+  {
+    "id_slug": "wolf-cfk-1",
+    "search_text": "wolf cfk-1 piano",
+    "marca": "Wolf",
+    "modello": "CFK-1",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.3,
+      "area_apertura_mq": 2.12,
+      "energia_qcol_50": 887.0,
+      "energia_qcol_75": 513.0,
+      "producibilita_qualificazione_kwh_mq": 385.65
+    }
+  },
+  {
+    "id_slug": "wolf-topson-f3-1",
+    "search_text": "wolf topson f3-1 piano",
+    "marca": "Wolf",
+    "modello": "TopSon F3-1",
+    "tipologia": "piano",
+    "tipologia_collettore": "Piani",
+    "utilizzo": "acs_riscaldamento",
+    "dati_tecnici": {
+      "area_lorda_mq": 2.3,
+      "area_apertura_mq": 2.0,
+      "energia_qcol_50": 1048.0,
+      "energia_qcol_75": 627.0,
+      "producibilita_qualificazione_kwh_mq": 455.65
+    }
+  }
+]

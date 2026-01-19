@@ -1,0 +1,3078 @@
+{
+  "spese_ammissibili": [
+    {
+      "voce": "Interventi di efficienza energetica (Titolo II)",
+      "riferimento_intervento": "25 % intervento singolo 306 % per multi-interventi",
+      "note": ""
+    },
+    {
+      "voce": "Incremento per dimensione impresa",
+      "riferimento_intervento": "20 %",
+      "note": "10%"
+    },
+    {
+      "voce": "Zone assistite lett. a) Zone assistite lett. c)",
+      "riferimento_intervento": "15 % 5%",
+      "note": "15 % 5%"
+    },
+    {
+      "voce": "Miglioramento della prestazione energetica",
+      "riferimento_intervento": "15 %",
+      "note": "15%"
+    },
+    {
+      "voce": "Intensità massima",
+      "riferimento_intervento": "65 %",
+      "note": "65%"
+    },
+    {
+      "voce": "Classe A",
+      "riferimento_intervento": "V ≤ 150 litri",
+      "note": "500 €"
+    },
+    {
+      "voce": "Classe +",
+      "riferimento_intervento": "V ≤ 150 litri",
+      "note": "700 €"
+    },
+    {
+      "voce": "[Tabella 20 - Allegato 2 del D.M. 7 agosto 2025]",
+      "riferimento_intervento": "",
+      "note": ""
+    },
+    {
+      "voce": "Tipologia di intervento",
+      "riferimento_intervento": "",
+      "note": "ammissibile"
+    },
+    {
+      "voce": "Installazione di microcogeneratori",
+      "riferimento_intervento": "65",
+      "note": "5.000 €/kWe"
+    },
+    {
+      "voce": "i Soggetti ammessi ai benefici;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "gli interventi incentivabili, ivi inclusi i requisiti tecnici di accesso previsti dal Decreto e gli algoritmi di",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "le modalità di invio della richiesta di concessione dell’incentivo;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "la documentazione da presentare nell’ambito della scheda-domanda e la documentazione da",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "il procedimento di valutazione condotto dal GSE sulle richieste presentate dal Soggetto Responsabile;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "le modalità di erogazione degli incentivi;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "la gestione delle modifiche tecnico-amministrative dell’intervento incentivato;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "i controlli e le verifiche.",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 8 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "per l’incremento dell’efficienza energetica in edifici esistenti, parti di essi o unità immobiliari",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "per la produzione di energia termica da fonti rinnovabili e di sistemi ad alta efficienza realizzati in",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 9 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "A Art. 5, comma 1, lettera a)",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "B Art.5, comma 1, lettera b)",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "C sistemi di filtrazione solari esterni di chiusure trasparenti con Art. 5, comma 1, lettera c)",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "D Art. 5, comma 1, lettera d)",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "E Art. 5, comma 1, lettera e)",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "F Art. 5, comma 1, lettera f)",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "G congiuntamente alla sostituzione di impianti di climatizzazione Art. 5, comma 1, lettera g)",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "H congiuntamente alla sostituzione di impianti di climatizzazione Art. 5, comma 1, lettera h)",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "A produzione di acqua calda sanitaria, dotati di pompe di calore Art. 8, comma 1, lettera a)",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "il contratto di PPP, debitamente sottoscritto dalle parti, avente i requisiti minimi precisati nel successivo",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "il progetto esecutivo verificato e approvato ai sensi del D.lgs. 36/2023 con l’indicazione delle spese",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "il Piano economico finanziario (PEF) asseverato da ente terzo contenente l'importo complessivo delle",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "il piano dei pagamenti previsti dal contratto;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "dichiarazione contenente la suddivisione delle spese ammissibili e non ammissibili, sottoscritta dalla PA",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "in caso di contratti multi -edificio, ripartizione dei costi per singolo edificio oggetto dell’intervento,",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 25 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "per il punto i), oltre alla diagnosi energetica, dovrà essere trasmessa la delibera dell’organo",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "oltre alla documentazione prevista al punto iv), l’ETS potrà trasmettere qualsiasi atto o delibera",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 27 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Il SR carica sul Portaltermico i dati tecnici e anagrafici relativi all'intervento, unitamente alla",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Il SR stampa la scheda domanda, la sottoscrive in ogni sua parte (inclusa la scheda contratto) e la",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Il GSE invia la lettera di accettazione della prenotazione all’incentivo",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Il SR comunica tramite Portaltermico i dati e i documenti previsti dall'art. 14 del Decreto relativi",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "il GSE effettua l'istruttoria e se positiva, invia la lettera di ammissione agli incentivi, con relativo",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Il SR comunica la data di fine lavori tramite Portaltermico",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Il SR richiede l'accesso diretto agli incentivi per l'erogazione del saldo entro 90 giorni dalla fine lavori",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "interventi realizzati su edifici di proprietà di Comuni con popolazione fino a",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "una dichiarazione, redatta in conformità ai modelli 1 e 2, attestante il rispetto della soglia di abitanti",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "la visura catastale dell’edificio di proprietà comunale;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "se pertinente, il titolo da cui risulti che il terzo utilizza l’immobile di proprietà comunale e del quale si",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 29 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "400 milioni di euro per incentivi riconosciuti ad interventi realizzati o da realizzare da parte delle",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "500 milioni di euro per incentivi riconosciuti ad interventi realizzati da parte di Soggetti privati, ivi",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 34 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "non possono essere riconosciuti gli incentivi previsti dal Decreto agli interventi per la cui realizzazione",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "limitatamente agli edifici di proprietà della pubblica amministrazione e dalla stessa utilizzati, gli incentivi",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "con riferimento alle configurazioni di autoconsumo collettivo e alle comunità energetiche rinnovabili, la",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "la documentazione idonea a dimostrazione delle spese sostenute dalla ESCO, ai sensi degli artt. 6 e 9 del",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "il piano dei pagamenti previsti dal contratto e le fatture e i mandati di pagamento/ricevute di bonifico",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 47 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "caso i.: diagnosi energetica, eseguita sull’edificio oggetto dell’intervento secondo i requisiti di cui al",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": ", del Decreto, in base ai requisiti per l’ammissibilità della richiesta di accesso su prenotazione, in fase di",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "caso ii.: copia del contratto di rendimento energetico (EPC) tra la ESCO e la Pubblica",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "caso iv.: provvedimento o altro atto amministrativo di assegnazione dei lavori oggetto della richiesta",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 48 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "caso i.: documento di diagnosi energetica eseguita secondo i requisiti di cui al paragrafo",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "in caso di esito positivo dell’istruttoria, il GSE trasmette il provvedimento di accoglimento, finalizzato",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "in caso in cui la documentazione si confermi incompleta, carente o difforme ai requisiti previsti dal",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "confermare tutte le informazioni inserite in fase di richiesta di ammissione;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "trasmettere la documentazione contabile (Stato di avanzamento lavori (SAL) e/o Registro di",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "fornitura e messa in opera di materiale coibente per il miglioramento delle caratteristiche termiche delle",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "fornitura e messa in opera di materiali ordinari, necessari alla realizzazione di ulteriori strutture murarie",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "demolizione e ricostruzione dell’elemento costruttivo, ove coerente con gli strumenti urbanistici vigenti;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "l’installazione di sistemi di ventilazione meccanica qualora gli stessi risultino l’unica soluzione tecnica o",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "prestazioni professionali connesse alla realizzazione degli interventi.",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 60 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "fornitura e messa in opera di nuove chiusure apribili o assimilabili, comprensive di infissi e di eventuali",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "miglioramento delle caratteristiche termiche dei componenti vetrati esistenti, con integrazioni e",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "smontaggio e dismissione delle chiusure preesistenti;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "fornitura e messa in opera di tende tecniche, schermature solari esterne regolabili mobili, sistemi di",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "fornitura e messa in opera di meccanismi automatici di regolazione e controllo;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "eventuale smontaggio e dismissione delle tende tecniche e schermature solari preesistenti;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "di impianti di climatizzazione invernale utilizzanti generatori di calore a condensazione, per la Pubblica",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "di apparecchiature energetiche alimentate a combustibili fossili, compreso il gas naturale, come",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "la fornitura e la messa in opera di materiali e tecnologie finalizzati al conseguimento della qualifica",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "la demolizione, il recupero o lo smaltimento e ricostruzione degli elementi costruttivi dell'involucro",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "la demolizione e la ricostruzione delle strutture dell'edificio, incluso gli eventuali costi aggiuntivi",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "gli eventuali interventi per l'adeguamento sismico delle strutture dell'edificio, rafforzate o ricostruite,",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 73 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "fornitura e messa in opera di sistemi efficienti di illuminazione conformi ai requisiti minimi sopra",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "adeguamenti dell’impianto elettrico, ivi compresa la messa a norma e l’eventuale adeguamento del",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "eventuale smontaggio e dismissione dei sistemi per l’illuminazione preesistenti;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "tabella riepilogativa riportante l’elenco dei corpi illuminanti/lampade sostituiti e installati (ante e post-",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "documentazione fotografica attestante l’intervento, raccolta in documento elettronico in formato PDF,",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "schede tecniche dei componenti oggetto dell’intervento fornite dal produttore dei sistemi/corpi",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "per interventi realizzati dalle imprese (ivi inclusi gli ETS economici) su edifici ricadenti nell’ambito",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "pertinente titolo autorizzativo e/o abilitativo, ove previsto dalla vigente legislazione/normativa",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "eventuale documentazione comprovante la progettazione del rifacimento dell’impianto di",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "relazione di collaudo illuminotecnico di tutte le aree oggetto dell’intervento nella situazione ex-ante e",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "certificato di collaudo dell’impianto;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "certificato di collaudo illuminotecnico;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "verifica del livello di illuminamento.",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 80 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 81 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "fornitura e la messa in opera di sistemi di building automation finalizzati al controllo dei servizi",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "gli adeguamenti dell’impianto elettrico e di climatizzazione invernale ed estiva;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "la fornitura e la messa in opera dei punti di ricarica;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "la fornitura e la messa in opera di materiali ordinari, necessari alla realizzazione di opere edili per",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "il contributo in quota potenza di cui al Testo Integrato delle Connessioni attive - TICA per la richiesta",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "prestazioni professionali connesse alla realizzazione dell’intervento.",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "la fornitura e la posa in opera dell’impianto fotovoltaico e dell’eventuale sistema di accumulo e relativi",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "le spese per le prestazioni professionali connesse alla realizzazione dell’intervento.",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "lo smontaggio e dismissione dell’impianto di climatizzazione invernale esistente, parziale o totale;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "la fornitura, trasporto e posa in opera di tutte le apparecchiature termiche, meccaniche, elettriche ed",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "i sistemi di contabilizzazione globale (solo se obbligatori) e individuale; eventuali interventi sulla rete",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "opere e sistemi di captazione per le pompe di calore geotermiche;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "smontaggio e dismissione, parziale o integrale, dell’impianto di climatizzazione invernale esistente;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "fornitura e posa in opera di tutte le apparecchiature termiche, meccaniche, elettriche, elettroniche,",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "smontaggio e dismissione dell’impianto di climatizzazione invernale esistente, parziale o totale;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "fornitura e posa in opera di tutte le apparecchiature termiche, meccaniche, elettriche ed elettroniche,",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "opere idrauliche e murarie necessarie per la sostituzione a regola d’arte dell’impianto di",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "interventi sulla rete di distribuzione, sui sistemi di trattamento dell’acqua, sui dispositivi di controllo e",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "smontaggio e dismissione dell’impianto esistente, parziale o totale;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "fornitura, trasporto e posa in opera di tutte le apparecchiature termiche, meccaniche, elettriche ed",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "smontaggio e dismissione dell’impianto esistente;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "spese professionali connesse alla realizzazione dell’intervento.",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "lo smontaggio e la dismissione dell'impianto di climatizzazione invernale esistente;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 132 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "la fornitura e la posa in opera di tutte le apparecchiature termiche, meccaniche, elettriche ed",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "gli eventuali interventi sulla rete di distribuzione, sui sistemi di trattamento dell'acqua, sui dispositivi",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "le spese relative all’installazione della sottostazione di utenza, al collegamento alla rete di",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "lo smontaggio e la dismissione, parziale o totale, dell’impianto di climatizzazione esistente;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "gli interventi per l’adeguamento della rete di distribuzione, dei sistemi di accumulo, dei sistemi di",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 135 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Documentazione comune a tutte le tipologie di interventi;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Asseverazione di un tecnico abilitato contenente la stima dei dati energetici ottenuti sulla base dei carichi",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Certificazione del produttore dalla quale si abbia evidenza delle prestazioni energetiche dell’unità di",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "In caso di sostituzione funzionale, relazione tecnica di progetto timbrata e firmata dal progettista,",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Scheda tecnica del microcogeneratore;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Documentazione fotografica attestante l’intervento, raccolta in un documento elettronico in formato",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 136 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "le targhe dei generatori sostituiti e installati (di ciascuna unità che costituiscono i generatori);",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "i generatori sostituiti e installati;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "la centrale termica, o il locale di installazione, ante-operam (presenta il generatore sostituito) e",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "le valvole termostatiche o sistema di regolazione modulante la portata.",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Libretto di centrale/d’impianto, come previsto dalla legislazione vigente;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Dichiarazione di conformità dell’impianto, ove prevista, ai sensi del DM 37/08, redatta da un installatore",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Modello unico per l’installazione e l’esercizio di unità di microcogenerazione a fonti rinnovabili;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Pertinente titolo autorizzativo e/o abilitativo, ove previsto dalla vigente legislazione/normativa nazionale",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "schema termico completo dell’impianto, con evidenza degli strumenti di misura ove presenti per la",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "schema elettrico completo dell’impianto con evidenza degli strumenti di misura ove presenti per la",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "denuncia e licenza di officina elettrica, ove richiesta dalla normativa vigente;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "certificato del corretto smaltimento del generatore di calore sostituito o di un documento analogo",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "documentazione attestante l’iscrizione dell’impianto installato al catasto regionale, ove presente;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "codice CENSIMP dell’impianto di cogenerazione, ove presente.",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 137 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "essere redatta da un EGE e/o ESCO, in conformità ai criteri minimi di cui al Dlgs 102/14, secondo",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "riportare almeno uno degli interventi del titolo II e III per i quali dovrà essere trasmessa, una volta",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "per il calcolo dell’incentivo di uno o più interventi oggetto della richiesta inviata a interventi realizzati",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "per il calcolo degli incentivi di ulteriori interventi ricompresi in diagnosi, inizialmente non realizzati e",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 143 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "la data di collaudo ai sensi dell’articolo 116 del decreto legislativo 31 marzo 2023, n. 36, o la data del",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "in caso di appalto riferito ad una pluralità d’interventi tra cui quello oggetto della richiesta di",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 148 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "mediante posta raccomandata A/R (all’indirizzo: Gestore dei Servizi Energetici – GSE S.p.A. – Viale",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "l’intervento sia realizzato esclusivamente su di un edificio pubblico da parte di una Pubblica",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "l’edificio sia registrato al catasto edilizio, in una delle categorie catastali previste dal Decreto;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "la destinazione d’uso dell’edificio sia univocamente riconducibile a uso scolastico, strutture",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Si precisa, inoltre, che le Università non sono riconducibili a edifici pubblici adibiti a uso scolastico, secondo",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 165 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "Ana-logamente, nel caso in cui l’edificio oggetto dell’intervento abbia una destinazione d’uso riconducibile al",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "l’effettiva contiguità dell’edificio palestra con l’edificio scuola/complesso scolastico;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "che la palestra si trovi nello stesso sedime della scuola/ complesso scolastico;",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "che gli edifici scuola e palestra siano collegati.",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "è ammissibile solo sulla porzione di edificio con destinazione di scuola o ospedale, in relazione agli",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "non è ammissibile in relazione agli interventi di cui all’art. 5, comma 1, lett. a), d), f), g), h) e all’art. 8,",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "-- PAGINA 166 ---",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "le spese ammissibili sono esclusivamente quelle previste dagli artt. 6 e 9 del DM 7 agosto 2025 e sono",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    },
+    {
+      "voce": "le spese non ammissibili sono:",
+      "riferimento_intervento": "",
+      "note": "Estratto da testo"
+    }
+  ],
+  "checklist_documenti": [],
+  "documenti_allegare": [
+    {
+      "documento": "1.2 Spese ammissibili ai fini del calcolo dell’incentivazione (art. 6)",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "fornitura e messa in opera di materiale coibente per il miglioramento delle caratteristiche termiche delle",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "fornitura e messa in opera di materiali ordinari, necessari alla realizzazione di ulteriori strutture murarie",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "demolizione e ricostruzione dell’elemento costruttivo, ove coerente con gli strumenti urbanistici vigenti;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "l’installazione di sistemi di ventilazione meccanica qualora gli stessi risultino l’unica soluzione tecnica o",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "prestazioni professionali connesse alla realizzazione degli interventi.",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "1.3 Calcolo dell’incentivo (Allegato 2 del Decreto)",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "1.4 Documentazione necessaria per l’accesso all’incentivo",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "documentazione comune a tutte le tipologie di interventi;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "asseverazione di un tecnico abilitato secondo quanto indicato nel paragrafo 12.5;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "la relazione tecnica di progetto timbrata e firmata dal progettista, contenente almeno i seguenti",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "documentazione fotografica attestante l’intervento, raccolta in documento elettronico in formato PDF,",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "per interventi realizzati dalle imprese (ivi inclusi gli ETS economici) su edifici ricadenti nell’ambito",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Strutture opache orizzontali 17 : isolamento",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 59 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 60 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 61 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "la descrizione dell’intervento realizzato, con l’indicazione delle superfici oggetto dell’isolamento",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "i dettagli costruttivi dei ponti termici ante-operam e post-operam della struttura oggetto di",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "stratigrafia della struttura oggetto dell’intervento, ante-operam e post-operam, riportante gli",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "elaborati grafici dell’edificio da cui si evincano le superfici oggetto dell’intervento;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista d’insieme della superficie oggetto d’intervento ante-operam;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista di dettaglio della struttura oggetto d’intervento ante-operam, posizionando un metro di",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista di dettaglio in fase di posa in opera del materiale isolante, prima dell’intonacatura;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista di dettaglio del pannello isolante, posizionando un metro di riferimento che ne accerti lo",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista d’insieme in fase di lavorazione della superficie oggetto di intervento, con il materiale isolante",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista d’insieme della superficie oggetto d’intervento, a lavoro concluso (post-operam);",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista di dettaglio post-operam della struttura oggetto d’intervento, posizionando un metro di",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 62 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Strutture opache orizzontali: isolamento",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Strutture opache verticali: isolamento pareti",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "A, III.B, III.C, III.E, la percentuale incentivata della spesa ammissibile è pari al 55%.",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 66 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "documentazione fotografica attestante l’intervento, raccolta in documento elettronico in formato PDF",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "certificazione del produttore dei sistemi di schermatura, che ne attesti la prestazione solare di classe 3",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "descrizione dettagliata del progetto, con caratterizzazione ante-operam della chiusura",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "tabella riepilogativa riportante l’elenco dei sistemi schermanti e/o ombreggiamento o dei sistemi",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "le facciate oggetto di intervento ante-operam e post-operam e in fase di lavorazione;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista di dettaglio dei sistemi di schermatura e/o ombreggiamento e/o sistemi di filtrazione solare",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "oltre un minimo di ulteriori 3 foto dell’intervento, ad esso abbinato [di cui all’articolo 5, comma",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 70 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "nel caso di ampliamento della volumetria iniziale e per demolizione e ricostruzione dell’edificio:",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "documentazione fotografica attestante l’intervento, raccolta in un documento elettronico in formato",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "diagnosi energetica precedente l’intervento, eseguita in conformità ai requisiti di cui al paragrafo 9.16.1,",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Attestato di Prestazione Energetica post-operam (redatto secondo D.Lgs. 192/05 e s.m.i. e disposizioni",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "per interventi realizzati dalle imprese e dagli ETS economici su edifici in ambito terziario, attestato di",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "pertinente titolo autorizzativo e/o abilitativo, ove previsto dalla vigente legislazione/normativa",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 75 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "tabella riepilogativa riportante l’elenco dei corpi illuminanti/lampade sostituiti e installati (ante e post-",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "schede tecniche dei componenti oggetto dell’intervento fornite dal produttore dei sistemi/corpi",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 80 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "descrizione generale dell’intervento eseguito partendo dalla configurazione ante-operam; la",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "produzione di schede dettagliate dei controlli di regolazione eseguiti come riportato nelle linee",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "descrizione e relativa esplicitazione dei servizi soggetti a regolazione.",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista d’insieme delle parti di impianto interessate dall’intervento ante-operam;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista d’insieme delle parti di impianto post-operam;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista di dettaglio dei dispositivi installati descritti al punto precedente;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 87 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "bollette elettriche rappresentative dei consumi annuali dichiarati, ovvero le copie delle fatture relative",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "fatture di acquisto dei combustibili utilizzati per coprire il fabbisogno termico dell’edificio oggetto",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Elenco dei numeri di serie dei moduli e dei convertitori (inverter);",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "dichiarazione di conformità dell’impianto, ove prevista, ai sensi del DM 37/08, redatta da un",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista di dettaglio del pannello fotovoltaico installato;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista di dettaglio della targa dei moduli fotovoltaici installati;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista di dettaglio del sistema di accumulo;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista d’insieme del campo fotovoltaico in fase di installazione;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista d’insieme del campo fotovoltaico realizzato;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "documentazione fotografica dell’intervento combinato III.A, secondo quanto previsto nel",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 92 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "per gli interventi che prevedono l’installazione di generatori di potenza termica nominale ≤ 35 kW non",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "500 euro;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "per gli interventi che prevedono l’installazione di generatori di potenza termica nominale > 35 kW,",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "nel caso di installazione di un generatore di calore avente potenza termica nominale maggiore o uguale",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "nel caso di installazione di un generatore di calore, di qualsiasi dimensione, volto oltre alla",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "le targhe dei generatori sostituiti e installati (di ciascuna delle unità che costituiscono i generatori);",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "i generatori sostituiti e installati;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "la centrale termica, o il locale di installazione, ante-operam (presente il generatore sostituito) e",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "le valvole termostatiche o del sistema di regolazione modulante della portata.",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "per gli interventi che prevedono l’installazione di sistemi ibridi factory made con gruppo funzionale a",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "per gli interventi che prevedono l’installazione di sistemi bivalenti o add on, indipendentemente dalla",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "nel caso di installazione di un sistema avente potenza termica nominale maggiore o uguale a 100 kWt,",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "le targhe dei generatori sostituiti e installati (di ciascuna delle unità che costituiscono i generatori",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 109 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "i dispositivi/interfacce che realizzano il sistema di controllo e regolazione tra i generatori",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "nel caso di installazione di generatori di calore a biomassa aventi potenza termica nominale maggiore o",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "nel caso di intervento su serra e a prescindere dalla taglia del generatore installato, relazione tecnica di",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "nel caso di installazione di generatori su serra non censita al catasto edilizio urbano, ma in possesso del",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "le targhe dei generatori sostituiti28 e di quelli installati;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "le valvole termostatiche o il sistema di regolazione modulante della portata;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista d’insieme del sistema di accumulo termico installato, in conformità a quanto riportato",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista d’insieme del sistema di abbattimento del particolato primario, per le caldaie a biomassa di",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 119 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "per gli interventi che prevedono l’installazione di una superficie lorda installata ≤ 50 m2 non ricompresi",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "per gli interventi che prevedono l’installazione di una superficie lorda installata > 50 m2, l’asseverazione",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "nel caso di installazione di impianto di superficie solare lorda superiore o uguale a 50 m2, relazione",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "nel caso di intervento su serra o sua pertinenza, relazione tecnica di progetto, timbrata e firmata dal",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "nel caso di installazione su serra (o sua pertinenza) non censita al catasto edilizio urbano, ma in possesso",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 128 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista di dettaglio del pannello solare installato;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista di dettaglio della targa dei collettori solari e/o degli impianti solari termici prefabbricati",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista di dettaglio del bollitore;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista d’insieme del campo solare in fase di installazione;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista d’insieme del campo solare realizzato;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "le valvole termostatiche o del sistema di regolazione modulante della portata, ove previste.",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista di dettaglio dei generatori sostituiti e installati;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "vista d’insieme dei generatori sostituiti e installati;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "la targa dei generatori installati.",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "documentazione comune a tutti gli interventi;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "asseverazione di un tecnico abilitato redatta in conformità al paragrafo 12.5;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "contratto di allaccio al sistema di teleriscaldamento efficiente, sottoscritto con il fornitore.",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "le targhe dei generatori sostituiti e dei componenti installati (scambiatori);",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "i generatori sostituiti;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "la sottostazione di utenza installata;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "la centrale termica o il locale di installazione ante-operam (presente il generatore sostituito) e",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 133 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Asseverazione di un tecnico abilitato contenente la stima dei dati energetici ottenuti sulla base dei carichi",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Certificazione del produttore dalla quale si abbia evidenza delle prestazioni energetiche dell’unità di",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "In caso di sostituzione funzionale, relazione tecnica di progetto timbrata e firmata dal progettista,",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Scheda tecnica del microcogeneratore;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 136 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "le targhe dei generatori sostituiti e installati (di ciascuna unità che costituiscono i generatori);",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "la centrale termica, o il locale di installazione, ante-operam (presenta il generatore sostituito) e",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "le valvole termostatiche o sistema di regolazione modulante la portata.",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "16.2 Richiesta di contributo anticipato per la redazione della Diagnosi energetica",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": ", inserendo tutti i dati relativi all’edificio/unità immobiliare oggetto di diagnosi, ivi inclusi le informazioni di",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "un provvedimento di accoglimento della richiesta, indicando l’importo del contributo anticipato che sarà",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "un provvedimento di diniego della richiesta, laddove le osservazioni presentate dal Soggetto",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "la diagnosi energetica, redatta in conformità ai requisiti precedentemente richiamati, con data di",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "le fatture e i mandati di pagamento attestanti le spese sostenute dalla Pubblica Amministrazione per la",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "l’indicazione dell’effettivo importo complessivo spettante, in ragione della documentazione contabile",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "1 Comunicazioni interventi di modifica",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "1 Modalità di svolgimento delle attività di verifica",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "per le Amministrazioni Pubbliche e gli ETS, nonché per le ESCO e gli altri soggetti abilitati che operano",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "per i Soggetti privati, le Cooperative di abitanti e le Cooperative sociali, l’incentivo è previsto nella",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "nell’istruttoria sulle informazioni e sulla documentazione inviata a corredo della richiesta, nel rispetto",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "nell’eventuale comunicazione del preavviso di rigetto, con cui il GSE comunica i motivi ostativi",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "nell’invio al Soggetto Responsabile del provvedimento di accoglimento o di diniego.",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "la presentazione al GSE di dati non veritieri o documenti falsi, mendaci o contraffatti, al fine di avere",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "l’indisponibilità della",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 138 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "le diagnosi energetiche dovranno essere redatte da un Esperto in Gestione dell'Energia (EGE)",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "le diagnosi energetiche dovranno essere conformi al rispetto del pacchetto di norme UNI CEI EN 16247.",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "gli attestati di prestazione energetica devono essere conformi al Decreto legislativo 19 agosto 2005, n.",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 139 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "essere redatta da un EGE e/o ESCO, in conformità ai criteri minimi di cui al Dlgs 102/14, secondo",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "riportare almeno uno degli interventi del titolo II e III per i quali dovrà essere trasmessa, una volta",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "fase 1 “trasmissione della richiesta di contributo anticipato”, finalizzata all’erogazione dell’acconto del",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "fase 2 “trasmissione della diagnosi energetica e consuntivazione delle spese sostenute per la",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "fase 3 trasmissione della richiesta in modalità “accesso diretto” o “modalità prenotazione”, una volta",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 140 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "un preventivo di spesa, recante il costo previsto per la redazione della diagnosi;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "copia del documento di identità, in corso di validità, del Soggetto Responsabile;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "nel caso in cui intenda delegare un soggetto terzo, copia della delega sottoscritta dal delegante",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "il contributo totale spettante per la redazione della Diagnosi inteso quale “massimale prenotato”,",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "l’acconto da erogare in tale fase, pari al 50 % del “contributo totale spettante”;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "l'importo del rimanente saldo del 50% da erogare nella successiva fase 3, a seguito dell’invio",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 141 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 142 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "in modalità prenotazione, in presenza di lavori programmati e nelle casistiche di cui al Capitolo 7;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "in modalità di accesso diretto, alla fine dei lavori.",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "per il calcolo dell’incentivo di uno o più interventi oggetto della richiesta inviata a interventi realizzati",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "per il calcolo degli incentivi di ulteriori interventi ricompresi in diagnosi, inizialmente non realizzati e",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 143 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Codice identificativo intervento – tipo modifica”.",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "mediante posta elettronica certificata, all’indirizzo email: info@pec.gse.it;",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "mediante posta raccomandata A/R, all’indirizzo: Gestore dei Servizi Energetici – GSE S.p.A. – Viale",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 144 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 145 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "specifica di intervento allegata alla richiesta degli incentivi, tra cui le fatture attestanti le spese",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "normativa applicabile, anche in riferimento ad eventuali modifiche agli interventi ammessi, agli",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "degli immobili oggetto dell’intervento.",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 146 ---",
+      "fase": "Da allegare alla richiesta",
+      "obbligatorio": true
+    }
+  ],
+  "documenti_conservare": [
+    {
+      "documento": "per l’incremento dell’efficienza energetica in edifici esistenti, parti di essi o unità immobiliari",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "per la produzione di energia termica da fonti rinnovabili e di sistemi ad alta efficienza realizzati in",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 9 ---",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "A Art. 5, comma 1, lettera a)",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "B Art.5, comma 1, lettera b)",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "C sistemi di filtrazione solari esterni di chiusure trasparenti con Art. 5, comma 1, lettera c)",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "D Art. 5, comma 1, lettera d)",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "E Art. 5, comma 1, lettera e)",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "F Art. 5, comma 1, lettera f)",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "G congiuntamente alla sostituzione di impianti di climatizzazione Art. 5, comma 1, lettera g)",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "H congiuntamente alla sostituzione di impianti di climatizzazione Art. 5, comma 1, lettera h)",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "A produzione di acqua calda sanitaria, dotati di pompe di calore Art. 8, comma 1, lettera a)",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 59 ---",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 64 ---",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "E, II.F, II.G, II.H). Al fine di tale verifica, deve essere redatto l’attestato di prestazione energetica sia ante-",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "attestato di prestazione energetica post-operam (redatto secondo D.Lgs. 192/05 e s.m.i. e",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "diagnosi energetica precedente l’intervento.",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 67 ---",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 71 ---",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "le lampade devono essere certificate da laboratori accreditati anche per quanto riguarda le",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "le lampade devono rispettare i seguenti requisiti tecnici:",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "indice di resa cromatica >80 per l’illuminazione d’interni e >60 per l’illuminazione delle pertinenze",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "la potenza installata delle lampade non deve superare il 50% della potenza sostituita, nel rispetto dei",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "gli apparecchi di illuminazione devono rispettare i requisiti minimi definiti dai regolamenti UE 2017/1369",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "i sistemi di illuminazione esterni o emittenti verso l’esterno sono realizzati in conformità alla normativa",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 77 ---",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "efficienza luminosa minima: 80 lm/W.",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "H). Al fine di tale verifica, deve essere redatto l’attestato di prestazione energetica sia ante-operam sia",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "i requisiti di progettazione dei sistemi che accedono agli incentivi (unitamente alla guida CEI 205-18);",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Riscaldamento",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Raffrescamento",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Ventilazione e condizionamento",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Produzione di acqua calda sanitaria",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Illuminazione",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Controllo integrato delle diverse applicazioni",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Diagnostica e rilevamento consumi.",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "m.i., che evidenzia le disposizioni in materia di attività di installazione di impianti all’interno degli edifici.",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 82 ---",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "i criteri e i parametri per l’identificazione della classe B di efficienza, assegnabile a sistemi di Building",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "le categorie di dispositivi di Building Automation che riguardano essenzialmente sistemi BACS /TBM",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "schede tecniche dei componenti installati fornite dal produttore;",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "schede tecniche delle funzioni di controllo implementate;",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "pertinente titolo autorizzativo e/o abilitativo, ove previsto dalla vigente legislazione/normativa",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "libretto di manutenzione dell’impianto.",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 84 ---",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "l’intervento deve essere realizzato congiuntamente alla sostituzione di impianti di climatizzazione",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "l’impianto fotovoltaico è realizzato in assetto di autoconsumo, vale a dire in regime di cessione parziale;",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "la potenza dell’impianto è non inferiore a 2 kW, non superiore a 1 MW e comunque alla potenza",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "I moduli fotovoltaici e gli inverter costituenti l’impianto sono esclusivamente di nuova costruzione,",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "documentazione attestante l’iscrizione dell’impianto installato al catasto regionale, ove presente.",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "diagnosi energetica precedente l’intervento;",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 102 ---",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "documentazione attestante l’iscrizione dell’impianto installato al catasto regionale, ove presente",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "APE post-operam (redatto secondo D.Lgs. 192/05 e s.m.i. e disposizioni regionali vigenti, ove",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 110 ---",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "per le caldaie a biomassa di potenza termica nominale superiore a 500 kW e inferiore o uguale a",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "per interventi non a Catalogo scheda tecnica del produttore dei collettori solari o impianto solare factory",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "dichiarazione di conformità dell’impianto, ove prevista, ai sensi del DM 37/08, redatta da un installatore",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "deve contenere la relazione contenente le tipologie dei materiali nonché il progetto dell’impianto",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "certificato di garanzia dei collettori solari, dei bollitori, degli accessori e dei componenti elettrici ed",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "nel caso di impianto di superficie solare lorda superiore o uguale a 12 m2 e inferiore a 50 m2, relazione",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "eventuali contratti di locazione delle serre, nel caso di installazione sulle medesime non di proprietà del",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "nel caso in cui l’intervento sia realizzato su interi edifici con impianti di riscaldamento di potenza",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "APE post-operam (redatto secondo D.Lgs. 192/05 e s.m.i. e disposizioni regionali vigenti ove",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 129 ---",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Per gli interventi non a Catalogo e per interventi con incentivi ≤",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Certificato del corretto smaltimento del generatore di calore sostituito o di un documento analogo",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Libretto di centrale/d’impianto, come previsto dalla legislazione vigente;",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Modello unico per l’installazione e l’esercizio di unità di microcogenerazione a fonti rinnovabili;",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "Pertinente titolo autorizzativo e/o abilitativo, ove previsto dalla vigente legislazione/normativa nazionale",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "schema termico completo dell’impianto, con evidenza degli strumenti di misura ove presenti per la",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "schema elettrico completo dell’impianto con evidenza degli strumenti di misura ove presenti per la",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "denuncia e licenza di officina elettrica, ove richiesta dalla normativa vigente;",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "documentazione attestante l’iscrizione dell’impianto installato al catasto regionale, ove presente;",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "codice CENSIMP dell’impianto di cogenerazione, ove presente.",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 137 ---",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "la data di collaudo ai sensi dell’articolo 116 del decreto legislativo 31 marzo 2023, n. 36, o la data del",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "in caso di appalto riferito ad una pluralità d’interventi tra cui quello oggetto della richiesta di",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    },
+    {
+      "documento": "-- PAGINA 148 ---",
+      "fase": "Da conservare",
+      "obbligatorio": true
+    }
+  ],
+  "requisiti_tecnici": [
+    {
+      "tipologia": "",
+      "valore": "Tipologia di intervento",
+      "unita": "",
+      "note": ""
+    },
+    {
+      "tipologia": "Strutture opache orizzontali: isolamento coperture (calcolo secondo le norme UNI EN ISO 6946)",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica A"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica B"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica C"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica D"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica E"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica F"
+    },
+    {
+      "tipologia": "Strutture opache orizzontali: isolamento pavimenti (calcolo secondo le norme UNI EN ISO 6946)",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica A"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica B"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica C"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica D"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica E"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica F"
+    },
+    {
+      "tipologia": "Strutture opache verticali: isolamento pareti perimetrali (calcolo secondo le norme UNI EN ISO 6946)",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica A"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica B"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica C"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica D"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica E"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica F"
+    },
+    {
+      "tipologia": "",
+      "valore": "Tipologia di intervento",
+      "unita": "",
+      "note": ""
+    },
+    {
+      "tipologia": "Sostituzione di chiusure trasparenti, comprensive di infissi (calcolato secondo le norme UNI EN ISO 10077-1), se installate congiuntamente a sistemi di termoregolazione o valvole termostatiche ovvero in presenza di detti sistemi al momento dell’intervento",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica A"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica B"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica C"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica D"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica E"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": "Zona climatica F"
+    },
+    {
+      "tipologia": "[Tabella 3 – Allegato 1 – D.M. 7 agosto 2025]",
+      "valore": "",
+      "unita": "",
+      "note": ""
+    },
+    {
+      "tipologia": "",
+      "valore": "Tipo di",
+      "unita": "",
+      "note": ""
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "Efficienza stagionale",
+      "note": ""
+    },
+    {
+      "tipologia": "",
+      "valore": "pompa di calore",
+      "unita": "",
+      "note": "SCOP minimo"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "minima ecodesign",
+      "note": ""
+    },
+    {
+      "tipologia": "",
+      "valore": "Ambiente",
+      "unita": "",
+      "note": "ecodesign"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "Ꞃs (%)",
+      "note": ""
+    },
+    {
+      "tipologia": "",
+      "valore": "esterno/interno",
+      "unita": "",
+      "note": ""
+    },
+    {
+      "tipologia": "Reg. 206/2012",
+      "valore": "aria/aria ≤ 12 kW",
+      "unita": "149 GWP >150 134 GWP≤150",
+      "note": "3,8 3,42"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "",
+      "note": ""
+    },
+    {
+      "tipologia": "Reg. 2281/2016",
+      "valore": "aria/aria >12 kW",
+      "unita": "137",
+      "note": "3,5"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "125",
+      "note": "3,2"
+    },
+    {
+      "tipologia": "Reg. 2281/2016",
+      "valore": "acqua/aria",
+      "unita": "137",
+      "note": "3,625"
+    },
+    {
+      "tipologia": "Reg. 813/2013",
+      "valore": "aria/acqua",
+      "unita": "110",
+      "note": "2,825"
+    },
+    {
+      "tipologia": "",
+      "valore": "acqua/acqua",
+      "unita": "110",
+      "note": "2,95"
+    },
+    {
+      "tipologia": "",
+      "valore": "aria/acqua a bassa temperatura",
+      "unita": "125",
+      "note": "3,2"
+    },
+    {
+      "tipologia": "",
+      "valore": "acqua/acqua a bassa temperatura",
+      "unita": "125",
+      "note": "3,325"
+    },
+    {
+      "tipologia": "[Tabella 4 – Allegato 1 – D.M. 7 agosto 2025]",
+      "valore": "",
+      "unita": "",
+      "note": ""
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "Efficienza stagionale",
+      "note": ""
+    },
+    {
+      "tipologia": "",
+      "valore": "Tipo di pompa di calore",
+      "unita": "",
+      "note": "SCOP minimo"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "minima ecodesign",
+      "note": ""
+    },
+    {
+      "tipologia": "",
+      "valore": "Ambiente esterno/interno",
+      "unita": "",
+      "note": "ecodesign"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "Ꞃs (%)",
+      "note": ""
+    },
+    {
+      "tipologia": "Reg. 206/2012",
+      "valore": "salamoia/aria ≤ 12 kW",
+      "unita": "149 GWP >150 134 GWP ≤<150",
+      "note": "3,8 3,42"
+    },
+    {
+      "tipologia": "Reg. 2281/2016",
+      "valore": "salamoia/aria >12 kW",
+      "unita": "137",
+      "note": "3,625"
+    },
+    {
+      "tipologia": "Reg. 813/2013",
+      "valore": "salamoia/acqua",
+      "unita": "110",
+      "note": "2,825"
+    },
+    {
+      "tipologia": "",
+      "valore": "salamoia/acqua a bassa temperatura",
+      "unita": "125",
+      "note": "3,2"
+    },
+    {
+      "tipologia": "[Tabella 5 – Allegato 1 – D.M. 7 agosto 2025]",
+      "valore": "",
+      "unita": "",
+      "note": ""
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "Efficienza stagionale",
+      "note": ""
+    },
+    {
+      "tipologia": "",
+      "valore": "Tipo di pompa di calore",
+      "unita": "",
+      "note": "SPER minimo"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "minima ecodesign",
+      "note": ""
+    },
+    {
+      "tipologia": "",
+      "valore": "Ambiente esterno/interno",
+      "unita": "",
+      "note": "ecodesign"
+    },
+    {
+      "tipologia": "",
+      "valore": "",
+      "unita": "Ꞃs (%)",
+      "note": ""
+    },
+    {
+      "tipologia": "Reg. 2281/2016",
+      "valore": "aria/aria",
+      "unita": "130",
+      "note": "1,33"
+    },
+    {
+      "tipologia": "Reg. 2281/2016",
+      "valore": "acqua/aria",
+      "unita": "130",
+      "note": "1,33"
+    },
+    {
+      "tipologia": "",
+      "valore": "salamoia/aria",
+      "unita": "130",
+      "note": "1,33"
+    },
+    {
+      "tipologia": "Reg. 813/2013",
+      "valore": "aria/acqua – acqua/acqua",
+      "unita": "110",
+      "note": "1,13"
+    },
+    {
+      "tipologia": "",
+      "valore": "aria/acqua – acqua/acqua a bassa temperatura",
+      "unita": "125",
+      "note": "1,28"
+    },
+    {
+      "tipologia": "",
+      "valore": "Salamoia/acqua",
+      "unita": "125",
+      "note": "1,28"
+    },
+    {
+      "tipologia": "K : p",
+      "valore": "è un coefficiente di premialità dato dal rapporto tra l’efficienza energetica stagionale della pompa di calore considerata e quella minima per l’immissione sul mercato prevista dal regolamento ecodesign applicato: kp=η /η s s min ECODESIGN",
+      "unita": "",
+      "note": ""
+    },
+    {
+      "tipologia": "Q : u",
+      "valore": "è la stima del calore totale prodotto dall’impianto, espresso in kWht, ed è calcolato come segue: Q = P ∙ Q u rated uf",
+      "unita": "",
+      "note": ""
+    }
+  ],
+  "soggetti_ammessi": [],
+  "interventi": [],
+  "altre_tabelle": [
+    {
+      "pagina": 8,
+      "tipo_identificato": "interventi",
+      "contesto": "• per la produzione di energia termica da fonti rinnovabili e di sistemi ad alta efficienza realizzati in edifici esistenti, parti di essi o unità immobiliari esistenti, dotati di impianto di climatiz",
+      "headers": [
+        "Categoria",
+        "Sigla (*)",
+        "Tipologia di intervento",
+        "Riferimenti Decreto"
+      ],
+      "righe": 9
+    },
+    {
+      "pagina": 9,
+      "tipo_identificato": "interventi",
+      "contesto": "",
+      "headers": [
+        "Categoria",
+        "Sigla (*)",
+        "Tipologia di intervento",
+        "Riferimenti Decreto"
+      ],
+      "righe": 8
+    },
+    {
+      "pagina": 9,
+      "tipo_identificato": "interventi",
+      "contesto": "",
+      "headers": [
+        "Categoria",
+        "Sigla",
+        "Tipologia di intervento",
+        "Riferimenti Decreto"
+      ],
+      "righe": 2
+    },
+    {
+      "pagina": 10,
+      "tipo_identificato": "interventi",
+      "contesto": "o degli interventi previsti sia dal Titolo II sia dal Titolo III; se svolgono attività economica, possono richiedere incentivi per la realizzazione di uno o più degli o interventi previsti dal Titolo ",
+      "headers": [
+        "Categoria",
+        "Sigla intervento",
+        "PA",
+        "",
+        "Soggetti",
+        "",
+        "",
+        "Soggetti",
+        "",
+        "",
+        "ETS",
+        "",
+        "ETS che svolgono attività di carattere economico"
+      ],
+      "righe": 8
+    },
+    {
+      "pagina": 11,
+      "tipo_identificato": "interventi",
+      "contesto": "",
+      "headers": [
+        "Categoria",
+        "Sigla intervento",
+        "PA",
+        "",
+        "Soggetti",
+        "",
+        "",
+        "Soggetti",
+        "",
+        "",
+        "ETS",
+        "",
+        "ETS che svolgono attività di carattere economico"
+      ],
+      "righe": 7
+    },
+    {
+      "pagina": 11,
+      "tipo_identificato": "altro",
+      "contesto": "",
+      "headers": [
+        "Ambito residenziale",
+        "Ambito terziario"
+      ],
+      "righe": 6
+    },
+    {
+      "pagina": 15,
+      "tipo_identificato": "soggetti_ammessi",
+      "contesto": "qualità di Soggetti Responsabili, potranno richiedere l’accesso agli incentivi per conto del Soggetto Ammesso per gli interventi realizzati sull’edificio o sull’unità immobiliare nella disponibilità d",
+      "headers": [
+        "Soggetto Ammesso",
+        "ESCO",
+        "",
+        "Altro soggetto",
+        "",
+        "",
+        "Soggetto privato",
+        "",
+        "Comunità energetiche/ configurazioni di autoconsumo"
+      ],
+      "righe": 10
+    },
+    {
+      "pagina": 16,
+      "tipo_identificato": "soggetti_ammessi",
+      "contesto": "o sensi del D.M. 7 agosto 2025 per l’intervento individuato; si impegna a non richiedere per il medesimo intervento gli incentivi previsti dal D.M. 7 agosto 2025 o e/o altre forme di incentivazione no",
+      "headers": [
+        "Titolo",
+        "PA",
+        "(ETS) con attività non economica",
+        "(ETS) con attività economica",
+        "",
+        "Soggetti privati:",
+        "",
+        "",
+        "Soggetti privati:",
+        ""
+      ],
+      "righe": 7
+    },
+    {
+      "pagina": 22,
+      "tipo_identificato": "soggetti_ammessi",
+      "contesto": "Figura 1 – Configurazione Soggetti Ammessi vs Soggetto Responsabili",
+      "headers": [
+        "",
+        "",
+        ""
+      ],
+      "righe": 9
+    },
+    {
+      "pagina": 23,
+      "tipo_identificato": "altro",
+      "contesto": "ra a) e 7, comma 1, lettera a) del Decreto, e agli ETS, per lavori ancora da avviare o in corso di realizzazione. Le Pubbliche Amministrazioni, o i Soggetti Responsabili che operano per conto delle st",
+      "headers": [
+        "",
+        "Soggetto Ammesso",
+        "",
+        "",
+        "Accesso diretto",
+        "",
+        "",
+        "Prenotazione",
+        ""
+      ],
+      "righe": 6
+    },
+    {
+      "pagina": 26,
+      "tipo_identificato": "soggetti_ammessi",
+      "contesto": "soggetti abilitati di cui all’art. 13 comma 1 del Decreto che agiscono per loro conto in qualità di Soggetto Responsabile, ai sensi dell’art. 11, comma 5 del Decreto. Nello schema che segue sono elenc",
+      "headers": [
+        "Soggetto Responsabile",
+        "Soggetto Ammesso",
+        "",
+        "Casi in cui è",
+        ""
+      ],
+      "righe": 9
+    },
+    {
+      "pagina": 30,
+      "tipo_identificato": "altro",
+      "contesto": "Tabella 11 - Intensità degli aiuti agli investimenti per interventi di cui al Titolo II",
+      "headers": [
+        "",
+        "Piccola impresa",
+        "Media impresa",
+        "Grande impresa"
+      ],
+      "righe": 4
+    },
+    {
+      "pagina": 32,
+      "tipo_identificato": "interventi",
+      "contesto": "",
+      "headers": [
+        "Tipologia di intervento",
+        "Durata dell’incentivo (anni)"
+      ],
+      "righe": 18
+    },
+    {
+      "pagina": 33,
+      "tipo_identificato": "interventi",
+      "contesto": "",
+      "headers": [
+        "Tipologia di intervento",
+        "Durata dell’incentivo (anni)"
+      ],
+      "righe": 3
+    },
+    {
+      "pagina": 44,
+      "tipo_identificato": "interventi",
+      "contesto": "",
+      "headers": [
+        "",
+        "Sigla",
+        "",
+        "Tipologia di intervento",
+        "Riferimenti del Decreto"
+      ],
+      "righe": 9
+    },
+    {
+      "pagina": 60,
+      "tipo_identificato": "interventi",
+      "contesto": "Sint: superficie16 oggetto dell’intervento (m2). C = , costo specifico sostenuto. ssssssssss ssssssssssssssssss iiss € ssssssssssssiissiiss ssoooossssssss ddii iissssssssiissssssss Cmax: è il valore m",
+      "headers": [
+        "",
+        "[Tabella 7 – Allegato 2 – D.M. 7 agosto 2025]",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "righe": 19
+    },
+    {
+      "pagina": 65,
+      "tipo_identificato": "altro",
+      "contesto": "",
+      "headers": [
+        "",
+        "[Tabella 7 – Allegato 2 – D.M. 7 agosto 2025]",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "righe": 7
+    },
+    {
+      "pagina": 68,
+      "tipo_identificato": "interventi",
+      "contesto": "Sint: superficie oggetto dell’intervento (m2) C = , costo specifico sostenuto ssssssssss ssssssssssssssssss iiss € Cmax : è il valore massimo di C ed è definito dalla tabella 7 dell’Allegato 2 del Dec",
+      "headers": [
+        "[Tabella 7 – Allegato 2 - D.M. 7 agosto 2025]",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "righe": 8
+    },
+    {
+      "pagina": 73,
+      "tipo_identificato": "interventi",
+      "contesto": "max %spesa è la percentuale incentivata della spesa totale sostenuta per l’intervento, come espressa in tabella 7 dell’Allegato 2 del Decreto; Itot è l’incentivo totale dell’intervento cumulato per l’",
+      "headers": [
+        "",
+        "[Tabella 7 – Allegato 2 – D.M. 7 agosto 2025]",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "righe": 7
+    },
+    {
+      "pagina": 78,
+      "tipo_identificato": "interventi",
+      "contesto": "l’intervento sia eseguito sulle pertinenze, per superficie utile (S ) è da intendersi la Superficie della ed pertinenza effettivamente oggetto dell’intervento, sino al raggiungimento di un valore pari",
+      "headers": [
+        "[Tabella 7 – Allegato 2 – D.M. 7 agosto 2025]",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "righe": 7
+    },
+    {
+      "pagina": 82,
+      "tipo_identificato": "interventi",
+      "contesto": "ile calpestabile dell’edificio in metri quadrati; è inferiore o pari alla superficie utilizzata per il calcolo della prestazione energetica dell’edificio. I valori massimi di C, ai fini del calcolo de",
+      "headers": [
+        "",
+        "[Tabella 7 – Allegato 2- D.M. agosto 2025]",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "righe": 3
+    },
+    {
+      "pagina": 86,
+      "tipo_identificato": "interventi",
+      "contesto": "",
+      "headers": [
+        "Tipologia di intervento",
+        "",
+        "",
+        "Costo massimo",
+        "",
+        "",
+        "Valore massimo",
+        ""
+      ],
+      "righe": 8
+    },
+    {
+      "pagina": 99,
+      "tipo_identificato": "altro",
+      "contesto": "",
+      "headers": [
+        "",
+        ""
+      ],
+      "righe": 12
+    },
+    {
+      "pagina": 99,
+      "tipo_identificato": "altro",
+      "contesto": "",
+      "headers": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "righe": 22
+    },
+    {
+      "pagina": 106,
+      "tipo_identificato": "altro",
+      "contesto": "",
+      "headers": [
+        "",
+        "",
+        ""
+      ],
+      "righe": 8
+    },
+    {
+      "pagina": 107,
+      "tipo_identificato": "altro",
+      "contesto": "",
+      "headers": [
+        "",
+        "L’incentivo totale (I ), è costituito dalla sommatoria delle rate annue (I ) previste nella tabella 1 tot a tot dell’art. 11 del Decreto: - 2 annualità per sistemi con potenza termica nominale in riscaldamento P ≤ 35 kW; n - 5 annualità per sistemi con potenza termica nominale in riscaldamento P > 35 kW; n L’incentivo totale (I ) è corrisposto in un’unica rata se inferiore o uguale a euro 15.000 nonché per tot gli aventi diritto."
+      ],
+      "righe": 4
+    },
+    {
+      "pagina": 107,
+      "tipo_identificato": "altro",
+      "contesto": "",
+      "headers": [
+        "",
+        "",
+        ""
+      ],
+      "righe": 6
+    },
+    {
+      "pagina": 116,
+      "tipo_identificato": "altro",
+      "contesto": "o dell’Allegato 2 del Decreto. Per l’applicazione delle Tabelle 12 e 13 l’eventuale CCss valore decimale ottenuto dal calcolo percentuale viene arrotondato per eccesso all’intero più vicino. hr: è il ",
+      "headers": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "righe": 18
+    },
+    {
+      "pagina": 116,
+      "tipo_identificato": "altro",
+      "contesto": "o dell’Allegato 2 del Decreto. Per l’applicazione delle Tabelle 12 e 13 l’eventuale CCss valore decimale ottenuto dal calcolo percentuale viene arrotondato per eccesso all’intero più vicino. hr: è il ",
+      "headers": [
+        "",
+        ""
+      ],
+      "righe": 12
+    },
+    {
+      "pagina": 116,
+      "tipo_identificato": "altro",
+      "contesto": "o dell’Allegato 2 del Decreto. Per l’applicazione delle Tabelle 12 e 13 l’eventuale CCss valore decimale ottenuto dal calcolo percentuale viene arrotondato per eccesso all’intero più vicino. hr: è il ",
+      "headers": [
+        "",
+        ""
+      ],
+      "righe": 12
+    },
+    {
+      "pagina": 117,
+      "tipo_identificato": "altro",
+      "contesto": "",
+      "headers": [
+        "",
+        ""
+      ],
+      "righe": 10
+    },
+    {
+      "pagina": 117,
+      "tipo_identificato": "altro",
+      "contesto": "",
+      "headers": [
+        "[Tabella 14 - Allegato 2 D.M. 7 agosto 2025]",
+        "",
+        "",
+        ""
+      ],
+      "righe": 3
+    },
+    {
+      "pagina": 117,
+      "tipo_identificato": "altro",
+      "contesto": "",
+      "headers": [
+        "[Tabella 15 - Allegato 2 - D.M. 7 agosto 2025]",
+        "",
+        ""
+      ],
+      "righe": 6
+    },
+    {
+      "pagina": 120,
+      "tipo_identificato": "altro",
+      "contesto": "t tipo di combustibile utilizzato; stante la non applicabilità della norma UNI EN 303-5:2012 classe 5 (valida fino alla potenza di 500 kW), e nelle more di una norma che estenda modalità di misura fin",
+      "headers": [
+        "",
+        "",
+        "",
+        "500 < P < 2000 kWt",
+        "P < 500 kWt"
+      ],
+      "righe": 9
+    },
+    {
+      "pagina": 126,
+      "tipo_identificato": "altro",
+      "contesto": "o al volume ad esso più vicino. Qsol: energia termica prodotta in un anno da un singolo modulo di collettore solare a concertazione, espressa in kWht il cui valore, relativo alla località di riferimen",
+      "headers": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "righe": 14
+    },
+    {
+      "pagina": 127,
+      "tipo_identificato": "altro",
+      "contesto": "",
+      "headers": [
+        "",
+        ""
+      ],
+      "righe": 13
+    },
+    {
+      "pagina": 132,
+      "tipo_identificato": "interventi",
+      "contesto": "ta della spesa totale sostenuta per l’intervento (Tabella 19 dell’Allegato 2 Decreto) Pnsc è la potenza elettrica nominale della sottostazione del teleriscaldamento installato in KW; C: è il costo spe",
+      "headers": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "righe": 9
+    },
+    {
+      "pagina": 138,
+      "tipo_identificato": "altro",
+      "contesto": "ammissibile il costo sostenuto per la redazione della diagnosi energetica e dell’attestato di prestazione energetica post-operam, ai sensi dell’art. 26, comma 2, del Decreto. È previsto un valore mass",
+      "headers": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "righe": 14
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+# TASK: CONFIGURAZIONE DATABASE ECOBONUS
+Agisci come Esperto Fiscale e Tecnico ENEA.
+Il file `data/rules_eco.json` è stato generato usando i PDF nella cartella `docs_reference/ecobonus`.
+
+**ATTENZIONE:** Non confondere questi dati con il Conto Termico. Queste sono regole per la DETRAZIONE FISCALE (IRPEF/IRES).
+
+## NOVITÀ LEGGE DI BILANCIO 2025 (CRITICHE)
+
+### 1. NUOVE ALIQUOTE DAL 2025
+Le aliquote NON sono più fisse al 50%/65%. Ora dipendono dal tipo di abitazione:
+
+| Periodo | Abitazione Principale | Altre Abitazioni |
+|---------|----------------------|------------------|
+| 2024 | 50% / 65% (vecchio regime) | 50% / 65% |
+| 2025-2026 | **50%** | **36%** |
+| 2027-2028 | **36%** | **30%** |
+
+### 2. ESCLUSIONE CALDAIE A GAS (DAL 2025)
+**IMPORTANTE:** Dal 1° gennaio 2025, le **caldaie uniche alimentate a combustibili fossili** sono ESCLUSE dall'Ecobonus.
+
+Sono ESCLUSE:
+- Caldaie a condensazione a gas (anche classe A)
+- Generatori d'aria calda a condensazione a gas
+
+Restano AMMESSE:
+- Sistemi ibridi factory made (PdC + caldaia condensazione)
+- Pompe di calore elettriche
+- Pompe di calore a gas (il bruciatore ha funzione diversa)
+- Generatori a biomassa
+- Microcogeneratori
+
+### 3. LIMITI DI DETRAZIONE (INVARIATI)
+I massimali di detrazione restano gli stessi:
+
+| Intervento | Limite Detrazione | Tipo Limite |
+|------------|------------------|-------------|
+| Pompe di calore | 30.000 € | detrazione_massima |
+| Caldaie condensazione | 30.000 € | detrazione_massima |
+| Sistemi ibridi | 30.000 € | detrazione_massima |
+| Generatori biomassa | 30.000 € | detrazione_massima |
+| Solare termico | 60.000 € | detrazione_massima |
+| Coibentazione involucro | 60.000 € | detrazione_massima |
+| Serramenti/infissi | 60.000 € | detrazione_massima |
+| Riqualificazione globale | 100.000 € | detrazione_massima |
+| Microcogeneratori | 100.000 € | detrazione_massima |
+| Building automation | 15.000 € | detrazione_massima |
+
+### 4. PERIODO DI RECUPERO
+Sempre **10 anni** in rate annuali di pari importo.
+
+## STRUTTURA JSON GENERATA (`data/rules_eco.json`)
+
+```json
+{
+  "pompe_di_calore": {
+    "aliquota_2024": 0.65,
+    "aliquota_2025_abitazione_principale": 0.50,
+    "aliquota_2025_altre": 0.36,
+    "limite_tipo": "detrazione_massima",
+    "valore_limite_euro": 30000,
+    "anni_recupero": 10,
+    "note_tecniche": "Asseverazione se P > 100kW. Obbligatorie valvole termostatiche."
+  },
+  "caldaie_condensazione": {
+    "AVVISO": "ESCLUSE DAL 2025 se alimentate solo a combustibili fossili",
+    "classe_A_base": {
+      "aliquota_2024": 0.50,
+      "aliquota_2025": "ESCLUSA",
+      "note": "Senza termoregolazione evoluta"
+    },
+    "classe_A_evoluta": {
+      "aliquota_2024": 0.65,
+      "aliquota_2025": "ESCLUSA",
+      "note": "Con termoregolazione classe V, VI o VIII"
+    },
+    "limite_tipo": "detrazione_massima",
+    "valore_limite_euro": 30000
+  },
+  "sistemi_ibridi": {
+    "aliquota_2024": 0.65,
+    "aliquota_2025_abitazione_principale": 0.50,
+    "aliquota_2025_altre": 0.36,
+    "limite_tipo": "detrazione_massima",
+    "valore_limite_euro": 30000,
+    "note": "Factory made, PdC + caldaia condensazione. AMMESSI anche dal 2025."
+  },
+  "solare_termico": {
+    "aliquota_2024": 0.65,
+    "aliquota_2025_abitazione_principale": 0.50,
+    "aliquota_2025_altre": 0.36,
+    "limite_tipo": "detrazione_massima",
+    "valore_limite_euro": 60000,
+    "anni_recupero": 10
+  },
+  "riqualificazione_globale": {
+    "aliquota_2024": 0.65,
+    "aliquota_2025_abitazione_principale": 0.50,
+    "aliquota_2025_altre": 0.36,
+    "limite_tipo": "detrazione_massima",
+    "valore_limite_euro": 100000
+  },
+  "microcogeneratori": {
+    "aliquota_2024": 0.65,
+    "aliquota_2025_abitazione_principale": 0.50,
+    "aliquota_2025_altre": 0.36,
+    "limite_tipo": "detrazione_massima",
+    "valore_limite_euro": 100000,
+    "note": "PES >= 20%. Ammessi anche se a combustibili fossili."
+  }
+}
+```
+
+## REQUISITI TECNICI PRINCIPALI
+
+### Pompe di Calore
+- COP/GUE minimo secondo Allegato F DM 6.08.2020
+- Scaldacqua a PdC: COP > 2,6
+- Con inverter: requisiti COP ridotti del 5%
+- Asseverazione obbligatoria per P > 100 kW
+
+### Caldaie a Condensazione (fino al 2024)
+- Efficienza stagionale ηs ≥ 90% (classe A)
+- Termoregolazione evoluta: classi V, VI, VIII
+- Valvole termostatiche a bassa inerzia obbligatorie
+- Per P > 100 kW: bruciatore modulante, regolazione climatica, pompa a giri variabili
+
+### Sistemi Ibridi
+- Factory made (assemblati in fabbrica)
+- Concepiti dal fabbricante per funzionare in abbinamento
+- Riferimento: DM 6.08.2020
+
+## FORMULA DI CALCOLO DETRAZIONE
+
+```
+Detrazione = min(Spesa_Sostenuta × Aliquota, Limite_Detrazione_Massima)
+Rata_Annuale = Detrazione / 10
+```
+
+**Esempio:** PdC con spesa 20.000€, abitazione principale 2025
+- Detrazione = min(20.000 × 0.50, 30.000) = 10.000 €
+- Rata annuale = 10.000 / 10 = 1.000 €/anno per 10 anni

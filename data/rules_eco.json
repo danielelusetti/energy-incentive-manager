@@ -1,0 +1,242 @@
+{
+  "_metadata": {
+    "fonte": "Legge di Bilancio 2025, D.L. 63/2013, Vademecum ENEA",
+    "aggiornamento": "Gennaio 2026",
+    "descrizione": "Regole Ecobonus per detrazione fiscale IRPEF/IRES",
+    "note_generali": {
+      "anni_recupero": 10,
+      "tipo_detrazione": "IRPEF o IRES",
+      "edifici_ammessi": "Esistenti, accatastati, dotati di impianto climatizzazione invernale",
+      "comunicazione_enea": "Obbligatoria entro 90 giorni dalla fine lavori"
+    }
+  },
+  "aliquote_per_anno": {
+    "_nota": "Legge di Bilancio 2025 - Nuove aliquote differenziate",
+    "2024": {
+      "standard": 0.50,
+      "con_termoregolazione_evoluta": 0.65,
+      "note": "Regime precedente - aliquote piene"
+    },
+    "2025_2026": {
+      "abitazione_principale": 0.50,
+      "altre_abitazioni": 0.36,
+      "note": "Maggiorazione solo per abitazione principale (residenza anagrafica)"
+    },
+    "2027_2028": {
+      "abitazione_principale": 0.36,
+      "altre_abitazioni": 0.30,
+      "note": "Ulteriore riduzione aliquote"
+    }
+  },
+  "esclusioni_2025": {
+    "_nota": "ATTENZIONE: Dal 2025 escluse dall'Ecobonus",
+    "caldaie_uniche_fossili": {
+      "escluso": true,
+      "descrizione": "Caldaie a condensazione alimentate SOLO a combustibili fossili",
+      "alternativa": "Utilizzare sistemi ibridi factory made o pompe di calore"
+    },
+    "generatori_aria_calda_fossili": {
+      "escluso": true,
+      "descrizione": "Generatori d'aria calda a condensazione alimentati a combustibili fossili"
+    }
+  },
+  "interventi_ammessi": {
+    "pompe_di_calore": {
+      "aliquota_2024": 0.65,
+      "aliquota_2025_abitazione_principale": 0.50,
+      "aliquota_2025_altre": 0.36,
+      "limite_tipo": "detrazione_massima",
+      "valore_limite_euro": 30000,
+      "anni_recupero": 10,
+      "requisiti_tecnici": {
+        "cop_minimo": "Secondo Allegato F DM 6.08.2020",
+        "cop_scaldacqua_pdc": 2.6,
+        "riduzione_cop_inverter": "5% sui valori minimi se dotata di inverter"
+      },
+      "note_tecniche": [
+        "Sostituzione integrale o parziale impianto esistente",
+        "Asseverazione obbligatoria per P > 100 kW",
+        "Per P <= 100 kW: dichiarazione fornitore in alternativa",
+        "Valvole termostatiche a bassa inerzia obbligatorie",
+        "Comunicazione ENEA entro 90 giorni"
+      ],
+      "include": [
+        "Pompe di calore ad alta efficienza",
+        "Sistemi geotermici a bassa entalpia",
+        "Scaldacqua a pompa di calore"
+      ]
+    },
+    "caldaie_condensazione": {
+      "_avviso": "DAL 2025: SOLO con termoregolazione evoluta o in sistemi ibridi",
+      "classe_A_sola": {
+        "aliquota_2024": 0.50,
+        "aliquota_2025": "ESCLUSA se alimentata solo a combustibili fossili",
+        "note": "Senza termoregolazione evoluta - NON PIU' AMMESSA dal 2025"
+      },
+      "classe_A_con_termoregolazione_evoluta": {
+        "aliquota_2024": 0.65,
+        "aliquota_2025": "ESCLUSA se alimentata solo a combustibili fossili",
+        "note": "Con termoregolazione classe V, VI o VIII - NON PIU' AMMESSA dal 2025 se caldaia unica a gas"
+      },
+      "limite_tipo": "detrazione_massima",
+      "valore_limite_euro": 30000,
+      "anni_recupero": 10,
+      "requisiti_tecnici": {
+        "efficienza_stagionale_minima": ">=90% (classe A)",
+        "termoregolazione_evoluta": "Classi V, VI o VIII (Comunicazione UE 2014/C 207/02)",
+        "valvole_termostatiche": "Obbligatorie a bassa inerzia termica"
+      },
+      "requisiti_P_maggiore_100kw": [
+        "Bruciatore di tipo modulante",
+        "Regolazione climatica agente sul bruciatore",
+        "Pompa elettronica a giri variabili"
+      ]
+    },
+    "sistemi_ibridi": {
+      "_nota": "AMMESSI anche dal 2025",
+      "aliquota_2024": 0.65,
+      "aliquota_2025_abitazione_principale": 0.50,
+      "aliquota_2025_altre": 0.36,
+      "limite_tipo": "detrazione_massima",
+      "valore_limite_euro": 30000,
+      "anni_recupero": 10,
+      "requisiti": {
+        "tipo": "Factory made",
+        "composizione": "Pompa di calore integrata con caldaia a condensazione",
+        "assemblaggio": "In fabbrica, concepiti dal fabbricante per funzionare in abbinamento",
+        "riferimento": "DM 6.08.2020"
+      },
+      "note": "Restano agevolati perche' non sono caldaie UNICHE a combustibili fossili"
+    },
+    "solare_termico": {
+      "aliquota_2024": 0.65,
+      "aliquota_2025_abitazione_principale": 0.50,
+      "aliquota_2025_altre": 0.36,
+      "limite_tipo": "detrazione_massima",
+      "valore_limite_euro": 60000,
+      "anni_recupero": 10,
+      "note": "Pannelli solari per produzione acqua calda sanitaria"
+    },
+    "coibentazione_involucro": {
+      "aliquota_2024": 0.65,
+      "aliquota_2025_abitazione_principale": 0.50,
+      "aliquota_2025_altre": 0.36,
+      "limite_tipo": "detrazione_massima",
+      "valore_limite_euro": 60000,
+      "anni_recupero": 10,
+      "include": [
+        "Strutture opache verticali (pareti)",
+        "Strutture opache orizzontali (coperture, pavimenti)",
+        "Rispetto requisiti trasmittanza U (W/m2K) DM 11/03/2008"
+      ]
+    },
+    "serramenti_infissi": {
+      "aliquota_2024": 0.50,
+      "aliquota_2025_abitazione_principale": 0.50,
+      "aliquota_2025_altre": 0.36,
+      "limite_tipo": "detrazione_massima",
+      "valore_limite_euro": 60000,
+      "anni_recupero": 10,
+      "note": "Comprensivo di schermature solari"
+    },
+    "riqualificazione_globale": {
+      "aliquota_2024": 0.65,
+      "aliquota_2025_abitazione_principale": 0.50,
+      "aliquota_2025_altre": 0.36,
+      "limite_tipo": "detrazione_massima",
+      "valore_limite_euro": 100000,
+      "anni_recupero": 10,
+      "requisiti": "Riduzione fabbisogno energia primaria per climatizzazione invernale"
+    },
+    "microcogeneratori": {
+      "aliquota_2024": 0.65,
+      "aliquota_2025_abitazione_principale": 0.50,
+      "aliquota_2025_altre": 0.36,
+      "limite_tipo": "detrazione_massima",
+      "valore_limite_euro": 100000,
+      "anni_recupero": 10,
+      "requisiti": {
+        "risparmio_energia_primaria": ">=20% (PES)",
+        "riferimento": "Allegato III DM 4 agosto 2011"
+      },
+      "note": "Ammessi anche se alimentati a combustibili fossili (non sono caldaie)"
+    },
+    "generatori_biomassa": {
+      "aliquota_2024": 0.50,
+      "aliquota_2025_abitazione_principale": 0.50,
+      "aliquota_2025_altre": 0.36,
+      "limite_tipo": "detrazione_massima",
+      "valore_limite_euro": 30000,
+      "anni_recupero": 10,
+      "note": "Caldaie a biomassa - AMMESSE (non fossili)"
+    },
+    "building_automation": {
+      "aliquota_2024": 0.65,
+      "aliquota_2025_abitazione_principale": 0.50,
+      "aliquota_2025_altre": 0.36,
+      "limite_tipo": "detrazione_massima",
+      "valore_limite_euro": 15000,
+      "anni_recupero": 10,
+      "note": "Dispositivi multimediali per controllo remoto impianti"
+    }
+  },
+  "interventi_condominiali": {
+    "_nota": "Aliquote maggiorate per parti comuni",
+    "coibentazione_involucro_25_percento": {
+      "aliquota_2024": 0.70,
+      "aliquota_2025": 0.50,
+      "requisito": "Incidenza > 25% superficie disperdente lorda",
+      "limite_tipo": "spesa_massima",
+      "valore_limite_euro_per_unita": 40000,
+      "note": "Moltiplicato per numero unita' immobiliari"
+    },
+    "coibentazione_con_qualita_media": {
+      "aliquota_2024": 0.75,
+      "aliquota_2025": 0.50,
+      "requisito": "Incidenza > 25% + qualita' media involucro DM 26/06/2015",
+      "limite_tipo": "spesa_massima",
+      "valore_limite_euro_per_unita": 40000
+    },
+    "con_riduzione_rischio_sismico_1_classe": {
+      "aliquota_2024": 0.80,
+      "aliquota_2025": 0.50,
+      "requisito": "Zone sismiche 1,2,3 + riqualificazione energetica + 1 classe rischio",
+      "limite_tipo": "spesa_massima",
+      "valore_limite_euro_per_unita": 136000
+    },
+    "con_riduzione_rischio_sismico_2_classi": {
+      "aliquota_2024": 0.85,
+      "aliquota_2025": 0.50,
+      "requisito": "Zone sismiche 1,2,3 + riqualificazione energetica + 2 classi rischio",
+      "limite_tipo": "spesa_massima",
+      "valore_limite_euro_per_unita": 136000
+    }
+  },
+  "documentazione_richiesta": {
+    "tecnica": [
+      "Scheda descrittiva intervento con codice CPID (ENEA)",
+      "Asseverazione tecnico abilitato (se P > 100 kW o richiesta)",
+      "Schede tecniche prodotti installati",
+      "Dichiarazione conformita' DM 37/08",
+      "Libretto impianto",
+      "APE post-intervento (se richiesto)"
+    ],
+    "amministrativa": [
+      "Fatture spese sostenute",
+      "Bonifici parlanti (causale, CF beneficiario, P.IVA destinatario)",
+      "Delibera assembleare (per condomini)",
+      "Consenso proprietario (se detentore)"
+    ]
+  },
+  "calcolo_detrazione": {
+    "formula": "Detrazione = min(Spesa * Aliquota, Limite_Detrazione)",
+    "esempio": {
+      "intervento": "Pompa di calore",
+      "spesa_sostenuta": 20000,
+      "aliquota": 0.50,
+      "limite_detrazione": 30000,
+      "detrazione_calcolata": "20000 * 0.50 = 10000 EUR",
+      "rata_annuale": "10000 / 10 = 1000 EUR/anno"
+    }
+  }
+}

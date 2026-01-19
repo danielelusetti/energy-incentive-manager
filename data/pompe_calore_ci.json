@@ -1,0 +1,219 @@
+{
+  "_metadata": {
+    "fonte": "D.M. 7 agosto 2025 - Allegati 1 e 2",
+    "riferimento_regole": "Regole Applicative CT 3.0",
+    "descrizione": "Dati completi per il calcolo dell'incentivo Conto Termico 3.0 per pompe di calore",
+    "formule": {
+      "incentivo_annuo": "I_a = E_i × C_i",
+      "energia_termica_incentivata": "E_i = Q_u × (1 - 1/SCOP) × kp",
+      "energia_termica_incentivata_fixed_double_duct": "E_i = Q_u × (1 - 1/COP) × kp",
+      "calore_totale_prodotto": "Q_u = P_rated × Q_uf",
+      "coefficiente_premialita": "kp = η_s / η_s_min_ecodesign  oppure  kp = SCOP / SCOP_min_ecodesign"
+    }
+  },
+  "zone_climatiche_Quf": {
+    "_nota": "Tabella 8 - Allegato 2 - Coefficiente di utilizzo Q_uf (ore equivalenti annue)",
+    "_unita": "kWh/kW (ore equivalenti)",
+    "A": 600,
+    "B": 850,
+    "C": 1100,
+    "D": 1400,
+    "E": 1700,
+    "F": 1800
+  },
+  "requisiti_minimi_ecodesign": {
+    "_nota": "Tabelle 3-4-5 Allegato 1 - Valori minimi per ammissibilità e calcolo kp",
+    "pompe_calore_elettriche": {
+      "aria_aria": {
+        "split_multisplit": {
+          "regolamento": "Reg. 206/2012",
+          "potenza": "≤ 12 kW",
+          "GWP_gt_150": { "eta_s_min": 149, "SCOP_min": 3.80 },
+          "GWP_lte_150": { "eta_s_min": 134, "SCOP_min": 3.42 }
+        },
+        "fixed_double_duct": {
+          "regolamento": "Reg. 206/2012",
+          "potenza": "≤ 12 kW",
+          "GWP_gt_150": { "COP_min": 2.60 },
+          "GWP_lte_150": { "COP_min": 2.34 }
+        },
+        "vrf_vrv": {
+          "regolamento": "Reg. 2281/2016",
+          "potenza": "> 12 kW",
+          "eta_s_min": 137,
+          "SCOP_min": 3.50
+        },
+        "rooftop": {
+          "regolamento": "Reg. 2281/2016",
+          "potenza": "> 12 kW",
+          "eta_s_min": 125,
+          "SCOP_min": 3.20
+        }
+      },
+      "acqua_aria": {
+        "regolamento": "Reg. 2281/2016",
+        "eta_s_min": 137,
+        "SCOP_min": 3.625
+      },
+      "aria_acqua": {
+        "regolamento": "Reg. 813/2013",
+        "standard": { "eta_s_min": 110, "SCOP_min": 2.825 },
+        "bassa_temperatura": { "eta_s_min": 125, "SCOP_min": 3.20 }
+      },
+      "acqua_acqua": {
+        "regolamento": "Reg. 813/2013",
+        "standard": { "eta_s_min": 110, "SCOP_min": 2.95 },
+        "bassa_temperatura": { "eta_s_min": 125, "SCOP_min": 3.325 }
+      },
+      "geotermiche_salamoia_aria": {
+        "lte_12kw": {
+          "regolamento": "Reg. 206/2012",
+          "GWP_gt_150": { "eta_s_min": 149, "SCOP_min": 3.80 },
+          "GWP_lte_150": { "eta_s_min": 134, "SCOP_min": 3.42 }
+        },
+        "gt_12kw": {
+          "regolamento": "Reg. 2281/2016",
+          "eta_s_min": 137,
+          "SCOP_min": 3.625
+        }
+      },
+      "geotermiche_salamoia_acqua": {
+        "regolamento": "Reg. 813/2013",
+        "standard": { "eta_s_min": 110, "SCOP_min": 2.825 },
+        "bassa_temperatura": { "eta_s_min": 125, "SCOP_min": 3.20 }
+      }
+    },
+    "pompe_calore_gas": {
+      "_nota": "Tabella 5 - Allegato 1",
+      "aria_aria": {
+        "regolamento": "Reg. 2281/2016",
+        "tipologie": ["split_multisplit", "vrf_vrv"],
+        "eta_s_min": 130,
+        "SPER_min": 1.33
+      },
+      "acqua_aria": {
+        "regolamento": "Reg. 2281/2016",
+        "eta_s_min": 130,
+        "SPER_min": 1.33
+      },
+      "salamoia_aria": {
+        "regolamento": "Reg. 2281/2016",
+        "eta_s_min": 130,
+        "SPER_min": 1.33
+      },
+      "acqua_acqua": {
+        "regolamento": "Reg. 813/2013",
+        "standard": { "eta_s_min": 110, "SPER_min": 1.13 },
+        "bassa_temperatura": { "eta_s_min": 125, "SPER_min": 1.28 }
+      },
+      "salamoia_acqua": {
+        "regolamento": "Reg. 813/2013",
+        "eta_s_min": 125,
+        "SPER_min": 1.28
+      }
+    }
+  },
+  "coefficienti_Ci": {
+    "_nota": "Tabella 9 - Allegato 2 - Coefficiente di valorizzazione energia termica",
+    "_unita": "€/kWht",
+    "aria_aria": {
+      "split_multisplit": {
+        "regolamento": "Reg. 206/2012",
+        "potenza_max_kw": 12,
+        "Ci": 0.070
+      },
+      "fixed_double_duct": {
+        "regolamento": "Reg. 206/2012",
+        "potenza_max_kw": 12,
+        "Ci": 0.200
+      },
+      "vrf_vrv": {
+        "regolamento": "Reg. 206/2012",
+        "fasce": [
+          { "potenza_min_kw": 12, "potenza_max_kw": 35, "Ci": 0.15 },
+          { "potenza_min_kw": 35, "potenza_max_kw": null, "Ci": 0.055 }
+        ]
+      },
+      "rooftop": {
+        "regolamento": "Reg. 2281/2016",
+        "fasce": [
+          { "potenza_max_kw": 35, "Ci": 0.15 },
+          { "potenza_min_kw": 35, "potenza_max_kw": null, "Ci": 0.055 }
+        ]
+      }
+    },
+    "aria_acqua": {
+      "regolamento": "Reg. 813/2013",
+      "fasce": [
+        { "potenza_max_kw": 35, "Ci": 0.15 },
+        { "potenza_min_kw": 35, "potenza_max_kw": null, "Ci": 0.06 }
+      ]
+    },
+    "acqua_aria": {
+      "denominazione": "PdC ad acqua di falda/aria",
+      "regolamento": "Reg. 2281/2016",
+      "fasce": [
+        { "potenza_max_kw": 35, "Ci": 0.160 },
+        { "potenza_min_kw": 35, "potenza_max_kw": null, "Ci": 0.06 }
+      ]
+    },
+    "acqua_acqua": {
+      "denominazione": "PdC ad acqua di falda/acqua",
+      "regolamento": "Reg. 813/2013",
+      "fasce": [
+        { "potenza_max_kw": 35, "Ci": 0.160 },
+        { "potenza_min_kw": 35, "potenza_max_kw": null, "Ci": 0.06 }
+      ]
+    },
+    "geotermiche_salamoia_aria": {
+      "denominazione": "Geotermiche suolo/aria a circuito chiuso",
+      "regolamento": "Reg. 2281/2016",
+      "fasce": [
+        { "potenza_max_kw": 35, "Ci": 0.160 },
+        { "potenza_min_kw": 35, "potenza_max_kw": null, "Ci": 0.06 }
+      ]
+    },
+    "geotermiche_salamoia_acqua": {
+      "denominazione": "Geotermiche suolo/acqua a circuito chiuso",
+      "regolamento": "Reg. 813/2013",
+      "fasce": [
+        { "potenza_max_kw": 35, "Ci": 0.160 },
+        { "potenza_min_kw": 35, "potenza_max_kw": null, "Ci": 0.06 }
+      ]
+    }
+  },
+  "annualita_incentivo": {
+    "potenza_lte_35kw": {
+      "descrizione": "Generatori con potenza termica utile nominale ≤ 35 kW",
+      "annualita": 2
+    },
+    "potenza_gt_35kw": {
+      "descrizione": "Generatori con potenza termica utile nominale > 35 kW",
+      "annualita": 5
+    }
+  },
+  "erogazione": {
+    "soglia_unica_soluzione_euro": 15000,
+    "nota": "L'incentivo totale sarà corrisposto in un'unica soluzione se ≤ 15.000 euro o per aventi diritto (es. PA)"
+  },
+  "esempio_calcolo": {
+    "_nota": "Esempio: PdC aria/acqua 10 kW, SCOP 4.5, zona climatica E",
+    "input": {
+      "tipologia": "aria_acqua",
+      "P_rated_kw": 10,
+      "SCOP": 4.5,
+      "SCOP_min_ecodesign": 2.825,
+      "zona_climatica": "E"
+    },
+    "calcolo": {
+      "Q_uf": 1700,
+      "Q_u": "10 × 1700 = 17000 kWht",
+      "kp": "4.5 / 2.825 = 1.593",
+      "E_i": "17000 × (1 - 1/4.5) × 1.593 = 21070 kWht",
+      "Ci": 0.15,
+      "I_annuo": "21070 × 0.15 = 3160.5 €",
+      "annualita": 2,
+      "I_totale": "3160.5 × 2 = 6321 €"
+    }
+  }
+}

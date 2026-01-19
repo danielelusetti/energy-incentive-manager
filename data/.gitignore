@@ -1,0 +1,5 @@
+# Ignora tutti i file progetti (dati clienti sensibili)
+progetti/*.json
+
+# Mantieni directory
+!.gitignore

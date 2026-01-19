@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Backups (non necessari online)
+backups/
+
+# File di sistema
+.DS_Store
+Thumbs.db
+
+# File batch Windows (non necessari su cloud)
+*.bat
+
+# Docker (non necessario su Streamlit Cloud)
+Dockerfile
+docker-compose.yml
+
+# Progetti locali salvati (opzionale - rimuovi se vuoi includerli)
+data/progetti/*.json

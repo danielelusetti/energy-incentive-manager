@@ -1,0 +1,82 @@
+Quali requisiti deve avere l'edificio per accedere al Conto Termico 3.0?
+Tutti gli interventi (Titolo II e Titolo III) sono ammissibili solo se realizzati su edifici esistenti, parti di essi o unità immobiliari iscritti al catasto edilizio urbano alla data di presentazione della richiesta, ad esclusione degli edifici in costruzione (categoria F), dotati di impianto di impianto di climatizzazione invernale funzionante.
+Il Soggetto Responsabile deve conservare il pertinente titolo autorizzativo e/o abilitativo, ove previsto dalla normativa vigente.
+
+Quali requisiti deve avere l'impianto di climatizzazione invernale per accedere al Conto Termico 3.0?
+Gli interventi del Titolo II e del Titolo III sono ammissibili solo se realizzati su edifici o unità immobiliari dotati di impianto di climatizzazione invernale esistente e funzionante alla data di entrata in vigore del Decreto (25 dicembre 2025).
+Un edificio privo di impianto di riscaldamento, oppure dotato di impianto non funzionante, non soddisfa i requisiti di ammissibilità.
+Per gli interventi che prevedono la sostituzione dell'impianto, l'impianto installato nella configurazione post operam deve essere registrato presso il catasto regionale degli impianti, ove presente.
+È possibile verificare i costi massimi ammissibili tramite il portale Conto Termico 3.0?
+Il portale Conto Termico 3.0 effettua una verifica in forma automatica di rispondenza ai requisiti minimi e di congruità dei costi dell'intervento.
+Il calcolo dell'incentivo è basato sul costo specifico sostenuto rispetto al Costo Massimo Ammissibile. A tal fine, il Soggetto Responsabile è tenuto a caricare le fatture e le ricevute dei bonifici effettuati.
+Nei Comuni con popolazione fino a 15.000 abitanti, quando spetta l'incentivo al 100%?
+L'incentivo è determinato al 100% delle spese ammissibili, nel rispetto degli specifici massimali e la producibilità degli impianti, per gli interventi realizzati su edifici di proprietà di Comuni con popolazione fino a 15.000 abitanti e da essi utilizzati.
+Tale incentivo è previsto anche se l'edificio di proprietà del Comune è utilizzato da soggetti terzi, purché non riconducibili a imprese, per lo svolgimento di attività di carattere pubblico-sociale e servizi di interesse collettivo.
+Ciò include, a titolo esemplificativo, l'edificio municipale, biblioteche, le caserme, nonché altri edifici pubblici qualora ricorrano le condizioni sopra indicate.
+Quali caratteristiche deve avere l'impianto fotovoltaico e i relativi sistemi di accumulo per essere incentivabili?
+L'installazione di impianti solari fotovoltaici e dei relativi sistemi di accumulo è incentivabile come intervento di cui al Titolo II.H (fotovoltaico e accumulo) solo se realizzato:
+•congiuntamente alla sostituzione di impianti di climatizzazione invernale esistenti con impianti dotati di pompe di calore elettriche, intervento di cui al Titolo III.A;
+•in assetto di autoconsumo, assumendo come riferimento il fabbisogno energetico dell'edificio, inteso come fabbisogno delle utenze elettriche e termiche. L'energia elettrica prodotta dall'impianto non deve superare del 5% la somma dei consumi medi annui di energia elettrica e dei consumi equivalenti associati all'uso termico.
+L'intervento non è incentivabile se realizzato congiuntamente all'installazione di impianti dotati di pompe di calore elettriche inseriti all'interno di un sistema ibrido (intervento di cui al Titolo III.B).
+Si specifica che, infine, i moduli fotovoltaici e gli inverter devono essere esclusivamente di nuova costruzione. Non è previsto l'incentivo per il revamping di impianti esistenti.
+La Diagnosi Energetica è sempre obbligatoria?
+No. La diagnosi è obbligatoria solo per gli interventi di isolamento (II.A) e nZEB (II.D), o per tutti gli interventi del Titolo III o degli altri interventi del Titolo II (II.B, II.C) su interi edifici con impianti di riscaldamento con potenza nominale totale maggiore o uguale a 200 kWt.
+Gli ETS non economici possono beneficiare dell'incentivo al 100%?
+L'incentivo al 100% delle spese ammissibili, nel rispetto degli specifici massimali e la producibilità degli impianti, è previsto:
+•per gli interventi realizzati su edifici di proprietà di Comuni con popolazione fino a 15.000 abitanti e da essi utilizzati direttamente o da soggetti terzi, purché non riconducibili a imprese, per lo svolgimento di attività di carattere pubblico-sociale e servizi di interesse collettivo;
+•per gli interventi previsti all'Art. 48-ter, relativi a edifici scolastici pubblici e strutture sanitarie pubbliche.
+In relazione a quanto richiamato, un ETS non economico può beneficiare della percentuale del 100% esclusivamente se risulta utilizzatore:
+•di un edificio di proprietà del Comune, situato in un Comune con popolazione fino a 15.000 abitanti, per lo svolgimento di attività di carattere pubblico-sociale e servizi di interesse collettivo;
+•di una scuola o struttura sanitaria di proprietà pubblica.
+La percentuale del 100% non si applica, pertanto, nel caso in cui l'immobile sia di proprietà dell'ETS non economico, anche se situato in un Comune con popolazione inferiore a 15.000 abitanti.
+Ai fini dell'accesso all'incentivo, è obbligatorio presentare le bollette per dimostrare i consumi dell'edificio?
+Seppur tale documentazione non sia obbligatoria, le ultime bollette costituiscono elementi utili per la caratterizzazione dei consumi ante operam dell'edificio oggetto dell'intervento, anche ai fini della redazione della Diagnosi energetica, nei casi in cui risulti obbligatoria.
+Le bollette costituiscono documentazione obbligatoria da inviare per l'intervento di installazione di impianti fotovoltaici e sistemi di accumulo (II.H), al fine della dimostrazione dei consumi annuali e del fabbisogno elettrico dell'edificio.
+
+Le spese per la diagnosi energetica e per l'APE sono incentivabili?
+Sì. Le spese per la Diagnosi Energetica e l'Attestato di Prestazione Energetica (APE) sono incentivabili se i documenti sono obbligatoriamente richiesti dal Decreto per l'intervento da realizzare.
+L'incentivo è al 100% per le PA e gli ETS e al 50% per i Soggetti Privati e cooperative sociali.
+Per le grandi imprese e gli ETS economici, invece, tali costi non sono incentivabili.
+Si specifica che, ai fini dell'incentivo, la fattura per la Diagnosi Energetica e/o per l'APE deve essere intestata al Soggetto Responsabile (SR), ossia al soggetto che ha sostenuto le spese.
+Come si calcola l'incentivo massimo per fotovoltaico e accumulo?
+L'incentivo erogabile per l'installazione di impianti fotovoltaici e sistemi di accumulo (II.H) è calcolato come il valore minimo tra:
+-una percentuale della spesa ammissibile (20%);
+-l'incentivo riconoscibile per l'intervento combinato di sostituzione di impianti con pompe di calore elettriche (III.A).
+Chi deve redigere la Diagnosi Energetica?
+Ai fini dell'ammissibilità, la diagnosi energetica, quando obbligatoria, deve essere sempre redatta da un Esperto in Gestione dell'Energia (EGE) certificato (UNI CEI 11339), oppure una ESCO certificata (UNI CEI 11352).
+La sola comprovata esperienza o un attestato di formazione non sono sufficienti ai fini dell'ammissibilità.
+Per quali interventi è richiesta la riduzione dell'energia primaria?
+La riduzione della domanda di energia primaria (10% o 20% in caso di multiintervento) è un requisito specifico degli interventi del Titolo II (efficienza energetica) realizzati da imprese e ETS economici su edifici ricadenti nell'ambito terziario. La verifica è basata sulla riduzione dell'indice di prestazione energetica globale non rinnovabile risultante nell'APE ante operam e post operam.
+Laddove la riduzione della domanda di energia primaria conseguita sia almeno del 40%, per gli interventi realizzati del Titolo II è, inoltre, prevista una premialità specifica applicabile alle imprese ed ETS economici per ottenere un incremento del 15% sull'intensità massima dell'incentivo.
+L'APE ante e post operam è obbligatorio per gli interventi effettuati dalle imprese su edifici terziari?
+Sì. L'APE ante e post operam è obbligatorio per gli interventi del Titolo II (efficienza energetica) realizzati da imprese ed ETS economici su edifici in ambito terziario, al fine di verificare la riduzione della domanda di energia primaria.
+Si ricorda, inoltre, che l'APE post operam è obbligatorio per interventi del Titolo III realizzati su interi edifici con impianto di riscaldamento di potenza nominale totale maggiore o uguale a 200 kWt.
+Per le imprese, come si applicano i massimali in caso di multi-intervento?
+Per le imprese, i massimali di incentivo sono disciplinati dal Titolo V del Decreto e dipendono dalla dimensione dell'impresa, dalla tipologia di intervento e dalle eventuali premialità applicabili.
+In particolare:
+-per gli interventi del Titolo III (sostituzione degli impianti di climatizzazione invernale), l'intensità massima di aiuto è pari al 45% dei costi ammissibili, incrementabile del 10% per le medie imprese e del 20% per le piccole imprese;
+-per gli interventi di efficienza energetica del Titolo II, l'intensità massima non supera il 25% dei costi ammissibili, che sale al 30% in caso di multi-intervento; tale percentuale può essere ulteriormente incrementata, fino a un massimo del 65%, in funzione della dimensione dell'impresa e delle premialità previste (ad esempio per interventi in zone assistite e/o per il miglioramento della prestazione energetica dell'edificio). Per le grandi imprese, l'intensità massima è del 60% dei costi ammissibili.
+Se non è possibile installare l'impianto fotovoltaico sull'edificio (intervento II.H), è ammessa l'installazione nelle relative pertinenze?
+L'installazione di impianti solari fotovoltaici (II.H) è incentivabile presso l'edificio o nelle relative pertinenze.
+Le pertinenze includono gli spazi funzionali all'edificio, compresi quelli coperti, destinati al parcheggio o al transito dei veicoli.
+In presenza di edifici a proprietà promiscua (pubblico/privato), una PA situata in un Comune con meno di 15.000 abitanti può accedere all'incentivo del 100% per interventi in CT 3.0?
+Sugli edifici a proprietà promiscua (pubblico/privato), gli interventi del Titolo II sono ammessi esclusivamente per la quota millesimale riferibile alla Pubblica Amministrazione.
+Qualora l'immobile sia situato in un Comune con popolazione fino a 15.000 abitanti, la quota di competenza della PA beneficia dell'incentivo al 100% delle spese ammissibili.
+Tale previsione non si applica agli interventi NZEB e agli interventi del Titolo III (impianti centralizzati), per i quali è richiesta la proprietà o disponibilità dell'intero edificio ad un unico soggetto. In presenza di proprietà promiscua, la mancanza di tale requisito esclude l'ammissibilità dell'intervento per tali tipologie.
+Una parrocchia o altro ente religioso che abbia adibito un proprio immobile a uso scolastico, a quali condizioni può accedere al Conto Termico 3.0?
+Un ente religioso può accedere al Conto Termico 3.0:
+•in qualità di Ente del Terzo Settore (ETS) se iscritto al Registro Unico Nazionale del Terzo Settore (RUNTS), con la relativa attuazione delle disposizioni previste per tali Enti.
+•come Soggetto Privato se non iscritto al RUNTS.
+Le parrocchie/altri enti religiosi possono beneficiare della percentuale del 100%, nel rispetto dei massimali e della producibilità degli impianti, esclusivamente se risultano utilizzatori e non siano riconducibili a imprese o a un ETS economico, di un edificio di proprietà pubblica con destinazione scolastica.
+A quale titolo un ente religioso (parrocchia, diocesi ecc.), può accedere al Conto Termico 3.0?
+Un ente religioso può accedere al Conto Termico 3.0:
+•in qualità di Ente del Terzo Settore (ETS) se iscritto al Registro Unico Nazionale del Terzo Settore (RUNTS), con la relativa attuazione delle disposizioni previste per tali Enti;
+•come Soggetto Privato se non iscritto al RUNTS.
+Pertanto, in relazione alla natura di soggetto richiamato in cui viene identificato l'ente religioso, quest'ultimo potrà accedere agli interventi del Conto Termico 3.0 come segue:
+•in caso di ETS non economico agli interventi del Titolo II e Titolo III;
+•in caso di soggetto privato o ETS economico agli interventi del Titolo III e a quelli del Titolo II esclusivamente se realizzati su edifici ricadenti nell'ambito terziario.
+Si specifica che l'ente religioso può presentare la richiesta anche se non è proprietario dell'immobile, purché sia titolare di un diritto reale o personale di godimento.
+Come si applica la maggiorazione del 10% per l'utilizzo di componenti prodotti nell'Unione Europea (MADE IN EU) e quali soggetti possono accedervi?
+La maggiorazione del 10% per l'utilizzo di componenti prodotti nell'Unione Europea si applica alla percentuale dell'incentivo spettante, secondo l'algoritmo di calcolo previsto dal Decreto ed è prevista per gli interventi di incremento dell'efficienza energetica (Titolo II) di cui all'art. 5, comma 1, lettere a) –f).
+Si precisa che l'incentivo erogato non può eccedere i livelli massimi dell'incentivo spettante.
+La maggiorazione del 10% è riconosciuta a tutti i Soggetti Ammessi agli incentivi dal Decreto.

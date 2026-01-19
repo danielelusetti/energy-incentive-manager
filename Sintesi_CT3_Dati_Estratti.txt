@@ -1,0 +1,501 @@
+SINTESI DATI CONTO TERMICO 3.0 - ESTRATTI DA REGOLE_EXTRACTED.TXT
+================================================================================
+
+## DATI GENERALI
+
+Decreto: D.M. 7 agosto 2025
+Pubblicazione GU: n. 224 del 26 settembre 2025
+Regole Applicative: 5/12/2025
+Budget annuale: 900 milioni €/anno
+  - PA e ETS non economici: 400 milioni € (di cui 200 milioni riservati a prenotazione)
+  - Soggetti privati e imprese: 500 milioni € (di cui max 150 milioni per imprese)
+
+## EROGAZIONE INCENTIVI (Art. 11, comma 4)
+
+**NOVITÀ CT 3.0 vs CT 2.0: Soglia aumentata da 5.000€ a 15.000€**
+
+- < 15.000€: UNICA RATA
+- ≥ 15.000€: Rate annuali costanti (2 o 5 anni secondo Tabella 1)
+  * 2 anni: generatori ≤ 35 kW
+  * 5 anni: generatori > 35 kW
+
+ECCEZIONI (unica rata anche > 15.000€):
+- PA e ETS non economici: se accesso diretto
+- ETS economici: solo per interventi Titolo III
+
+PRENOTAZIONE (acconti e rate intermedie):
+- Acconto: 50% se durata 2 anni, 40% (2/5) se durata 5 anni
+- Rata intermedia: possibile al 50% avanzamento lavori
+- Saldo: a conclusione lavori
+
+Conservazione documenti: 5 anni dopo ultima erogazione
+Copertura costi GSE: 1% del valore contributo (max 250€)
+
+Prima rata: entro ultimo giorno mese successivo al bimestre di attivazione contratto
+
+## SOGGETTI AMMESSI
+
+1. PUBBLICHE AMMINISTRAZIONI
+   - Accesso a tutti gli interventi Titolo II e III
+   - Intensità incentivo su edifici pubblici specifici (art. 11, comma 2): 100%
+
+2. ENTI DEL TERZO SETTORE (ETS)
+   - Economici: assimilati a imprese
+   - Non economici: assimilati a PA
+
+3. SOGGETTI PRIVATI
+   - Residenziale: Titolo II e III
+   - Terziario: Titolo II e III (con vincoli specifici per imprese)
+
+4. IMPRESE ed ETS ECONOMICI
+   - Solo ambito terziario (categorie catastali Tabella 1 Allegato 1)
+   - NON ammesse: pompe di calore a gas (art. 25, comma 2)
+   - Riduzione domanda energia primaria minima richiesta:
+     * 10% per singoli interventi (II.B, II.E, II.F)
+     * 20% per multi-interventi e interventi specifici (II.G, II.H, nZEB)
+
+## ZONE CLIMATICHE E COEFFICIENTI
+
+Zone climatiche (coefficiente utilizzo Quf per pompe di calore):
+  A: 600 h
+  B: 850 h
+  C: 1100 h
+  D: 1400 h
+  E: 1700 h
+  F: 1800 h
+
+## INTERVENTO III.A - POMPE DI CALORE
+
+### Tipologie ammesse:
+- Pompe di calore elettriche o a gas
+- Energia aerotermica, geotermica o idrotermica
+- Potenza max: 2.000 kW
+
+### Requisiti tecnici minimi:
+
+**POMPE DI CALORE ELETTRICHE** (Tabelle 3-4 Allegato 1):
+
+1. Split/multisplit aria/aria ≤ 12 kW:
+   - Ꞃs% min: 149 (GWP >150) / 134 (GWP≤150)
+   - SCOP min: 3,8 (GWP >150) / 3,42 (GWP≤150)
+
+2. Fixed double duct aria/aria ≤ 12 kW:
+   - COP min: 2,60 (GWP >150) / 2,34 (GWP≤150)
+
+3. VRF/VRV aria/aria >12 kW:
+   - Ꞃs% min: 137
+   - SCOP min: 3,5
+
+4. Rooftop aria/aria >12 kW:
+   - Ꞃs% min: 125
+   - SCOP min: 3,2
+
+5. Acqua/aria >12 kW:
+   - Ꞃs% min: 137
+   - SCOP min: 3,625
+
+6. Aria/acqua (bassa temp):
+   - Ꞃs% min: 110
+   - SCOP min: 2,825
+
+7. Acqua/acqua (bassa temp):
+   - Ꞃs% min: 110
+   - SCOP min: 2,95
+
+8. Aria/acqua a bassa temperatura:
+   - Ꞃs% min: 125
+   - SCOP min: 3,2
+
+9. Acqua/acqua a bassa temperatura:
+   - Ꞃs% min: 125
+   - SCOP min: 3,325
+
+10. Salamoia/aria ≤ 12 kW (geotermiche):
+    - Ꞃs% min: 149 (GWP >150) / 134 (GWP≤150)
+    - SCOP min: 3,8 (GWP >150) / 3,42 (GWP≤150)
+
+11. Salamoia/aria >12 kW:
+    - Ꞃs% min: 137
+    - SCOP min: 3,625
+
+12. Salamoia/acqua:
+    - Ꞃs% min: 110
+    - SCOP min: 2,825
+
+13. Salamoia/acqua a bassa temperatura:
+    - Ꞃs% min: 125
+    - SCOP min: 3,2
+
+**POMPE DI CALORE A GAS** (Tabella 5 Allegato 1):
+
+1. Split/multisplit aria/aria:
+   - Ꞃs% min: 130
+   - SPER min: 1,33
+
+2. VRF/VRV aria/aria:
+   - Ꞃs% min: 130
+   - SPER min: 1,33
+
+3. Acqua/aria:
+   - Ꞃs% min: 130
+   - SPER min: 1,33
+
+4. Salamoia/aria:
+   - Ꞃs% min: 130
+   - SPER min: 1,33
+
+5. Aria/acqua – acqua/acqua:
+   - Ꞃs% min: 110
+   - SPER min: 1,13
+
+6. Aria/acqua – acqua/acqua a bassa temperatura:
+   - Ꞃs% min: 125
+   - SPER min: 1,28
+
+7. Salamoia/acqua:
+   - Ꞃs% min: 125
+   - SPER min: 1,28
+
+### Calcolo incentivo (pompe elettriche):
+
+I_atot = Ei × Ci
+
+Dove:
+- Ei = Qu × [1 - 1/SCOP] × kp
+- Qu = Prated × Quf
+- kp = Ꞃs / Ꞃs,min_Ecodesign
+
+**Coefficienti di valorizzazione Ci (€/kWh)** (Tabella 9 Allegato 2):
+
+| Tipo                      | Potenza     | Ci (€/kWh) |
+|---------------------------|-------------|------------|
+| Split/multisplit aria/aria| ≤ 12 kW     | 0,070      |
+| Fixed double duct aria/aria| ≤ 12 kW    | 0,200      |
+| VRF/VRV aria/aria         | 12-35 kW    | 0,15       |
+| VRF/VRV aria/aria         | > 35 kW     | 0,055      |
+| Rooftop aria/aria         | ≤ 35 kW     | 0,15       |
+| Rooftop aria/aria         | > 35 kW     | 0,055      |
+| Aria/acqua                | ≤ 35 kW     | 0,15       |
+| Aria/acqua                | > 35 kW     | 0,06       |
+| Acqua/aria (falda)        | ≤ 35 kW     | 0,160      |
+| Acqua/aria (falda)        | > 35 kW     | 0,06       |
+| Acqua/acqua (falda)       | ≤ 35 kW     | 0,160      |
+| Acqua/acqua (falda)       | > 35 kW     | 0,06       |
+| Salamoia/aria (geotermiche)| ≤ 35 kW    | 0,160      |
+| Salamoia/aria (geotermiche)| > 35 kW    | 0,06       |
+| Salamoia/acqua (geotermiche)| ≤ 35 kW   | 0,160      |
+| Salamoia/acqua (geotermiche)| > 35 kW   | 0,06       |
+
+Durata:
+- 2 anni se ≤ 35 kW
+- 5 anni se > 35 kW
+
+### Requisiti installazione:
+- Sostituzione parziale o totale impianto esistente
+- Messa a punto sistema distribuzione, regolazione, controllo
+- Valvole termostatiche su tutti i corpi scaldanti (con eccezioni)
+- Contabilizzazione individuale se impianto centralizzato
+- Se > 200 kW: contabilizzazione calore obbligatoria + trasmissione dati GSE
+
+## INTERVENTO II.H - FOTOVOLTAICO COMBINATO
+
+### Requisiti:
+- Congiunto a sostituzione impianto con pompa di calore elettrica (III.A)
+- Assetto autoconsumo (cessione parziale)
+- Potenza: 2 kW ≤ P ≤ 1 MW (e potenza disponibile punto prelievo)
+- Moduli e inverter nuovi, marcatura CE (Dir. 2014/35/UE)
+- Tolleranza solo positiva
+- Resistenza carico min: 5.400 Pa
+- Coefficiente perdita potenza temp: ≥ -0,37 %/°C
+- Garanzia prodotto: ≥ 10 anni
+- Garanzia rendimento: ≥ 90% dopo 10 anni (moduli)
+- Garanzia rendimento europeo inverter: ≥ 97%
+
+### Calcolo incentivo:
+I_tot = min(20% × C_FTV × P_FTV + 20% × C_ACC × C_ACCUMULO ; I_tot_impianto_pdc)
+
+Con:
+- I_tot ≤ I_max (=incentivo pompa di calore)
+
+**Costi massimi ammissibili (C_FTV)**:
+- Fino 20 kW: 1.500 €/kW
+- 20-200 kW: 1.200 €/kW
+- 200-600 kW: 1.100 €/kW
+- 600-1.000 kW: 1.050 €/kW
+
+**Accumulo (C_ACC)**: max 1.000 €/kWh
+
+**Maggiorazioni** (registro tecnologie fotovoltaico DL 181/2023 art. 12):
+- +5% per moduli sezione a)
+- +10% per moduli sezione b)
+- +15% per moduli sezione c)
+
+Dimensionamento: energia prodotta FV ≤ 105% (consumi elettrici + equivalente termico)
+
+## INTERVENTO II.A - ISOLAMENTO TERMICO
+
+### Superfici ammesse:
+- Strutture opache orizzontali (coperture, pavimenti)
+- Strutture opache verticali (pareti perimetrali)
+
+### Requisiti tecnici:
+Trasmittanza massima per zona climatica (Tabella 1 Allegato 1) - variabili per struttura e zona
+
+### Calcolo incentivo:
+I_tot = %spesa × C × Sint
+
+**Percentuali base**:
+- 40% generale
+- 50% zone E e F
+- 55% se combinato con III.A, III.B, III.C o III.E
+- 100% edifici pubblici (art. 11, comma 2)
+
+**Costi massimi (C_max)**:
+- Coperture esterne: 300 €/m²
+- Coperture interne: 150 €/m²
+- Coperture ventilate: 350 €/m²
+- Pavimenti esterni: 170 €/m²
+- Pavimenti interni: 150 €/m²
+- Pareti esterne: 200 €/m²
+- Pareti interne: 100 €/m²
+- Pareti ventilate: 250 €/m²
+
+I_max cumulativo (i+ii+iii): 1.000.000 €
+
+Durata: 5 anni
+
+Maggiorazione +10% se componenti prodotti UE (Allegato 4)
+
+## INTERVENTO II.B - SERRAMENTI
+
+### Requisiti tecnici:
+Trasmittanza massima (W/m²K) per zona climatica (Tabella 2 Allegato 1):
+
+- Zone A, B: ≤ 2,60
+- Zona C: ≤ 1,75
+- Zona D: ≤ 1,67
+- Zona E: ≤ 1,30
+- Zona F: ≤ 1,00
+
+Obbligatorio: sistemi termoregolazione o valvole termostatiche (installati o preesistenti)
+
+### Calcolo incentivo:
+I_tot = %spesa × C × Sint
+
+**Percentuali**:
+- 40% base
+- 55% se combinato con II.A + (III.A o III.B o III.C o III.E)
+- 100% edifici pubblici (art. 11, comma 2)
+
+**Costi massimi**:
+- Zone A, B, C: 700 €/m²
+- Zone D, E, F: 800 €/m²
+
+I_max: 500.000 €
+
+Durata: 5 anni
+
+Maggiorazione +10% se componenti prodotti UE
+
+**Imprese/ETS economici su terziario**:
+- Riduzione domanda energia primaria ≥ 10% (singolo II.B)
+- Riduzione ≥ 20% se multi-intervento II.B + altro Titolo II
+
+## INTERVENTO III.C - BIOMASSA
+
+### Requisiti classe ambientale 5 stelle (DM 186/2017):
+
+**OBBLIGATORIA solo se:**
+- Sostituzione impianto esistente alimentato a biomassa, carbone, olio combustibile o gasolio
+- Aziende agricole/imprese settore forestale in caso di nuova installazione
+
+**NON obbligatoria se:**
+- Sostituisci caldaia a gas/GPL con biomassa
+- Ammessa anche sostituzione gas/GPL con biomassa se emissioni particolato ≤ 1 mg/Nm³ + classe 5 stelle
+
+### Generatori ammessi:
+
+a) **Caldaie biomassa ≤ 500 kW**:
+   - Conformità UNI EN 303-5 classe 5
+   - Rendimento ≥ 87+log(Pn)
+   - Accumulo termico ≥ 20 dm³/kW
+   - Pellet certificato UNI EN ISO 17225-2
+
+b) **Caldaie biomassa 500-2.000 kW**:
+   - Rendimento ≥ 92%
+   - Emissioni conformi Tabella 14 Allegato 2
+   - Sistema abbattimento particolato (disponibilità ≥ 90%)
+   - Pellet certificato UNI EN ISO 17225-2
+   - Classe ambientale 5 stelle
+
+c) **Stufe e termocamini a pellet**:
+   - Conformità UNI EN 16510:2023 (o UNI EN 14785 fino 9/11/2025)
+   - Rendimento > 85%
+   - Pellet certificato UNI EN ISO 17225-2
+
+d) **Termocamini a legna**:
+   - Solo sostituzione camini/termocamini/stufe a legna
+   - Conformità UNI EN 16510:2023 (o UNI EN 13229 fino 9/11/2025)
+   - Rendimento > 85%
+   - Legna certificata UNI EN 17225-5
+
+e) **Stufe a legna**:
+   - Conformità UNI EN 16510:2023 (o UNI EN 13240 fino 9/11/2025)
+   - Rendimento > 85%
+   - Legna certificata UNI EN 17225-5
+
+### Calcolo incentivo:
+
+**Caldaie**: I_atot = Pn × hr × Ci × Ce
+**Stufe/termocamini**: I_atot = 3,35 × ln(Pn) × hr × Ci × Ce
+
+**Coefficienti Ci (€/kWh)** (Tabella 10 Allegato 2):
+- Caldaie ≤ 35 kW: 0,060
+- Caldaie 35-500 kW: 0,025
+- Caldaie > 500 kW: 0,020
+- Termocamini/stufe legna: 0,045
+- Termocamini/stufe pellet: 0,055
+
+**Coefficiente Ce** (emissioni polveri - Tabella 12/13):
+- Riduzione ≤ 20% vs classe 5 stelle: 1
+- Riduzione 20-50%: 1,2
+- Riduzione > 50%: 1,5
+
+**Coefficiente hr** (ore funzionamento - zone climatiche):
+- A: 600 h
+- B: 850 h
+- C: 1100 h
+- D: 1400 h
+- E: 1700 h
+- F: 1800 h
+
+Durata:
+- 2 anni se ≤ 35 kW
+- 5 anni se > 35 kW
+
+**NOTE**:
+- Teleriscaldamento: incentivo ridotto 20%
+- Manutenzione biennale obbligatoria per tutta durata incentivo
+
+## INTERVENTO II.G - COLONNINE RICARICA VE
+
+### Requisiti:
+- Congiunto a sostituzione impianto con pompa di calore elettrica (III.A)
+- Utenze BT/MT
+- Potenza min: 7,4 kW
+- Dispositivi smart (misura, trasmissione, comandi esterni)
+- Modo 3 o Modo 4 (CEI EN 61851)
+- Dichiarazione conformità DM 37/2008
+- Se destinazione pubblica: registrazione Piattaforma Unica Nazionale (DM 106/2023)
+
+### Calcolo incentivo:
+I_tot = min(30% × C ; I_tot_pdc)
+
+Con I_tot ≤ I_max (=incentivo pompa di calore)
+
+**Costi massimi (C_max)**:
+- Potenza standard 7,4-22 kW monofase: 2.400 €/punto
+- Potenza standard 7,4-22 kW trifase: 8.400 €/punto
+- Potenza 22-50 kW: 1.200 €/kW
+- Potenza 50-100 kW: 60.000 €/infrastruttura
+- Potenza > 100 kW: 110.000 €/infrastruttura
+
+Durata: come pompa di calore combinata (2 o 5 anni)
+
+**Imprese/ETS economici su terziario**:
+- Riduzione domanda energia primaria ≥ 20%
+
+## INTERVENTI SISTEMI IBRIDI (III.B)
+
+### Tipologie:
+1. **Ibridi factory made**: PDC + caldaia condensazione/biomassa (assemblati fabbrica)
+2. **Bivalenti**: PDC + caldaia (assemblati campo)
+3. **Add on**: PDC integrata a caldaia condensazione esistente (no smaltimento)
+
+### Requisiti:
+- Sistema regolazione "intelligente"
+- Rapporto potenze PDC/condensazione ≤ 0,5 (ibridi factory made)
+- PDC rispetta requisiti III.A
+- Caldaia condensazione/biomassa rispetta Tabella 6 Allegato 1
+- Termoregolazione classe V-VIII (impianti autonomi)
+
+Calcolo: simile a III.A con coefficienti specifici
+
+## DIFFERENZE RESIDENZIALE / TERZIARIO
+
+### RESIDENZIALE:
+- Tutti i soggetti privati (persone fisiche, titolari reddito impresa/agrario)
+- Accesso a tutti interventi Titolo II e III
+- Nessun vincolo riduzione energia primaria
+
+### TERZIARIO:
+- Edifici categorie catastali Tabella 1 Allegato 1 (gruppi A, B, C, D, E)
+- Soggetti privati/imprese/ETS economici
+- **VINCOLI SPECIFICI PER IMPRESE/ETS ECONOMICI**:
+  * NON ammesse pompe di calore a gas
+  * Riduzione domanda energia primaria OBBLIGATORIA:
+    - 10% per II.B, II.E, II.F (singoli)
+    - 20% per II.B+altro Titolo II, II.E+altro Titolo II, II.F+altro Titolo II
+    - 20% per II.G, II.H, nZEB
+  * Verifica tramite APE ante e post operam
+
+## MODALITÀ DI ACCESSO
+
+1. **ACCESSO DIRETTO** (post-completamento):
+   - Tutti i soggetti
+   - Richiesta dopo conclusione lavori
+   - Documentazione completa + fatture + pagamenti
+
+2. **PRENOTAZIONE** (pre-lavori):
+   - Solo PA, ETS, ESCO per conto PA/ETS
+   - Richiesta prima inizio lavori
+   - Quattro casistiche (diagnosi energetica, EPC, PPP, assegnazione lavori)
+   - Acconti e rate intermedie
+   - Massimale preventivo vincolante
+   - Saldo a consuntivo
+
+## PROCEDURA CATALOGO (semplificata)
+
+Applicabile a:
+- Generatori ≤ 35 kW (pompe calore, ibridi, biomassa)
+- Collettori solari ≤ 50 m²
+- Microcogeneratori < 50 kW elettrici
+- Colonnine ricarica VE (tutte)
+
+Vantaggi:
+- No asseverazione (autodichiarazione)
+- Dati tecnici precompilati
+- Istruttoria semplificata
+
+## CUMULABILITÀ
+
+**NON CUMULABILE** con altri incentivi statali (eccetto fondi garanzia, rotazione, contributi conto interesse)
+
+**CUMULABILE**:
+- PA: con incentivi conto capitale (statali/non statali) fino a 100% spese
+- CER/autoconsumo: con incentivi condivisione energia (DM CACER 414/2023) nei limiti intensità aiuto
+- Imprese: secondo art. 27 Decreto (limiti intensità aiuto)
+
+## ASPETTI FISCALI
+
+- Contributo in conto impianti
+- NO ritenuta 4% (DPR 600/1973)
+- Fuori campo IVA (no sinallagma)
+- No obbligo fattura
+
+## CONTROLLI
+
+- Verifica documentale e tecnica GSE
+- Conservazione documenti: 5 anni dopo ultima erogazione
+- Sopralluoghi possibili
+- Antimafia se > 150.000 € (art. 99 D.lgs 159/2011)
+
+## NOVITÀ 2025 (RISPETTO CT 2.0)
+
+1. **Soglia pagamento unico**: 5.000€ → 15.000€
+2. **Nuovi interventi incentivabili**:
+   - Colonnine ricarica VE (II.G)
+   - Fotovoltaico combinato (II.H)
+3. **Classe ambientale biomassa**: 5 stelle solo se sostituisci biomassa/carbone/olio/gasolio esistente
+4. **Maggiorazioni**: +10% componenti UE, +5/10/15% FV registro tecnologie
+5. **Edifici pubblici specifici**: 100% spese (art. 11, comma 2)

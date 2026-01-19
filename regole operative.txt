@@ -1,0 +1,41 @@
+# TASK: ESTRAZIONE STRUTTURATA REGOLE E CHECKLIST
+Agisci come Data Engineer e Legal Tech Specialist.
+Dobbiamo convertire le tabelle contenute nel file `Regole_Applicative_CT_3_0.pdf` in un formato JSON utilizzabile dal software per i controlli automatici.
+
+## OBIETTIVO
+Creare uno script Python (`scripts/extract_rules_tables.py`) che analizzi il PDF per individuare ed estrarre le tabelle riassuntive, ignorando il testo discorsivo.
+
+## TARGET DI ESTRAZIONE
+Lo script deve cercare e strutturare specificamente:
+1. **Tabelle Spese Ammissibili:** Spesso il GSE elenca in tabella quali voci di spesa sono incluse (es. "Smontaggio", "Fornitura", "Opere idrauliche").
+2. **Tabelle Documentazione:** Le checklist dei documenti da allegare (es. "Bonifico", "Scheda tecnica", "Liberatoria").
+3. **Tabelle Definizioni:** Se presenti, le definizioni dei soggetti ammessi.
+
+## LOGICA DELLO SCRIPT (pdfplumber)
+Usa `pdfplumber` con queste accortezze:
+- Filtra le tabelle piccole (meno di 3 righe) per evitare di catturare layout di pagina errati.
+- Tenta di identificare l'argomento della tabella leggendo il testo immediatamente precedente alla tabella (l'header o il titolo del paragrafo).
+- Pulisci il testo dai caratteri speciali (`\n`, `\uf0b7`).
+
+## SCHEMA OUTPUT (JSON)
+Il file `data/compliance_tables.json` deve avere questa struttura raggruppata:
+
+```json
+{
+  "spese_ammissibili": [
+    {
+      "voce": "Smontaggio e dismissione impianto esistente",
+      "riferimento_intervento": "Tutti",
+      "note": "Compreso smaltimento autorizzato"
+    },
+    ...
+  ],
+  "checklist_documenti": [
+    {
+      "documento": "Ricevuta bonifico",
+      "fase": "Richiesta incentivo",
+      "obbligatorio": true
+    },
+    ...
+  ]
+}
