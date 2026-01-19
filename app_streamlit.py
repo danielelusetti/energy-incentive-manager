@@ -44,7 +44,8 @@ from modules.calculator_biomassa import (
 from modules.financial_roi import calculate_npv
 from modules.report_generator import (
     genera_report_html, genera_report_markdown, ScenarioCalcolo,
-    genera_report_solare_termico_html, ScenarioSolareTermico
+    genera_report_solare_termico_html, ScenarioSolareTermico,
+    genera_report_building_automation_html
 )
 from modules.zone_climatiche import (
     get_lista_regioni, get_province_by_regione, get_zona_climatica, get_info_provincia
@@ -287,10 +288,13 @@ def map_tipologia_catalogo_to_intervento(tipologia: str) -> str:
 
     mapping = {
         "aria/acqua": "aria_acqua",
-        "aria/aria": "split_multisplit",
+        "aria/aria": "aria_aria",  # Corretto: usa aria_aria come tipo base
         "acqua/acqua": "acqua_acqua",
         "acqua/aria": "acqua_aria",
         "geotermica": "geotermiche_salamoia_acqua",
+        "salamoia/acqua": "geotermiche_salamoia_acqua",
+        "acqua glicolata/acqua": "geotermiche_salamoia_acqua",
+        "acqua di falda/acqua": "geotermiche_acqua_falda",
     }
 
     for key, value in mapping.items():
@@ -644,6 +648,16 @@ def init_session_state():
         st.session_state.scenari_ricarica_veicoli = []
     if "scenari_building_automation" not in st.session_state:
         st.session_state.scenari_building_automation = []
+    if "ultimo_confronto_ba" not in st.session_state:
+        st.session_state.ultimo_confronto_ba = None
+    if "ultimo_calcolo_solare" not in st.session_state:
+        st.session_state.ultimo_calcolo_solare = None
+    if "ultimo_calcolo_isolamento" not in st.session_state:
+        st.session_state.ultimo_calcolo_isolamento = None
+    if "ultimo_calcolo_serramenti" not in st.session_state:
+        st.session_state.ultimo_calcolo_serramenti = None
+    if "ultimo_calcolo_ibridi" not in st.session_state:
+        st.session_state.ultimo_calcolo_ibridi = None
     if "progetto_multi" not in st.session_state:
         st.session_state.progetto_multi = {
             "nome_progetto": "",
@@ -769,19 +783,37 @@ def calcola_scenario(
     potenza_kw: float, scop: float, eta_s: float, eta_s_min: int, scop_min: float,
     zona_climatica: str, gwp: str, bassa_temp: bool, spesa: float,
     tipo_soggetto: str, tipo_abitazione: str, anno: int, tasso_sconto: float,
-    alimentazione: str = "elettrica"
+    alimentazione: str = "elettrica",
+    iter_semplificato: bool = False
 ) -> dict:
     """Calcola un singolo scenario e restituisce i risultati."""
 
-    # Mappa tipo gas a tipo base per validazione
-    tipo_base = tipo_intervento.replace("_gas", "") if is_gas_pump(tipo_intervento) else tipo_intervento
-    # Gestione mapping gas specifici
-    if tipo_intervento == "aria_aria_gas":
-        tipo_base = "acqua_aria"  # Usa acqua_aria come base
-    elif tipo_intervento == "salamoia_aria_gas":
-        tipo_base = "geotermiche_salamoia_aria"
-    elif tipo_intervento == "salamoia_acqua_gas":
-        tipo_base = "geotermiche_salamoia_acqua"
+    # Mappa tipi app -> tipi validator
+    # L'app usa tipi dettagliati (split_multisplit, vrf_vrv, ecc.)
+    # Il validator usa tipi base (aria_aria, aria_acqua, ecc.)
+    MAPPA_TIPI_VALIDATOR = {
+        "split_multisplit": "aria_aria",
+        "fixed_double_duct": "aria_aria",
+        "vrf_vrv": "aria_aria",
+        "rooftop": "aria_aria",
+        "aria_acqua": "aria_acqua",
+        "acqua_acqua": "acqua_acqua",
+        "acqua_aria": "acqua_aria",
+        "geotermiche_salamoia_aria": "geotermiche_salamoia_aria",
+        "geotermiche_salamoia_acqua": "geotermiche_salamoia_acqua",
+        "geotermiche_acqua_falda": "geotermiche_acqua_falda",
+        # Tipi gas
+        "aria_aria_gas": "acqua_aria",
+        "salamoia_aria_gas": "geotermiche_salamoia_aria",
+        "salamoia_acqua_gas": "geotermiche_salamoia_acqua",
+    }
+
+    # Mappa tipo app a tipo base per validazione
+    tipo_base = MAPPA_TIPI_VALIDATOR.get(tipo_intervento, tipo_intervento)
+
+    # Fallback per tipi gas non mappati
+    if is_gas_pump(tipo_intervento) and tipo_base == tipo_intervento:
+        tipo_base = tipo_intervento.replace("_gas", "")
 
     # Validazione CT
     validazione_ct = valida_requisiti_ct(
@@ -791,7 +823,8 @@ def calcola_scenario(
         scop_dichiarato=scop,
         gwp_refrigerante=gwp,
         bassa_temperatura=bassa_temp,
-        alimentazione=alimentazione
+        alimentazione=alimentazione,
+        iter_semplificato=iter_semplificato
     )
 
     # Calcolo CT
@@ -806,7 +839,8 @@ def calcola_scenario(
     ct_quf = 0
 
     # Verifica requisiti eta_s
-    eta_s_valido = eta_s >= eta_s_min
+    # Se iter semplificato (prodotto nel catalogo GSE), il requisito è già verificato dal GSE
+    eta_s_valido = iter_semplificato or (eta_s >= eta_s_min)
 
     # Verifica vincoli terziario CT 3.0 (Punto 3)
     vincolo_terziario_msg = None
@@ -1355,24 +1389,13 @@ def main():
                 else:
                     potenza_kw = st.number_input("Potenza (kW)", min_value=1.0, max_value=2000.0, value=10.0, step=0.5, key="pdc_potenza")
             with col2:
-                # Legge COP dal nuovo formato (dati_tecnici) o vecchio formato
-                cop_da_catalogo = None
-                if prodotto_catalogo:
-                    dati_tec = prodotto_catalogo.get('dati_tecnici', {})
-                    cop_da_catalogo = dati_tec.get('cop', prodotto_catalogo.get('cop'))
-
-                if cop_da_catalogo:
-                    scop = float(cop_da_catalogo)
-                    if is_gas:
-                        st.info(f"📊 SPER: **{scop}**")
-                    else:
-                        st.info(f"📊 SCOP: **{scop}**")
+                # SCOP sempre editabile dall'utente (il COP del catalogo non è lo SCOP)
+                if is_gas:
+                    scop = st.number_input("SPER dichiarato", min_value=0.5, max_value=3.0, value=1.4, step=0.01,
+                                          help="Seasonal Primary Energy Ratio (da scheda tecnica)", key="pdc_sper")
                 else:
-                    if is_gas:
-                        scop = st.number_input("SPER dichiarato", min_value=0.5, max_value=3.0, value=1.4, step=0.01,
-                                              help="Seasonal Primary Energy Ratio", key="pdc_sper")
-                    else:
-                        scop = st.number_input("SCOP dichiarato", min_value=1.5, max_value=10.0, value=4.0, step=0.1, key="pdc_scop")
+                    scop = st.number_input("SCOP dichiarato", min_value=1.5, max_value=10.0, value=4.0, step=0.1,
+                                          help="Seasonal COP (da scheda tecnica)", key="pdc_scop")
 
             col1, col2 = st.columns(2)
             with col1:
@@ -1390,25 +1413,35 @@ def main():
                 eff_label = "SCOP"
 
             # Box informativo minimi Ecodesign
-            st.markdown(f"""
-            <div style="background-color: #e8f4ea; padding: 10px; border-radius: 5px; border-left: 4px solid #2e7d32; margin: 10px 0;">
-                <strong>Requisiti minimi Ecodesign:</strong><br>
-                η_s min: <strong>{eta_s_min}%</strong> | {eff_label} min: <strong>{scop_min}</strong>
-            </div>
-            """, unsafe_allow_html=True)
+            if iter_semplificato:
+                st.markdown(f"""
+                <div style="background-color: #e3f2fd; padding: 10px; border-radius: 5px; border-left: 4px solid #1976d2; margin: 10px 0;">
+                    <strong>✅ Prodotto nel Catalogo GSE - Iter Semplificato</strong><br>
+                    I requisiti Ecodesign sono già verificati dal GSE (Art. 14, comma 5)<br>
+                    <small>Compila comunque η_s per il calcolo dell'incentivo</small>
+                </div>
+                """, unsafe_allow_html=True)
+            else:
+                st.markdown(f"""
+                <div style="background-color: #e8f4ea; padding: 10px; border-radius: 5px; border-left: 4px solid #2e7d32; margin: 10px 0;">
+                    <strong>Requisiti minimi Ecodesign:</strong><br>
+                    η_s min: <strong>{eta_s_min}%</strong> | {eff_label} min: <strong>{scop_min}</strong>
+                </div>
+                """, unsafe_allow_html=True)
 
-            # Efficienza stagionale
+            # Efficienza stagionale - sempre compilabile (serve per il calcolo incentivo)
             eta_s = st.number_input(
                 "η_s dichiarata (%)", min_value=100.0, max_value=300.0, value=150.0, step=1.0,
-                help=f"Deve essere >= {eta_s_min}%",
+                help=f"Efficienza energetica stagionale (da scheda tecnica). Minimo: {eta_s_min}%",
                 key="pdc_eta_s"
             )
 
-            # Warning se sotto i minimi
-            if eta_s < eta_s_min:
-                st.error(f"⛔ η_s ({eta_s}%) < minimo ({eta_s_min}%): NON AMMESSO")
-            if scop < scop_min:
-                st.error(f"⛔ {eff_label} ({scop}) < minimo ({scop_min}): NON AMMESSO")
+            # Warning se sotto i minimi (solo se NON iter semplificato)
+            if not iter_semplificato:
+                if eta_s < eta_s_min:
+                    st.error(f"⛔ η_s ({eta_s}%) < minimo ({eta_s_min}%): NON AMMESSO")
+                if scop < scop_min:
+                    st.error(f"⛔ {eff_label} ({scop}) < minimo ({scop_min}): NON AMMESSO")
 
             st.divider()
 
@@ -1468,7 +1501,8 @@ def main():
                     tipo_abitazione=tipo_abitazione,
                     anno=anno,
                     tasso_sconto=tasso_sconto,
-                    alimentazione="gas" if is_gas else "elettrica"
+                    alimentazione="gas" if is_gas else "elettrica",
+                    iter_semplificato=iter_semplificato
                 )
 
                 # Aggiungi info catalogo GSE al risultato
@@ -2490,6 +2524,31 @@ def main():
 
                         # Box riepilogo compatto
                         calcoli = risultato_solare["calcoli_intermedi"]
+
+                        # Salva nel session state per uso successivo
+                        st.session_state.ultimo_calcolo_solare = {
+                            "tipologia_solare": tipologia_solare,
+                            "tipologia_solare_label": tipologia_solare_label,
+                            "tipo_collettore": tipo_collettore,
+                            "tipo_collettore_label": tipo_collettore_label,
+                            "superficie_totale": superficie_totale,
+                            "n_moduli": n_moduli,
+                            "area_modulo": area_modulo,
+                            "qu_calcolato": qu_calcolato,
+                            "spesa_solare": spesa_solare,
+                            "ct_incentivo": ct_incentivo,
+                            "risultato_solare": risultato_solare,
+                            "n_rate_ct": n_rate_ct,
+                            "calcoli": calcoli,
+                            "eco_solare": eco_solare,
+                            "aliquota_eco_solare": aliquota_eco_solare,
+                            "npv_ct_solare": npv_ct_solare,
+                            "npv_eco_solare": npv_eco_solare,
+                            "iter_semplificato_st": iter_semplificato_st,
+                            "prodotto_catalogo_st": prodotto_catalogo_st,
+                            "piu_conveniente": "CT" if npv_ct_solare > npv_eco_solare else "Ecobonus"
+                        }
+
                         st.markdown(f"""
                         <div style="background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
                                     padding: 15px; border-radius: 10px; color: white; margin: 15px 0;">
@@ -2523,53 +2582,6 @@ def main():
                         with st.expander("📋 Documentazione"):
                             for doc in validazione_solare.documentazione_richiesta:
                                 st.write(f"• {doc}")
-
-                        # Pulsante salva scenario solare
-                        st.divider()
-                        col_save1, col_save2 = st.columns([3, 1])
-                        with col_save1:
-                            salva_scenario_solare = st.button(
-                                "💾 Salva Scenario Solare",
-                                type="secondary",
-                                use_container_width=True,
-                                key="btn_salva_solare",
-                                disabled=len(st.session_state.scenari_solare) >= 5
-                            )
-                        with col_save2:
-                            st.write(f"({len(st.session_state.scenari_solare)}/5)")
-
-                        if salva_scenario_solare:
-                            nome_scenario_sol = f"Solare {len(st.session_state.scenari_solare) + 1}"
-                            scenario_solare_dict = {
-                                "nome": nome_scenario_sol,
-                                "tipologia_impianto": tipologia_solare,
-                                "tipologia_label": tipologia_solare_label,
-                                "tipo_collettore": tipo_collettore,
-                                "tipo_collettore_label": tipo_collettore_label,
-                                "superficie_m2": superficie_totale,
-                                "n_moduli": n_moduli,
-                                "area_modulo_m2": area_modulo,
-                                "producibilita_qu": qu_calcolato,
-                                "spesa": spesa_solare,
-                                "ct_ammissibile": True,
-                                "ct_incentivo": ct_incentivo,
-                                "ct_rate": risultato_solare["erogazione"]["rate"],
-                                "ct_annualita": n_rate_ct,
-                                "ct_ci": calcoli["Ci"],
-                                "ct_ia": calcoli["Ia"],
-                                "eco_ammissibile": True,
-                                "eco_detrazione": eco_solare,
-                                "eco_aliquota": aliquota_eco_solare,
-                                "npv_ct": npv_ct_solare,
-                                "npv_eco": npv_eco_solare,
-                                # Info Catalogo GSE
-                                "iter_semplificato": iter_semplificato_st,
-                                "prodotto_catalogo": prodotto_catalogo_st.get("id_slug", prodotto_catalogo_st.get("id")) if prodotto_catalogo_st else None,
-                                "prodotto_marca": prodotto_catalogo_st.get("marca") if prodotto_catalogo_st else None,
-                                "prodotto_modello": prodotto_catalogo_st.get("modello") if prodotto_catalogo_st else None,
-                            }
-                            st.session_state.scenari_solare.append(scenario_solare_dict)
-                            st.success(f"✅ Scenario salvato: {nome_scenario_sol}")
 
                     else:
                         st.error(f"Errore: {risultato_solare['messaggio']}")
@@ -2605,6 +2617,52 @@ def main():
                     | ACS+Risc | 0.36 | 0.33 | 0.13 | 0.12 | 0.11 |
                     | Solar cool | 0.43 | 0.40 | 0.17 | 0.15 | 0.14 |
                     """)
+
+        # Pulsante salva scenario solare (FUORI dal blocco calcola)
+        st.divider()
+        col_save_sol1, col_save_sol2 = st.columns([3, 1])
+        with col_save_sol1:
+            salva_scenario_solare = st.button(
+                "💾 Salva Scenario Solare",
+                type="secondary",
+                use_container_width=True,
+                key="btn_salva_solare",
+                disabled=len(st.session_state.scenari_solare) >= 5
+            )
+        with col_save_sol2:
+            st.write(f"({len(st.session_state.scenari_solare)}/5)")
+
+        if salva_scenario_solare:
+            if st.session_state.ultimo_calcolo_solare is None:
+                st.warning("⚠️ Prima calcola gli incentivi con CALCOLA SOLARE")
+            elif len(st.session_state.scenari_solare) >= 5:
+                st.warning("⚠️ Hai raggiunto il massimo di 5 scenari")
+            else:
+                dati = st.session_state.ultimo_calcolo_solare
+                nuovo_scenario = {
+                    "id": len(st.session_state.scenari_solare) + 1,
+                    "nome": f"Scenario {len(st.session_state.scenari_solare) + 1}",
+                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M"),
+                    "tipologia": dati["tipologia_solare_label"],
+                    "tipo_collettore": dati["tipo_collettore_label"],
+                    "superficie": dati["superficie_totale"],
+                    "n_moduli": dati["n_moduli"],
+                    "area_modulo": dati["area_modulo"],
+                    "qu_calcolato": dati["qu_calcolato"],
+                    "spesa": dati["spesa_solare"],
+                    "ct_incentivo": dati["ct_incentivo"],
+                    "ct_rate": dati["n_rate_ct"],
+                    "eco_detrazione": dati["eco_solare"],
+                    "aliquota_eco": dati["aliquota_eco_solare"],
+                    "npv_ct": dati["npv_ct_solare"],
+                    "npv_eco": dati["npv_eco_solare"],
+                    "iter_semplificato": dati["iter_semplificato_st"],
+                    "prodotto_catalogo": dati["prodotto_catalogo_st"],
+                    "piu_conveniente": dati["piu_conveniente"]
+                }
+                st.session_state.scenari_solare.append(nuovo_scenario)
+                st.success(f"✅ Scenario salvato! ({len(st.session_state.scenari_solare)}/5)")
+                st.rerun()
 
     # ===========================================================================
     # TAB 3: FOTOVOLTAICO COMBINATO (II.H)
@@ -4082,14 +4140,10 @@ def main():
 
         st.divider()
 
-        # Pulsanti azione
-        col_btn1_iso, col_btn2_iso = st.columns(2)
-        with col_btn1_iso:
-            calcola_iso = st.button("🔍 Calcola Incentivi", key="btn_calcola_iso", type="primary", use_container_width=True)
-        with col_btn2_iso:
-            salva_scenario_iso = st.button("💾 Salva Scenario", use_container_width=True, key="btn_salva_iso", disabled=len(st.session_state.scenari_isolamento) >= 5)
+        # Pulsante calcola
+        calcola_iso = st.button("🔍 Calcola Incentivi", key="btn_calcola_iso", type="primary", use_container_width=True)
 
-        if calcola_iso or salva_scenario_iso:
+        if calcola_iso:
 
             # Verifica vincoli terziario CT 3.0 (Punto 3)
             tipo_intervento_iso_codice = "isolamento_copertura" if tipo_superficie_iso == "coperture" else ("isolamento_pavimento" if tipo_superficie_iso == "pavimenti" else "isolamento_termico")
@@ -4155,76 +4209,95 @@ def main():
                     tasso_sconto=tasso_sconto
                 )
 
-                # Mostra risultati in 3 colonne
-                col_ct, col_eco, col_bonus = st.columns(3)
+                # Mostra risultati - condizionale in base a solo_conto_termico
+                ct_data = confronto_iso["risultati"]["conto_termico"]
+                eco_data = confronto_iso["risultati"]["ecobonus"]
+                bonus_data = confronto_iso["risultati"]["bonus_ristrutturazione"]
 
-                # Conto Termico 3.0
-                with col_ct:
+                if solo_conto_termico:
+                    # Modalità Solo CT 3.0
                     st.markdown("### 🔥 Conto Termico 3.0")
-                    ct_data = confronto_iso["risultati"]["conto_termico"]
-
                     if ct_data["status"] == "OK":
-                        st.metric(
-                            label="Incentivo Totale",
-                            value=f"{ct_data['incentivo_totale']:,.2f} €"
-                        )
-                        st.metric(
-                            label="NPV (Valore Attuale)",
-                            value=f"{ct_data['npv']:,.2f} €"
-                        )
-                        st.write(f"**Rate:** {ct_data['numero_rate']}")
-                        st.write(f"**Rata annuale:** {ct_data['rata_annuale']:,.2f} €")
+                        col1, col2 = st.columns(2)
+                        with col1:
+                            st.metric(
+                                label="Incentivo Totale",
+                                value=f"{ct_data['incentivo_totale']:,.2f} €"
+                            )
+                        with col2:
+                            st.metric(
+                                label="NPV (Valore Attuale)",
+                                value=f"{ct_data['npv']:,.2f} €"
+                            )
+                        st.write(f"**Rate:** {ct_data['numero_rate']} | **Rata annuale:** {ct_data['rata_annuale']:,.2f} €")
                     else:
                         st.error(f"❌ {ct_data['messaggio']}")
+                else:
+                    # Modalità confronto completo
+                    col_ct, col_eco, col_bonus = st.columns(3)
 
-                # Ecobonus
-                with col_eco:
-                    st.markdown("### 💚 Ecobonus")
-                    eco_data = confronto_iso["risultati"]["ecobonus"]
+                    # Conto Termico 3.0
+                    with col_ct:
+                        st.markdown("### 🔥 Conto Termico 3.0")
+                        if ct_data["status"] == "OK":
+                            st.metric(
+                                label="Incentivo Totale",
+                                value=f"{ct_data['incentivo_totale']:,.2f} €"
+                            )
+                            st.metric(
+                                label="NPV (Valore Attuale)",
+                                value=f"{ct_data['npv']:,.2f} €"
+                            )
+                            st.write(f"**Rate:** {ct_data['numero_rate']}")
+                            st.write(f"**Rata annuale:** {ct_data['rata_annuale']:,.2f} €")
+                        else:
+                            st.error(f"❌ {ct_data['messaggio']}")
 
-                    if eco_data["status"] == "OK":
-                        st.metric(
-                            label="Detrazione Totale",
-                            value=f"{eco_data['detrazione_totale']:,.2f} €"
-                        )
-                        st.metric(
-                            label="NPV (Valore Attuale)",
-                            value=f"{eco_data['npv']:,.2f} €"
-                        )
-                        st.write(f"**Aliquota:** {eco_data['aliquota']*100:.0f}%")
-                        st.write(f"**Anni:** {eco_data['anni_recupero']}")
-                        st.write(f"**Rata annuale:** {eco_data['rata_annuale']:,.2f} €")
-                    else:
-                        st.error(f"❌ {eco_data['messaggio']}")
+                    # Ecobonus
+                    with col_eco:
+                        st.markdown("### 💚 Ecobonus")
+                        if eco_data["status"] == "OK":
+                            st.metric(
+                                label="Detrazione Totale",
+                                value=f"{eco_data['detrazione_totale']:,.2f} €"
+                            )
+                            st.metric(
+                                label="NPV (Valore Attuale)",
+                                value=f"{eco_data['npv']:,.2f} €"
+                            )
+                            st.write(f"**Aliquota:** {eco_data['aliquota']*100:.0f}%")
+                            st.write(f"**Anni:** {eco_data['anni_recupero']}")
+                            st.write(f"**Rata annuale:** {eco_data['rata_annuale']:,.2f} €")
+                        else:
+                            st.error(f"❌ {eco_data['messaggio']}")
 
-                # Bonus Ristrutturazione
-                with col_bonus:
-                    st.markdown("### 🏗️ Bonus Ristrutturazione")
-                    bonus_data = confronto_iso["risultati"]["bonus_ristrutturazione"]
-
-                    if bonus_data["status"] == "OK":
-                        st.metric(
-                            label="Detrazione Totale",
-                            value=f"{bonus_data['detrazione_totale']:,.2f} €"
-                        )
-                        st.metric(
-                            label="NPV (Valore Attuale)",
-                            value=f"{bonus_data['npv']:,.2f} €"
-                        )
-                        st.write(f"**Aliquota:** {bonus_data['aliquota']*100:.0f}%")
-                        st.write(f"**Anni:** {bonus_data['anni_recupero']}")
-                        st.write(f"**Rata annuale:** {bonus_data['rata_annuale']:,.2f} €")
-                    else:
-                        st.error(f"❌ {bonus_data['messaggio']}")
+                    # Bonus Ristrutturazione
+                    with col_bonus:
+                        st.markdown("### 🏗️ Bonus Ristrutturazione")
+                        if bonus_data["status"] == "OK":
+                            st.metric(
+                                label="Detrazione Totale",
+                                value=f"{bonus_data['detrazione_totale']:,.2f} €"
+                            )
+                            st.metric(
+                                label="NPV (Valore Attuale)",
+                                value=f"{bonus_data['npv']:,.2f} €"
+                            )
+                            st.write(f"**Aliquota:** {bonus_data['aliquota']*100:.0f}%")
+                            st.write(f"**Anni:** {bonus_data['anni_recupero']}")
+                            st.write(f"**Rata annuale:** {bonus_data['rata_annuale']:,.2f} €")
+                        else:
+                            st.error(f"❌ {bonus_data['messaggio']}")
 
                 st.divider()
 
-                # Raccomandazione
-                st.subheader("🎯 Raccomandazione")
-                st.info(confronto_iso["raccomandazione"])
+                # Raccomandazione (solo se non in modalità solo CT)
+                if not solo_conto_termico:
+                    st.subheader("🎯 Raccomandazione")
+                    st.info(confronto_iso["raccomandazione"])
 
-                # Grafico comparativo
-                if len(confronto_iso["incentivi_validi"]) > 0:
+                # Grafico comparativo (solo se non in modalità solo CT)
+                if not solo_conto_termico and len(confronto_iso["incentivi_validi"]) > 0:
                     st.subheader("📊 Grafico Comparativo (NPV)")
 
                     import plotly.graph_objects as go
@@ -4253,37 +4326,79 @@ def main():
 
                     st.plotly_chart(fig_iso, use_container_width=True)
 
-                    # Salva scenario se richiesto
-                    if salva_scenario_iso and len(st.session_state.scenari_isolamento) < 5:
-                        nome_scenario_iso = f"Isolamento {len(st.session_state.scenari_isolamento) + 1}"
-                        scenario_data_iso = {
-                            "nome": nome_scenario_iso,
-                            "timestamp": datetime.now().isoformat(),
-                            "tipo_superficie": tipo_superficie_iso,
-                            "posizione": posizione_iso,
-                            "zona_climatica": zona_climatica_iso,
-                            "superficie_mq": superficie_mq_iso,
-                            "spesa_totale": spesa_totale_iso,
-                            "trasmittanza_post": trasmittanza_post_iso,
-                            "tipo_soggetto": tipo_soggetto,
-                            "ct_incentivo": risultato_ct_iso.incentivo_totale,
-                            "ct_npv": confronto_iso['npv_ct'],
-                            "eco_detrazione": risultato_eco_iso.detrazione_totale,
-                            "eco_npv": confronto_iso['npv_ecobonus'],
-                            "bonus_detrazione": risultato_bonus_iso.detrazione_totale,
-                            "bonus_npv": confronto_iso['npv_bonus_ristrutturazione'],
-                            "migliore": confronto_iso['migliore']
-                        }
-                        st.session_state.scenari_isolamento.append(scenario_data_iso)
-                        st.success(f"✅ Scenario salvato: {nome_scenario_iso}")
-                        st.info(f"📊 Scenari salvati: {len(st.session_state.scenari_isolamento)}/5")
-                    elif salva_scenario_iso:
-                        st.warning("⚠️ Hai raggiunto il massimo di 5 scenari")
+                # Salva nel session state per uso successivo
+                st.session_state.ultimo_calcolo_isolamento = {
+                    "tipo_superficie": tipo_superficie_iso,
+                    "posizione": posizione_iso,
+                    "zona_climatica": zona_climatica_iso,
+                    "superficie_mq": superficie_mq_iso,
+                    "spesa_totale": spesa_totale_iso,
+                    "trasmittanza_post": trasmittanza_post_iso,
+                    "tipo_soggetto": tipo_soggetto_iso,
+                    "componenti_ue": componenti_ue_iso,
+                    "combinato_titolo_iii": combinato_titolo_iii_iso,
+                    "anno_spesa": anno_spesa_iso,
+                    "tipo_abitazione": tipo_abitazione_iso,
+                    "ct_data": ct_data,
+                    "eco_data": eco_data,
+                    "bonus_data": bonus_data,
+                    "raccomandazione": confronto_iso.get("raccomandazione", ""),
+                    "migliore": confronto_iso.get("migliore", "")
+                }
 
             except Exception as e:
                 st.error(f"Errore nel calcolo: {str(e)}")
                 import traceback
                 st.code(traceback.format_exc())
+
+        # Pulsante salva scenario isolamento (FUORI dal blocco calcola)
+        st.divider()
+        col_save_iso1, col_save_iso2 = st.columns([3, 1])
+        with col_save_iso1:
+            salva_scenario_iso = st.button(
+                "💾 Salva Scenario Isolamento",
+                type="secondary",
+                use_container_width=True,
+                key="btn_salva_iso",
+                disabled=len(st.session_state.scenari_isolamento) >= 5
+            )
+        with col_save_iso2:
+            st.write(f"({len(st.session_state.scenari_isolamento)}/5)")
+
+        if salva_scenario_iso:
+            if st.session_state.ultimo_calcolo_isolamento is None:
+                st.warning("⚠️ Prima calcola gli incentivi con CALCOLA INCENTIVI")
+            elif len(st.session_state.scenari_isolamento) >= 5:
+                st.warning("⚠️ Hai raggiunto il massimo di 5 scenari")
+            else:
+                dati = st.session_state.ultimo_calcolo_isolamento
+                ct_data = dati["ct_data"]
+                eco_data = dati["eco_data"]
+                bonus_data = dati["bonus_data"]
+                nuovo_scenario = {
+                    "id": len(st.session_state.scenari_isolamento) + 1,
+                    "nome": f"Isolamento {len(st.session_state.scenari_isolamento) + 1}",
+                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M"),
+                    "tipo_superficie": dati["tipo_superficie"],
+                    "posizione": dati["posizione"],
+                    "zona_climatica": dati["zona_climatica"],
+                    "superficie_mq": dati["superficie_mq"],
+                    "spesa_totale": dati["spesa_totale"],
+                    "trasmittanza_post": dati["trasmittanza_post"],
+                    "tipo_soggetto": dati["tipo_soggetto"],
+                    "componenti_ue": dati["componenti_ue"],
+                    "combinato_titolo_iii": dati["combinato_titolo_iii"],
+                    "ct_incentivo": ct_data.get("incentivo_totale", 0) if ct_data["status"] == "OK" else 0,
+                    "ct_npv": ct_data.get("npv", 0) if ct_data["status"] == "OK" else 0,
+                    "eco_detrazione": eco_data.get("detrazione_totale", 0) if eco_data["status"] == "OK" else 0,
+                    "eco_npv": eco_data.get("npv", 0) if eco_data["status"] == "OK" else 0,
+                    "bonus_detrazione": bonus_data.get("detrazione_totale", 0) if bonus_data["status"] == "OK" else 0,
+                    "bonus_npv": bonus_data.get("npv", 0) if bonus_data["status"] == "OK" else 0,
+                    "migliore": dati["migliore"]
+                }
+                st.session_state.scenari_isolamento.append(nuovo_scenario)
+                st.success(f"✅ Scenario salvato! ({len(st.session_state.scenari_isolamento)}/5)")
+                st.rerun()
 
     # ===========================================================================
     # TAB SERRAMENTI: SOSTITUZIONE SERRAMENTI
@@ -4481,14 +4596,10 @@ def main():
 
         st.divider()
 
-        # Pulsanti azione
-        col_btn1_serr, col_btn2_serr = st.columns(2)
-        with col_btn1_serr:
-            calcola_serr = st.button("🔍 Calcola Incentivi", key="btn_calcola_serr", type="primary", use_container_width=True)
-        with col_btn2_serr:
-            salva_scenario_serr = st.button("💾 Salva Scenario", use_container_width=True, key="btn_salva_serr", disabled=len(st.session_state.scenari_serramenti) >= 5)
+        # Pulsante calcola
+        calcola_serr = st.button("🔍 Calcola Incentivi", key="btn_calcola_serr", type="primary", use_container_width=True)
 
-        if calcola_serr or salva_scenario_serr:
+        if calcola_serr:
 
             # Verifica vincoli terziario CT 3.0 (Punto 3)
             ammissibile_vincoli, msg_vincoli = applica_vincoli_terziario_ct3(
@@ -4560,76 +4671,95 @@ def main():
                     tasso_sconto=tasso_sconto
                 )
 
-                # Mostra risultati in 3 colonne
-                col_ct, col_eco, col_bonus = st.columns(3)
+                # Mostra risultati - condizionale in base a solo_conto_termico
+                ct_data = confronto_serr["risultati"]["conto_termico"]
+                eco_data = confronto_serr["risultati"]["ecobonus"]
+                bonus_data = confronto_serr["risultati"]["bonus_ristrutturazione"]
 
-                # Conto Termico 3.0
-                with col_ct:
+                if solo_conto_termico:
+                    # Modalità Solo CT 3.0
                     st.markdown("### 🔥 Conto Termico 3.0")
-                    ct_data = confronto_serr["risultati"]["conto_termico"]
-
                     if ct_data["status"] == "OK":
-                        st.metric(
-                            label="Incentivo Totale",
-                            value=f"{ct_data['incentivo_totale']:,.2f} €"
-                        )
-                        st.metric(
-                            label="NPV (Valore Attuale)",
-                            value=f"{ct_data['npv']:,.2f} €"
-                        )
-                        st.write(f"**Rate:** {ct_data['numero_rate']}")
-                        st.write(f"**Rata annuale:** {ct_data['rata_annuale']:,.2f} €")
+                        col1, col2 = st.columns(2)
+                        with col1:
+                            st.metric(
+                                label="Incentivo Totale",
+                                value=f"{ct_data['incentivo_totale']:,.2f} €"
+                            )
+                        with col2:
+                            st.metric(
+                                label="NPV (Valore Attuale)",
+                                value=f"{ct_data['npv']:,.2f} €"
+                            )
+                        st.write(f"**Rate:** {ct_data['numero_rate']} | **Rata annuale:** {ct_data['rata_annuale']:,.2f} €")
                     else:
                         st.error(f"❌ {ct_data['messaggio']}")
+                else:
+                    # Modalità confronto completo
+                    col_ct, col_eco, col_bonus = st.columns(3)
 
-                # Ecobonus
-                with col_eco:
-                    st.markdown("### 💚 Ecobonus")
-                    eco_data = confronto_serr["risultati"]["ecobonus"]
+                    # Conto Termico 3.0
+                    with col_ct:
+                        st.markdown("### 🔥 Conto Termico 3.0")
+                        if ct_data["status"] == "OK":
+                            st.metric(
+                                label="Incentivo Totale",
+                                value=f"{ct_data['incentivo_totale']:,.2f} €"
+                            )
+                            st.metric(
+                                label="NPV (Valore Attuale)",
+                                value=f"{ct_data['npv']:,.2f} €"
+                            )
+                            st.write(f"**Rate:** {ct_data['numero_rate']}")
+                            st.write(f"**Rata annuale:** {ct_data['rata_annuale']:,.2f} €")
+                        else:
+                            st.error(f"❌ {ct_data['messaggio']}")
 
-                    if eco_data["status"] == "OK":
-                        st.metric(
-                            label="Detrazione Totale",
-                            value=f"{eco_data['detrazione_totale']:,.2f} €"
-                        )
-                        st.metric(
-                            label="NPV (Valore Attuale)",
-                            value=f"{eco_data['npv']:,.2f} €"
-                        )
-                        st.write(f"**Aliquota:** {eco_data['aliquota']*100:.0f}%")
-                        st.write(f"**Anni:** {eco_data['anni_recupero']}")
-                        st.write(f"**Rata annuale:** {eco_data['rata_annuale']:,.2f} €")
-                    else:
-                        st.error(f"❌ {eco_data['messaggio']}")
+                    # Ecobonus
+                    with col_eco:
+                        st.markdown("### 💚 Ecobonus")
+                        if eco_data["status"] == "OK":
+                            st.metric(
+                                label="Detrazione Totale",
+                                value=f"{eco_data['detrazione_totale']:,.2f} €"
+                            )
+                            st.metric(
+                                label="NPV (Valore Attuale)",
+                                value=f"{eco_data['npv']:,.2f} €"
+                            )
+                            st.write(f"**Aliquota:** {eco_data['aliquota']*100:.0f}%")
+                            st.write(f"**Anni:** {eco_data['anni_recupero']}")
+                            st.write(f"**Rata annuale:** {eco_data['rata_annuale']:,.2f} €")
+                        else:
+                            st.error(f"❌ {eco_data['messaggio']}")
 
-                # Bonus Ristrutturazione
-                with col_bonus:
-                    st.markdown("### 🏗️ Bonus Ristrutturazione")
-                    bonus_data = confronto_serr["risultati"]["bonus_ristrutturazione"]
-
-                    if bonus_data["status"] == "OK":
-                        st.metric(
-                            label="Detrazione Totale",
-                            value=f"{bonus_data['detrazione_totale']:,.2f} €"
-                        )
-                        st.metric(
-                            label="NPV (Valore Attuale)",
-                            value=f"{bonus_data['npv']:,.2f} €"
-                        )
-                        st.write(f"**Aliquota:** {bonus_data['aliquota']*100:.0f}%")
-                        st.write(f"**Anni:** {bonus_data['anni_recupero']}")
-                        st.write(f"**Rata annuale:** {bonus_data['rata_annuale']:,.2f} €")
-                    else:
-                        st.error(f"❌ {bonus_data['messaggio']}")
+                    # Bonus Ristrutturazione
+                    with col_bonus:
+                        st.markdown("### 🏗️ Bonus Ristrutturazione")
+                        if bonus_data["status"] == "OK":
+                            st.metric(
+                                label="Detrazione Totale",
+                                value=f"{bonus_data['detrazione_totale']:,.2f} €"
+                            )
+                            st.metric(
+                                label="NPV (Valore Attuale)",
+                                value=f"{bonus_data['npv']:,.2f} €"
+                            )
+                            st.write(f"**Aliquota:** {bonus_data['aliquota']*100:.0f}%")
+                            st.write(f"**Anni:** {bonus_data['anni_recupero']}")
+                            st.write(f"**Rata annuale:** {bonus_data['rata_annuale']:,.2f} €")
+                        else:
+                            st.error(f"❌ {bonus_data['messaggio']}")
 
                 st.divider()
 
-                # Raccomandazione
-                st.subheader("🎯 Raccomandazione")
-                st.info(confronto_serr["raccomandazione"])
+                # Raccomandazione (solo se non in modalità solo CT)
+                if not solo_conto_termico:
+                    st.subheader("🎯 Raccomandazione")
+                    st.info(confronto_serr["raccomandazione"])
 
-                # Grafico comparativo
-                if len(confronto_serr["incentivi_validi"]) > 0:
+                # Grafico comparativo (solo se non in modalità solo CT)
+                if not solo_conto_termico and len(confronto_serr["incentivi_validi"]) > 0:
                     st.subheader("📊 Grafico Comparativo (NPV)")
 
                     import plotly.graph_objects as go
@@ -4658,41 +4788,79 @@ def main():
 
                     st.plotly_chart(fig_serr, use_container_width=True)
 
-                # Salva scenario se richiesto
-                if salva_scenario_serr and len(st.session_state.scenari_serramenti) < 5:
-                    nome_scenario_serr = f"Serramenti {len(st.session_state.scenari_serramenti) + 1}"
-                    scenario_data_serr = {
-                        "nome": nome_scenario_serr,
-                        "timestamp": datetime.now().isoformat(),
-                        "zona_climatica": zona_climatica_serr,
-                        "superficie_mq": superficie_serr,
-                        "trasmittanza_post": trasmittanza_post_serr,
-                        "spesa_totale": spesa_totale_serr,
-                        "tipo_soggetto": tipo_soggetto,
-                        "migliore": confronto_serr['migliore']
-                    }
-                    # Aggiungi dati incentivi disponibili
-                    for incentivo in confronto_serr['incentivi_validi']:
-                        if incentivo['tipo'] == 'CT 3.0':
-                            scenario_data_serr['ct_incentivo'] = incentivo['incentivo_totale']
-                            scenario_data_serr['ct_npv'] = incentivo['npv']
-                        elif incentivo['tipo'] == 'Ecobonus':
-                            scenario_data_serr['eco_detrazione'] = incentivo['incentivo_totale']
-                            scenario_data_serr['eco_npv'] = incentivo['npv']
-                        elif incentivo['tipo'] == 'Bonus Ristrutturazione':
-                            scenario_data_serr['bonus_detrazione'] = incentivo['incentivo_totale']
-                            scenario_data_serr['bonus_npv'] = incentivo['npv']
-
-                    st.session_state.scenari_serramenti.append(scenario_data_serr)
-                    st.success(f"✅ Scenario salvato: {nome_scenario_serr}")
-                    st.info(f"📊 Scenari salvati: {len(st.session_state.scenari_serramenti)}/5")
-                elif salva_scenario_serr:
-                    st.warning("⚠️ Hai raggiunto il massimo di 5 scenari")
+                # Salva nel session state per uso successivo
+                st.session_state.ultimo_calcolo_serramenti = {
+                    "zona_climatica": zona_climatica_serr,
+                    "superficie_mq": superficie_mq_serr,
+                    "trasmittanza_post": trasmittanza_post_serr,
+                    "spesa_totale": spesa_totale_serr,
+                    "tipo_soggetto": tipo_soggetto_serr,
+                    "ha_termoregolazione": ha_termoregolazione_serr,
+                    "componenti_ue": componenti_ue_serr,
+                    "combinato_isolamento": combinato_isolamento_serr,
+                    "combinato_titolo_iii": combinato_titolo_iii_serr,
+                    "anno_spesa": anno_spesa_serr,
+                    "tipo_abitazione": tipo_abitazione_serr,
+                    "ct_data": ct_data,
+                    "eco_data": eco_data,
+                    "bonus_data": bonus_data,
+                    "raccomandazione": confronto_serr.get("raccomandazione", ""),
+                    "migliore": confronto_serr.get("migliore", "")
+                }
 
             except Exception as e:
                 st.error(f"Errore nel calcolo: {str(e)}")
                 import traceback
                 st.code(traceback.format_exc())
+
+        # Pulsante salva scenario serramenti (FUORI dal blocco calcola)
+        st.divider()
+        col_save_serr1, col_save_serr2 = st.columns([3, 1])
+        with col_save_serr1:
+            salva_scenario_serr = st.button(
+                "💾 Salva Scenario Serramenti",
+                type="secondary",
+                use_container_width=True,
+                key="btn_salva_serr",
+                disabled=len(st.session_state.scenari_serramenti) >= 5
+            )
+        with col_save_serr2:
+            st.write(f"({len(st.session_state.scenari_serramenti)}/5)")
+
+        if salva_scenario_serr:
+            if st.session_state.ultimo_calcolo_serramenti is None:
+                st.warning("⚠️ Prima calcola gli incentivi con CALCOLA INCENTIVI")
+            elif len(st.session_state.scenari_serramenti) >= 5:
+                st.warning("⚠️ Hai raggiunto il massimo di 5 scenari")
+            else:
+                dati = st.session_state.ultimo_calcolo_serramenti
+                ct_data = dati["ct_data"]
+                eco_data = dati["eco_data"]
+                bonus_data = dati["bonus_data"]
+                nuovo_scenario = {
+                    "id": len(st.session_state.scenari_serramenti) + 1,
+                    "nome": f"Serramenti {len(st.session_state.scenari_serramenti) + 1}",
+                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M"),
+                    "zona_climatica": dati["zona_climatica"],
+                    "superficie_mq": dati["superficie_mq"],
+                    "trasmittanza_post": dati["trasmittanza_post"],
+                    "spesa_totale": dati["spesa_totale"],
+                    "tipo_soggetto": dati["tipo_soggetto"],
+                    "ha_termoregolazione": dati["ha_termoregolazione"],
+                    "componenti_ue": dati["componenti_ue"],
+                    "combinato_isolamento": dati["combinato_isolamento"],
+                    "combinato_titolo_iii": dati["combinato_titolo_iii"],
+                    "ct_incentivo": ct_data.get("incentivo_totale", 0) if ct_data["status"] == "OK" else 0,
+                    "ct_npv": ct_data.get("npv", 0) if ct_data["status"] == "OK" else 0,
+                    "eco_detrazione": eco_data.get("detrazione_totale", 0) if eco_data["status"] == "OK" else 0,
+                    "eco_npv": eco_data.get("npv", 0) if eco_data["status"] == "OK" else 0,
+                    "bonus_detrazione": bonus_data.get("detrazione_totale", 0) if bonus_data["status"] == "OK" else 0,
+                    "bonus_npv": bonus_data.get("npv", 0) if bonus_data["status"] == "OK" else 0,
+                    "migliore": dati["migliore"]
+                }
+                st.session_state.scenari_serramenti.append(nuovo_scenario)
+                st.success(f"✅ Scenario salvato! ({len(st.session_state.scenari_serramenti)}/5)")
+                st.rerun()
 
     # ===========================================================================
     # TAB 7: SCHERMATURE SOLARI (II.C)
@@ -5844,47 +6012,69 @@ def main():
                         tasso_sconto=tasso_sconto
                     )
 
-                    # Risultati confronto
-                    st.success(f"✅ **Migliore opzione**: {confronto_ba['migliore_opzione']}")
+                    # Salva nel session state per uso successivo (es. salvataggio scenario)
+                    st.session_state.ultimo_confronto_ba = confronto_ba
 
-                    # Tabella comparativa
-                    col_ct, col_eco, col_br = st.columns(3)
+                    # Risultati confronto - condizionale in base a solo_conto_termico
+                    if solo_conto_termico:
+                        # Modalità Solo CT 3.0
+                        st.markdown("### 🔥 Conto Termico 3.0")
+                        col1, col2 = st.columns(2)
+                        with col1:
+                            st.metric(
+                                "💚 Incentivo CT 3.0",
+                                f"€ {confronto_ba['ct_3_0']['incentivo_totale']:,.0f}",
+                                help=f"{confronto_ba['ct_3_0']['anni_erogazione']} anni"
+                            )
+                        with col2:
+                            st.metric(
+                                "NPV (Valore Attuale)",
+                                f"€ {confronto_ba['ct_3_0']['npv']:,.0f}"
+                            )
+                        det_ct_ba = confronto_ba['ct_3_0']['dettagli']
+                        st.write(f"**Percentuale incentivo**: {det_ct_ba['percentuale']:.0%} | **{det_ct_ba['nota_rateazione']}**")
+                    else:
+                        # Modalità confronto completo
+                        st.success(f"✅ **Migliore opzione**: {confronto_ba['migliore_opzione']}")
 
-                    with col_ct:
-                        st.metric(
-                            "💚 CT 3.0",
-                            f"€ {confronto_ba['ct_3_0']['incentivo_totale']:,.0f}",
-                            delta=f"NPV: € {confronto_ba['ct_3_0']['npv']:,.0f}",
-                            help=f"{confronto_ba['ct_3_0']['anni_erogazione']} anni"
-                        )
+                        # Tabella comparativa
+                        col_ct, col_eco, col_br = st.columns(3)
 
-                    with col_eco:
-                        st.metric(
-                            "🔵 Ecobonus",
-                            f"€ {confronto_ba['ecobonus']['detrazione_totale']:,.0f}",
-                            delta=f"NPV: € {confronto_ba['ecobonus']['npv']:,.0f}",
-                            help=f"{confronto_ba['ecobonus']['anni_erogazione']} anni - LIMITE SPECIALE: 15.000€"
-                        )
+                        with col_ct:
+                            st.metric(
+                                "💚 CT 3.0",
+                                f"€ {confronto_ba['ct_3_0']['incentivo_totale']:,.0f}",
+                                delta=f"NPV: € {confronto_ba['ct_3_0']['npv']:,.0f}",
+                                help=f"{confronto_ba['ct_3_0']['anni_erogazione']} anni"
+                            )
 
-                    with col_br:
-                        st.metric(
-                            "🟠 Bonus Ristr.",
-                            f"€ {confronto_ba['bonus_ristrutturazione']['detrazione_totale']:,.0f}",
-                            delta=f"NPV: € {confronto_ba['bonus_ristrutturazione']['npv']:,.0f}",
-                            help=f"{confronto_ba['bonus_ristrutturazione']['anni_erogazione']} anni"
-                        )
+                        with col_eco:
+                            st.metric(
+                                "🔵 Ecobonus",
+                                f"€ {confronto_ba['ecobonus']['detrazione_totale']:,.0f}",
+                                delta=f"NPV: € {confronto_ba['ecobonus']['npv']:,.0f}",
+                                help=f"{confronto_ba['ecobonus']['anni_erogazione']} anni - LIMITE SPECIALE: 15.000€"
+                            )
 
-                    # Grafico comparativo NPV
-                    st.subheader("📊 Confronto NPV (Valore Attuale Netto)")
-                    df_confronto_ba = pd.DataFrame({
-                        "Incentivo": ["CT 3.0", "Ecobonus", "Bonus Ristr."],
-                        "NPV (€)": [
-                            confronto_ba['ct_3_0']['npv'],
-                            confronto_ba['ecobonus']['npv'],
-                            confronto_ba['bonus_ristrutturazione']['npv']
-                        ]
-                    })
-                    st.bar_chart(df_confronto_ba.set_index("Incentivo"))
+                        with col_br:
+                            st.metric(
+                                "🟠 Bonus Ristr.",
+                                f"€ {confronto_ba['bonus_ristrutturazione']['detrazione_totale']:,.0f}",
+                                delta=f"NPV: € {confronto_ba['bonus_ristrutturazione']['npv']:,.0f}",
+                                help=f"{confronto_ba['bonus_ristrutturazione']['anni_erogazione']} anni"
+                            )
+
+                        # Grafico comparativo NPV
+                        st.subheader("📊 Confronto NPV (Valore Attuale Netto)")
+                        df_confronto_ba = pd.DataFrame({
+                            "Incentivo": ["CT 3.0", "Ecobonus", "Bonus Ristr."],
+                            "NPV (€)": [
+                                confronto_ba['ct_3_0']['npv'],
+                                confronto_ba['ecobonus']['npv'],
+                                confronto_ba['bonus_ristrutturazione']['npv']
+                            ]
+                        })
+                        st.bar_chart(df_confronto_ba.set_index("Incentivo"))
 
                     # Dettagli CT 3.0
                     with st.expander("💚 Dettagli CT 3.0", expanded=False):
@@ -5899,55 +6089,59 @@ def main():
                         if confronto_ba['ct_3_0']['anni_erogazione'] > 1:
                             st.write(f"**Rata annuale**: € {confronto_ba['ct_3_0']['rata_annuale']:,.2f}")
 
-                    # Dettagli Ecobonus
-                    with st.expander("🔵 Dettagli Ecobonus", expanded=False):
-                        det_eco_ba = confronto_ba['ecobonus']['dettagli']
-                        st.write(f"**Aliquota**: {det_eco_ba['aliquota']:.0%}")
-                        st.write(f"**Anno riferimento**: {det_eco_ba['anno_riferimento']}")
-                        st.write(f"**Tipo immobile**: {det_eco_ba['tipo_immobile']}")
-                        st.write(f"**Spesa ammissibile**: € {confronto_ba['ecobonus']['spesa_ammissibile']:,.2f}")
-                        st.warning(f"⚠️ **{det_eco_ba['nota_speciale']}** - Limite: € {det_eco_ba['limite_max']:,.0f}")
-                        st.write(f"**Detrazione totale**: € {confronto_ba['ecobonus']['detrazione_totale']:,.2f}")
-                        st.write(f"**Rata annuale**: € {confronto_ba['ecobonus']['rata_annuale']:,.2f} × {confronto_ba['ecobonus']['anni_erogazione']} anni")
+                    # Dettagli Ecobonus e Bonus Ristrutturazione (solo se non in modalità solo CT)
+                    if not solo_conto_termico:
+                        with st.expander("🔵 Dettagli Ecobonus", expanded=False):
+                            det_eco_ba = confronto_ba['ecobonus']['dettagli']
+                            st.write(f"**Aliquota**: {det_eco_ba['aliquota']:.0%}")
+                            st.write(f"**Anno riferimento**: {det_eco_ba['anno_riferimento']}")
+                            st.write(f"**Tipo immobile**: {det_eco_ba['tipo_immobile']}")
+                            st.write(f"**Spesa ammissibile**: € {confronto_ba['ecobonus']['spesa_ammissibile']:,.2f}")
+                            st.warning(f"⚠️ **{det_eco_ba['nota_speciale']}** - Limite: € {det_eco_ba['limite_max']:,.0f}")
+                            st.write(f"**Detrazione totale**: € {confronto_ba['ecobonus']['detrazione_totale']:,.2f}")
+                            st.write(f"**Rata annuale**: € {confronto_ba['ecobonus']['rata_annuale']:,.2f} × {confronto_ba['ecobonus']['anni_erogazione']} anni")
 
-                    # Dettagli Bonus Ristrutturazione
-                    with st.expander("🟠 Dettagli Bonus Ristrutturazione", expanded=False):
-                        det_br_ba = confronto_ba['bonus_ristrutturazione']['dettagli']
-                        st.write(f"**Aliquota**: {det_br_ba['aliquota']:.0%}")
-                        st.write(f"**Anno riferimento**: {det_br_ba['anno_riferimento']}")
-                        st.write(f"**Tipo immobile**: {det_br_ba['tipo_immobile']}")
-                        st.write(f"**Spesa ammissibile**: € {confronto_ba['bonus_ristrutturazione']['spesa_ammissibile']:,.2f} (limite: € {det_br_ba['limite_max']:,.0f})")
-                        st.write(f"**Detrazione totale**: € {confronto_ba['bonus_ristrutturazione']['detrazione_totale']:,.2f}")
-                        st.write(f"**Rata annuale**: € {confronto_ba['bonus_ristrutturazione']['rata_annuale']:,.2f} × {confronto_ba['bonus_ristrutturazione']['anni_erogazione']} anni")
-
-                    # Salva scenario se richiesto
-                    if salva_scenario_ba and len(st.session_state.scenari_building_automation) < 5:
-                        nome_scenario_ba = f"Building Auto {len(st.session_state.scenari_building_automation) + 1}"
-                        scenario_data_ba = {
-                            "nome": nome_scenario_ba,
-                            "timestamp": datetime.now().isoformat(),
-                            "superficie_mq": superficie_ba,
-                            "spesa": spesa_ba,
-                            "classe_efficienza": classe_efficienza_ba,
-                            "tipo_soggetto": tipo_soggetto,
-                            "ct_incentivo": confronto_ba['ct_3_0']['incentivo_totale'],
-                            "ct_npv": confronto_ba['ct_3_0']['npv'],
-                            "eco_detrazione": confronto_ba['ecobonus']['detrazione_totale'],
-                            "eco_npv": confronto_ba['ecobonus']['npv'],
-                            "bonus_detrazione": confronto_ba['bonus_ristrutturazione']['detrazione_totale'],
-                            "bonus_npv": confronto_ba['bonus_ristrutturazione']['npv'],
-                            "migliore": confronto_ba['migliore_opzione']
-                        }
-                        st.session_state.scenari_building_automation.append(scenario_data_ba)
-                        st.success(f"✅ Scenario salvato: {nome_scenario_ba}")
-                        st.info(f"📊 Scenari salvati: {len(st.session_state.scenari_building_automation)}/5")
-                    elif salva_scenario_ba:
-                        st.warning("⚠️ Hai raggiunto il massimo di 5 scenari")
+                        with st.expander("🟠 Dettagli Bonus Ristrutturazione", expanded=False):
+                            det_br_ba = confronto_ba['bonus_ristrutturazione']['dettagli']
+                            st.write(f"**Aliquota**: {det_br_ba['aliquota']:.0%}")
+                            st.write(f"**Anno riferimento**: {det_br_ba['anno_riferimento']}")
+                            st.write(f"**Tipo immobile**: {det_br_ba['tipo_immobile']}")
+                            st.write(f"**Spesa ammissibile**: € {confronto_ba['bonus_ristrutturazione']['spesa_ammissibile']:,.2f} (limite: € {det_br_ba['limite_max']:,.0f})")
+                            st.write(f"**Detrazione totale**: € {confronto_ba['bonus_ristrutturazione']['detrazione_totale']:,.2f}")
+                            st.write(f"**Rata annuale**: € {confronto_ba['bonus_ristrutturazione']['rata_annuale']:,.2f} × {confronto_ba['bonus_ristrutturazione']['anni_erogazione']} anni")
 
             except Exception as e:
                 st.error(f"Errore nel calcolo: {str(e)}")
                 import traceback
                 st.code(traceback.format_exc())
+
+        # Logica di salvataggio scenario (FUORI dal blocco calcola, usa session state)
+        if salva_scenario_ba:
+            if st.session_state.ultimo_confronto_ba is None:
+                st.warning("⚠️ Prima calcola gli incentivi con il pulsante 'Calcola e Confronta Incentivi'")
+            elif len(st.session_state.scenari_building_automation) >= 5:
+                st.warning("⚠️ Hai raggiunto il massimo di 5 scenari")
+            else:
+                confronto_ba = st.session_state.ultimo_confronto_ba
+                nome_scenario_ba = f"Building Auto {len(st.session_state.scenari_building_automation) + 1}"
+                scenario_data_ba = {
+                    "nome": nome_scenario_ba,
+                    "timestamp": datetime.now().isoformat(),
+                    "superficie_mq": superficie_ba,
+                    "spesa": spesa_ba,
+                    "classe_efficienza": classe_efficienza_ba,
+                    "tipo_soggetto": tipo_soggetto,
+                    "ct_incentivo": confronto_ba['ct_3_0']['incentivo_totale'],
+                    "ct_npv": confronto_ba['ct_3_0']['npv'],
+                    "eco_detrazione": confronto_ba['ecobonus']['detrazione_totale'],
+                    "eco_npv": confronto_ba['ecobonus']['npv'],
+                    "bonus_detrazione": confronto_ba['bonus_ristrutturazione']['detrazione_totale'],
+                    "bonus_npv": confronto_ba['bonus_ristrutturazione']['npv'],
+                    "migliore": confronto_ba['migliore_opzione']
+                }
+                st.session_state.scenari_building_automation.append(scenario_data_ba)
+                st.success(f"✅ Scenario salvato: {nome_scenario_ba}")
+                st.info(f"📊 Scenari salvati: {len(st.session_state.scenari_building_automation)}/5")
 
     # ===========================================================================
     # TAB 10: SISTEMI IBRIDI
@@ -6340,14 +6534,10 @@ def main():
 
         st.divider()
 
-        # Pulsanti azione
-        col_btn1_ibr, col_btn2_ibr = st.columns(2)
-        with col_btn1_ibr:
-            calcola_ibr = st.button("🔀 Calcola Confronto", type="primary", use_container_width=True, key="ibr_calcola")
-        with col_btn2_ibr:
-            salva_scenario_ibr = st.button("💾 Salva Scenario", use_container_width=True, key="btn_salva_ibr", disabled=len(st.session_state.scenari_ibridi) >= 5)
+        # Pulsante calcola
+        calcola_ibr = st.button("🔀 Calcola Confronto", type="primary", use_container_width=True, key="ibr_calcola")
 
-        if calcola_ibr or salva_scenario_ibr:
+        if calcola_ibr:
             try:
                 # Validazione
                 st.subheader("✅ Validazione Requisiti")
@@ -6405,6 +6595,12 @@ def main():
                     # Confronto incentivi
                     st.subheader("💰 Confronto Incentivi")
 
+                    # Anno spesa per calcoli Ecobonus
+                    anno_spesa_ibr = st.session_state.get("sidebar_anno", 2025)
+
+                    # Determina tipo PdC per calcolo Ci
+                    tipo_pdc_ibr = tipo_pdc_addon_ibr if tipo_sistema_ibr == "add_on" else "aria_acqua"
+
                     confronto_ibr = confronta_incentivi_ibridi(
                         tipo_sistema=tipo_sistema_ibr,
                         potenza_pdc_kw=potenza_pdc_ibr,
@@ -6413,8 +6609,9 @@ def main():
                         eta_s_pdc=eta_s_pdc_ibr,
                         zona_climatica=zona_climatica,
                         spesa_totale_sostenuta=spesa_ibr,
-                        anno_spesa=anno_spesa,
+                        anno_spesa=anno_spesa_ibr,
                         tipo_abitazione=tipo_abitazione,
+                        tipo_pdc=tipo_pdc_ibr,
                         tipo_soggetto=tipo_soggetto_ibr,
                         usa_premialita_componenti_ue=usa_premialita_ue_ibr,
                         usa_premialita_combinato_titolo_iii=usa_premialita_combinato_ibr,
@@ -6422,26 +6619,26 @@ def main():
                     )
 
                     # Visualizzazione risultati in 3 colonne
-                    col1, col2, col3 = st.columns(3)
-
-                    # Conto Termico 3.0
-                    with col1:
+                    # Mostra risultati - condizionale in base a solo_conto_termico
+                    if solo_conto_termico:
+                        # Modalità Solo CT 3.0
                         st.markdown("### 🏛️ Conto Termico 3.0")
                         if confronto_ibr["ct"] and "errore" not in confronto_ibr["ct"]:
                             ct_data = confronto_ibr["ct"]
-                            st.metric(
-                                "Incentivo Totale",
-                                format_currency(ct_data["incentivo"]),
-                                delta=None
-                            )
+                            col1, col2 = st.columns(2)
+                            with col1:
+                                st.metric(
+                                    "Incentivo Totale",
+                                    format_currency(ct_data["incentivo"]),
+                                    delta=None
+                                )
+                            with col2:
+                                st.metric("NPV (3%)", format_currency(confronto_ibr["npv_ct"]))
 
                             if ct_data["rata_unica"]:
                                 st.info("💰 **Rata unica**")
                             else:
-                                st.info(f"📅 **{ct_data['anni']} rate annuali**")
-                                st.write(f"Rata: {format_currency(ct_data['rata_annuale'])}")
-
-                            st.metric("NPV (3%)", format_currency(confronto_ibr["npv_ct"]))
+                                st.info(f"📅 **{ct_data['anni']} rate annuali** - Rata: {format_currency(ct_data['rata_annuale'])}")
 
                             with st.expander("📊 Dettagli calcolo CT"):
                                 dettagli_ct = ct_data["dettagli"]
@@ -6449,144 +6646,227 @@ def main():
                                 st.write(f"**Coefficiente k:** {dettagli_ct.coefficiente_k}")
                                 st.write(f"**Coefficiente Ci:** {dettagli_ct.coefficiente_ci} €/kWh_t")
                                 st.write(f"**Energia incentivata (Ei):** {dettagli_ct.energia_incentivata_ei:,.0f} kWh_t")
-                                st.write(f"**Energia totale (Qu):** {dettagli_ct.energia_totale_qu:,.0f} kWh_t")
-                                st.write(f"**Coefficiente kp:** {dettagli_ct.coefficiente_kp:.4f}")
                         else:
                             st.error("❌ Non calcolabile")
                             if "errore" in confronto_ibr["ct"]:
                                 st.write(confronto_ibr["ct"]["errore"])
+                    else:
+                        # Modalità confronto completo
+                        col1, col2, col3 = st.columns(3)
 
-                    # Ecobonus
-                    with col2:
-                        st.markdown("### 🏠 Ecobonus")
-                        if confronto_ibr["ecobonus"] and "errore" not in confronto_ibr["ecobonus"]:
-                            eco_data = confronto_ibr["ecobonus"]
-                            st.metric(
-                                "Detrazione Totale",
-                                format_currency(eco_data["detrazione"]),
-                                delta=None
-                            )
+                        # Conto Termico 3.0
+                        with col1:
+                            st.markdown("### 🏛️ Conto Termico 3.0")
+                            if confronto_ibr["ct"] and "errore" not in confronto_ibr["ct"]:
+                                ct_data = confronto_ibr["ct"]
+                                st.metric(
+                                    "Incentivo Totale",
+                                    format_currency(ct_data["incentivo"]),
+                                    delta=None
+                                )
 
-                            st.info(f"📅 **{eco_data['anni']} rate annuali**")
-                            st.write(f"Rata: {format_currency(eco_data['rata_annuale'])}")
-                            st.write(f"Aliquota: {eco_data['aliquota']*100:.0f}%")
+                                if ct_data["rata_unica"]:
+                                    st.info("💰 **Rata unica**")
+                                else:
+                                    st.info(f"📅 **{ct_data['anni']} rate annuali**")
+                                    st.write(f"Rata: {format_currency(ct_data['rata_annuale'])}")
 
-                            st.metric("NPV (3%)", format_currency(confronto_ibr["npv_ecobonus"]))
+                                st.metric("NPV (3%)", format_currency(confronto_ibr["npv_ct"]))
 
-                            with st.expander("📊 Dettagli Ecobonus"):
-                                st.write(f"**Anno:** {anno_spesa}")
-                                st.write(f"**Tipo abitazione:** {tipo_abitazione}")
-                                st.write(f"**Limite detrazione:** 60.000 €")
-                                st.write(f"**Scadenza ENEA:** 90 giorni")
-                        else:
-                            st.error("❌ Non applicabile")
-                            if "errore" in confronto_ibr["ecobonus"]:
-                                st.write(confronto_ibr["ecobonus"]["errore"])
+                                with st.expander("📊 Dettagli calcolo CT"):
+                                    dettagli_ct = ct_data["dettagli"]
+                                    st.write(f"**Tipo sistema:** {dettagli_ct.tipo_sistema}")
+                                    st.write(f"**Coefficiente k:** {dettagli_ct.coefficiente_k}")
+                                    st.write(f"**Coefficiente Ci:** {dettagli_ct.coefficiente_ci} €/kWh_t")
+                                    st.write(f"**Energia incentivata (Ei):** {dettagli_ct.energia_incentivata_ei:,.0f} kWh_t")
+                                    st.write(f"**Energia totale (Qu):** {dettagli_ct.energia_totale_qu:,.0f} kWh_t")
+                                    st.write(f"**Coefficiente kp:** {dettagli_ct.coefficiente_kp:.4f}")
+                            else:
+                                st.error("❌ Non calcolabile")
+                                if "errore" in confronto_ibr["ct"]:
+                                    st.write(confronto_ibr["ct"]["errore"])
 
-                    # Bonus Ristrutturazione
-                    with col3:
-                        st.markdown("### 🔧 Bonus Ristrutturazione")
-                        if confronto_ibr["bonus_ristrutturazione"] and "errore" not in confronto_ibr["bonus_ristrutturazione"]:
-                            bonus_data = confronto_ibr["bonus_ristrutturazione"]
-                            st.metric(
-                                "Detrazione Totale",
-                                format_currency(bonus_data["detrazione"]),
-                                delta=None
-                            )
+                        # Ecobonus
+                        with col2:
+                            st.markdown("### 🏠 Ecobonus")
+                            if confronto_ibr["ecobonus"] and "errore" not in confronto_ibr["ecobonus"]:
+                                eco_data = confronto_ibr["ecobonus"]
+                                st.metric(
+                                    "Detrazione Totale",
+                                    format_currency(eco_data["detrazione"]),
+                                    delta=None
+                                )
 
-                            st.info(f"📅 **{bonus_data['anni']} rate annuali**")
-                            st.write(f"Rata: {format_currency(bonus_data['rata_annuale'])}")
-                            st.write(f"Aliquota: {bonus_data['aliquota']*100:.0f}%")
+                                st.info(f"📅 **{eco_data['anni']} rate annuali**")
+                                st.write(f"Rata: {format_currency(eco_data['rata_annuale'])}")
+                                st.write(f"Aliquota: {eco_data['aliquota']*100:.0f}%")
 
-                            st.metric("NPV (3%)", format_currency(confronto_ibr["npv_bonus_ristrutturazione"]))
+                                st.metric("NPV (3%)", format_currency(confronto_ibr["npv_ecobonus"]))
 
-                            st.warning("⚠️ **NON cumulabile con Ecobonus**")
+                                with st.expander("📊 Dettagli Ecobonus"):
+                                    st.write(f"**Anno:** {anno_spesa_ibr}")
+                                    st.write(f"**Tipo abitazione:** {tipo_abitazione}")
+                                    st.write(f"**Limite detrazione:** 60.000 €")
+                                    st.write(f"**Scadenza ENEA:** 90 giorni")
+                            else:
+                                st.error("❌ Non applicabile")
+                                if "errore" in confronto_ibr["ecobonus"]:
+                                    st.write(confronto_ibr["ecobonus"]["errore"])
 
-                            with st.expander("📊 Dettagli Bonus Ristrutturazione"):
-                                st.write(f"**Anno:** {anno_spesa}")
-                                st.write(f"**Tipo abitazione:** {tipo_abitazione}")
-                                st.write(f"**Limite spesa:** 96.000 €")
-                                st.write(f"**Scadenza ENEA:** 90 giorni")
-                        else:
-                            st.error("❌ Non applicabile")
-                            if "errore" in confronto_ibr["bonus_ristrutturazione"]:
-                                st.write(confronto_ibr["bonus_ristrutturazione"]["errore"])
+                        # Bonus Ristrutturazione
+                        with col3:
+                            st.markdown("### 🔧 Bonus Ristrutturazione")
+                            if confronto_ibr["bonus_ristrutturazione"] and "errore" not in confronto_ibr["bonus_ristrutturazione"]:
+                                bonus_data = confronto_ibr["bonus_ristrutturazione"]
+                                st.metric(
+                                    "Detrazione Totale",
+                                    format_currency(bonus_data["detrazione"]),
+                                    delta=None
+                                )
 
-                    st.divider()
+                                st.info(f"📅 **{bonus_data['anni']} rate annuali**")
+                                st.write(f"Rata: {format_currency(bonus_data['rata_annuale'])}")
+                                st.write(f"Aliquota: {bonus_data['aliquota']*100:.0f}%")
 
-                    # Grafico confronto NPV
-                    st.subheader("📊 Confronto NPV (Net Present Value)")
+                                st.metric("NPV (3%)", format_currency(confronto_ibr["npv_bonus_ristrutturazione"]))
 
-                    npv_data_ibr = {
-                        "Incentivo": ["Conto Termico 3.0", "Ecobonus", "Bonus Ristrutturazione"],
-                        "NPV (€)": [
-                            confronto_ibr["npv_ct"],
-                            confronto_ibr["npv_ecobonus"],
-                            confronto_ibr["npv_bonus_ristrutturazione"]
-                        ],
-                        "Colore": ["#1E88E5", "#43A047", "#FB8C00"]
-                    }
+                                st.warning("⚠️ **NON cumulabile con Ecobonus**")
 
-                    fig_ibr = go.Figure(data=[
-                        go.Bar(
-                            x=npv_data_ibr["Incentivo"],
-                            y=npv_data_ibr["NPV (€)"],
-                            marker_color=npv_data_ibr["Colore"],
-                            text=[format_currency(v) for v in npv_data_ibr["NPV (€)"]],
-                            textposition="outside"
-                        )
-                    ])
+                                with st.expander("📊 Dettagli Bonus Ristrutturazione"):
+                                    st.write(f"**Anno:** {anno_spesa_ibr}")
+                                    st.write(f"**Tipo abitazione:** {tipo_abitazione}")
+                                    st.write(f"**Limite spesa:** 96.000 €")
+                                    st.write(f"**Scadenza ENEA:** 90 giorni")
+                            else:
+                                st.error("❌ Non applicabile")
+                                if "errore" in confronto_ibr["bonus_ristrutturazione"]:
+                                    st.write(confronto_ibr["bonus_ristrutturazione"]["errore"])
 
-                    fig_ibr.update_layout(
-                        title="Confronto NPV Incentivi - Sistemi Ibridi",
-                        xaxis_title="Tipo Incentivo",
-                        yaxis_title="NPV (€)",
-                        height=400,
-                        showlegend=False
-                    )
+                        st.divider()
 
-                    st.plotly_chart(fig_ibr, use_container_width=True)
+                        # Grafico confronto NPV
+                        st.subheader("📊 Confronto NPV (Net Present Value)")
 
-                    # Migliore incentivo
-                    st.success(f"🏆 **MIGLIORE INCENTIVO:** {confronto_ibr['migliore']} con NPV di {format_currency(max(confronto_ibr['npv_ct'], confronto_ibr['npv_ecobonus'], confronto_ibr['npv_bonus_ristrutturazione']))}")
+                        import plotly.graph_objects as go
 
-                    # Salva scenario se richiesto
-                    if salva_scenario_ibr and len(st.session_state.scenari_ibridi) < 5:
-                        nome_scenario_ibr = f"Ibrido {len(st.session_state.scenari_ibridi) + 1}"
-                        scenario_data_ibr = {
-                            "nome": nome_scenario_ibr,
-                            "timestamp": datetime.now().isoformat(),
-                            "iter_semplificato": iter_semplificato_ibr,
-                            "prodotto_catalogo": {
-                                "marca": prodotto_catalogo_ibr.get("marca"),
-                                "modello_pdc": prodotto_catalogo_ibr.get("modello_pompa_calore"),
-                                "modello_caldaia": prodotto_catalogo_ibr.get("modello_caldaia_condensazione")
-                            } if prodotto_catalogo_ibr else None,
-                            "tipo_sistema": tipo_sistema_ibr,
-                            "potenza_pdc_kw": potenza_pdc_ibr,
-                            "potenza_caldaia_kw": potenza_caldaia_ibr,
-                            "scop": scop_pdc_ibr,
-                            "eta_s_caldaia": eta_s_caldaia_ibr,
-                            "spesa": spesa_ibr,
-                            "tipo_soggetto": tipo_soggetto,
-                            "ct_incentivo": risultato_ct_ibr['incentivo_totale'],
-                            "ct_npv": confronto_ibr['npv_ct'],
-                            "eco_detrazione": risultato_eco_ibr['detrazione_totale'],
-                            "eco_npv": confronto_ibr['npv_ecobonus'],
-                            "bonus_ristrutturazione": risultato_bonus_ibr['detrazione_totale'],
-                            "bonus_npv": confronto_ibr['npv_bonus_ristrutturazione'],
-                            "migliore": confronto_ibr['migliore']
+                        npv_data_ibr = {
+                            "Incentivo": ["Conto Termico 3.0", "Ecobonus", "Bonus Ristrutturazione"],
+                            "NPV (€)": [
+                                confronto_ibr["npv_ct"],
+                                confronto_ibr["npv_ecobonus"],
+                                confronto_ibr["npv_bonus_ristrutturazione"]
+                            ],
+                            "Colore": ["#1E88E5", "#43A047", "#FB8C00"]
                         }
-                        st.session_state.scenari_ibridi.append(scenario_data_ibr)
-                        st.success(f"✅ Scenario salvato: {nome_scenario_ibr}")
-                        st.info(f"📊 Scenari salvati: {len(st.session_state.scenari_ibridi)}/5")
-                    elif salva_scenario_ibr:
-                        st.warning("⚠️ Hai raggiunto il massimo di 5 scenari")
+
+                        fig_ibr = go.Figure(data=[
+                            go.Bar(
+                                x=npv_data_ibr["Incentivo"],
+                                y=npv_data_ibr["NPV (€)"],
+                                marker_color=npv_data_ibr["Colore"],
+                                text=[format_currency(v) for v in npv_data_ibr["NPV (€)"]],
+                                textposition="outside"
+                            )
+                        ])
+
+                        fig_ibr.update_layout(
+                            title="Confronto NPV Incentivi - Sistemi Ibridi",
+                            xaxis_title="Tipo Incentivo",
+                            yaxis_title="NPV (€)",
+                            height=400,
+                            showlegend=False
+                        )
+
+                        st.plotly_chart(fig_ibr, use_container_width=True)
+
+                        # Migliore incentivo
+                        st.success(f"🏆 **MIGLIORE INCENTIVO:** {confronto_ibr['migliore']} con NPV di {format_currency(max(confronto_ibr['npv_ct'], confronto_ibr['npv_ecobonus'], confronto_ibr['npv_bonus_ristrutturazione']))}")
+
+                    # Salva nel session state per uso successivo
+                    ct_data_ibr = confronto_ibr.get("ct", {})
+                    eco_data_ibr = confronto_ibr.get("ecobonus", {})
+                    bonus_data_ibr = confronto_ibr.get("bonus_ristrutturazione", {})
+
+                    st.session_state.ultimo_calcolo_ibridi = {
+                        "iter_semplificato": iter_semplificato_ibr,
+                        "prodotto_catalogo": {
+                            "marca": prodotto_catalogo_ibr.get("marca") if prodotto_catalogo_ibr else None,
+                            "modello_pdc": prodotto_catalogo_ibr.get("modello_pompa_calore") if prodotto_catalogo_ibr else None,
+                            "modello_caldaia": prodotto_catalogo_ibr.get("modello_caldaia_condensazione") if prodotto_catalogo_ibr else None
+                        } if prodotto_catalogo_ibr else None,
+                        "tipo_sistema": tipo_sistema_ibr,
+                        "potenza_pdc_kw": potenza_pdc_ibr,
+                        "potenza_caldaia_kw": potenza_caldaia_ibr,
+                        "scop": scop_pdc_ibr,
+                        "eta_s_pdc": eta_s_pdc_ibr,
+                        "eta_s_caldaia": eta_s_caldaia_ibr,
+                        "spesa": spesa_ibr,
+                        "tipo_soggetto": tipo_soggetto_ibr,
+                        "zona_climatica": zona_climatica,
+                        "usa_premialita_ue": usa_premialita_ue_ibr,
+                        "usa_premialita_combinato": usa_premialita_combinato_ibr,
+                        "ct_data": ct_data_ibr,
+                        "eco_data": eco_data_ibr,
+                        "bonus_data": bonus_data_ibr,
+                        "npv_ct": confronto_ibr.get("npv_ct", 0),
+                        "npv_ecobonus": confronto_ibr.get("npv_ecobonus", 0),
+                        "npv_bonus_ristrutturazione": confronto_ibr.get("npv_bonus_ristrutturazione", 0),
+                        "migliore": confronto_ibr.get("migliore", "")
+                    }
 
             except Exception as e:
                 st.error(f"Errore nel calcolo: {str(e)}")
                 import traceback
                 st.code(traceback.format_exc())
+
+        # Pulsante salva scenario ibridi (FUORI dal blocco calcola)
+        st.divider()
+        col_save_ibr1, col_save_ibr2 = st.columns([3, 1])
+        with col_save_ibr1:
+            salva_scenario_ibr = st.button(
+                "💾 Salva Scenario Ibridi",
+                type="secondary",
+                use_container_width=True,
+                key="btn_salva_ibr",
+                disabled=len(st.session_state.scenari_ibridi) >= 5
+            )
+        with col_save_ibr2:
+            st.write(f"({len(st.session_state.scenari_ibridi)}/5)")
+
+        if salva_scenario_ibr:
+            if st.session_state.ultimo_calcolo_ibridi is None:
+                st.warning("⚠️ Prima calcola gli incentivi con CALCOLA CONFRONTO")
+            elif len(st.session_state.scenari_ibridi) >= 5:
+                st.warning("⚠️ Hai raggiunto il massimo di 5 scenari")
+            else:
+                dati = st.session_state.ultimo_calcolo_ibridi
+                ct_data = dati.get("ct_data", {})
+                eco_data = dati.get("eco_data", {})
+                bonus_data = dati.get("bonus_data", {})
+                nuovo_scenario = {
+                    "id": len(st.session_state.scenari_ibridi) + 1,
+                    "nome": f"Ibrido {len(st.session_state.scenari_ibridi) + 1}",
+                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M"),
+                    "iter_semplificato": dati["iter_semplificato"],
+                    "prodotto_catalogo": dati["prodotto_catalogo"],
+                    "tipo_sistema": dati["tipo_sistema"],
+                    "potenza_pdc_kw": dati["potenza_pdc_kw"],
+                    "potenza_caldaia_kw": dati["potenza_caldaia_kw"],
+                    "scop": dati["scop"],
+                    "eta_s_caldaia": dati["eta_s_caldaia"],
+                    "spesa": dati["spesa"],
+                    "tipo_soggetto": dati["tipo_soggetto"],
+                    "ct_incentivo": ct_data.get("incentivo", 0) if ct_data and "errore" not in ct_data else 0,
+                    "ct_npv": dati["npv_ct"],
+                    "eco_detrazione": eco_data.get("detrazione", 0) if eco_data and "errore" not in eco_data else 0,
+                    "eco_npv": dati["npv_ecobonus"],
+                    "bonus_detrazione": bonus_data.get("detrazione", 0) if bonus_data and "errore" not in bonus_data else 0,
+                    "bonus_npv": dati["npv_bonus_ristrutturazione"],
+                    "migliore": dati["migliore"]
+                }
+                st.session_state.scenari_ibridi.append(nuovo_scenario)
+                st.success(f"✅ Scenario salvato! ({len(st.session_state.scenari_ibridi)}/5)")
+                st.rerun()
 
     # ===========================================================================
     # TAB 8: SCALDACQUA A POMPA DI CALORE (III.E)
@@ -7346,7 +7626,7 @@ def main():
                     scenari_disponibili.append({
                         "tipo": "solare_termico",
                         "tipo_label": "Solare Termico (III.B)",
-                        "display": f"Solare: {s['nome']} - {s['superficie_m2']:.1f} m²",
+                        "display": f"Solare: {s['nome']} - {s['superficie']:.1f} m²",
                         "data": s,
                         "index": idx
                     })
@@ -7635,7 +7915,7 @@ def main():
             ct_totale_multi = ct_base_multi + bonus_multi_totale
 
             # Calcola NPV
-            tasso_sconto = tasso_sconto_utente
+            tasso_sconto = st.session_state.get("sidebar_tasso", 3.0) / 100
             npv_ct_multi = ct_totale_multi  # Semplificato, assumendo erogazione immediata
             npv_eco_multi = sum(
                 (eco_totale_multi / 10) / ((1 + tasso_sconto) ** anno)
@@ -7743,57 +8023,238 @@ def main():
     # ===========================================================================
     with tab_scenari:
         st.header("📊 Confronto Scenari Multipli")
-        st.write("Confronta fino a 5 diverse pompe di calore per lo stesso immobile")
+        st.write("Confronta fino a 5 scenari per tipologia di intervento")
 
-        if len(st.session_state.scenari) == 0:
-            st.info("Nessuno scenario salvato. Vai alla tab 'Calcolo Singolo' e clicca 'Salva Scenario' per aggiungere scenari.")
-        else:
-            st.write(f"**Scenari salvati:** {len(st.session_state.scenari)}/5")
+        # Selezione tipo intervento
+        tipo_scenari = st.selectbox(
+            "Tipo di intervento:",
+            options=[
+                "🌡️ Pompe di Calore",
+                "☀️ Solare Termico",
+                "🏠 Isolamento Termico",
+                "🪟 Serramenti",
+                "🏢 Building Automation",
+                "🔀 Sistemi Ibridi"
+            ],
+            key="scenari_tipo_intervento"
+        )
 
-            # Grafico confronto
-            fig = create_scenarios_comparison_chart(st.session_state.scenari)
-            if fig:
-                st.plotly_chart(fig, use_container_width=True)
+        if tipo_scenari == "🌡️ Pompe di Calore":
+            if len(st.session_state.scenari) == 0:
+                st.info("Nessuno scenario salvato. Vai alla tab 'PdC' e clicca 'Salva Scenario' per aggiungere scenari.")
+            else:
+                st.write(f"**Scenari salvati:** {len(st.session_state.scenari)}/5")
 
-            # Tabella confronto
-            st.subheader("Tabella Comparativa")
-            df_data = []
-            for s in st.session_state.scenari:
-                migliore = "CT" if s["npv_ct"] > s["npv_eco"] else "Eco"
-                df_data.append({
-                    "Scenario": s["nome"],
-                    "Tipologia": s["tipo_intervento_label"],
-                    "Potenza": f"{s['potenza_kw']} kW",
-                    "Spesa": format_currency(s["spesa"]),
-                    "CT (NPV)": format_currency(s["npv_ct"]),
-                    "Ecobonus (NPV)": format_currency(s["npv_eco"]),
-                    "Migliore": migliore
-                })
+                # Grafico confronto
+                fig = create_scenarios_comparison_chart(st.session_state.scenari)
+                if fig:
+                    st.plotly_chart(fig, use_container_width=True)
 
-            df = pd.DataFrame(df_data)
-            st.dataframe(df, use_container_width=True, hide_index=True)
+                # Tabella confronto
+                st.subheader("Tabella Comparativa")
+                df_data = []
+                for s in st.session_state.scenari:
+                    migliore = "CT" if s["npv_ct"] > s["npv_eco"] else "Eco"
+                    df_data.append({
+                        "Scenario": s["nome"],
+                        "Tipologia": s["tipo_intervento_label"],
+                        "Potenza": f"{s['potenza_kw']} kW",
+                        "Spesa": format_currency(s["spesa"]),
+                        "CT 3.0": format_currency(s.get("ct_incentivo", 0)),
+                        "CT (NPV)": format_currency(s["npv_ct"]),
+                        "Ecobonus": format_currency(s.get("eco_detrazione", 0)),
+                        "Eco (NPV)": format_currency(s["npv_eco"]),
+                        "Migliore": migliore
+                    })
 
-            # Migliore assoluto
-            miglior = max(st.session_state.scenari, key=lambda x: max(x["npv_ct"], x["npv_eco"]))
-            miglior_incentivo = "CT" if miglior["npv_ct"] > miglior["npv_eco"] else "Ecobonus"
-            miglior_npv = max(miglior["npv_ct"], miglior["npv_eco"])
+                df = pd.DataFrame(df_data)
+                st.dataframe(df, use_container_width=True, hide_index=True)
 
-            st.success(f"""
-            **Miglior scenario:** {miglior["nome"]} con {miglior_incentivo}
+                # Migliore assoluto
+                miglior = max(st.session_state.scenari, key=lambda x: max(x["npv_ct"], x["npv_eco"]))
+                miglior_incentivo = "CT" if miglior["npv_ct"] > miglior["npv_eco"] else "Ecobonus"
+                miglior_npv = max(miglior["npv_ct"], miglior["npv_eco"])
 
-            **NPV:** {format_currency(miglior_npv)}
-            """)
+                st.success(f"""
+                **Miglior scenario:** {miglior["nome"]} con {miglior_incentivo}
 
-            # Gestione scenari
-            st.divider()
-            col1, col2 = st.columns(2)
-            with col1:
-                if st.button("🗑️ Cancella tutti gli scenari", type="secondary"):
-                    st.session_state.scenari = []
+                **NPV:** {format_currency(miglior_npv)}
+                """)
+
+                # Gestione scenari
+                st.divider()
+                col1, col2 = st.columns(2)
+                with col1:
+                    if st.button("🗑️ Cancella tutti gli scenari PdC", type="secondary", key="del_scenari_pdc"):
+                        st.session_state.scenari = []
+                        st.rerun()
+                with col2:
+                    if len(st.session_state.scenari) >= 5:
+                        st.warning("Hai raggiunto il massimo di 5 scenari")
+
+        elif tipo_scenari == "☀️ Solare Termico":
+            if len(st.session_state.scenari_solare) == 0:
+                st.info("Nessuno scenario salvato. Vai alla tab 'Solare' e clicca 'Salva Scenario' per aggiungere scenari.")
+            else:
+                st.write(f"**Scenari salvati:** {len(st.session_state.scenari_solare)}/5")
+
+                # Tabella confronto
+                st.subheader("Tabella Comparativa")
+                df_data = []
+                for s in st.session_state.scenari_solare:
+                    df_data.append({
+                        "Scenario": s["nome"],
+                        "Tipologia": s.get("tipologia", s.get("tipologia_label", "N/D")),
+                        "Superficie": f"{s.get('superficie', s.get('superficie_m2', 0)):.1f} m²",
+                        "Spesa": format_currency(s.get("spesa_solare", s.get("spesa", 0))),
+                        "CT 3.0": format_currency(s.get("ct_incentivo", 0)),
+                        "CT (NPV)": format_currency(s.get("npv_ct_solare", s.get("ct_npv", 0))),
+                        "Ecobonus": format_currency(s.get("eco_solare", s.get("eco_detrazione", 0))),
+                        "Eco (NPV)": format_currency(s.get("npv_eco_solare", s.get("eco_npv", 0))),
+                        "Migliore": s.get("piu_conveniente", "N/D")
+                    })
+
+                df = pd.DataFrame(df_data)
+                st.dataframe(df, use_container_width=True, hide_index=True)
+
+                # Migliore assoluto
+                if len(st.session_state.scenari_solare) > 0:
+                    miglior = max(st.session_state.scenari_solare, key=lambda x: max(x.get("ct_npv", 0), x.get("eco_npv", 0)))
+                    miglior_npv = max(miglior.get("ct_npv", 0), miglior.get("eco_npv", 0))
+                    st.success(f"**Miglior scenario:** {miglior['nome']} - NPV: {format_currency(miglior_npv)}")
+
+                st.divider()
+                if st.button("🗑️ Cancella tutti gli scenari Solare", type="secondary", key="del_scenari_solare"):
+                    st.session_state.scenari_solare = []
                     st.rerun()
-            with col2:
-                if len(st.session_state.scenari) >= 5:
-                    st.warning("Hai raggiunto il massimo di 5 scenari")
+
+        elif tipo_scenari == "🏠 Isolamento Termico":
+            if len(st.session_state.scenari_isolamento) == 0:
+                st.info("Nessuno scenario salvato. Vai alla tab 'Isolamento' e clicca 'Salva Scenario' per aggiungere scenari.")
+            else:
+                st.write(f"**Scenari salvati:** {len(st.session_state.scenari_isolamento)}/5")
+
+                # Tabella confronto
+                st.subheader("Tabella Comparativa")
+                df_data = []
+                for s in st.session_state.scenari_isolamento:
+                    df_data.append({
+                        "Scenario": s["nome"],
+                        "Superficie": f"{s['superficie_mq']:.1f} m²",
+                        "Zona": s.get("zona_climatica", "N/D"),
+                        "U post": f"{s.get('trasmittanza_post', 0):.3f} W/m²K",
+                        "Spesa": format_currency(s.get("spesa_totale", 0)),
+                        "CT 3.0": format_currency(s.get("ct_incentivo", 0)),
+                        "CT (NPV)": format_currency(s.get("ct_npv", 0)),
+                        "Ecobonus": format_currency(s.get("eco_detrazione", 0)),
+                        "Eco (NPV)": format_currency(s.get("eco_npv", 0)),
+                        "Migliore": s.get("migliore", "N/D")
+                    })
+
+                df = pd.DataFrame(df_data)
+                st.dataframe(df, use_container_width=True, hide_index=True)
+
+                st.divider()
+                if st.button("🗑️ Cancella tutti gli scenari Isolamento", type="secondary", key="del_scenari_iso"):
+                    st.session_state.scenari_isolamento = []
+                    st.rerun()
+
+        elif tipo_scenari == "🪟 Serramenti":
+            if len(st.session_state.scenari_serramenti) == 0:
+                st.info("Nessuno scenario salvato. Vai alla tab 'Serramenti' e clicca 'Salva Scenario' per aggiungere scenari.")
+            else:
+                st.write(f"**Scenari salvati:** {len(st.session_state.scenari_serramenti)}/5")
+
+                # Tabella confronto
+                st.subheader("Tabella Comparativa")
+                df_data = []
+                for s in st.session_state.scenari_serramenti:
+                    df_data.append({
+                        "Scenario": s["nome"],
+                        "Superficie": f"{s['superficie_mq']:.1f} m²",
+                        "Zona": s.get("zona_climatica", "N/D"),
+                        "U post": f"{s.get('trasmittanza_post', 0):.2f} W/m²K",
+                        "Spesa": format_currency(s.get("spesa_totale", 0)),
+                        "CT 3.0": format_currency(s.get("ct_incentivo", 0)),
+                        "CT (NPV)": format_currency(s.get("ct_npv", 0)),
+                        "Ecobonus": format_currency(s.get("eco_detrazione", 0)),
+                        "Eco (NPV)": format_currency(s.get("eco_npv", 0)),
+                        "Migliore": s.get("migliore", "N/D")
+                    })
+
+                df = pd.DataFrame(df_data)
+                st.dataframe(df, use_container_width=True, hide_index=True)
+
+                st.divider()
+                if st.button("🗑️ Cancella tutti gli scenari Serramenti", type="secondary", key="del_scenari_serr"):
+                    st.session_state.scenari_serramenti = []
+                    st.rerun()
+
+        elif tipo_scenari == "🏢 Building Automation":
+            if len(st.session_state.scenari_building_automation) == 0:
+                st.info("Nessuno scenario salvato. Vai alla tab 'B.A.' e clicca 'Salva Scenario' per aggiungere scenari.")
+            else:
+                st.write(f"**Scenari salvati:** {len(st.session_state.scenari_building_automation)}/5")
+
+                # Tabella confronto
+                st.subheader("Tabella Comparativa")
+                df_data = []
+                for s in st.session_state.scenari_building_automation:
+                    df_data.append({
+                        "Scenario": s["nome"],
+                        "Superficie": f"{s['superficie_mq']:.0f} m²",
+                        "Classe": s.get("classe_efficienza", "N/D"),
+                        "Spesa": format_currency(s.get("spesa", 0)),
+                        "CT": format_currency(s.get("ct_incentivo", 0)),
+                        "CT NPV": format_currency(s.get("ct_npv", 0)),
+                        "Eco": format_currency(s.get("eco_detrazione", 0)),
+                        "Eco NPV": format_currency(s.get("eco_npv", 0)),
+                        "Migliore": s.get("migliore", "N/D")
+                    })
+
+                df = pd.DataFrame(df_data)
+                st.dataframe(df, use_container_width=True, hide_index=True)
+
+                # Migliore assoluto
+                if len(st.session_state.scenari_building_automation) > 0:
+                    miglior = max(st.session_state.scenari_building_automation, key=lambda x: max(x.get("ct_npv", 0), x.get("eco_npv", 0)))
+                    miglior_npv = max(miglior.get("ct_npv", 0), miglior.get("eco_npv", 0))
+                    st.success(f"**Miglior scenario:** {miglior['nome']} ({miglior.get('migliore', 'N/D')}) - NPV: {format_currency(miglior_npv)}")
+
+                st.divider()
+                if st.button("🗑️ Cancella tutti gli scenari B.A.", type="secondary", key="del_scenari_ba"):
+                    st.session_state.scenari_building_automation = []
+                    st.rerun()
+
+        elif tipo_scenari == "🔀 Sistemi Ibridi":
+            if len(st.session_state.scenari_ibridi) == 0:
+                st.info("Nessuno scenario salvato. Vai alla tab 'Ibridi' e clicca 'Salva Scenario' per aggiungere scenari.")
+            else:
+                st.write(f"**Scenari salvati:** {len(st.session_state.scenari_ibridi)}/5")
+
+                # Tabella confronto
+                st.subheader("Tabella Comparativa")
+                df_data = []
+                for s in st.session_state.scenari_ibridi:
+                    df_data.append({
+                        "Scenario": s.get("nome", "N/D"),
+                        "Tipo": s.get("tipo_sistema", "N/D"),
+                        "Potenza PdC": f"{s.get('potenza_pdc_kw', s.get('potenza_nominale_kw', 0)):.1f} kW",
+                        "Spesa": format_currency(s.get("spesa", s.get("spesa_totale", 0))),
+                        "CT 3.0": format_currency(s.get("ct_incentivo", 0)),
+                        "CT (NPV)": format_currency(s.get("ct_npv", 0)),
+                        "Ecobonus": format_currency(s.get("eco_detrazione", 0)),
+                        "Eco (NPV)": format_currency(s.get("eco_npv", 0)),
+                        "Migliore": s.get("migliore", "N/D")
+                    })
+
+                df = pd.DataFrame(df_data)
+                st.dataframe(df, use_container_width=True, hide_index=True)
+
+                st.divider()
+                if st.button("🗑️ Cancella tutti gli scenari Ibridi", type="secondary", key="del_scenari_ibridi"):
+                    st.session_state.scenari_ibridi = []
+                    st.rerun()
 
     # ===========================================================================
     # TAB 3: STORICO CALCOLI
@@ -8397,7 +8858,7 @@ def main():
                 for i, s in enumerate(st.session_state.scenari_solare):
                     col_sc1, col_sc2 = st.columns([5, 1])
                     with col_sc1:
-                        st.write(f"• **{s['nome']}**: {s['tipologia_label']} - {s['superficie_m2']:.1f} m²")
+                        st.write(f"• **{s['nome']}**: {s['tipologia']} - {s['superficie']:.1f} m²")
                     with col_sc2:
                         if st.button("🗑️", key=f"del_sol_{i}"):
                             st.session_state.scenari_solare.pop(i)
@@ -8420,28 +8881,29 @@ def main():
                     # Converti scenari in ScenarioSolareTermico
                     scenari_sol_obj = []
                     for s in st.session_state.scenari_solare:
+                        # Mappa le chiavi del dizionario salvato ai campi del dataclass
                         sc = ScenarioSolareTermico(
                             nome=s["nome"],
-                            tipologia_impianto=s["tipologia_impianto"],
-                            tipologia_label=s["tipologia_label"],
-                            tipo_collettore=s["tipo_collettore"],
-                            tipo_collettore_label=s["tipo_collettore_label"],
-                            superficie_m2=s["superficie_m2"],
-                            n_moduli=s["n_moduli"],
-                            area_modulo_m2=s["area_modulo_m2"],
-                            producibilita_qu=s["producibilita_qu"],
-                            spesa=s["spesa"],
-                            ct_ammissibile=s["ct_ammissibile"],
-                            ct_incentivo=s["ct_incentivo"],
-                            ct_rate=s["ct_rate"],
-                            ct_annualita=s["ct_annualita"],
-                            ct_ci=s["ct_ci"],
-                            ct_ia=s["ct_ia"],
-                            eco_ammissibile=s["eco_ammissibile"],
-                            eco_detrazione=s["eco_detrazione"],
-                            eco_aliquota=s["eco_aliquota"],
-                            npv_ct=s["npv_ct"],
-                            npv_eco=s["npv_eco"],
+                            tipologia_impianto=s.get("tipologia", "acs_solo"),
+                            tipologia_label=s.get("tipologia", "ACS"),
+                            tipo_collettore=s.get("tipo_collettore", "piano"),
+                            tipo_collettore_label=s.get("tipo_collettore", "Piano"),
+                            superficie_m2=s.get("superficie", 0),
+                            n_moduli=s.get("n_moduli", 1),
+                            area_modulo_m2=s.get("area_modulo", 2.0),
+                            producibilita_qu=s.get("qu_calcolato", 0) / max(s.get("superficie", 1), 1),  # kWht/m²
+                            spesa=s.get("spesa", 0),
+                            ct_ammissibile=s.get("ct_incentivo", 0) > 0,
+                            ct_incentivo=s.get("ct_incentivo", 0),
+                            ct_rate=[s.get("ct_incentivo", 0) / max(s.get("ct_rate", 1), 1)] * s.get("ct_rate", 2) if s.get("ct_rate", 1) > 0 else [0],
+                            ct_annualita=s.get("ct_rate", 2),
+                            ct_ci=0.15,  # Valore standard per solare termico
+                            ct_ia=s.get("ct_incentivo", 0) / max(s.get("ct_rate", 1), 1),
+                            eco_ammissibile=s.get("eco_detrazione", 0) > 0,
+                            eco_detrazione=s.get("eco_detrazione", 0),
+                            eco_aliquota=s.get("aliquota_eco", 0.5),
+                            npv_ct=s.get("npv_ct", 0),
+                            npv_eco=s.get("npv_eco", 0),
                         )
                         scenari_sol_obj.append(sc)
 
@@ -8567,7 +9029,43 @@ def main():
                             st.rerun()
 
                 st.divider()
-                st.info("📄 Generazione report completo in sviluppo. Per ora puoi visualizzare e confrontare gli scenari salvati.")
+
+                # Parametri report Ibridi
+                col1, col2 = st.columns(2)
+                with col1:
+                    tipo_soggetto_report_ibr = st.selectbox("Tipo soggetto", list(TIPI_SOGGETTO.keys()), key="report_soggetto_ibr")
+                    tipo_abitazione_report_ibr = st.selectbox("Tipo abitazione", list(TIPI_ABITAZIONE.keys()), key="report_abitazione_ibr")
+                with col2:
+                    anno_report_ibr = st.number_input("Anno", min_value=2024, max_value=2030, value=2025, key="report_anno_ibr")
+                    tasso_report_ibr = st.slider("Tasso sconto (%)", 0.0, 10.0, 3.0, key="report_tasso_ibr") / 100
+
+                st.divider()
+
+                if st.button("📄 Genera Report Sistemi Ibridi", type="primary", use_container_width=True):
+                    from modules.report_generator import genera_report_ibridi_html
+
+                    # Genera HTML
+                    html_content_ibr = genera_report_ibridi_html(
+                        scenari=st.session_state.scenari_ibridi,
+                        tipo_soggetto=TIPI_SOGGETTO[tipo_soggetto_report_ibr],
+                        tipo_abitazione=TIPI_ABITAZIONE[tipo_abitazione_report_ibr],
+                        anno=anno_report_ibr,
+                        tasso_sconto=tasso_report_ibr,
+                        solo_ct=solo_conto_termico
+                    )
+
+                    # Download
+                    st.markdown(
+                        get_download_link(html_content_ibr, f"relazione_tecnica_ibridi_{datetime.now().strftime('%Y%m%d_%H%M')}.html"),
+                        unsafe_allow_html=True
+                    )
+
+                    # Preview
+                    with st.expander("👁️ Anteprima Report"):
+                        st.components.v1.html(html_content_ibr, height=800, scrolling=True)
+
+                    st.success("✅ Report Sistemi Ibridi generato!")
+                    st.info("💡 Per salvare come PDF, apri il file HTML nel browser e usa Stampa > Salva come PDF")
 
                 # Tabella comparativa scenari
                 if len(st.session_state.scenari_ibridi) > 1:
@@ -8602,7 +9100,43 @@ def main():
                             st.rerun()
 
                 st.divider()
-                st.info("📄 Generazione report completo in sviluppo. Per ora puoi visualizzare e confrontare gli scenari salvati.")
+
+                # Parametri report Isolamento
+                col1, col2 = st.columns(2)
+                with col1:
+                    tipo_soggetto_report_iso = st.selectbox("Tipo soggetto", list(TIPI_SOGGETTO.keys()), key="report_soggetto_iso")
+                    tipo_abitazione_report_iso = st.selectbox("Tipo abitazione", list(TIPI_ABITAZIONE.keys()), key="report_abitazione_iso")
+                with col2:
+                    anno_report_iso = st.number_input("Anno", min_value=2024, max_value=2030, value=2025, key="report_anno_iso")
+                    tasso_report_iso = st.slider("Tasso sconto (%)", 0.0, 10.0, 3.0, key="report_tasso_iso") / 100
+
+                st.divider()
+
+                if st.button("📄 Genera Report Isolamento Termico", type="primary", use_container_width=True):
+                    from modules.report_generator import genera_report_isolamento_html
+
+                    # Genera HTML
+                    html_content_iso = genera_report_isolamento_html(
+                        scenari=st.session_state.scenari_isolamento,
+                        tipo_soggetto=TIPI_SOGGETTO[tipo_soggetto_report_iso],
+                        tipo_abitazione=TIPI_ABITAZIONE[tipo_abitazione_report_iso],
+                        anno=anno_report_iso,
+                        tasso_sconto=tasso_report_iso,
+                        solo_ct=solo_conto_termico
+                    )
+
+                    # Download
+                    st.markdown(
+                        get_download_link(html_content_iso, f"relazione_tecnica_isolamento_{datetime.now().strftime('%Y%m%d_%H%M')}.html"),
+                        unsafe_allow_html=True
+                    )
+
+                    # Preview
+                    with st.expander("👁️ Anteprima Report"):
+                        st.components.v1.html(html_content_iso, height=800, scrolling=True)
+
+                    st.success("✅ Report Isolamento Termico generato!")
+                    st.info("💡 Per salvare come PDF, apri il file HTML nel browser e usa Stampa > Salva come PDF")
 
                 # Tabella comparativa scenari
                 if len(st.session_state.scenari_isolamento) > 1:
@@ -8636,7 +9170,43 @@ def main():
                             st.rerun()
 
                 st.divider()
-                st.info("📄 Generazione report completo in sviluppo. Per ora puoi visualizzare e confrontare gli scenari salvati.")
+
+                # Parametri report Serramenti
+                col1, col2 = st.columns(2)
+                with col1:
+                    tipo_soggetto_report_serr = st.selectbox("Tipo soggetto", list(TIPI_SOGGETTO.keys()), key="report_soggetto_serr")
+                    tipo_abitazione_report_serr = st.selectbox("Tipo abitazione", list(TIPI_ABITAZIONE.keys()), key="report_abitazione_serr")
+                with col2:
+                    anno_report_serr = st.number_input("Anno", min_value=2024, max_value=2030, value=2025, key="report_anno_serr")
+                    tasso_report_serr = st.slider("Tasso sconto (%)", 0.0, 10.0, 3.0, key="report_tasso_serr") / 100
+
+                st.divider()
+
+                if st.button("📄 Genera Report Serramenti", type="primary", use_container_width=True):
+                    from modules.report_generator import genera_report_serramenti_html
+
+                    # Genera HTML
+                    html_content_serr = genera_report_serramenti_html(
+                        scenari=st.session_state.scenari_serramenti,
+                        tipo_soggetto=TIPI_SOGGETTO[tipo_soggetto_report_serr],
+                        tipo_abitazione=TIPI_ABITAZIONE[tipo_abitazione_report_serr],
+                        anno=anno_report_serr,
+                        tasso_sconto=tasso_report_serr,
+                        solo_ct=solo_conto_termico
+                    )
+
+                    # Download
+                    st.markdown(
+                        get_download_link(html_content_serr, f"relazione_tecnica_serramenti_{datetime.now().strftime('%Y%m%d_%H%M')}.html"),
+                        unsafe_allow_html=True
+                    )
+
+                    # Preview
+                    with st.expander("👁️ Anteprima Report"):
+                        st.components.v1.html(html_content_serr, height=800, scrolling=True)
+
+                    st.success("✅ Report Serramenti generato!")
+                    st.info("💡 Per salvare come PDF, apri il file HTML nel browser e usa Stampa > Salva come PDF")
 
                 # Tabella comparativa scenari
                 if len(st.session_state.scenari_serramenti) > 1:
@@ -8670,7 +9240,41 @@ def main():
                             st.rerun()
 
                 st.divider()
-                st.info("📄 Generazione report completo in sviluppo. Per ora puoi visualizzare e confrontare gli scenari salvati.")
+
+                # Parametri report BA
+                col1, col2 = st.columns(2)
+                with col1:
+                    tipo_soggetto_report_ba = st.selectbox("Tipo soggetto", list(TIPI_SOGGETTO.keys()), key="report_soggetto_ba")
+                    tipo_abitazione_report_ba = st.selectbox("Tipo abitazione", list(TIPI_ABITAZIONE.keys()), key="report_abitazione_ba")
+                with col2:
+                    anno_report_ba = st.number_input("Anno", min_value=2024, max_value=2030, value=2025, key="report_anno_ba")
+                    tasso_report_ba = st.slider("Tasso sconto (%)", 0.0, 10.0, 3.0, key="report_tasso_ba") / 100
+
+                st.divider()
+
+                if st.button("📄 Genera Report Building Automation", type="primary", use_container_width=True):
+                    # Genera HTML
+                    html_content_ba = genera_report_building_automation_html(
+                        scenari=st.session_state.scenari_building_automation,
+                        tipo_soggetto=TIPI_SOGGETTO[tipo_soggetto_report_ba],
+                        tipo_abitazione=TIPI_ABITAZIONE[tipo_abitazione_report_ba],
+                        anno=anno_report_ba,
+                        tasso_sconto=tasso_report_ba,
+                        solo_ct=solo_conto_termico
+                    )
+
+                    # Download
+                    st.markdown(
+                        get_download_link(html_content_ba, f"relazione_tecnica_ba_{datetime.now().strftime('%Y%m%d_%H%M')}.html"),
+                        unsafe_allow_html=True
+                    )
+
+                    # Preview
+                    with st.expander("👁️ Anteprima Report"):
+                        st.components.v1.html(html_content_ba, height=800, scrolling=True)
+
+                    st.success("✅ Report generato! Clicca sul link sopra per scaricare.")
+                    st.info("💡 Per salvare come PDF, apri il file HTML nel browser e usa Stampa > Salva come PDF")
 
                 # Tabella comparativa scenari
                 if len(st.session_state.scenari_building_automation) > 1:
@@ -10350,11 +10954,11 @@ def main():
                 st.markdown("#### 2️⃣ Certificazione Ambientale (OBBLIGATORIA)")
 
                 docs_cert_bio = [
-                    ("cert_5stelle", "⭐ Certificazione classe 5 stelle (DM 186/2017)", True),
+                    ("cert_4_5stelle", "⭐ Certificazione classe 4 o 5 stelle (DM 186/2017)", True),
                 ]
 
                 if tipo_gen_doc == "caldaia":
-                    docs_cert_bio.append(("cert_uni_303_5", "📄 Certificazione UNI EN 303-5 classe 5", True))
+                    docs_cert_bio.append(("cert_uni_303_5", "📄 Certificazione UNI EN 303-5 classe 4 o 5", True))
                 else:
                     docs_cert_bio.append(("cert_uni_16510", "📄 Certificazione UNI EN 16510:2023", True))
 
@@ -10367,7 +10971,7 @@ def main():
                         key=f"ct_bio_{key}"
                     )
 
-                st.info("⚠️ **REQUISITO OBBLIGATORIO:** Solo generatori con certificazione classe 5 stelle (DM 186/2017) sono ammessi al CT 3.0")
+                st.info("ℹ️ **CLASSI AMMESSE:** Generatori classe 4 stelle (per sostituzione combustibili fossili) o classe 5 stelle (DM 186/2017)")
 
                 # 3. Asseverazione (se P > 35 kW)
                 st.markdown("#### 3️⃣ Asseverazione e Certificazione")
@@ -11226,16 +11830,16 @@ def main():
                 st.markdown("""
                 ##### 📄 Documentazione Comune
 
-                - ☐ Scheda-domanda compilata e firmata
-                - ☐ Documento identità valido del Soggetto Responsabile
-                - ☐ Visura catastale edificio
-                - ☐ DSAN (Dichiarazione Sostitutiva Atto Notorietà)
-                - ☐ Coordinate bancarie (IBAN)
+                - 📝 Scheda-domanda compilata e firmata
+                - 🪪 Documento identità valido del Soggetto Responsabile
+                - 🏠 Visura catastale edificio
+                - 📋 DSAN (Dichiarazione Sostitutiva Atto Notorietà)
+                - 💳 Coordinate bancarie (IBAN)
 
                 ##### 📝 Asseverazione Tecnica
 
-                - ☐ **Asseverazione tecnico abilitato** (obbligatoria - Par. 12.5)
-                - ☐ **Relazione tecnica di progetto** con:
+                - ✅ **Asseverazione tecnico abilitato** (obbligatoria - Par. 12.5)
+                - 📄 **Relazione tecnica di progetto** con:
                   - Descrizione dettagliata intervento
                   - Caratterizzazione ante-operam chiusure trasparenti
                   - Prestazioni post-operam componenti installati
@@ -11246,45 +11850,45 @@ def main():
                 ##### 📸 Documentazione Fotografica
 
                 **Minimo 6 foto** (formato PDF):
-                - ☐ Facciate oggetto intervento ANTE-operam
-                - ☐ Facciate oggetto intervento POST-operam
-                - ☐ Facciate in fase di lavorazione
-                - ☐ Vista dettaglio schermature/pellicole installate
-                - ☐ Meccanismi automatici (se installati)
-                - ☐ 3 foto aggiuntive intervento serramenti abbinato (II.B)
+                - 📷 Facciate oggetto intervento ANTE-operam
+                - 📷 Facciate oggetto intervento POST-operam
+                - 📷 Facciate in fase di lavorazione
+                - 📷 Vista dettaglio schermature/pellicole installate
+                - 📷 Meccanismi automatici (se installati)
+                - 📷 3 foto aggiuntive intervento serramenti abbinato (II.B)
 
                 ##### 🔬 Certificazioni Tecniche
 
-                - ☐ **Certificazione produttore schermature**:
+                - 📜 **Certificazione produttore schermature**:
                   - Prestazione solare classe ≥ 3 (UNI EN 14501)
                   - Valutazione con UNI EN ISO 52022-1:2018
-                - ☐ **Certificazione pellicole** (se applicabile):
+                - 📜 **Certificazione pellicole** (se applicabile):
                   - Fattore solare g_tot classe 3 o 4
                   - Trasmittanza vetro riferimento
 
                 ##### 📋 APE e Diagnosi (se P ≥ 200 kW)
 
-                - ☐ APE post-operam (se P ≥ 200 kW)
-                - ☐ Diagnosi energetica ante-operam (se P ≥ 200 kW)
+                - 🏠 APE post-operam (se P ≥ 200 kW)
+                - 📊 Diagnosi energetica ante-operam (se P ≥ 200 kW)
 
                 ##### 📋 APE ante+post (imprese/ETS su terziario)
 
-                - ☐ APE ante-operam (verifica riduzione energia ≥ 10-20%)
-                - ☐ APE post-operam (verifica riduzione energia ≥ 10-20%)
+                - 🏠 APE ante-operam (verifica riduzione energia ≥ 10-20%)
+                - 🏠 APE post-operam (verifica riduzione energia ≥ 10-20%)
 
                 ##### 💰 Documenti Economici
 
-                - ☐ Fatture intervento con dettaglio spese ammissibili
-                - ☐ Bonifici/ricevute pagamento
-                - ☐ Prospetto ripartizione spese (se ESCo/PPP)
+                - 🧾 Fatture intervento con dettaglio spese ammissibili
+                - 💳 Bonifici/ricevute pagamento
+                - 📋 Prospetto ripartizione spese (se ESCo/PPP)
 
                 ##### 📁 Documenti da Conservare (5 anni)
 
-                - Titolo autorizzativo/abilitativo (se richiesto)
-                - Schede tecniche schermature/pellicole/automazione
-                - Certificazioni produttori
-                - APE post-operam (tutti i casi)
-                - Diagnosi ante-operam (se P ≥ 200 kW)
+                - 📄 Titolo autorizzativo/abilitativo (se richiesto)
+                - 📋 Schede tecniche schermature/pellicole/automazione
+                - 📜 Certificazioni produttori
+                - 🏠 APE post-operam (tutti i casi)
+                - 📊 Diagnosi ante-operam (se P ≥ 200 kW)
 
                 ---
 
@@ -11310,15 +11914,15 @@ def main():
 
             st.markdown("### 📄 Documentazione Comune")
 
-            doc_comune_illum = {
-                "Richiesta di concessione degli incentivi firmata digitalmente": False,
-                "Copia documento identità del Soggetto Responsabile": False,
-                "Fatture e ricevute pagamenti (bonifici/mandati di pagamento)": False,
-                "Visura catastale edificio": False,
-            }
+            doc_comune_illum = [
+                ("📝 Richiesta di concessione degli incentivi firmata digitalmente", "richiesta"),
+                ("🪪 Copia documento identità del Soggetto Responsabile", "doc_id"),
+                ("💳 Fatture e ricevute pagamenti (bonifici/mandati di pagamento)", "fatture"),
+                ("🏠 Visura catastale edificio", "visura"),
+            ]
 
-            for doc, _ in doc_comune_illum.items():
-                st.checkbox(f"☐ {doc}", key=f"doc_comune_illum_{doc}")
+            for label, key in doc_comune_illum:
+                st.checkbox(label, key=f"doc_comune_illum_{key}")
 
             st.markdown("### 🔧 Documentazione Tecnica Specifica")
 
@@ -11326,104 +11930,104 @@ def main():
             st.caption("Contenente:")
 
             doc_relazione_illum = [
-                "Descrizione dell'intervento realizzato",
-                "Superficie utile illuminata (m²)",
-                "Tipologia illuminazione (interni/esterni/mista)",
-                "Potenza ante-operam e post-operam (W) con dimostrazione rispetto limite 50%",
-                "Caratteristiche tecniche lampade installate (efficienza lm/W, CRI)",
-                "Dimostrazione rispetto criteri illuminotecnici UNI EN 12464-1",
-                "Calcolo spesa ammissibile con dettaglio costi unitari (€/m²)"
+                ("📄 Descrizione dell'intervento realizzato", "descrizione"),
+                ("📐 Superficie utile illuminata (m²)", "superficie"),
+                ("💡 Tipologia illuminazione (interni/esterni/mista)", "tipologia"),
+                ("⚡ Potenza ante-operam e post-operam (W) con dimostrazione rispetto limite 50%", "potenza"),
+                ("🔬 Caratteristiche tecniche lampade installate (efficienza lm/W, CRI)", "caratteristiche"),
+                ("📊 Dimostrazione rispetto criteri illuminotecnici UNI EN 12464-1", "criteri"),
+                ("💰 Calcolo spesa ammissibile con dettaglio costi unitari (€/m²)", "calcolo_spesa")
             ]
 
-            for doc in doc_relazione_illum:
-                st.checkbox(f"☐ {doc}", key=f"doc_rel_illum_{doc}")
+            for label, key in doc_relazione_illum:
+                st.checkbox(label, key=f"doc_rel_illum_{key}")
 
             st.markdown("**📸 Documentazione Fotografica**")
 
             doc_foto_illum = [
-                "Minimo 6 fotografie dell'edificio/unità immobiliare",
-                "Fotografie impianto illuminazione ante-operam",
-                "Fotografie impianto illuminazione post-operam (lampade installate)",
-                "Fotografie targhe identificative apparecchi (marca, modello, dati tecnici)",
-                "Fotografie quadri elettrici/sistemi di alimentazione",
-                "Fotografie ambienti illuminati (per verifica criteri illuminotecnici)"
+                ("📷 Minimo 6 fotografie dell'edificio/unità immobiliare", "foto_edificio"),
+                ("📷 Fotografie impianto illuminazione ante-operam", "foto_ante"),
+                ("📷 Fotografie impianto illuminazione post-operam (lampade installate)", "foto_post"),
+                ("🏷️ Fotografie targhe identificative apparecchi (marca, modello, dati tecnici)", "foto_targhe"),
+                ("⚡ Fotografie quadri elettrici/sistemi di alimentazione", "foto_quadri"),
+                ("🏢 Fotografie ambienti illuminati (per verifica criteri illuminotecnici)", "foto_ambienti")
             ]
 
-            for doc in doc_foto_illum:
-                st.checkbox(f"☐ {doc}", key=f"doc_foto_illum_{doc}")
+            for label, key in doc_foto_illum:
+                st.checkbox(label, key=f"doc_foto_illum_{key}")
 
             st.markdown("**🏭 Certificazioni Produttore/Laboratorio**")
 
             doc_cert_illum = [
-                "Certificazione marcatura CE lampade (conformità direttive europee)",
-                "Certificazione da laboratorio accreditato per caratteristiche fotometriche",
-                "Dichiarazione solido fotometrico lampade installate",
-                "Certificazione indice resa cromatica (CRI ≥80 interni, ≥60 esterni)",
-                "Certificazione efficienza luminosa (≥80 lm/W)",
-                "Conformità regolamenti UE 2017/1369 e direttiva 2009/125/CE (Ecodesign)",
-                "Schede tecniche dettagliate prodotti installati"
+                ("🇪🇺 Certificazione marcatura CE lampade (conformità direttive europee)", "cert_ce"),
+                ("🔬 Certificazione da laboratorio accreditato per caratteristiche fotometriche", "cert_lab"),
+                ("💡 Dichiarazione solido fotometrico lampade installate", "solido_fotom"),
+                ("🎨 Certificazione indice resa cromatica (CRI ≥80 interni, ≥60 esterni)", "cert_cri"),
+                ("⚡ Certificazione efficienza luminosa (≥80 lm/W)", "cert_efficienza"),
+                ("📜 Conformità regolamenti UE 2017/1369 e direttiva 2009/125/CE (Ecodesign)", "conf_ecodesign"),
+                ("📋 Schede tecniche dettagliate prodotti installati", "schede_tecniche")
             ]
 
-            for doc in doc_cert_illum:
-                st.checkbox(f"☐ {doc}", key=f"doc_cert_illum_{doc}")
+            for label, key in doc_cert_illum:
+                st.checkbox(label, key=f"doc_cert_illum_{key}")
 
             st.markdown("**📐 Documentazione Progettuale**")
 
             doc_prog_illum = [
-                "Progetto illuminotecnico conforme a UNI EN 12464-1",
-                "Calcoli illuminotecnici (livelli illuminamento, uniformità, abbagliamento)",
-                "Schemi elettrici impianto illuminazione post-operam",
-                "Dichiarazione conformità impianto elettrico (se modificato)",
-                "Verifica conformità norme CEI vigenti"
+                ("📐 Progetto illuminotecnico conforme a UNI EN 12464-1", "progetto_illum"),
+                ("📊 Calcoli illuminotecnici (livelli illuminamento, uniformità, abbagliamento)", "calcoli_illum"),
+                ("⚡ Schemi elettrici impianto illuminazione post-operam", "schemi_elettrici"),
+                ("✅ Dichiarazione conformità impianto elettrico (se modificato)", "dich_conformita"),
+                ("📋 Verifica conformità norme CEI vigenti", "conf_cei")
             ]
 
-            for doc in doc_prog_illum:
-                st.checkbox(f"☐ {doc}", key=f"doc_prog_illum_{doc}")
+            for label, key in doc_prog_illum:
+                st.checkbox(label, key=f"doc_prog_illum_{key}")
 
             st.markdown("**🌃 Per illuminazione esterna/pertinenze**")
 
             doc_esterni_illum = [
-                "Dichiarazione conformità normativa inquinamento luminoso",
-                "Dimostrazione che ambiente esterno è pertinenza dell'edificio",
-                "Verifica superficie pertinenza ≤ 2× superficie edificio"
+                ("🌙 Dichiarazione conformità normativa inquinamento luminoso", "conf_inquin_lum"),
+                ("🏢 Dimostrazione che ambiente esterno è pertinenza dell'edificio", "pertinenza"),
+                ("📐 Verifica superficie pertinenza ≤ 2× superficie edificio", "verifica_sup")
             ]
 
-            for doc in doc_esterni_illum:
-                st.checkbox(f"☐ {doc}", key=f"doc_ext_illum_{doc}")
+            for label, key in doc_esterni_illum:
+                st.checkbox(label, key=f"doc_ext_illum_{key}")
 
             st.markdown("**⚙️ Per edifici con P ≥ 200 kW**")
 
             doc_200kw_illum = [
-                "Relazione tecnica descrittiva dell'intervento (al posto di diagnosi energetica completa)",
-                "APE (Attestato Prestazione Energetica) post-operam",
-                "Documentazione stato legittimità urbanistico-edilizia edificio"
+                ("📄 Relazione tecnica descrittiva dell'intervento (al posto di diagnosi energetica completa)", "relazione_200"),
+                ("🏠 APE (Attestato Prestazione Energetica) post-operam", "ape_post_200"),
+                ("📋 Documentazione stato legittimità urbanistico-edilizia edificio", "legittimita")
             ]
 
-            for doc in doc_200kw_illum:
-                st.checkbox(f"☐ {doc}", key=f"doc_200_illum_{doc}")
+            for label, key in doc_200kw_illum:
+                st.checkbox(label, key=f"doc_200_illum_{key}")
 
             st.markdown("**🏢 Per imprese/ETS economici su edifici terziario**")
 
             doc_terziario_illum = [
-                "APE ante-operam",
-                "APE post-operam",
-                "Dimostrazione riduzione energia primaria ≥10% (solo II.E) o ≥20% (multi-intervento)"
+                ("🏠 APE ante-operam", "ape_ante_terz"),
+                ("🏠 APE post-operam", "ape_post_terz"),
+                ("📊 Dimostrazione riduzione energia primaria ≥10% (solo II.E) o ≥20% (multi-intervento)", "riduzione_energia")
             ]
 
-            for doc in doc_terziario_illum:
-                st.checkbox(f"☐ {doc}", key=f"doc_terz_illum_{doc}")
+            for label, key in doc_terziario_illum:
+                st.checkbox(label, key=f"doc_terz_illum_{key}")
 
             st.markdown("**💰 Documentazione Economica**")
 
             doc_econ_illum = [
-                "Fatture elettroniche con dettaglio spese ammissibili",
-                "Ricevute pagamenti con evidenza beneficiario e ordinante",
-                "Prospetto riepilogativo spese per tipologia (fornitura, posa, adeguamenti elettrici)",
-                "Dichiarazione IVA se costituisce un costo"
+                ("🧾 Fatture elettroniche con dettaglio spese ammissibili", "fatture_econ"),
+                ("💳 Ricevute pagamenti con evidenza beneficiario e ordinante", "ricevute"),
+                ("📋 Prospetto riepilogativo spese per tipologia (fornitura, posa, adeguamenti elettrici)", "prospetto_spese"),
+                ("📄 Dichiarazione IVA se costituisce un costo", "dich_iva")
             ]
 
-            for doc in doc_econ_illum:
-                st.checkbox(f"☐ {doc}", key=f"doc_econ_illum_{doc}")
+            for label, key in doc_econ_illum:
+                st.checkbox(label, key=f"doc_econ_illum_{key}")
 
             st.markdown("---")
 
@@ -13241,8 +13845,7 @@ def main():
     st.divider()
     st.markdown("""
     <div style="text-align: center; color: #666; font-size: 0.8rem;">
-        Energy Incentive Manager v2.0 | Conto Termico 3.0 (DM 7/8/2025) ed Ecobonus<br>
-        I calcoli sono indicativi e non sostituiscono la consulenza di un professionista abilitato.
+        Energy Incentive Manager v2.0 | Conto Termico 3.0 (DM 7/8/2025) ed Ecobonus
     </div>
     """, unsafe_allow_html=True)
 

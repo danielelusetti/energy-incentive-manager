@@ -13,6 +13,20 @@ from typing import NamedTuple
 
 logger = logging.getLogger(__name__)
 
+# Tabella 14 - Valori limite massimi di trasmittanza termica [W/m²K]
+# Paragrafo 9.1.1 DM 7/8/2025
+TRASMITTANZA_LIMITI = {
+    "coperture": {
+        "A": 0.27, "B": 0.27, "C": 0.27, "D": 0.22, "E": 0.20, "F": 0.19
+    },
+    "pavimenti": {
+        "A": 0.40, "B": 0.40, "C": 0.30, "D": 0.28, "E": 0.25, "F": 0.23
+    },
+    "pareti": {
+        "A": 0.38, "B": 0.38, "C": 0.30, "D": 0.26, "E": 0.23, "F": 0.22
+    }
+}
+
 
 class RisultatoValidazione(NamedTuple):
     ammissibile: bool
@@ -65,7 +79,23 @@ def valida_requisiti_isolamento(
     if trasm <= 0:
         errori.append("Trasmittanza deve essere > 0 W/m²K")
     else:
-        punteggio += 20
+        # Verifica limiti trasmittanza (Tabella 14)
+        if tipo_superficie in TRASMITTANZA_LIMITI and zona_climatica in TRASMITTANZA_LIMITI.get(tipo_superficie, {}):
+            limite_base = TRASMITTANZA_LIMITI[tipo_superficie][zona_climatica]
+            # Incremento del 30% per isolamento interno
+            if pos == "interno":
+                limite = limite_base * 1.30
+                tipo_limite = "interno (+30%)"
+            else:
+                limite = limite_base
+                tipo_limite = "esterno"
+
+            if trasm > limite:
+                errori.append(f"Trasmittanza {trasm:.3f} W/m²K supera il limite {tipo_limite} di {limite:.3f} W/m²K per zona {zona_climatica}")
+            else:
+                punteggio += 20
+        else:
+            punteggio += 20  # Se tipo non riconosciuto, passa comunque
 
     # Documentazione obbligatoria
     if not ha_diagnosi_energetica:

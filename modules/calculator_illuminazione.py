@@ -19,12 +19,21 @@ logger = logging.getLogger(__name__)
 # PARAMETRI DI RIFERIMENTO (da Regole Applicative CT 3.0 - Par. 9.5, Tabella 7)
 # ==============================================================================
 
-# Tabella 7 - Allegato 2 - Parametri II.E
+# Tabella 20 - Allegato 2 - Parametri II.E (D.M. 7 agosto 2025)
+# NOTA: Esistono DUE tipologie con parametri diversi
 PARAMETRI_ILLUMINAZIONE = {
-    "percentuale_base": 0.40,  # 40% per soggetti privati, imprese, ETS
-    "percentuale_pa_edifici_pubblici": 1.00,  # 100% per PA su edifici pubblici
-    "costo_max_mq": 15.0,  # €/m² di superficie utile illuminata
-    "incentivo_max": 50000.0,  # € - massimale incentivo
+    "alta_efficienza": {  # Lampade ad alta efficienza
+        "percentuale_base": 0.40,
+        "percentuale_pa_edifici_pubblici": 1.00,
+        "costo_max_mq": 15.0,  # €/m²
+        "incentivo_max": 50000.0,  # €
+    },
+    "led": {  # Lampade a LED
+        "percentuale_base": 0.40,
+        "percentuale_pa_edifici_pubblici": 1.00,
+        "costo_max_mq": 35.0,  # €/m²
+        "incentivo_max": 140000.0,  # €
+    },
     "soglia_rata_unica": 15000.0,  # € - sotto questa soglia, erogazione in unica soluzione
     "anni_rateazione": 5  # anni
 }
@@ -36,6 +45,9 @@ def calculate_lighting_incentive(
     # Dati superficie e spesa
     superficie_illuminata_mq: float = 0.0,
     spesa_sostenuta: float = 0.0,
+
+    # Tipo lampada (IMPORTANTE: determinare i massimali corretti)
+    tipo_lampada: str = "led",  # "led" o "alta_efficienza"
 
     # Dati potenza (per calcolo spesa ammissibile se impianto sottodimensionato)
     potenza_ante_operam_w: float = 0.0,
@@ -70,10 +82,20 @@ def calculate_lighting_incentive(
     """
 
     logger.info("=" * 60)
-    logger.info("AVVIO CALCOLO INCENTIVO CT 3.0 - ILLUMINAZIONE LED (II.E)")
+    logger.info("AVVIO CALCOLO INCENTIVO CT 3.0 - ILLUMINAZIONE (II.E)")
     logger.info("=" * 60)
+    logger.info(f"Tipo lampada: {tipo_lampada}")
     logger.info(f"Tipo soggetto: {tipo_soggetto}")
     logger.info(f"Tipo edificio: {tipo_edificio}")
+
+    # Recupera parametri in base al tipo di lampada
+    if tipo_lampada not in PARAMETRI_ILLUMINAZIONE:
+        tipo_lampada = "led"  # Default a LED
+    params = PARAMETRI_ILLUMINAZIONE[tipo_lampada]
+    costo_max_mq = params["costo_max_mq"]
+    incentivo_max = params["incentivo_max"]
+
+    logger.info(f"Parametri Tabella 20: C_max = {costo_max_mq} €/m², I_max = {incentivo_max:,.0f} €")
 
     # =========================================================================
     # STEP 1: Determinazione percentuale incentivata
@@ -81,10 +103,10 @@ def calculate_lighting_incentive(
 
     # PA su edifici pubblici: 100%, altri: 40%
     if tipo_soggetto == "pa" and tipo_edificio == "pubblico":
-        percentuale_incentivo = PARAMETRI_ILLUMINAZIONE["percentuale_pa_edifici_pubblici"]
+        percentuale_incentivo = params["percentuale_pa_edifici_pubblici"]
         logger.info(f"Percentuale incentivo: 100% (PA su edificio pubblico)")
     else:
-        percentuale_incentivo = PARAMETRI_ILLUMINAZIONE["percentuale_base"]
+        percentuale_incentivo = params["percentuale_base"]
         logger.info(f"Percentuale incentivo: 40%")
 
     # =========================================================================
@@ -108,10 +130,10 @@ def calculate_lighting_incentive(
     # Costo specifico effettivo
     costo_specifico = spesa_sostenuta / superficie_illuminata_mq
     logger.info(f"  Costo specifico: {costo_specifico:.2f} €/m²")
-    logger.info(f"  Costo massimo ammissibile: {PARAMETRI_ILLUMINAZIONE['costo_max_mq']:.2f} €/m²")
+    logger.info(f"  Costo massimo ammissibile: {costo_max_mq:.2f} €/m²")
 
     # Applica il minimo tra costo effettivo e massimo ammissibile
-    costo_ammissibile = min(costo_specifico, PARAMETRI_ILLUMINAZIONE["costo_max_mq"])
+    costo_ammissibile = min(costo_specifico, costo_max_mq)
     logger.info(f"  Costo ammissibile: {costo_ammissibile:.2f} €/m²")
 
     # Spesa ammissibile base
@@ -184,13 +206,13 @@ def calculate_lighting_incentive(
     logger.info("")
     logger.info("[STEP 6] Applicazione massimale")
     logger.info(f"  Incentivo (prima massimale): {incentivo_con_premialita:,.2f} €")
-    logger.info(f"  Massimale intervento II.E: {PARAMETRI_ILLUMINAZIONE['incentivo_max']:,.2f} €")
+    logger.info(f"  Massimale intervento II.E ({tipo_lampada}): {incentivo_max:,.2f} €")
     logger.info(f"  Massimale complessivo Titolo II: {MASSIMALE_COMPLESSIVO:,.2f} €")
 
-    incentivo_finale = min(incentivo_con_premialita, PARAMETRI_ILLUMINAZIONE["incentivo_max"])
+    incentivo_finale = min(incentivo_con_premialita, incentivo_max)
 
     if incentivo_finale < incentivo_con_premialita:
-        logger.info(f"  ⚠️ Incentivo limitato dal massimale di {PARAMETRI_ILLUMINAZIONE['incentivo_max']:,.2f} €")
+        logger.info(f"  ⚠️ Incentivo limitato dal massimale di {incentivo_max:,.2f} €")
 
     logger.info(f"  Incentivo finale: {incentivo_finale:,.2f} €")
 
@@ -203,16 +225,19 @@ def calculate_lighting_incentive(
 
     # PA/ETS su edifici pubblici: sempre rata unica
     # Altri: rata unica se ≤ 15.000€, altrimenti 5 anni
+    soglia_rata_unica = PARAMETRI_ILLUMINAZIONE["soglia_rata_unica"]
+    anni_rateazione = PARAMETRI_ILLUMINAZIONE["anni_rateazione"]
+
     if tipo_soggetto == "pa" and tipo_edificio == "pubblico":
         anni_erogazione = 1
         logger.info(f"  PA su edificio pubblico → Erogazione in RATA UNICA")
-    elif incentivo_finale <= PARAMETRI_ILLUMINAZIONE["soglia_rata_unica"]:
+    elif incentivo_finale <= soglia_rata_unica:
         anni_erogazione = 1
-        logger.info(f"  Incentivo {incentivo_finale:,.2f} € ≤ {PARAMETRI_ILLUMINAZIONE['soglia_rata_unica']:,.2f} € → Rata unica")
+        logger.info(f"  Incentivo {incentivo_finale:,.2f} € ≤ {soglia_rata_unica:,.2f} € → Rata unica")
     else:
-        anni_erogazione = PARAMETRI_ILLUMINAZIONE["anni_rateazione"]
+        anni_erogazione = anni_rateazione
         rata_annuale = incentivo_finale / anni_erogazione
-        logger.info(f"  Incentivo {incentivo_finale:,.2f} € > {PARAMETRI_ILLUMINAZIONE['soglia_rata_unica']:,.2f} €")
+        logger.info(f"  Incentivo {incentivo_finale:,.2f} € > {soglia_rata_unica:,.2f} €")
         logger.info(f"  Erogazione in {anni_erogazione} rate annuali di {rata_annuale:,.2f} €")
 
     # =========================================================================
@@ -230,7 +255,7 @@ def calculate_lighting_incentive(
     dettagli = []
     dettagli.append(f"Superficie illuminata: {superficie_illuminata_mq:.2f} m²")
     dettagli.append(f"Spesa sostenuta: {spesa_sostenuta:,.2f} €")
-    dettagli.append(f"Costo specifico: {costo_specifico:.2f} €/m² (max: {PARAMETRI_ILLUMINAZIONE['costo_max_mq']:.2f} €/m²)")
+    dettagli.append(f"Costo specifico: {costo_specifico:.2f} €/m² (max: {costo_max_mq:.2f} €/m²)")
     dettagli.append(f"Spesa ammissibile: {spesa_ammissibile:,.2f} €")
 
     if riduzione_applicata:

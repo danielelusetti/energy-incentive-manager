@@ -450,6 +450,7 @@ def valida_requisiti_ct(
     impianto_esistente: bool = True,
     categoria_catastale: str = None,
     alimentazione: str = "elettrica",
+    iter_semplificato: bool = False,
 ) -> RisultatoValidazione:
     """
     Valida i requisiti per l'ammissibilita' al Conto Termico 3.0.
@@ -465,6 +466,7 @@ def valida_requisiti_ct(
         impianto_esistente: True se sostituisce impianto esistente
         categoria_catastale: Categoria catastale edificio (es. "A/2", "D/1")
         alimentazione: "elettrica" o "gas" per determinare SCOP vs SPER
+        iter_semplificato: True se prodotto nel catalogo GSE (bypassa controllo SCOP)
 
     Returns:
         RisultatoValidazione con esito e dettagli
@@ -578,6 +580,8 @@ def valida_requisiti_ct(
 
     # -------------------------------------------------------------------------
     # REQ-CT-07: SCOP/COP/SPER minimo Ecodesign
+    # Se iter_semplificato=True (prodotto nel catalogo GSE), il requisito è
+    # automaticamente superato perché il GSE ha già verificato l'ammissibilità
     # -------------------------------------------------------------------------
     if alimentazione.lower() == "gas":
         scop_min = _get_sper_minimo_ct(tipo_intervento, bassa_temperatura)
@@ -585,15 +589,22 @@ def valida_requisiti_ct(
     else:
         scop_min = _get_scop_minimo_ct(tipo_intervento, gwp_refrigerante, bassa_temperatura, potenza_nominale_kw)
         etichetta_eff = "SCOP/COP"
-    scop_sufficiente = scop_dichiarato >= scop_min if scop_min else False
+
+    # Se iter semplificato, il requisito è automaticamente superato
+    if iter_semplificato:
+        scop_sufficiente = True
+        dettaglio_scop = f"Prodotto nel Catalogo GSE - requisiti già verificati ({etichetta_eff} {scop_dichiarato})"
+    else:
+        scop_sufficiente = scop_dichiarato >= scop_min if scop_min else False
+        dettaglio_scop = f"{etichetta_eff} {scop_dichiarato} >= {scop_min}" if scop_sufficiente else f"{etichetta_eff} {scop_dichiarato} < {scop_min} (minimo)"
 
     req_scop = RequisitoValidazione(
         codice="REQ-CT-07",
-        descrizione=f"{etichetta_eff} >= minimo Ecodesign ({scop_min})",
+        descrizione=f"{etichetta_eff} >= minimo Ecodesign ({scop_min})" + (" [Catalogo GSE]" if iter_semplificato else ""),
         superato=scop_sufficiente,
         obbligatorio=True,
-        dettaglio=f"{etichetta_eff} {scop_dichiarato} >= {scop_min}" if scop_sufficiente else f"{etichetta_eff} {scop_dichiarato} < {scop_min} (minimo)",
-        riferimento_normativo="Allegato 1 - Requisiti Ecodesign"
+        dettaglio=dettaglio_scop,
+        riferimento_normativo="Allegato 1 - Requisiti Ecodesign" + (" / Art. 14 comma 5" if iter_semplificato else "")
     )
     requisiti.append(req_scop)
     if not scop_sufficiente:

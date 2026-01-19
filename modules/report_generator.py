@@ -1052,10 +1052,6 @@ def genera_report_html(
     </ul>
 
     <div class="footer">
-        <p>
-            Documento generato automaticamente da Energy Incentive Manager<br>
-            I calcoli sono indicativi e non sostituiscono la consulenza di un professionista abilitato.
-        </p>
     </div>
 </body>
 </html>
@@ -1292,8 +1288,8 @@ def genera_report_solare_termico_html(
     </p>
 
     <h2>2. Scenari Analizzati</h2>
-    <p>Sono stati analizzati i seguenti {n} scenari di installazione:</p>
-""".format(n=len(scenari))
+    <p>Sono stati analizzati i seguenti {len(scenari)} scenari di installazione:</p>
+"""
 
     for i, scenario in enumerate(scenari, 1):
         html += f"""
@@ -1471,10 +1467,6 @@ def genera_report_solare_termico_html(
     </ul>
 
     <div class="footer">
-        <p>
-            Documento generato automaticamente da Energy Incentive Manager<br>
-            I calcoli sono indicativi e non sostituiscono la consulenza di un professionista abilitato.
-        </p>
     </div>
 </body>
 </html>
@@ -1490,63 +1482,389 @@ def genera_report_scaldacqua_html(
     anno: int,
     tasso_sconto: float
 ) -> str:
-    """Genera report HTML per scaldacqua a pompa di calore."""
-    from modules.report_generator import ScenarioScaldacqua
+    """
+    Genera report HTML completo per scaldacqua a pompa di calore (III.E).
 
-    data_generazione = datetime.now().strftime("%d/%m/%Y %H:%M")
+    Args:
+        scenari: Lista di ScenarioScaldacqua
+        tipo_soggetto: Tipo di soggetto richiedente
+        tipo_abitazione: Tipo di abitazione
+        anno: Anno della spesa
+        tasso_sconto: Tasso di sconto per NPV
 
-    righe_scenari = ""
-    for s in scenari:
-        iter_badge = '<span style="background: #4CAF50; color: white; padding: 3px 8px; border-radius: 3px; font-size: 0.8em;">ITER SEMPLIFICATO</span>' if s.iter_semplificato else ""
-        prodotto_info = f"{s.prodotto_marca} {s.prodotto_modello}" if s.prodotto_marca else "N/D"
+    Returns:
+        Stringa HTML del report
+    """
+    data_report = datetime.now().strftime("%d/%m/%Y %H:%M")
 
-        righe_scenari += f"""
-        <tr>
-            <td>{s.nome} {iter_badge}</td>
-            <td>{prodotto_info}</td>
-            <td>{s.classe_energetica}</td>
-            <td>{s.capacita_litri} L</td>
-            <td>{s.potenza_kw:.1f} kW</td>
-            <td>€ {s.spesa_lavori:,.0f}</td>
-            <td style="background: #E8F5E9;">€ {s.ct_incentivo:,.0f}</td>
-            <td style="font-weight: bold; color: #1565C0;">€ {s.ct_npv:,.0f}</td>
-            <td style="background: #E3F2FD;">€ {s.eco_detrazione:,.0f}</td>
-            <td style="font-weight: bold; color: #1565C0;">€ {s.eco_npv:,.0f}</td>
-            <td><strong>{s.piu_conveniente}</strong></td>
-        </tr>
-        """
-
-    html = f"""<!DOCTYPE html>
+    html = f"""
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Relazione Tecnica - Scaldacqua PdC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relazione Tecnica - Scaldacqua a Pompa di Calore</title>
     <style>
-        body {{ font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }}
-        .container {{ max-width: 1200px; margin: 0 auto; background: white; padding: 30px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }}
-        h1 {{ color: #2E7D32; border-bottom: 3px solid #4CAF50; padding-bottom: 10px; }}
-        table {{ width: 100%; border-collapse: collapse; margin: 20px 0; }}
-        th {{ background: #4CAF50; color: white; padding: 12px; }}
-        td {{ padding: 10px; border-bottom: 1px solid #ddd; }}
-        .info-box {{ background: #E3F2FD; padding: 15px; margin: 20px 0; }}
+        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+        body {{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6; color: #333;
+            max-width: 210mm; margin: 0 auto; padding: 20mm; background: white;
+        }}
+        .header {{
+            text-align: center; border-bottom: 3px solid #4CAF50;
+            padding-bottom: 20px; margin-bottom: 30px;
+        }}
+        .header h1 {{ color: #4CAF50; font-size: 24px; margin-bottom: 10px; }}
+        .header .subtitle {{ color: #666; font-size: 14px; }}
+        .meta-info {{
+            display: flex; justify-content: space-between; background: #f5f5f5;
+            padding: 15px; border-radius: 5px; margin-bottom: 25px; font-size: 12px;
+        }}
+        h2 {{
+            color: #4CAF50; border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px; margin: 25px 0 15px 0; font-size: 18px;
+        }}
+        h3 {{ color: #333; margin: 20px 0 10px 0; font-size: 14px; }}
+        table {{
+            width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 12px;
+        }}
+        th, td {{ border: 1px solid #ddd; padding: 10px; text-align: left; }}
+        th {{ background-color: #4CAF50; color: white; font-weight: 600; }}
+        tr:nth-child(even) {{ background-color: #f9f9f9; }}
+        .highlight {{ background-color: #e8f5e9 !important; font-weight: bold; }}
+        .scenario-box {{
+            border: 1px solid #ddd; border-radius: 8px;
+            padding: 15px; margin: 15px 0; background: #fafafa;
+        }}
+        .scenario-title {{
+            font-weight: bold; color: #4CAF50; font-size: 14px; margin-bottom: 10px;
+        }}
+        .iter-badge {{
+            background: #2196F3; color: white; padding: 3px 8px;
+            border-radius: 3px; font-size: 0.8em; margin-left: 10px;
+        }}
+        .positive {{ color: #2E7D32; }}
+        .negative {{ color: #C62828; }}
+        .recommendation {{
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-left: 4px solid #4CAF50;
+            padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0;
+        }}
+        .recommendation h3 {{ color: #2E7D32; margin-bottom: 10px; }}
+        .formula-box {{
+            background: #e8f5e9; border: 1px solid #a5d6a7;
+            padding: 15px; margin: 15px 0; border-radius: 5px;
+            font-family: 'Courier New', monospace; font-size: 12px;
+        }}
+        .note {{
+            background: #fff3e0; border-left: 4px solid #FF9800;
+            padding: 10px 15px; margin: 15px 0; font-size: 11px; color: #E65100;
+        }}
+        .footer {{
+            margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd;
+            font-size: 10px; color: #999; text-align: center;
+        }}
+        .comparison-grid {{
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: 15px; margin: 15px 0;
+        }}
+        .comparison-card {{
+            border: 1px solid #ddd; border-radius: 8px; padding: 15px; text-align: center;
+        }}
+        .comparison-card.ct {{
+            border-color: #4CAF50; background: linear-gradient(to bottom, #e8f5e9, white);
+        }}
+        .comparison-card.eco {{
+            border-color: #1565C0; background: linear-gradient(to bottom, #e3f2fd, white);
+        }}
+        .comparison-card h4 {{ margin-bottom: 10px; }}
+        .comparison-card.ct h4 {{ color: #2E7D32; }}
+        .comparison-card.eco h4 {{ color: #1565C0; }}
+        .big-number {{ font-size: 24px; font-weight: bold; margin: 10px 0; }}
+        .ct .big-number {{ color: #2E7D32; }}
+        .eco .big-number {{ color: #1565C0; }}
+        @media print {{ body {{ padding: 10mm; }} .page-break {{ page-break-before: always; }} }}
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Relazione Tecnica - Scaldacqua a Pompa di Calore (III.E)</h1>
-        <div class="info-box">
-            Soggetto: {tipo_soggetto} | Abitazione: {tipo_abitazione} | Anno: {anno} | Tasso NPV: {tasso_sconto*100:.1f}% | Data: {data_generazione}
-        </div>
+    <div class="header">
+        <h1>🚿 RELAZIONE TECNICA - SCALDACQUA A POMPA DI CALORE</h1>
+        <div class="subtitle">Analisi Comparativa Incentivi Energetici</div>
+        <div class="subtitle">Conto Termico 3.0 (DM 7/8/2025) vs Ecobonus</div>
+    </div>
+
+    <div class="meta-info">
+        <div><strong>Data:</strong> {data_report}</div>
+        <div><strong>Soggetto:</strong> {tipo_soggetto.replace('_', ' ').title()}</div>
+        <div><strong>Abitazione:</strong> {tipo_abitazione.replace('_', ' ').title()}</div>
+        <div><strong>Anno spesa:</strong> {anno}</div>
+    </div>
+
+    <h2>1. Premessa</h2>
+    <p>
+        La presente relazione tecnica analizza le opzioni di incentivazione disponibili per
+        l'installazione di scaldacqua a pompa di calore (intervento III.E), confrontando il
+        <strong>Conto Termico 3.0</strong> (DM 7 agosto 2025) con l'<strong>Ecobonus</strong>
+        (D.L. 63/2013 e s.m.i.).
+    </p>
+    <p style="margin-top: 10px;">
+        L'analisi include il calcolo del <strong>Valore Attuale Netto (NPV)</strong> con un tasso
+        di sconto del {tasso_sconto*100:.1f}% per una corretta valutazione finanziaria.
+    </p>
+
+    <h2>2. Quadro Normativo</h2>
+
+    <h3>2.1 Conto Termico 3.0 - DM 7 agosto 2025</h3>
+    <p>
+        L'intervento III.E riguarda la <strong>sostituzione di scaldacqua elettrici a resistenza</strong>
+        con scaldacqua a pompa di calore dedicati alla produzione di acqua calda sanitaria.
+    </p>
+    <div class="note">
+        <strong>Art. 8, comma 1, lettera e):</strong> Sostituzione di scaldacqua elettrici a resistenza
+        con scaldacqua a pompa di calore per la produzione di ACS, anche abbinati a sistemi solari
+        termici, nel rispetto dei requisiti minimi di cui all'Allegato II, Tabella 7.
+    </div>
+
+    <h3>2.2 Requisiti Tecnici (Allegato II, Tabella 7)</h3>
+    <table>
+        <tr>
+            <th>Requisito</th>
+            <th>Valore Minimo</th>
+        </tr>
+        <tr>
+            <td>Classe energetica minima</td>
+            <td><strong>A</strong> (etichetta ErP)</td>
+        </tr>
+        <tr>
+            <td>COP minimo</td>
+            <td><strong>2.6</strong> (condizioni EN 16147)</td>
+        </tr>
+        <tr>
+            <td>Sostituzione necessaria</td>
+            <td>Scaldacqua elettrico a resistenza esistente</td>
+        </tr>
+    </table>
+
+    <h3>2.3 Ecobonus - D.L. 63/2013</h3>
+    <p>
+        Gli scaldacqua a pompa di calore rientrano tra gli interventi di riqualificazione energetica
+        ammessi all'Ecobonus, con aliquota variabile in base all'anno e al tipo di abitazione.
+    </p>
+    <table>
+        <tr>
+            <th>Anno</th>
+            <th>Abitazione Principale</th>
+            <th>Altri Immobili</th>
+        </tr>
+        <tr>
+            <td>2025</td>
+            <td>50%</td>
+            <td>36%</td>
+        </tr>
+        <tr>
+            <td>2026</td>
+            <td>36%</td>
+            <td>36%</td>
+        </tr>
+        <tr>
+            <td>2027</td>
+            <td>36%</td>
+            <td>30%</td>
+        </tr>
+        <tr>
+            <td>2028+</td>
+            <td>30%</td>
+            <td>30%</td>
+        </tr>
+    </table>
+
+    <h2>3. Scenari Analizzati</h2>
+    <p>Sono stati analizzati i seguenti {len(scenari)} scenari di installazione:</p>
+"""
+
+    for i, scenario in enumerate(scenari, 1):
+        iter_badge = '<span class="iter-badge">ITER SEMPLIFICATO</span>' if scenario.iter_semplificato else ""
+        prodotto_info = f"{scenario.prodotto_marca} {scenario.prodotto_modello}" if scenario.prodotto_marca else "Prodotto generico"
+
+        html += f"""
+    <div class="scenario-box">
+        <div class="scenario-title">Scenario {i}: {scenario.nome} {iter_badge}</div>
         <table>
-            <thead>
-                <tr><th>Scenario</th><th>Prodotto</th><th>Classe</th><th>Capacità</th><th>Potenza</th><th>Spesa</th><th>CT</th><th>CT NPV</th><th>Eco</th><th>Eco NPV</th><th>Migliore</th></tr>
-            </thead>
-            <tbody>{righe_scenari}</tbody>
+            <tr>
+                <th colspan="2">Dati Tecnici</th>
+                <th colspan="2">Parametri Economici</th>
+            </tr>
+            <tr>
+                <td><strong>Prodotto:</strong></td>
+                <td>{prodotto_info}</td>
+                <td><strong>Spesa lavori:</strong></td>
+                <td>{scenario.spesa_lavori:,.2f} EUR</td>
+            </tr>
+            <tr>
+                <td><strong>Classe energetica:</strong></td>
+                <td>{scenario.classe_energetica}</td>
+                <td><strong>Spesa tecnici:</strong></td>
+                <td>{scenario.spesa_tecnici:,.2f} EUR</td>
+            </tr>
+            <tr>
+                <td><strong>Capacità:</strong></td>
+                <td>{scenario.capacita_litri} litri</td>
+                <td><strong>Spesa totale:</strong></td>
+                <td><strong>{scenario.spesa_lavori + scenario.spesa_tecnici:,.2f} EUR</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Potenza:</strong></td>
+                <td>{scenario.potenza_kw:.2f} kW</td>
+                <td><strong>Tipo soggetto:</strong></td>
+                <td>{scenario.tipo_soggetto.replace('_', ' ').title()}</td>
+            </tr>
         </table>
-        <div class="info-box"><em>DM 7/8/2025 - Art. 8, comma 1, lettera e)</em></div>
+
+        <div class="comparison-grid">
+            <div class="comparison-card ct">
+                <h4>Conto Termico 3.0</h4>
+                <div class="big-number">{scenario.ct_incentivo:,.0f} EUR</div>
+                <p>NPV: <strong>{scenario.ct_npv:,.0f} EUR</strong></p>
+                <p style="font-size: 11px;">Erogazione in {scenario.ct_anni_erogazione} anni</p>
+            </div>
+            <div class="comparison-card eco">
+                <h4>Ecobonus</h4>
+                <div class="big-number">{scenario.eco_detrazione:,.0f} EUR</div>
+                <p>NPV: <strong>{scenario.eco_npv:,.0f} EUR</strong></p>
+                <p style="font-size: 11px;">Recupero in {scenario.eco_anni_recupero} anni</p>
+            </div>
+        </div>
+
+        <div class="recommendation">
+            <h3>Raccomandazione per Scenario {i}</h3>
+            <p>
+                <strong>Opzione più conveniente: {scenario.piu_conveniente}</strong><br>
+                Differenza NPV: {scenario.differenza_npv:,.0f} EUR
+            </p>
+        </div>
+    </div>
+"""
+
+    # Tabella riepilogativa
+    html += """
+    <h2>4. Tabella Riepilogativa</h2>
+    <table>
+        <tr>
+            <th>Scenario</th>
+            <th>Prodotto</th>
+            <th>Classe</th>
+            <th>Capacità</th>
+            <th>Spesa</th>
+            <th>CT 3.0</th>
+            <th>NPV CT</th>
+            <th>Ecobonus</th>
+            <th>NPV Eco</th>
+            <th>Migliore</th>
+        </tr>
+"""
+
+    for scenario in scenari:
+        prodotto_info = f"{scenario.prodotto_marca} {scenario.prodotto_modello}" if scenario.prodotto_marca else "N/D"
+        spesa_totale = scenario.spesa_lavori + scenario.spesa_tecnici
+        migliore_class = "highlight" if scenario.piu_conveniente == "CT" else ""
+        migliore_class_eco = "highlight" if scenario.piu_conveniente == "Ecobonus" else ""
+
+        html += f"""
+        <tr>
+            <td><strong>{scenario.nome}</strong></td>
+            <td>{prodotto_info}</td>
+            <td>{scenario.classe_energetica}</td>
+            <td>{scenario.capacita_litri} L</td>
+            <td>{spesa_totale:,.0f} EUR</td>
+            <td class="{migliore_class}">{scenario.ct_incentivo:,.0f} EUR</td>
+            <td class="{migliore_class}">{scenario.ct_npv:,.0f} EUR</td>
+            <td class="{migliore_class_eco}">{scenario.eco_detrazione:,.0f} EUR</td>
+            <td class="{migliore_class_eco}">{scenario.eco_npv:,.0f} EUR</td>
+            <td><strong>{scenario.piu_conveniente}</strong></td>
+        </tr>
+"""
+
+    html += """
+    </table>
+"""
+
+    # Sezione metodologia
+    html += f"""
+    <h2>5. Metodologia di Calcolo</h2>
+
+    <h3>5.1 Conto Termico 3.0</h3>
+    <p>
+        L'incentivo per gli scaldacqua a pompa di calore è calcolato secondo le tabelle dell'Allegato II
+        del DM 7/8/2025, in funzione della capacità del serbatoio e della classe energetica.
+    </p>
+    <div class="formula-box">
+        <strong>Incentivo = Incentivo_base × Coefficiente_classe</strong><br><br>
+        Dove l'incentivo base dipende dalla capacità (litri) e il coefficiente dalla classe energetica.
+    </div>
+
+    <h3>5.2 Ecobonus</h3>
+    <div class="formula-box">
+        <strong>Detrazione = Spesa × Aliquota</strong><br>
+        <strong>Rata annuale = Detrazione / 10 anni</strong>
+    </div>
+
+    <h3>5.3 Net Present Value (NPV)</h3>
+    <div class="formula-box">
+        <strong>NPV = Σ (Flusso_anno_t / (1 + r)^t)</strong><br>
+        Con r = {tasso_sconto*100:.1f}% (tasso di sconto)
+    </div>
+
+    <h2>6. Iter Semplificato</h2>
+    <p>
+        Per scaldacqua a pompa di calore selezionati da catalogo GSE (Registro Tecnologie),
+        è disponibile l'<strong>iter semplificato</strong> con:
+    </p>
+    <ul style="margin: 15px 0; padding-left: 30px;">
+        <li>Documentazione ridotta</li>
+        <li>Tempistiche più rapide</li>
+        <li>Valori di incentivo predeterminati</li>
+    </ul>
+    <div class="note">
+        <strong>Nota:</strong> Verificare sempre la presenza del prodotto nel Registro Tecnologie GSE
+        prima di presentare domanda con iter semplificato.
+    </div>
+
+    <h2>7. Conclusioni</h2>
+"""
+
+    # Determina il migliore scenario complessivo
+    miglior_scenario = max(scenari, key=lambda s: max(s.ct_npv, s.eco_npv))
+    miglior_opzione = "Conto Termico 3.0" if miglior_scenario.ct_npv > miglior_scenario.eco_npv else "Ecobonus"
+    miglior_npv = max(miglior_scenario.ct_npv, miglior_scenario.eco_npv)
+
+    html += f"""
+    <div class="recommendation">
+        <h3>Raccomandazione Finale</h3>
+        <p>
+            Sulla base dell'analisi comparativa condotta, si raccomanda l'opzione
+            <strong>{miglior_opzione}</strong> per lo scenario <strong>{miglior_scenario.nome}</strong>,
+            con un NPV di <strong>{miglior_npv:,.0f} EUR</strong>.
+        </p>
+    </div>
+
+    <h2>8. Riferimenti Normativi</h2>
+    <ul style="margin: 15px 0; padding-left: 30px;">
+        <li>DM 7 agosto 2025 - Conto Termico 3.0</li>
+        <li>Art. 8, comma 1, lettera e) - Scaldacqua a pompa di calore</li>
+        <li>Allegato II, Tabella 7 - Requisiti minimi</li>
+        <li>D.L. 63/2013 e s.m.i. - Ecobonus</li>
+        <li>Regolamento UE 812/2013 - Etichettatura energetica</li>
+        <li>EN 16147 - Condizioni di prova COP</li>
+    </ul>
+
+    <div class="footer">
+        <p>Documento generato automaticamente - {data_report}</p>
+        <p>I calcoli sono indicativi e soggetti a verifica con i dati definitivi della domanda GSE.</p>
     </div>
 </body>
-</html>"""
+</html>
+"""
     return html
 
 def genera_report_multi_intervento_html(scenario, anno, tasso_sconto):
@@ -1581,3 +1899,1211 @@ def genera_report_multi_intervento_html(scenario, anno, tasso_sconto):
 <div class="section"><h2>💰 Riepilogo Economico</h2>{bonus_section}<table><tr><th>Incentivo</th><th>Totale</th><th>NPV ({tasso_sconto*100:.1f}%)</th></tr><tr><td>Conto Termico</td><td>{scenario.ct_incentivo_totale:,.0f} €</td><td>{scenario.ct_npv:,.0f} €</td></tr><tr><td>Ecobonus</td><td>{scenario.eco_detrazione_totale:,.0f} €</td><td>{scenario.eco_npv:,.0f} €</td></tr></table>
 <div class="success-box"><p><strong>✅ Più conveniente: {convenienza}</strong></p><p>Differenza NPV: {abs(scenario.differenza_npv):,.0f} €</p></div></div>
 <div class="section"><h2>📝 Note Normative</h2><div class="info-box"><p><strong>Riferimenti:</strong></p><ul><li>DM 7/8/2025 - Art. 2, comma 1, lettera cc) - Definizione Multi-Intervento</li><li>Art. 27, comma 3 - Intensità incentivi per imprese</li><li>Regole GSE - Par. 12.4 - Multi-intervento</li></ul><p><strong>N.B.</strong> Presentare unica scheda-domanda GSE per tutti gli interventi</p></div></div></body></html>"""
+
+
+def genera_report_building_automation_html(
+    scenari: list,
+    tipo_soggetto: str,
+    tipo_abitazione: str,
+    anno: int,
+    tasso_sconto: float,
+    solo_ct: bool = False
+) -> str:
+    """
+    Genera report HTML per scenari Building Automation (III.F).
+
+    Args:
+        scenari: Lista di dizionari con dati scenario BA
+        tipo_soggetto: Tipo di soggetto richiedente
+        tipo_abitazione: Tipo di abitazione
+        anno: Anno della spesa
+        tasso_sconto: Tasso di sconto per NPV
+        solo_ct: Se True, mostra solo CT 3.0
+
+    Returns:
+        Stringa HTML del report
+    """
+    data_report = datetime.now().strftime("%d/%m/%Y %H:%M")
+
+    # Mappa classi efficienza a descrizioni
+    classi_desc = {
+        "A": "Classe A - Alta efficienza",
+        "B": "Classe B - Media efficienza",
+        "C": "Classe C - Efficienza standard",
+        "D": "Classe D - Efficienza base"
+    }
+
+    # Costruisci righe tabella scenari
+    righe_scenari = ""
+    miglior_scenario = None
+    miglior_npv = -float('inf')
+
+    for s in scenari:
+        classe = s.get('classe_efficienza', 'B')
+        ct_npv = s.get('ct_npv', 0)
+        eco_npv = s.get('eco_npv', 0)
+        bonus_npv = s.get('bonus_npv', 0)
+
+        # Determina il migliore per questo scenario
+        if solo_ct:
+            npv_max = ct_npv
+        else:
+            npv_max = max(ct_npv, eco_npv, bonus_npv)
+
+        if npv_max > miglior_npv:
+            miglior_npv = npv_max
+            miglior_scenario = s['nome']
+
+        if solo_ct:
+            righe_scenari += f"""
+            <tr>
+                <td><strong>{s['nome']}</strong></td>
+                <td>{s['superficie_mq']:.0f} m²</td>
+                <td>Classe {classe}</td>
+                <td>€ {s['spesa']:,.0f}</td>
+                <td style="background: #E8F5E9; font-weight: bold;">€ {s['ct_incentivo']:,.0f}</td>
+                <td style="color: #1565C0; font-weight: bold;">€ {ct_npv:,.0f}</td>
+            </tr>
+            """
+        else:
+            righe_scenari += f"""
+            <tr>
+                <td><strong>{s['nome']}</strong></td>
+                <td>{s['superficie_mq']:.0f} m²</td>
+                <td>Classe {classe}</td>
+                <td>€ {s['spesa']:,.0f}</td>
+                <td style="background: #E8F5E9;">€ {s['ct_incentivo']:,.0f}</td>
+                <td>€ {ct_npv:,.0f}</td>
+                <td style="background: #E3F2FD;">€ {s['eco_detrazione']:,.0f}</td>
+                <td>€ {eco_npv:,.0f}</td>
+                <td style="background: #FFF3E0;">€ {s['bonus_detrazione']:,.0f}</td>
+                <td>€ {bonus_npv:,.0f}</td>
+                <td style="font-weight: bold;">{s['migliore']}</td>
+            </tr>
+            """
+
+    # Intestazioni tabella
+    if solo_ct:
+        header_tabella = """
+        <tr>
+            <th>Scenario</th>
+            <th>Superficie</th>
+            <th>Classe</th>
+            <th>Spesa</th>
+            <th>CT 3.0</th>
+            <th>NPV CT</th>
+        </tr>
+        """
+    else:
+        header_tabella = """
+        <tr>
+            <th>Scenario</th>
+            <th>Superficie</th>
+            <th>Classe</th>
+            <th>Spesa</th>
+            <th>CT 3.0</th>
+            <th>NPV CT</th>
+            <th>Ecobonus</th>
+            <th>NPV Eco</th>
+            <th>Bonus Ristr.</th>
+            <th>NPV BR</th>
+            <th>Migliore</th>
+        </tr>
+        """
+
+    # Sezione raccomandazione
+    if len(scenari) > 1 and miglior_scenario:
+        raccomandazione = f"""
+        <div class="recommendation">
+            <h3>🏆 Scenario Consigliato</h3>
+            <p><strong>{miglior_scenario}</strong> presenta il miglior NPV: <strong>€ {miglior_npv:,.0f}</strong></p>
+        </div>
+        """
+    else:
+        raccomandazione = ""
+
+    # Descrizione tipo soggetto
+    soggetto_desc = {
+        "privato": "Privato cittadino",
+        "impresa": "Impresa",
+        "PA": "Pubblica Amministrazione",
+        "condominio": "Condominio",
+        "ets": "Ente Terzo Settore"
+    }
+
+    html = f"""<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relazione Tecnica - Building Automation</title>
+    <style>
+        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+        body {{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6; color: #333;
+            max-width: 210mm; margin: 0 auto; padding: 20mm; background: white;
+        }}
+        .header {{
+            text-align: center; border-bottom: 3px solid #00796B;
+            padding-bottom: 20px; margin-bottom: 30px;
+        }}
+        .header h1 {{ color: #00796B; font-size: 24px; margin-bottom: 10px; }}
+        .header .subtitle {{ color: #666; font-size: 14px; }}
+        .meta-info {{
+            display: flex; justify-content: space-between; background: #f5f5f5;
+            padding: 15px; border-radius: 5px; margin-bottom: 25px; font-size: 12px;
+        }}
+        h2 {{
+            color: #00796B; border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px; margin: 25px 0 15px 0; font-size: 18px;
+        }}
+        h3 {{ color: #333; margin: 20px 0 10px 0; font-size: 14px; }}
+        table {{
+            width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 11px;
+        }}
+        th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
+        th {{ background-color: #00796B; color: white; font-weight: 600; }}
+        tr:nth-child(even) {{ background-color: #f9f9f9; }}
+        .highlight {{ background-color: #E0F2F1 !important; font-weight: bold; }}
+        .recommendation {{
+            background: linear-gradient(135deg, #E0F2F1 0%, #B2DFDB 100%);
+            border-left: 4px solid #00796B;
+            padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0;
+        }}
+        .recommendation h3 {{ color: #004D40; margin-bottom: 10px; }}
+        .formula-box {{
+            background: #E8F5E9; border: 1px solid #A5D6A7;
+            padding: 15px; margin: 15px 0; border-radius: 5px;
+            font-family: 'Courier New', monospace; font-size: 12px;
+        }}
+        .note {{
+            background: #E0F2F1; border-left: 4px solid #00796B;
+            padding: 10px 15px; margin: 15px 0; font-size: 11px; color: #004D40;
+        }}
+        .footer {{
+            margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd;
+            font-size: 10px; color: #999; text-align: center;
+        }}
+        @media print {{
+            body {{ padding: 10mm; }}
+            .no-print {{ display: none; }}
+        }}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏢 Relazione Tecnica Building Automation</h1>
+        <p class="subtitle">Intervento III.F - Sistemi di Building Automation (BACS)</p>
+        <p class="subtitle">DM 7/8/2025 - Conto Termico 3.0</p>
+    </div>
+
+    <div class="meta-info">
+        <div><strong>Tipo Soggetto:</strong> {soggetto_desc.get(tipo_soggetto, tipo_soggetto)}</div>
+        <div><strong>Tipo Abitazione:</strong> {tipo_abitazione}</div>
+        <div><strong>Anno:</strong> {anno}</div>
+        <div><strong>Tasso NPV:</strong> {tasso_sconto*100:.1f}%</div>
+        <div><strong>Data:</strong> {data_report}</div>
+    </div>
+
+    <h2>📊 Confronto Scenari</h2>
+    <table>
+        <thead>
+            {header_tabella}
+        </thead>
+        <tbody>
+            {righe_scenari}
+        </tbody>
+    </table>
+
+    {raccomandazione}
+
+    <h2>📋 Requisiti Tecnici Building Automation</h2>
+    <div class="note">
+        <strong>Requisiti minimi per ammissibilità CT 3.0:</strong>
+        <ul style="margin-top: 10px; margin-left: 20px;">
+            <li>Conformità UNI EN ISO 52120-1 (classe minima B)</li>
+            <li>Conformità Guida CEI 205-18 (sistemi HBES/BACS)</li>
+            <li>Controllo almeno: riscaldamento/raffrescamento/ventilazione/ACS</li>
+            <li>Sistema di diagnostica consumi energetici</li>
+            <li>Relazione tecnica descrittiva intervento</li>
+        </ul>
+    </div>
+
+    <h2>💡 Calcolo Incentivo CT 3.0</h2>
+    <div class="formula-box">
+        <p><strong>Formula:</strong> I = min(Costo × %, Costo_max/m² × Superficie × %)</p>
+        <p style="margin-top: 10px;"><strong>Percentuali:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Privati/Condomini: 65%</li>
+            <li>PA: 100%</li>
+            <li>Imprese/ETS: 40%</li>
+        </ul>
+        <p style="margin-top: 10px;"><strong>Costo massimo:</strong> 80 €/m² (superficie utile)</p>
+        <p style="margin-top: 10px;"><strong>Erogazione:</strong> Rata unica se ≤ 15.000€, altrimenti 2 rate annuali</p>
+    </div>
+
+    <h2>📝 Note Normative</h2>
+    <div class="note">
+        <p><strong>Riferimenti:</strong></p>
+        <ul style="margin-left: 20px; margin-top: 5px;">
+            <li>DM 7/8/2025 - Art. 8, comma 1, lettera f) - Intervento III.F</li>
+            <li>Allegato 1 - Tabella 9 - Requisiti Building Automation</li>
+            <li>UNI EN ISO 52120-1 - Classificazione BACS</li>
+            <li>Guida CEI 205-18 - Sistemi HBES/BACS</li>
+        </ul>
+        <p style="margin-top: 10px;"><strong>Ecobonus:</strong> Per Building Automation vale il limite speciale di € 15.000 di detrazione massima (non di spesa)</p>
+    </div>
+
+    <div class="footer">
+        Energy Incentive Manager v2.0 | Conto Termico 3.0 (DM 7/8/2025) ed Ecobonus
+    </div>
+</body>
+</html>"""
+
+    return html
+
+
+def genera_report_isolamento_html(
+    scenari: list,
+    tipo_soggetto: str,
+    tipo_abitazione: str,
+    anno: int,
+    tasso_sconto: float,
+    solo_ct: bool = False
+) -> str:
+    """
+    Genera report HTML per scenari Isolamento Termico (II.A).
+
+    Args:
+        scenari: Lista di dizionari con dati scenario isolamento
+        tipo_soggetto: Tipo di soggetto richiedente
+        tipo_abitazione: Tipo di abitazione
+        anno: Anno della spesa
+        tasso_sconto: Tasso di sconto per NPV
+        solo_ct: Se True, mostra solo CT 3.0
+
+    Returns:
+        Stringa HTML del report
+    """
+    data_report = datetime.now().strftime("%d/%m/%Y %H:%M")
+
+    # Mappa tipi superficie
+    tipi_superficie_desc = {
+        "coperture": "Coperture (tetto)",
+        "pavimenti": "Pavimenti",
+        "pareti": "Pareti verticali"
+    }
+
+    # Mappa posizioni
+    posizioni_desc = {
+        "esterno": "Isolamento esterno (cappotto)",
+        "interno": "Isolamento interno",
+        "ventilato": "Parete ventilata"
+    }
+
+    # Costruisci righe tabella scenari
+    righe_scenari = ""
+    miglior_scenario = None
+    miglior_npv = -float('inf')
+
+    for s in scenari:
+        ct_npv = s.get('ct_npv', 0)
+        eco_npv = s.get('eco_npv', 0)
+        bonus_npv = s.get('bonus_npv', 0)
+
+        # Determina il migliore per questo scenario
+        if solo_ct:
+            npv_max = ct_npv
+        else:
+            npv_max = max(ct_npv, eco_npv, bonus_npv)
+
+        if npv_max > miglior_npv:
+            miglior_npv = npv_max
+            miglior_scenario = s['nome']
+
+        tipo_sup = tipi_superficie_desc.get(s.get('tipo_superficie', ''), s.get('tipo_superficie', ''))
+
+        if solo_ct:
+            righe_scenari += f"""
+            <tr>
+                <td><strong>{s['nome']}</strong></td>
+                <td>{tipo_sup}</td>
+                <td>Zona {s.get('zona_climatica', 'N/D')}</td>
+                <td>{s.get('superficie_mq', 0):.1f} m²</td>
+                <td>U = {s.get('trasmittanza_post', 0):.3f} W/m²K</td>
+                <td>€ {s.get('spesa_totale', 0):,.0f}</td>
+                <td style="background: #E8F5E9; font-weight: bold;">€ {s.get('ct_incentivo', 0):,.0f}</td>
+                <td style="color: #1565C0; font-weight: bold;">€ {ct_npv:,.0f}</td>
+            </tr>
+            """
+        else:
+            righe_scenari += f"""
+            <tr>
+                <td><strong>{s['nome']}</strong></td>
+                <td>{tipo_sup}</td>
+                <td>Zona {s.get('zona_climatica', 'N/D')}</td>
+                <td>{s.get('superficie_mq', 0):.1f} m²</td>
+                <td>U = {s.get('trasmittanza_post', 0):.3f} W/m²K</td>
+                <td>€ {s.get('spesa_totale', 0):,.0f}</td>
+                <td style="background: #E8F5E9;">€ {s.get('ct_incentivo', 0):,.0f}</td>
+                <td>€ {ct_npv:,.0f}</td>
+                <td style="background: #E3F2FD;">€ {s.get('eco_detrazione', 0):,.0f}</td>
+                <td>€ {eco_npv:,.0f}</td>
+                <td style="background: #FFF3E0;">€ {s.get('bonus_detrazione', 0):,.0f}</td>
+                <td>€ {bonus_npv:,.0f}</td>
+                <td style="font-weight: bold;">{s.get('migliore', 'N/D')}</td>
+            </tr>
+            """
+
+    # Intestazioni tabella
+    if solo_ct:
+        header_tabella = """
+        <tr>
+            <th>Scenario</th>
+            <th>Tipo Superficie</th>
+            <th>Zona</th>
+            <th>Superficie</th>
+            <th>Trasmittanza</th>
+            <th>Spesa</th>
+            <th>CT 3.0</th>
+            <th>NPV CT</th>
+        </tr>
+        """
+    else:
+        header_tabella = """
+        <tr>
+            <th>Scenario</th>
+            <th>Tipo Superficie</th>
+            <th>Zona</th>
+            <th>Superficie</th>
+            <th>Trasmittanza</th>
+            <th>Spesa</th>
+            <th>CT 3.0</th>
+            <th>NPV CT</th>
+            <th>Ecobonus</th>
+            <th>NPV Eco</th>
+            <th>Bonus Ristr.</th>
+            <th>NPV BR</th>
+            <th>Migliore</th>
+        </tr>
+        """
+
+    # Sezione raccomandazione
+    if len(scenari) > 1 and miglior_scenario:
+        raccomandazione = f"""
+        <div class="recommendation">
+            <h3>🏆 Scenario Consigliato</h3>
+            <p><strong>{miglior_scenario}</strong> presenta il miglior NPV: <strong>€ {miglior_npv:,.0f}</strong></p>
+        </div>
+        """
+    else:
+        raccomandazione = ""
+
+    # Descrizione tipo soggetto
+    soggetto_desc = {
+        "privato": "Privato cittadino",
+        "impresa": "Impresa",
+        "PA": "Pubblica Amministrazione",
+        "condominio": "Condominio",
+        "ets": "Ente Terzo Settore"
+    }
+
+    # Dettaglio scenari
+    dettaglio_scenari = ""
+    for idx, s in enumerate(scenari, 1):
+        tipo_sup = tipi_superficie_desc.get(s.get('tipo_superficie', ''), s.get('tipo_superficie', ''))
+        posizione = posizioni_desc.get(s.get('posizione', ''), s.get('posizione', ''))
+
+        dettaglio_scenari += f"""
+        <h3>Scenario {idx}: {s['nome']}</h3>
+        <table>
+            <tr><td style="width: 40%; background: #f5f5f5;"><strong>Tipo superficie</strong></td><td>{tipo_sup}</td></tr>
+            <tr><td style="background: #f5f5f5;"><strong>Posizione isolamento</strong></td><td>{posizione}</td></tr>
+            <tr><td style="background: #f5f5f5;"><strong>Zona climatica</strong></td><td>{s.get('zona_climatica', 'N/D')}</td></tr>
+            <tr><td style="background: #f5f5f5;"><strong>Superficie</strong></td><td>{s.get('superficie_mq', 0):.1f} m²</td></tr>
+            <tr><td style="background: #f5f5f5;"><strong>Trasmittanza post-intervento</strong></td><td>U = {s.get('trasmittanza_post', 0):.3f} W/m²K</td></tr>
+            <tr><td style="background: #f5f5f5;"><strong>Spesa totale</strong></td><td>€ {s.get('spesa_totale', 0):,.2f}</td></tr>
+        </table>
+        """
+
+    html = f"""<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relazione Tecnica - Isolamento Termico</title>
+    <style>
+        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+        body {{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6; color: #333;
+            max-width: 210mm; margin: 0 auto; padding: 20mm; background: white;
+        }}
+        .header {{
+            text-align: center; border-bottom: 3px solid #795548;
+            padding-bottom: 20px; margin-bottom: 30px;
+        }}
+        .header h1 {{ color: #795548; font-size: 24px; margin-bottom: 10px; }}
+        .header .subtitle {{ color: #666; font-size: 14px; }}
+        .meta-info {{
+            display: flex; justify-content: space-between; background: #f5f5f5;
+            padding: 15px; border-radius: 5px; margin-bottom: 25px; font-size: 12px;
+        }}
+        h2 {{
+            color: #795548; border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px; margin: 25px 0 15px 0; font-size: 18px;
+        }}
+        h3 {{ color: #333; margin: 20px 0 10px 0; font-size: 14px; }}
+        table {{
+            width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 11px;
+        }}
+        th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
+        th {{ background-color: #795548; color: white; font-weight: 600; }}
+        tr:nth-child(even) {{ background-color: #f9f9f9; }}
+        .highlight {{ background-color: #EFEBE9 !important; font-weight: bold; }}
+        .recommendation {{
+            background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+            border-left: 4px solid #795548;
+            padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0;
+        }}
+        .recommendation h3 {{ color: #4E342E; margin-bottom: 10px; }}
+        .formula-box {{
+            background: #EFEBE9; border: 1px solid #BCAAA4;
+            padding: 15px; margin: 15px 0; border-radius: 5px;
+            font-family: 'Courier New', monospace; font-size: 12px;
+        }}
+        .note {{
+            background: #EFEBE9; border-left: 4px solid #795548;
+            padding: 10px 15px; margin: 15px 0; font-size: 11px; color: #4E342E;
+        }}
+        .footer {{
+            margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd;
+            font-size: 10px; color: #999; text-align: center;
+        }}
+        .trasmittanze-table th {{ background-color: #5D4037; }}
+        @media print {{
+            body {{ padding: 10mm; }}
+            .no-print {{ display: none; }}
+        }}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏠 Relazione Tecnica Isolamento Termico</h1>
+        <p class="subtitle">Intervento II.A - Isolamento Termico dell'involucro edilizio</p>
+        <p class="subtitle">DM 7/8/2025 - Conto Termico 3.0</p>
+    </div>
+
+    <div class="meta-info">
+        <div><strong>Tipo Soggetto:</strong> {soggetto_desc.get(tipo_soggetto, tipo_soggetto)}</div>
+        <div><strong>Tipo Abitazione:</strong> {tipo_abitazione}</div>
+        <div><strong>Anno:</strong> {anno}</div>
+        <div><strong>Tasso NPV:</strong> {tasso_sconto*100:.1f}%</div>
+        <div><strong>Data:</strong> {data_report}</div>
+    </div>
+
+    <h2>📊 Confronto Scenari</h2>
+    <table>
+        <thead>
+            {header_tabella}
+        </thead>
+        <tbody>
+            {righe_scenari}
+        </tbody>
+    </table>
+
+    {raccomandazione}
+
+    <h2>📋 Dettaglio Scenari</h2>
+    {dettaglio_scenari}
+
+    <h2>📐 Requisiti di Trasmittanza</h2>
+    <div class="note">
+        <p><strong>Trasmittanze massime ammissibili per zona climatica (Allegato E, D.M. 26/06/2015):</strong></p>
+    </div>
+    <table class="trasmittanze-table">
+        <thead>
+            <tr>
+                <th>Zona Climatica</th>
+                <th>Coperture [W/m²K]</th>
+                <th>Pavimenti [W/m²K]</th>
+                <th>Pareti [W/m²K]</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>A e B</td><td>0.32</td><td>0.42</td><td>0.40</td></tr>
+            <tr><td>C</td><td>0.32</td><td>0.38</td><td>0.36</td></tr>
+            <tr><td>D</td><td>0.26</td><td>0.32</td><td>0.32</td></tr>
+            <tr><td>E</td><td>0.22</td><td>0.29</td><td>0.28</td></tr>
+            <tr><td>F</td><td>0.20</td><td>0.28</td><td>0.26</td></tr>
+        </tbody>
+    </table>
+
+    <h2>💡 Calcolo Incentivo CT 3.0</h2>
+    <div class="formula-box">
+        <p><strong>Formula:</strong> I_tot = ΣCi × S × UNI</p>
+        <p style="margin-top: 10px;"><strong>Dove:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Ci = coefficiente di valorizzazione [€/m²]</li>
+            <li>S = superficie isolata [m²]</li>
+            <li>UNI = fattore zona climatica</li>
+        </ul>
+        <p style="margin-top: 10px;"><strong>Massimali spesa:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Pareti esterne: 200 €/m² (cappotto), 100 €/m² (interno)</li>
+            <li>Coperture: 200 €/m²</li>
+            <li>Pavimenti: 150 €/m²</li>
+        </ul>
+        <p style="margin-top: 10px;"><strong>Percentuali massime:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Privati/Condomini: 65%</li>
+            <li>PA: 100%</li>
+            <li>Imprese: 40%</li>
+        </ul>
+    </div>
+
+    <h2>📝 Note Normative</h2>
+    <div class="note">
+        <p><strong>Riferimenti:</strong></p>
+        <ul style="margin-left: 20px; margin-top: 5px;">
+            <li>DM 7/8/2025 - Art. 8, comma 1, lettera a) - Intervento II.A</li>
+            <li>D.M. 26/06/2015 (requisiti minimi)</li>
+            <li>Allegato 1 - Tabella 2 - Coefficienti isolamento</li>
+            <li>UNI EN ISO 6946 - Calcolo trasmittanza termica</li>
+        </ul>
+        <p style="margin-top: 10px;"><strong>Documentazione richiesta:</strong></p>
+        <ul style="margin-left: 20px; margin-top: 5px;">
+            <li>Asseverazione tecnico abilitato</li>
+            <li>Certificazione materiali isolanti (marcatura CE)</li>
+            <li>APE post-intervento</li>
+            <li>Documentazione fotografica ante/post operam</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        Energy Incentive Manager v2.0 | Conto Termico 3.0 (DM 7/8/2025) ed Ecobonus
+    </div>
+</body>
+</html>"""
+
+    return html
+
+
+def genera_report_serramenti_html(
+    scenari: list,
+    tipo_soggetto: str,
+    tipo_abitazione: str,
+    anno: int,
+    tasso_sconto: float,
+    solo_ct: bool = False
+) -> str:
+    """
+    Genera report HTML per scenari Serramenti (II.B).
+
+    Args:
+        scenari: Lista di dizionari con dati scenario serramenti
+        tipo_soggetto: Tipo di soggetto richiedente
+        tipo_abitazione: Tipo di abitazione
+        anno: Anno della spesa
+        tasso_sconto: Tasso di sconto per NPV
+        solo_ct: Se True, mostra solo CT 3.0
+
+    Returns:
+        Stringa HTML del report
+    """
+    data_report = datetime.now().strftime("%d/%m/%Y %H:%M")
+
+    # Costruisci righe tabella scenari
+    righe_scenari = ""
+    miglior_scenario = None
+    miglior_npv = -float('inf')
+
+    for s in scenari:
+        ct_npv = s.get('ct_npv', 0)
+        eco_npv = s.get('eco_npv', 0)
+        bonus_npv = s.get('bonus_npv', 0)
+
+        # Determina il migliore per questo scenario
+        if solo_ct:
+            npv_max = ct_npv
+        else:
+            npv_max = max(ct_npv, eco_npv, bonus_npv)
+
+        if npv_max > miglior_npv:
+            miglior_npv = npv_max
+            miglior_scenario = s['nome']
+
+        if solo_ct:
+            righe_scenari += f"""
+            <tr>
+                <td><strong>{s['nome']}</strong></td>
+                <td>Zona {s.get('zona_climatica', 'N/D')}</td>
+                <td>{s.get('superficie_mq', 0):.1f} m²</td>
+                <td>Uw = {s.get('trasmittanza_post', 0):.2f} W/m²K</td>
+                <td>€ {s.get('spesa_totale', 0):,.0f}</td>
+                <td style="background: #E8F5E9; font-weight: bold;">€ {s.get('ct_incentivo', 0):,.0f}</td>
+                <td style="color: #1565C0; font-weight: bold;">€ {ct_npv:,.0f}</td>
+            </tr>
+            """
+        else:
+            righe_scenari += f"""
+            <tr>
+                <td><strong>{s['nome']}</strong></td>
+                <td>Zona {s.get('zona_climatica', 'N/D')}</td>
+                <td>{s.get('superficie_mq', 0):.1f} m²</td>
+                <td>Uw = {s.get('trasmittanza_post', 0):.2f} W/m²K</td>
+                <td>€ {s.get('spesa_totale', 0):,.0f}</td>
+                <td style="background: #E8F5E9;">€ {s.get('ct_incentivo', 0):,.0f}</td>
+                <td>€ {ct_npv:,.0f}</td>
+                <td style="background: #E3F2FD;">€ {s.get('eco_detrazione', 0):,.0f}</td>
+                <td>€ {eco_npv:,.0f}</td>
+                <td style="background: #FFF3E0;">€ {s.get('bonus_detrazione', 0):,.0f}</td>
+                <td>€ {bonus_npv:,.0f}</td>
+                <td style="font-weight: bold;">{s.get('migliore', 'N/D')}</td>
+            </tr>
+            """
+
+    # Intestazioni tabella
+    if solo_ct:
+        header_tabella = """
+        <tr>
+            <th>Scenario</th>
+            <th>Zona</th>
+            <th>Superficie</th>
+            <th>Trasmittanza</th>
+            <th>Spesa</th>
+            <th>CT 3.0</th>
+            <th>NPV CT</th>
+        </tr>
+        """
+    else:
+        header_tabella = """
+        <tr>
+            <th>Scenario</th>
+            <th>Zona</th>
+            <th>Superficie</th>
+            <th>Trasmittanza</th>
+            <th>Spesa</th>
+            <th>CT 3.0</th>
+            <th>NPV CT</th>
+            <th>Ecobonus</th>
+            <th>NPV Eco</th>
+            <th>Bonus Ristr.</th>
+            <th>NPV BR</th>
+            <th>Migliore</th>
+        </tr>
+        """
+
+    # Sezione raccomandazione
+    if len(scenari) > 1 and miglior_scenario:
+        raccomandazione = f"""
+        <div class="recommendation">
+            <h3>🏆 Scenario Consigliato</h3>
+            <p><strong>{miglior_scenario}</strong> presenta il miglior NPV: <strong>€ {miglior_npv:,.0f}</strong></p>
+        </div>
+        """
+    else:
+        raccomandazione = ""
+
+    # Descrizione tipo soggetto
+    soggetto_desc = {
+        "privato": "Privato cittadino",
+        "impresa": "Impresa",
+        "PA": "Pubblica Amministrazione",
+        "condominio": "Condominio",
+        "ets": "Ente Terzo Settore"
+    }
+
+    # Dettaglio scenari
+    dettaglio_scenari = ""
+    for idx, s in enumerate(scenari, 1):
+        dettaglio_scenari += f"""
+        <h3>Scenario {idx}: {s['nome']}</h3>
+        <table>
+            <tr><td style="width: 40%; background: #f5f5f5;"><strong>Zona climatica</strong></td><td>{s.get('zona_climatica', 'N/D')}</td></tr>
+            <tr><td style="background: #f5f5f5;"><strong>Superficie serramenti</strong></td><td>{s.get('superficie_mq', 0):.1f} m²</td></tr>
+            <tr><td style="background: #f5f5f5;"><strong>Trasmittanza termica (Uw)</strong></td><td>{s.get('trasmittanza_post', 0):.2f} W/m²K</td></tr>
+            <tr><td style="background: #f5f5f5;"><strong>Spesa totale</strong></td><td>€ {s.get('spesa_totale', 0):,.2f}</td></tr>
+        </table>
+        """
+
+    html = f"""<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relazione Tecnica - Serramenti</title>
+    <style>
+        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+        body {{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6; color: #333;
+            max-width: 210mm; margin: 0 auto; padding: 20mm; background: white;
+        }}
+        .header {{
+            text-align: center; border-bottom: 3px solid #2196F3;
+            padding-bottom: 20px; margin-bottom: 30px;
+        }}
+        .header h1 {{ color: #2196F3; font-size: 24px; margin-bottom: 10px; }}
+        .header .subtitle {{ color: #666; font-size: 14px; }}
+        .meta-info {{
+            display: flex; justify-content: space-between; background: #f5f5f5;
+            padding: 15px; border-radius: 5px; margin-bottom: 25px; font-size: 12px;
+        }}
+        h2 {{
+            color: #2196F3; border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px; margin: 25px 0 15px 0; font-size: 18px;
+        }}
+        h3 {{ color: #333; margin: 20px 0 10px 0; font-size: 14px; }}
+        table {{
+            width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 11px;
+        }}
+        th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
+        th {{ background-color: #2196F3; color: white; font-weight: 600; }}
+        tr:nth-child(even) {{ background-color: #f9f9f9; }}
+        .highlight {{ background-color: #E3F2FD !important; font-weight: bold; }}
+        .recommendation {{
+            background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+            border-left: 4px solid #2196F3;
+            padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0;
+        }}
+        .recommendation h3 {{ color: #1565C0; margin-bottom: 10px; }}
+        .formula-box {{
+            background: #E3F2FD; border: 1px solid #90CAF9;
+            padding: 15px; margin: 15px 0; border-radius: 5px;
+            font-family: 'Courier New', monospace; font-size: 12px;
+        }}
+        .note {{
+            background: #E3F2FD; border-left: 4px solid #2196F3;
+            padding: 10px 15px; margin: 15px 0; font-size: 11px; color: #1565C0;
+        }}
+        .footer {{
+            margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd;
+            font-size: 10px; color: #999; text-align: center;
+        }}
+        .trasmittanze-table th {{ background-color: #1976D2; }}
+        @media print {{
+            body {{ padding: 10mm; }}
+            .no-print {{ display: none; }}
+        }}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🪟 Relazione Tecnica Serramenti</h1>
+        <p class="subtitle">Intervento II.B - Sostituzione Chiusure Trasparenti</p>
+        <p class="subtitle">DM 7/8/2025 - Conto Termico 3.0</p>
+    </div>
+
+    <div class="meta-info">
+        <div><strong>Tipo Soggetto:</strong> {soggetto_desc.get(tipo_soggetto, tipo_soggetto)}</div>
+        <div><strong>Tipo Abitazione:</strong> {tipo_abitazione}</div>
+        <div><strong>Anno:</strong> {anno}</div>
+        <div><strong>Tasso NPV:</strong> {tasso_sconto*100:.1f}%</div>
+        <div><strong>Data:</strong> {data_report}</div>
+    </div>
+
+    <h2>📊 Confronto Scenari</h2>
+    <table>
+        <thead>
+            {header_tabella}
+        </thead>
+        <tbody>
+            {righe_scenari}
+        </tbody>
+    </table>
+
+    {raccomandazione}
+
+    <h2>📋 Dettaglio Scenari</h2>
+    {dettaglio_scenari}
+
+    <h2>📐 Requisiti di Trasmittanza Serramenti</h2>
+    <div class="note">
+        <p><strong>Trasmittanze massime ammissibili Uw per zona climatica (Allegato E, D.M. 26/06/2015):</strong></p>
+    </div>
+    <table class="trasmittanze-table">
+        <thead>
+            <tr>
+                <th>Zona Climatica</th>
+                <th>Uw max [W/m²K]</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>A e B</td><td>3.00</td></tr>
+            <tr><td>C</td><td>2.20</td></tr>
+            <tr><td>D</td><td>1.80</td></tr>
+            <tr><td>E</td><td>1.40</td></tr>
+            <tr><td>F</td><td>1.10</td></tr>
+        </tbody>
+    </table>
+
+    <h2>💡 Calcolo Incentivo CT 3.0</h2>
+    <div class="formula-box">
+        <p><strong>Formula:</strong> I_tot = Ci × S</p>
+        <p style="margin-top: 10px;"><strong>Dove:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Ci = coefficiente di valorizzazione [€/m²] (variabile per zona climatica)</li>
+            <li>S = superficie serramenti sostituiti [m²]</li>
+        </ul>
+        <p style="margin-top: 10px;"><strong>Massimali spesa unitaria:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Serramenti: 800 €/m²</li>
+        </ul>
+        <p style="margin-top: 10px;"><strong>Percentuali massime:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Privati/Condomini: 65%</li>
+            <li>PA: 100%</li>
+            <li>Imprese: 40%</li>
+        </ul>
+    </div>
+
+    <h2>📝 Note Normative</h2>
+    <div class="note">
+        <p><strong>Riferimenti:</strong></p>
+        <ul style="margin-left: 20px; margin-top: 5px;">
+            <li>DM 7/8/2025 - Art. 8, comma 1, lettera b) - Intervento II.B</li>
+            <li>D.M. 26/06/2015 (requisiti minimi)</li>
+            <li>Allegato 1 - Tabella 3 - Coefficienti serramenti</li>
+            <li>UNI EN ISO 10077-1 - Calcolo trasmittanza termica serramenti</li>
+        </ul>
+        <p style="margin-top: 10px;"><strong>Documentazione richiesta:</strong></p>
+        <ul style="margin-left: 20px; margin-top: 5px;">
+            <li>Asseverazione tecnico abilitato</li>
+            <li>Certificazione prestazionale serramenti (marcatura CE)</li>
+            <li>Scheda prodotto con valori Uw, Uf, Ug</li>
+            <li>Documentazione fotografica ante/post operam</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        Energy Incentive Manager v2.0 | Conto Termico 3.0 (DM 7/8/2025) ed Ecobonus
+    </div>
+</body>
+</html>"""
+
+    return html
+
+
+def genera_report_ibridi_html(
+    scenari: list,
+    tipo_soggetto: str,
+    tipo_abitazione: str,
+    anno: int,
+    tasso_sconto: float,
+    solo_ct: bool = False
+) -> str:
+    """
+    Genera report HTML per scenari Sistemi Ibridi (III.B).
+
+    Args:
+        scenari: Lista di dizionari con dati scenario sistemi ibridi
+        tipo_soggetto: Tipo di soggetto richiedente
+        tipo_abitazione: Tipo di abitazione
+        anno: Anno della spesa
+        tasso_sconto: Tasso di sconto per NPV
+        solo_ct: Se True, mostra solo CT 3.0
+
+    Returns:
+        Stringa HTML del report
+    """
+    data_report = datetime.now().strftime("%d/%m/%Y %H:%M")
+
+    # Mappa tipi sistema
+    tipi_sistema_desc = {
+        "ibrido_factory_made": "Sistema ibrido factory-made",
+        "bivalente": "Sistema bivalente",
+        "add_on": "Sistema add-on (retrofit)"
+    }
+
+    # Costruisci righe tabella scenari
+    righe_scenari = ""
+    miglior_scenario = None
+    miglior_npv = -float('inf')
+
+    for s in scenari:
+        ct_npv = s.get('ct_npv', 0)
+        eco_npv = s.get('eco_npv', 0)
+        bonus_npv = s.get('bonus_npv', 0)
+
+        # Determina il migliore per questo scenario
+        if solo_ct:
+            npv_max = ct_npv
+        else:
+            npv_max = max(ct_npv, eco_npv, bonus_npv)
+
+        if npv_max > miglior_npv:
+            miglior_npv = npv_max
+            miglior_scenario = s['nome']
+
+        tipo_sist = tipi_sistema_desc.get(s.get('tipo_sistema', ''), s.get('tipo_sistema', ''))
+        iter_info = " (Iter Sempl.)" if s.get('iter_semplificato', False) else ""
+
+        if solo_ct:
+            righe_scenari += f"""
+            <tr>
+                <td><strong>{s['nome']}</strong></td>
+                <td>{tipo_sist}{iter_info}</td>
+                <td>{s.get('potenza_pdc_kw', 0):.1f} kW</td>
+                <td>{s.get('potenza_caldaia_kw', 0):.1f} kW</td>
+                <td>€ {s.get('spesa', 0):,.0f}</td>
+                <td style="background: #E8F5E9; font-weight: bold;">€ {s.get('ct_incentivo', 0):,.0f}</td>
+                <td style="color: #1565C0; font-weight: bold;">€ {ct_npv:,.0f}</td>
+            </tr>
+            """
+        else:
+            righe_scenari += f"""
+            <tr>
+                <td><strong>{s['nome']}</strong></td>
+                <td>{tipo_sist}{iter_info}</td>
+                <td>{s.get('potenza_pdc_kw', 0):.1f} kW</td>
+                <td>{s.get('potenza_caldaia_kw', 0):.1f} kW</td>
+                <td>€ {s.get('spesa', 0):,.0f}</td>
+                <td style="background: #E8F5E9;">€ {s.get('ct_incentivo', 0):,.0f}</td>
+                <td>€ {ct_npv:,.0f}</td>
+                <td style="background: #E3F2FD;">€ {s.get('eco_detrazione', 0):,.0f}</td>
+                <td>€ {eco_npv:,.0f}</td>
+                <td style="background: #FFF3E0;">€ {s.get('bonus_detrazione', 0):,.0f}</td>
+                <td>€ {bonus_npv:,.0f}</td>
+                <td style="font-weight: bold;">{s.get('migliore', 'N/D')}</td>
+            </tr>
+            """
+
+    # Intestazioni tabella
+    if solo_ct:
+        header_tabella = """
+        <tr>
+            <th>Scenario</th>
+            <th>Tipo Sistema</th>
+            <th>PdC</th>
+            <th>Caldaia</th>
+            <th>Spesa</th>
+            <th>CT 3.0</th>
+            <th>NPV CT</th>
+        </tr>
+        """
+    else:
+        header_tabella = """
+        <tr>
+            <th>Scenario</th>
+            <th>Tipo Sistema</th>
+            <th>PdC</th>
+            <th>Caldaia</th>
+            <th>Spesa</th>
+            <th>CT 3.0</th>
+            <th>NPV CT</th>
+            <th>Ecobonus</th>
+            <th>NPV Eco</th>
+            <th>Bonus Ristr.</th>
+            <th>NPV BR</th>
+            <th>Migliore</th>
+        </tr>
+        """
+
+    # Sezione raccomandazione
+    if len(scenari) > 1 and miglior_scenario:
+        raccomandazione = f"""
+        <div class="recommendation">
+            <h3>🏆 Scenario Consigliato</h3>
+            <p><strong>{miglior_scenario}</strong> presenta il miglior NPV: <strong>€ {miglior_npv:,.0f}</strong></p>
+        </div>
+        """
+    else:
+        raccomandazione = ""
+
+    # Descrizione tipo soggetto
+    soggetto_desc = {
+        "privato": "Privato cittadino",
+        "impresa": "Impresa",
+        "PA": "Pubblica Amministrazione",
+        "condominio": "Condominio",
+        "ets": "Ente Terzo Settore"
+    }
+
+    # Dettaglio scenari
+    dettaglio_scenari = ""
+    for idx, s in enumerate(scenari, 1):
+        tipo_sist = tipi_sistema_desc.get(s.get('tipo_sistema', ''), s.get('tipo_sistema', ''))
+        iter_info = "Sì" if s.get('iter_semplificato', False) else "No"
+
+        prodotto_info = ""
+        if s.get('prodotto_marca') or s.get('prodotto_modello_pdc') or s.get('prodotto_modello_caldaia'):
+            prodotto_info = f"""
+            <tr><td style="background: #f5f5f5;"><strong>Marca</strong></td><td>{s.get('prodotto_marca', 'N/D')}</td></tr>
+            <tr><td style="background: #f5f5f5;"><strong>Modello PdC</strong></td><td>{s.get('prodotto_modello_pdc', 'N/D')}</td></tr>
+            <tr><td style="background: #f5f5f5;"><strong>Modello Caldaia</strong></td><td>{s.get('prodotto_modello_caldaia', 'N/D')}</td></tr>
+            """
+
+        dettaglio_scenari += f"""
+        <h3>Scenario {idx}: {s['nome']}</h3>
+        <table>
+            <tr><td style="width: 40%; background: #f5f5f5;"><strong>Tipo sistema</strong></td><td>{tipo_sist}</td></tr>
+            <tr><td style="background: #f5f5f5;"><strong>Potenza PdC</strong></td><td>{s.get('potenza_pdc_kw', 0):.1f} kW</td></tr>
+            <tr><td style="background: #f5f5f5;"><strong>Potenza Caldaia</strong></td><td>{s.get('potenza_caldaia_kw', 0):.1f} kW</td></tr>
+            <tr><td style="background: #f5f5f5;"><strong>SCOP</strong></td><td>{s.get('scop', 0):.2f}</td></tr>
+            <tr><td style="background: #f5f5f5;"><strong>η caldaia</strong></td><td>{s.get('eta_s_caldaia', 0):.1f}%</td></tr>
+            <tr><td style="background: #f5f5f5;"><strong>Iter semplificato</strong></td><td>{iter_info}</td></tr>
+            <tr><td style="background: #f5f5f5;"><strong>Spesa totale</strong></td><td>€ {s.get('spesa', 0):,.2f}</td></tr>
+            {prodotto_info}
+        </table>
+        """
+
+    html = f"""<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relazione Tecnica - Sistemi Ibridi</title>
+    <style>
+        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+        body {{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6; color: #333;
+            max-width: 210mm; margin: 0 auto; padding: 20mm; background: white;
+        }}
+        .header {{
+            text-align: center; border-bottom: 3px solid #9C27B0;
+            padding-bottom: 20px; margin-bottom: 30px;
+        }}
+        .header h1 {{ color: #9C27B0; font-size: 24px; margin-bottom: 10px; }}
+        .header .subtitle {{ color: #666; font-size: 14px; }}
+        .meta-info {{
+            display: flex; justify-content: space-between; background: #f5f5f5;
+            padding: 15px; border-radius: 5px; margin-bottom: 25px; font-size: 12px;
+        }}
+        h2 {{
+            color: #9C27B0; border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px; margin: 25px 0 15px 0; font-size: 18px;
+        }}
+        h3 {{ color: #333; margin: 20px 0 10px 0; font-size: 14px; }}
+        table {{
+            width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 11px;
+        }}
+        th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
+        th {{ background-color: #9C27B0; color: white; font-weight: 600; }}
+        tr:nth-child(even) {{ background-color: #f9f9f9; }}
+        .highlight {{ background-color: #F3E5F5 !important; font-weight: bold; }}
+        .recommendation {{
+            background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);
+            border-left: 4px solid #9C27B0;
+            padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0;
+        }}
+        .recommendation h3 {{ color: #6A1B9A; margin-bottom: 10px; }}
+        .formula-box {{
+            background: #F3E5F5; border: 1px solid #CE93D8;
+            padding: 15px; margin: 15px 0; border-radius: 5px;
+            font-family: 'Courier New', monospace; font-size: 12px;
+        }}
+        .note {{
+            background: #F3E5F5; border-left: 4px solid #9C27B0;
+            padding: 10px 15px; margin: 15px 0; font-size: 11px; color: #6A1B9A;
+        }}
+        .footer {{
+            margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd;
+            font-size: 10px; color: #999; text-align: center;
+        }}
+        @media print {{
+            body {{ padding: 10mm; }}
+            .no-print {{ display: none; }}
+        }}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔀 Relazione Tecnica Sistemi Ibridi</h1>
+        <p class="subtitle">Intervento III.B - Sistemi Ibridi a pompa di calore</p>
+        <p class="subtitle">DM 7/8/2025 - Conto Termico 3.0</p>
+    </div>
+
+    <div class="meta-info">
+        <div><strong>Tipo Soggetto:</strong> {soggetto_desc.get(tipo_soggetto, tipo_soggetto)}</div>
+        <div><strong>Tipo Abitazione:</strong> {tipo_abitazione}</div>
+        <div><strong>Anno:</strong> {anno}</div>
+        <div><strong>Tasso NPV:</strong> {tasso_sconto*100:.1f}%</div>
+        <div><strong>Data:</strong> {data_report}</div>
+    </div>
+
+    <h2>📊 Confronto Scenari</h2>
+    <table>
+        <thead>
+            {header_tabella}
+        </thead>
+        <tbody>
+            {righe_scenari}
+        </tbody>
+    </table>
+
+    {raccomandazione}
+
+    <h2>📋 Dettaglio Scenari</h2>
+    {dettaglio_scenari}
+
+    <h2>📐 Tipologie Sistemi Ibridi Ammessi</h2>
+    <div class="note">
+        <p><strong>Tipologie ammesse al Conto Termico 3.0:</strong></p>
+        <ul style="margin-left: 20px; margin-top: 5px;">
+            <li><strong>Factory-made:</strong> Sistema integrato in fabbrica, pompa di calore + caldaia a condensazione</li>
+            <li><strong>Bivalente:</strong> Sistema assemblato in campo con componenti di serie</li>
+            <li><strong>Add-on (retrofit):</strong> Pompa di calore aggiunta a caldaia esistente</li>
+        </ul>
+    </div>
+
+    <h2>💡 Calcolo Incentivo CT 3.0</h2>
+    <div class="formula-box">
+        <p><strong>Formula (analoga PdC):</strong> I_tot = Ei × Ci</p>
+        <p style="margin-top: 10px;"><strong>Dove:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Ei = Energia termica incentivata [kWht]</li>
+            <li>Ci = Coefficiente di valorizzazione [€/kWht]</li>
+        </ul>
+        <p style="margin-top: 10px;"><strong>Requisiti:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>PdC: rispetto requisiti Ecodesign</li>
+            <li>Caldaia: classe A o superiore (η ≥ 90%)</li>
+            <li>Sistema di regolazione integrato</li>
+        </ul>
+        <p style="margin-top: 10px;"><strong>Percentuali massime:</strong></p>
+        <ul style="margin-left: 20px;">
+            <li>Privati/Condomini: 65%</li>
+            <li>PA: 100%</li>
+            <li>Imprese: 40%</li>
+        </ul>
+    </div>
+
+    <h2>🔧 Iter Semplificato</h2>
+    <div class="note">
+        <p><strong>Condizioni per iter semplificato (Art. 6):</strong></p>
+        <ul style="margin-left: 20px; margin-top: 5px;">
+            <li>Potenza termica PdC ≤ 35 kW</li>
+            <li>Sistema factory-made certificato</li>
+            <li>Prodotto presente nel catalogo GSE</li>
+            <li>Incentivo forfettario senza calcolo prestazionale</li>
+        </ul>
+    </div>
+
+    <h2>📝 Note Normative</h2>
+    <div class="note">
+        <p><strong>Riferimenti:</strong></p>
+        <ul style="margin-left: 20px; margin-top: 5px;">
+            <li>DM 7/8/2025 - Art. 8, comma 1, lettera b) - Intervento III.B</li>
+            <li>Regolamento UE 813/2013 (Ecodesign PdC)</li>
+            <li>Regolamento UE 811/2013 (Etichettatura energetica)</li>
+            <li>UNI/TS 11300 - Prestazioni energetiche edifici</li>
+        </ul>
+        <p style="margin-top: 10px;"><strong>Documentazione richiesta:</strong></p>
+        <ul style="margin-left: 20px; margin-top: 5px;">
+            <li>Scheda tecnica sistema ibrido completa</li>
+            <li>Certificazione prestazioni (SCOP, η caldaia)</li>
+            <li>Schema impianto con logica di regolazione</li>
+            <li>Asseverazione tecnico abilitato</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        Energy Incentive Manager v2.0 | Conto Termico 3.0 (DM 7/8/2025) ed Ecobonus
+    </div>
+</body>
+</html>"""
+
+    return html

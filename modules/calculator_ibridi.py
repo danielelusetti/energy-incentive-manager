@@ -41,24 +41,27 @@ COEFFICIENTI_K = {
     "add_on": {"fino_35kw": 1.00, "oltre_35kw": 1.10}
 }
 
-# Coefficienti Ci per zona climatica e potenza (Tabella 9 - €/kWht)
+# Coefficienti Ci per tipo di pompa di calore e potenza (Tabella 9 - €/kWht)
+# NOTA: I coefficienti Ci dipendono dal TIPO di pompa di calore, non dalla zona climatica
+# Per sistemi ibridi tipicamente si usa aria/acqua (Reg. 813/2013)
 COEFFICIENTI_CI = {
-    "A": {"fino_35kw": 0.044, "oltre_35kw": 0.022},
-    "B": {"fino_35kw": 0.048, "oltre_35kw": 0.024},
-    "C": {"fino_35kw": 0.062, "oltre_35kw": 0.031},
-    "D": {"fino_35kw": 0.070, "oltre_35kw": 0.035},
-    "E": {"fino_35kw": 0.078, "oltre_35kw": 0.039},
-    "F": {"fino_35kw": 0.083, "oltre_35kw": 0.041}
+    "aria_aria_split": {"fino_12kw": 0.070, "12_35kw": 0.15, "oltre_35kw": 0.055},  # VRF/VRV
+    "aria_aria_rooftop": {"fino_35kw": 0.15, "oltre_35kw": 0.055},  # Reg. 2281/2016
+    "aria_acqua": {"fino_35kw": 0.15, "oltre_35kw": 0.06},  # Reg. 813/2013 - DEFAULT per ibridi
+    "acqua_aria": {"fino_35kw": 0.160, "oltre_35kw": 0.06},  # PdC ad acqua di falda/aria
+    "acqua_acqua": {"fino_35kw": 0.160, "oltre_35kw": 0.06},  # PdC ad acqua di falda/acqua
+    "geotermica": {"fino_35kw": 0.160, "oltre_35kw": 0.06}  # suolo/acqua o salamoia
 }
 
-# Coefficiente Quf per zona climatica (Tabella 8)
+# Coefficiente Quf per zona climatica (Tabella 8 - Allegato 2 DM 07.08.2025)
+# NOTA: Questi sono i valori CORRETTI per riscaldamento
 COEFFICIENTI_QUF = {
-    "A": 400,
-    "B": 500,
-    "C": 650,
-    "D": 900,
-    "E": 1150,
-    "F": 1350
+    "A": 600,
+    "B": 850,
+    "C": 1100,
+    "D": 1400,
+    "E": 1700,
+    "F": 1800
 }
 
 # Rateazione (Tabella 1 Art. 11)
@@ -73,8 +76,19 @@ SOGLIA_RATA_UNICA = 15000.0  # €
 # Massimale incentivo
 I_MAX_TOTALE = 500_000.0  # €
 
-# SCOP/η_s minimo Ecodesign (valore indicativo)
-ETA_S_MIN_ECODESIGN = 0.86  # 86%
+# η_s minimo Ecodesign per tipo di PdC (Tabelle 3-4 Allegato 1 DM 07.08.2025)
+# I valori sono espressi in percentuale (es. 125 = 125%)
+# Per sistemi ibridi si usa tipicamente "bassa temperatura"
+ETA_S_MIN_ECODESIGN_PER_TIPO = {
+    "aria_aria_split": 1.49,      # 149% (GWP>150) o 134% (GWP≤150) - usiamo valore più comune
+    "aria_aria_rooftop": 1.25,    # 125%
+    "aria_acqua": 1.25,           # 125% - aria/acqua a bassa temperatura (Reg. 813/2013)
+    "acqua_aria": 1.37,           # 137%
+    "acqua_acqua": 1.25,          # 125% - acqua/acqua a bassa temperatura
+    "geotermica": 1.25            # 125% - salamoia/acqua a bassa temperatura (Reg. 813/2013)
+}
+# Valore di default per backward compatibility
+ETA_S_MIN_ECODESIGN = 1.25  # 125% - valore per PdC a bassa temperatura (più comune per ibridi)
 
 
 @dataclass
@@ -105,6 +119,7 @@ def calculate_hybrid_incentive(
     scop_pdc: float,
     eta_s_pdc: float,
     zona_climatica: str,
+    tipo_pdc: str = "aria_acqua",  # Tipo pompa di calore per Ci (default aria/acqua per ibridi)
     tipo_soggetto: str = "privato",
     eta_s_min_ecodesign: float = ETA_S_MIN_ECODESIGN,
     usa_premialita_componenti_ue: bool = False,
@@ -117,7 +132,7 @@ def calculate_hybrid_incentive(
     dove:
     - k: coefficiente utilizzo PdC (1,25 factory made, 1/1,1 bivalente/add-on)
     - Ei: energia termica incentivata = Qu × [1 - 1/SCOP] × kp
-    - Ci: coefficiente valorizzazione (€/kWht)
+    - Ci: coefficiente valorizzazione (€/kWht) - dipende dal tipo di PdC
 
     Args:
         tipo_sistema: Tipo sistema ("ibrido_factory_made", "bivalente", "add_on")
@@ -126,6 +141,7 @@ def calculate_hybrid_incentive(
         scop_pdc: Coefficiente prestazione stagionale PdC
         eta_s_pdc: Efficienza energetica stagionale PdC [%]
         zona_climatica: Zona climatica (A-F)
+        tipo_pdc: Tipo pompa di calore ("aria_acqua", "aria_aria_split", "geotermica", ecc.)
         tipo_soggetto: Tipo soggetto ("privato", "pa")
         eta_s_min_ecodesign: η_s minimo Ecodesign per calcolo kp
         usa_premialita_componenti_ue: Premialità +10% componenti UE
@@ -140,6 +156,7 @@ def calculate_hybrid_incentive(
     logger.info("============================================================")
     logger.info("")
     logger.info(f"Tipo sistema: {tipo_sistema}")
+    logger.info(f"Tipo PdC: {tipo_pdc}")
     logger.info(f"Potenza PdC: {potenza_pdc_kw} kW")
     logger.info(f"Potenza caldaia: {potenza_caldaia_kw} kW")
     logger.info(f"SCOP PdC: {scop_pdc}")
@@ -170,12 +187,20 @@ def calculate_hybrid_incentive(
     logger.info("")
     logger.info("[STEP 2] Calcolo coefficiente kp (premialità efficienza)")
 
+    # Usa η_s minimo Ecodesign specifico per tipo di PdC se non fornito
+    # NOTA: Il valore da usare dipende dal tipo di pompa di calore (Tabelle 3-4 Allegato 1)
+    if eta_s_min_ecodesign == ETA_S_MIN_ECODESIGN:
+        # Se usa il default, prendi il valore specifico per il tipo di PdC
+        eta_s_min_ecodesign = ETA_S_MIN_ECODESIGN_PER_TIPO.get(tipo_pdc, ETA_S_MIN_ECODESIGN)
+        logger.info(f"  η_s_min ECODESIGN per {tipo_pdc}: {eta_s_min_ecodesign:.2%}")
+
     # kp = η_s / η_s_min_ECODESIGN
+    # NOTA: η_s è in percentuale (es. 170 = 170%), η_s_min_ecodesign è in decimale (es. 1.25 = 125%)
     eta_s_pdc_decimale = eta_s_pdc / 100.0
     kp = eta_s_pdc_decimale / eta_s_min_ecodesign
 
     logger.info(f"  η_s PdC: {eta_s_pdc}% = {eta_s_pdc_decimale:.4f}")
-    logger.info(f"  η_s_min ECODESIGN: {eta_s_min_ecodesign:.4f}")
+    logger.info(f"  η_s_min ECODESIGN: {eta_s_min_ecodesign:.4f} ({eta_s_min_ecodesign:.0%})")
     logger.info(f"  kp = {eta_s_pdc_decimale:.4f} / {eta_s_min_ecodesign:.4f} = {kp:.4f}")
 
     # -------------------------------------------------------------------------
@@ -210,20 +235,33 @@ def calculate_hybrid_incentive(
     logger.info(f"  Ei = {ei:,.2f} kWh_t")
 
     # -------------------------------------------------------------------------
-    # 5. DETERMINA COEFFICIENTE Ci
+    # 5. DETERMINA COEFFICIENTE Ci (basato su tipo PdC, NON zona climatica)
     # -------------------------------------------------------------------------
     logger.info("")
     logger.info("[STEP 5] Determinazione coefficiente Ci")
 
-    # Fascia potenza per Ci (basata su potenza PdC)
-    if potenza_pdc_kw <= 35:
-        fascia_ci = "fino_35kw"
+    # Ottieni coefficienti per il tipo di pompa di calore
+    ci_coeffs = COEFFICIENTI_CI.get(tipo_pdc, COEFFICIENTI_CI["aria_acqua"])
+
+    # Determina fascia potenza per Ci
+    if tipo_pdc == "aria_aria_split":
+        # Per split/multisplit: fino_12kw, 12_35kw, oltre_35kw
+        if potenza_pdc_kw <= 12:
+            fascia_ci = "fino_12kw"
+        elif potenza_pdc_kw <= 35:
+            fascia_ci = "12_35kw"
+        else:
+            fascia_ci = "oltre_35kw"
     else:
-        fascia_ci = "oltre_35kw"
+        # Per altri tipi: fino_35kw, oltre_35kw
+        if potenza_pdc_kw <= 35:
+            fascia_ci = "fino_35kw"
+        else:
+            fascia_ci = "oltre_35kw"
 
-    ci = COEFFICIENTI_CI[zona_climatica][fascia_ci]
+    ci = ci_coeffs.get(fascia_ci, 0.15)  # Default 0.15 se fascia non trovata
 
-    logger.info(f"  Zona climatica: {zona_climatica}")
+    logger.info(f"  Tipo PdC: {tipo_pdc}")
     logger.info(f"  Potenza PdC: {potenza_pdc_kw} kW → Fascia: {fascia_ci}")
     logger.info(f"  Ci = {ci} €/kWh_t")
 
@@ -369,6 +407,7 @@ def confronta_incentivi_ibridi(
     spesa_totale_sostenuta: float,
     anno_spesa: int = 2025,
     tipo_abitazione: str = "abitazione_principale",
+    tipo_pdc: str = "aria_acqua",  # Tipo pompa di calore per Ci
     tipo_soggetto: str = "privato",
     eta_s_min_ecodesign: float = ETA_S_MIN_ECODESIGN,
     usa_premialita_componenti_ue: bool = False,
@@ -422,6 +461,7 @@ def confronta_incentivi_ibridi(
             scop_pdc=scop_pdc,
             eta_s_pdc=eta_s_pdc,
             zona_climatica=zona_climatica,
+            tipo_pdc=tipo_pdc,
             tipo_soggetto=tipo_soggetto,
             eta_s_min_ecodesign=eta_s_min_ecodesign,
             usa_premialita_componenti_ue=usa_premialita_componenti_ue,
@@ -483,7 +523,7 @@ def confronta_incentivi_ibridi(
                 "detrazione": detrazione,
                 "rata_annuale": rata_annuale_eco,
                 "anni": anni_eco,
-                "aliquota": eco_result["aliquota_applicata"],
+                "aliquota": eco_result["calcoli"]["aliquota_applicata"],
                 "dettagli": eco_result
             }
             risultati["npv_ecobonus"] = npv_eco
@@ -531,7 +571,7 @@ def confronta_incentivi_ibridi(
                 "detrazione": detrazione,
                 "rata_annuale": rata_annuale_bonus,
                 "anni": anni_bonus,
-                "aliquota": bonus_result["aliquota_applicata"],
+                "aliquota": bonus_result["calcoli"]["aliquota_applicata"],
                 "dettagli": bonus_result
             }
             risultati["npv_bonus_ristrutturazione"] = npv_bonus
