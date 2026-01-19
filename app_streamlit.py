@@ -1274,7 +1274,7 @@ def main():
                     # Ottieni modelli per marca
                     modelli_marca = get_modelli_per_marca(catalogo_gse, marca_selezionata)
                     opzioni_modelli = [""] + [
-                        f"{m['modello']} ({m.get('potenza_kw', '?')} kW, COP {m.get('cop', '?')})"
+                        f"{m['modello']} ({m.get('dati_tecnici', {}).get('potenza_kw', m.get('potenza_kw', '?'))} kW, COP {m.get('dati_tecnici', {}).get('cop', m.get('cop', '?'))})"
                         for m in modelli_marca
                     ]
 
@@ -1292,13 +1292,17 @@ def main():
                         iter_semplificato = True
 
                         # Mostra info prodotto selezionato
+                        dati_tec = prodotto_catalogo.get('dati_tecnici', {})
+                        potenza_cat = dati_tec.get('potenza_kw', prodotto_catalogo.get('potenza_kw', 'N/D'))
+                        cop_cat = dati_tec.get('cop', prodotto_catalogo.get('cop', 'N/D'))
+                        tipologia_cat = prodotto_catalogo.get('tipologia_scambio', prodotto_catalogo.get('tipologia', 'N/D'))
                         st.success(f"""
                         ✅ **ITER SEMPLIFICATO**
 
                         **{prodotto_catalogo.get('marca')} {prodotto_catalogo.get('modello')}**
-                        - Tipologia: {prodotto_catalogo.get('tipologia', 'N/D')}
-                        - Potenza: {prodotto_catalogo.get('potenza_kw', 'N/D')} kW
-                        - COP/SCOP: {prodotto_catalogo.get('cop', 'N/D')}
+                        - Tipologia: {tipologia_cat}
+                        - Potenza: {potenza_cat} kW
+                        - COP/SCOP: {cop_cat}
                         """)
 
             elif usa_catalogo and not catalogo_gse:
@@ -1308,8 +1312,10 @@ def main():
 
             # Selezione tipologia (manuale o da catalogo)
             if prodotto_catalogo:
-                # Auto-fill da catalogo
-                tipo_intervento = map_tipologia_catalogo_to_intervento(prodotto_catalogo.get("tipologia", ""))
+                # Auto-fill da catalogo - usa tipologia_scambio se disponibile
+                tipo_intervento = map_tipologia_catalogo_to_intervento(
+                    prodotto_catalogo.get("tipologia_scambio", prodotto_catalogo.get("tipologia", ""))
+                )
                 # Trova la label corrispondente
                 tipo_intervento_label = next(
                     (k for k, v in TIPI_INTERVENTO_ELETTRICO.items() if v == tipo_intervento),
@@ -1337,14 +1343,26 @@ def main():
 
             col1, col2 = st.columns(2)
             with col1:
-                if prodotto_catalogo and prodotto_catalogo.get("potenza_kw"):
-                    potenza_kw = float(prodotto_catalogo.get("potenza_kw"))
+                # Legge potenza dal nuovo formato (dati_tecnici) o vecchio formato
+                potenza_da_catalogo = None
+                if prodotto_catalogo:
+                    dati_tec = prodotto_catalogo.get('dati_tecnici', {})
+                    potenza_da_catalogo = dati_tec.get('potenza_kw', prodotto_catalogo.get('potenza_kw'))
+
+                if potenza_da_catalogo:
+                    potenza_kw = float(potenza_da_catalogo)
                     st.info(f"⚡ Potenza: **{potenza_kw} kW**")
                 else:
                     potenza_kw = st.number_input("Potenza (kW)", min_value=1.0, max_value=2000.0, value=10.0, step=0.5, key="pdc_potenza")
             with col2:
-                if prodotto_catalogo and prodotto_catalogo.get("cop"):
-                    scop = float(prodotto_catalogo.get("cop"))
+                # Legge COP dal nuovo formato (dati_tecnici) o vecchio formato
+                cop_da_catalogo = None
+                if prodotto_catalogo:
+                    dati_tec = prodotto_catalogo.get('dati_tecnici', {})
+                    cop_da_catalogo = dati_tec.get('cop', prodotto_catalogo.get('cop'))
+
+                if cop_da_catalogo:
+                    scop = float(cop_da_catalogo)
                     if is_gas:
                         st.info(f"📊 SPER: **{scop}**")
                     else:
